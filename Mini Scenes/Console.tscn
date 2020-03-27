@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Console.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/Typer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Art/Typer1.png" type="Texture" id=3]
+[ext_resource path="res://Art/Typer2.png" type="Texture" id=4]
+[ext_resource path="res://Art/Typer3.png" type="Texture" id=5]
+
+[node name="Console" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -490.0
+margin_bottom = -681.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlackBackground" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_right = 376.0
+margin_bottom = 145.0
+rect_scale = Vector2( 0.8, 0.8 )
+color = Color( 0.0392157, 0.00392157, 0.00392157, 1 )
+
+[node name="Typer1" parent="." instance=ExtResource( 2 )]
+margin_left = 16.9595
+margin_top = 7.75983
+margin_right = 316.96
+margin_bottom = 77.7598
+rect_scale = Vector2( 0.8, 1 )
+sprite = ExtResource( 3 )
+
+[node name="Typer2" parent="." instance=ExtResource( 2 )]
+margin_left = 16.9595
+margin_top = 44.9238
+margin_right = 316.96
+margin_bottom = 114.924
+rect_scale = Vector2( 0.8, 1 )
+sprite = ExtResource( 4 )
+
+[node name="Typer3" parent="." instance=ExtResource( 2 )]
+margin_left = 17.1094
+margin_top = 82.1598
+margin_right = 317.11
+margin_bottom = 152.16
+rect_scale = Vector2( 0.8, 1 )
+sprite = ExtResource( 5 )

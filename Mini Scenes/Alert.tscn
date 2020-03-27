@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Art/HackerTitle.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/Alert.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_color = Color( 0.682353, 0.0901961, 0.0901961, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Alert1" type="TextureRect"]
+margin_left = 18.2926
+margin_top = 13.6083
+margin_right = 383.293
+margin_bottom = 73.6083
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Damage" type="ColorRect" parent="."]
+visible = false
+margin_left = 2.63388
+margin_top = 6.62226
+margin_right = 358.634
+margin_bottom = 54.6223
+color = Color( 0.152941, 0.0117647, 0.0117647, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 74.1695
+margin_top = 5.95216
+margin_right = 288.169
+margin_bottom = 57.9522
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.784314, 0.0901961, 0.0901961, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}

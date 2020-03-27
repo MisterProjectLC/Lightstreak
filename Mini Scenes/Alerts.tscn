@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Alerts.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/Alert.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Alerts" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -490.0
+margin_bottom = -681.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlackBackground" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_right = 376.0
+margin_bottom = 225.0
+rect_scale = Vector2( 0.8, 0.8 )
+color = Color( 0.0392157, 0.00392157, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 112.227
+margin_top = 154.306
+margin_right = 200.227
+margin_bottom = 180.306
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.52549, 0.0352941, 0.0352941, 1 )
+text = "Alerts"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alert1" parent="." instance=ExtResource( 2 )]
+margin_left = 20.7361
+margin_top = 3.83421
+margin_right = 385.737
+margin_bottom = 63.8342
+
+[node name="Alert2" parent="." instance=ExtResource( 2 )]
+margin_left = 21.5506
+margin_top = 54.3337
+margin_right = 386.551
+margin_bottom = 114.334
+
+[node name="Alert3" parent="." instance=ExtResource( 2 )]
+margin_left = 22.3652
+margin_top = 104.019
+margin_right = 387.366
+margin_bottom = 164.019

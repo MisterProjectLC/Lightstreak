@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/WeaponTitle.gd" type="Script" id=1]
+[ext_resource path="res://Art/LaserIcon.png" type="Texture" id=2]
+[ext_resource path="res://Art/WeaponTitle.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 4 )
+
+[node name="WeaponTitle" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -424.0
+margin_bottom = -731.0
+rect_scale = Vector2( 0.79, 0.79 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+sprite = ExtResource( 2 )
+
+[node name="Sprite" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="."]
+margin_left = 309.736
+margin_top = 4.89858
+margin_right = 396.736
+margin_bottom = 91.8986
+rect_scale = Vector2( 0.57, 0.57 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 13.3333
+margin_top = 2.78747
+margin_right = 378.333
+margin_bottom = 62.7875
+custom_fonts/font = SubResource( 1 )
+text = "Chair"
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}

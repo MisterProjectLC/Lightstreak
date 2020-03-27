@@ -1,0 +1,126 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/LangSystem.gd" type="Script" id=2]
+[ext_resource path="res://Mini Scenes/Battlefield.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Mini Scenes/Alerts.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Mini Scenes/Cannon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Art/Cannon1.png" type="Texture" id=6]
+[ext_resource path="res://Art/Highlight1.png" type="Texture" id=7]
+[ext_resource path="res://Art/Cannon2.png" type="Texture" id=8]
+[ext_resource path="res://Art/Highlight2.png" type="Texture" id=9]
+[ext_resource path="res://Art/Cannon3.png" type="Texture" id=10]
+[ext_resource path="res://Art/Highlight3.png" type="Texture" id=11]
+[ext_resource path="res://Mini Scenes/Console.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Mini Scenes/WeaponTitle.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Mini Scenes/Weapon/Laser.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Art/EnergyBallIcon.png" type="Texture" id=15]
+[ext_resource path="res://Mini Scenes/Weapon/EnergyBall.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Mini Scenes/Weapon/ShockW.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Mini Scenes/MinionSpawner.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Art/ThunderIcon.png" type="Texture" id=19]
+[ext_resource path="res://Mini Scenes/Enemies/Hacker.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Mini Scenes/Enemies/HackerInit.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Mini Scenes/PhaseManager.tscn" type="PackedScene" id=24]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+_lane_x0 = 340
+_lane_x_increase = 71
+_lane_y = 740
+
+[node name="BlackBackground" type="ColorRect" parent="."]
+margin_right = 804.0
+margin_bottom = 794.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Battlefield" parent="." instance=ExtResource( 3 )]
+position = Vector2( 40, 0 )
+
+[node name="MinionSpawner" parent="." instance=ExtResource( 18 )]
+hacker = ExtResource( 20 )
+hacker_init = ExtResource( 21 )
+
+[node name="LangSystem" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="PhaseManager" parent="." instance=ExtResource( 24 )]
+
+[node name="BlueBox2" type="ColorRect" parent="."]
+margin_left = 3.11078
+margin_top = 335.274
+margin_right = 299.111
+margin_bottom = 346.274
+color = Color( 0.0823529, 0.258824, 0.670588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cannon1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 410, 739.451 )
+sprite = ExtResource( 6 )
+highlight = ExtResource( 7 )
+
+[node name="Cannon2" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 480, 740 )
+sprite = ExtResource( 8 )
+highlight = ExtResource( 9 )
+
+[node name="Cannon3" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 623.732, 739.451 )
+sprite = ExtResource( 10 )
+highlight = ExtResource( 11 )
+
+[node name="LaserTitle" parent="." instance=ExtResource( 13 )]
+margin_left = 7.89237
+margin_top = 606.804
+margin_right = -414.107
+margin_bottom = -124.196
+_weapon = ExtResource( 14 )
+
+[node name="SphereTitle" parent="." instance=ExtResource( 13 )]
+visible = false
+margin_left = 7.52022
+margin_top = 554.365
+margin_right = -414.479
+margin_bottom = -176.635
+sprite = ExtResource( 15 )
+_weapon = ExtResource( 16 )
+
+[node name="ShockTitle" parent="." instance=ExtResource( 13 )]
+visible = false
+margin_left = 7.45298
+margin_top = 502.693
+margin_right = -414.546
+margin_bottom = -228.307
+sprite = ExtResource( 19 )
+_weapon = ExtResource( 17 )
+_difficulty = 0
+
+[node name="BlueBox" type="ColorRect" parent="."]
+margin_left = 4.0
+margin_top = 661.691
+margin_right = 300.0
+margin_bottom = 672.691
+color = Color( 0.0823529, 0.258824, 0.670588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Console" parent="." instance=ExtResource( 12 )]
+margin_left = -2.05158
+margin_top = 676.017
+margin_right = -486.052
+margin_bottom = -3.98315
+
+[node name="Alerts" parent="." instance=ExtResource( 4 )]
+[connection signal="minion_spawned" from="MinionSpawner" to="." method="_on_MinionSpawner_minion_spawned"]
+[connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
+[connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
+[connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]

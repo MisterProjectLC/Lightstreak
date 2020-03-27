@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Hacker.gd" type="Script" id=1]
+[ext_resource path="res://Art/HackerEnemy.png" type="Texture" id=2]
+[ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 26.1469, 27.2653 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+outline_color = Color( 0.509804, 0.0823529, 0.0823529, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Hacker" type="Area2D"]
+script = ExtResource( 1 )
+_max_health = 2
+_speed = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Paralysis" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 4
+frame = 7
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( -0.135277, 9.53674e-07 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -5.98841
+margin_top = -17.9764
+margin_right = 8.01159
+margin_bottom = 0.0236282
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.576471, 0, 0, 1 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -5.95193
+margin_top = 1.35512
+margin_right = 8.04807
+margin_bottom = 19.3551
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.576471, 0, 0, 1 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="hack" from="." to="." method="change_display_letters"]
+[connection signal="hack" from="." to="." method="change_alphabet_letters"]

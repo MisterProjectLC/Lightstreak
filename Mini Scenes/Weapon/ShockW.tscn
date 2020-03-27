@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ShockW.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/Weapon/Shock.tscn" type="PackedScene" id=2]
+
+[node name="ShockW" type="Node2D"]
+script = ExtResource( 1 )
+shock = ExtResource( 2 )
+
+[node name="Shock" parent="." instance=ExtResource( 2 )]
+
+[node name="Shock2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0.032425, -33.5341 )

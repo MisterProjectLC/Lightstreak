@@ -17,6 +17,7 @@ func damage_alert():
 	update_text('', 100, true)
 
 func update_text(text, priority, dmg):
+	Audio.play_sound(Audio.alert, 3)
 	var alert = get_available_alert(priority)
 	if alert == null:
 		return

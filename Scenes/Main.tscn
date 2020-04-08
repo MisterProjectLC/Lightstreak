@@ -122,5 +122,6 @@ margin_bottom = -3.98315
 [node name="Alerts" parent="." instance=ExtResource( 4 )]
 [connection signal="minion_spawned" from="MinionSpawner" to="." method="_on_MinionSpawner_minion_spawned"]
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
+[connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
 [connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]

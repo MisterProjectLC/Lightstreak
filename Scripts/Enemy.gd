@@ -1,6 +1,7 @@
 extends Area2D
 
 signal pass_threshold
+signal changed_stunned
 
 var _health
 export(int) var _max_health
@@ -31,8 +32,9 @@ func _process(delta):
 		_clock += delta
 		if _clock > 0.1:
 			$Paralysis.frame += 1
-			if $Paralysis.frame > 7:
-				$Paralysis.frame = 0
+		
+		if _stunned <= 0:
+			emit_signal('changed_stunned', 0)
 		
 
 func set_health(_new):
@@ -55,13 +57,13 @@ func get_speed():
 	
 func set_stunned(_new):
 	_stunned = _new
+	emit_signal('changed_stunned', _new)
 	
 func set_knockback(_new):
 	_knockback = _new
 
 func take_damage(_damage):
 	_health -= _damage
-	print("ouch!")
 	if _health <= 0:
 		destroy()
 

@@ -17,6 +17,9 @@ func _ready():
 	
 	
 	emit_signal('hack')
+	
+func _process(delta):
+	pass
 
 func generate_char():
 	var rand = randi() % 26
@@ -37,3 +40,10 @@ func change_alphabet_letters():
 func destroy():
 	get_node("/root/Alphabet").remove_letter_pair(a, b)
 	.destroy()
+
+
+func _on_Hacker_changed_stunned(_new):
+	if _new > 0:
+		get_node("/root/Alphabet").remove_letter_pair(a, b)
+	else:
+		get_node("/root/Alphabet").add_letter_pair(a, b)

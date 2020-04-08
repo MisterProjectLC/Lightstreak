@@ -14,11 +14,12 @@ export(int) var _spawn_y = 0
 
 var _phase_script = []
 
+signal phase_empty
 signal minion_spawned
 signal passed_threshold
 
 func _ready():
-	var Minion = Enums.Minion
+	var Minion = Global.Minion
 	enemy_object = {Minion.TROOPER:trooper, Minion.TANK:tank, Minion.SPEEDER:speeder, 
 	Minion.HACKER:hacker, Minion.HACKERI:hacker_init}
 
@@ -33,11 +34,16 @@ func _process(delta):
 		
 		# spawn enemy
 		while true:
-			if _last_spawned < _phase_script.size() and _phase_script[_last_spawned][Enums.Spawn.TIME] == _time:
+			if _last_spawned < _phase_script.size() and _phase_script[_last_spawned][Global.Spawn.TIME] == _time:
 				emit_signal("minion_spawned", self, _phase_script[_last_spawned])
 				_last_spawned += 1
+				print(_time)
 			else:
 				break
+				
+		# signal when there are no enemies around
+		if get_child_count() <= 0:
+			emit_signal("phase_empty", _time)
 
 
 func spawn_enemy(enemy_type, new_x):

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SpacemanReduced.ogg-636c20ae0447e87ed94e8a652ad454b5.oggstr"
+
+[deps]
+
+source_file="res://Music/SpacemanReduced.ogg"
+dest_files=[ "res://.import/SpacemanReduced.ogg-636c20ae0447e87ed94e8a652ad454b5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Magnet.gd" type="Script" id=1]
+[ext_resource path="res://Art/MagnetMid.png" type="Texture" id=2]
+[ext_resource path="res://Art/Magnet.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41.3188, 394.048 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.59, 0.85 )
+texture = ExtResource( 2 )
+
+[node name="MagnetLeft" type="Area2D" parent="."]
+visible = false
+position = Vector2( -66.1352, 1.54756 )
+scale = Vector2( 0.86, 1 )
+
+[node name="Sprite" type="Sprite" parent="MagnetLeft"]
+scale = Vector2( 0.59, 0.85 )
+texture = ExtResource( 3 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="MagnetLeft"]
+position = Vector2( -0.36805, 0 )
+scale = Vector2( 0.86, 1 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MagnetRight" type="Area2D" parent="."]
+visible = false
+position = Vector2( 65.9811, 3.54758 )
+scale = Vector2( 0.86, 1 )
+
+[node name="Sprite" type="Sprite" parent="MagnetRight"]
+scale = Vector2( 0.59, 0.85 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="MagnetRight"]
+position = Vector2( -0.36805, 0 )
+scale = Vector2( 0.86, 1 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="area_entered" from="MagnetLeft" to="." method="_on_MagnetLeft_area_entered"]
+[connection signal="area_entered" from="MagnetRight" to="." method="_on_MagnetRight_area_entered"]

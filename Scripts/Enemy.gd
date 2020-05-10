@@ -1,11 +1,13 @@
 extends Area2D
 
 signal pass_threshold
+signal changed_stunned
 
 var _health
 export(int) var _max_health
 export(int) var _speed
 var _knockback = 0
+var _knockside = 0
 var _stunned = 0
 var _clock = 0
 
@@ -17,6 +19,12 @@ func _process(delta):
 	if _knockback > 0:
 		position.y -= _knockback*25*delta
 		_knockback -= 4*delta
+	
+	# Knockside
+	if abs(_knockside) > 2:
+		var speed = 200*delta*(abs(_knockside)/_knockside)
+		position.x += speed
+		_knockside -= speed
 	
 	# Movement
 	if _stunned <= 0:
@@ -31,8 +39,11 @@ func _process(delta):
 		_clock += delta
 		if _clock > 0.1:
 			$Paralysis.frame += 1
-			if $Paralysis.frame > 7:
-				$Paralysis.frame = 0
+			if $Paralysis.frame >= 6:
+				$Paralysis.frame = 1
+		
+		if _stunned <= 0:
+			emit_signal('changed_stunned', 0)
 		
 
 func set_health(_new):
@@ -55,13 +66,16 @@ func get_speed():
 	
 func set_stunned(_new):
 	_stunned = _new
+	emit_signal('changed_stunned', _new)
 	
 func set_knockback(_new):
 	_knockback = _new
 
+func set_knockside(_new):
+	_knockside = _new*Global.get_lane_increase()
+
 func take_damage(_damage):
 	_health -= _damage
-	print("ouch!")
 	if _health <= 0:
 		destroy()
 

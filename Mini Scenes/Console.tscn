@@ -37,6 +37,7 @@ margin_top = 44.9238
 margin_right = 316.96
 margin_bottom = 114.924
 rect_scale = Vector2( 0.8, 1 )
+id = 1
 sprite = ExtResource( 4 )
 
 [node name="Typer3" parent="." instance=ExtResource( 2 )]
@@ -45,4 +46,8 @@ margin_top = 82.1598
 margin_right = 317.11
 margin_bottom = 152.16
 rect_scale = Vector2( 0.8, 1 )
+id = 2
 sprite = ExtResource( 5 )
+[connection signal="command_typed" from="Typer1" to="." method="_command_typed"]
+[connection signal="command_typed" from="Typer2" to="." method="_command_typed"]
+[connection signal="command_typed" from="Typer3" to="." method="_command_typed"]

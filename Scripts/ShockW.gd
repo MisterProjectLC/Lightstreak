@@ -1,4 +1,4 @@
-extends "res://Scripts//Weapon.gd"
+extends "res://Scripts/Weapon.gd"
 
 export(PackedScene) var shock
 var _color

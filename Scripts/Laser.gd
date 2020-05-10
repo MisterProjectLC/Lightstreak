@@ -1,4 +1,4 @@
-extends "res://Scripts//Weapon.gd"
+extends "res://Scripts/Weapon.gd"
 
 var _fading = false
 var _color
@@ -7,6 +7,7 @@ var _fading_speed = 2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_weapon_offset = Vector2(0, -462)
+	Audio.play_sound(Audio.laser, 1)
 
 func _process(delta):
 	if _fading:

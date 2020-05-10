@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/LangSystem.gd" type="Script" id=2]
@@ -21,13 +21,14 @@
 [ext_resource path="res://Art/ThunderIcon.png" type="Texture" id=19]
 [ext_resource path="res://Mini Scenes/Enemies/Hacker.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Mini Scenes/Enemies/HackerInit.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Art/MagnetMid.png" type="Texture" id=22]
+[ext_resource path="res://Art/Magnet.png" type="Texture" id=23]
 [ext_resource path="res://Mini Scenes/PhaseManager.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=25]
+[ext_resource path="res://Mini Scenes/Weapon/Magnet.tscn" type="PackedScene" id=26]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
-_lane_x0 = 340
-_lane_x_increase = 71
-_lane_y = 740
 
 [node name="BlackBackground" type="ColorRect" parent="."]
 margin_right = 804.0
@@ -59,6 +60,26 @@ color = Color( 0.0823529, 0.258824, 0.670588, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Magnet" type="Sprite" parent="."]
+visible = false
+position = Vector2( 479.897, 398.361 )
+scale = Vector2( 0.590145, 0.853657 )
+texture = ExtResource( 23 )
+
+[node name="Magnet2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 341.176, 394.502 )
+scale = Vector2( 0.627829, 0.850557 )
+texture = ExtResource( 23 )
+flip_h = true
+
+[node name="Magnet3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 412.021, 397.517 )
+scale = Vector2( 0.627829, 0.850557 )
+texture = ExtResource( 22 )
+flip_h = true
 
 [node name="Cannon1" parent="." instance=ExtResource( 5 )]
 position = Vector2( 410, 739.451 )
@@ -103,6 +124,16 @@ sprite = ExtResource( 19 )
 _weapon = ExtResource( 17 )
 _difficulty = 0
 
+[node name="MagnetTitle" parent="." instance=ExtResource( 13 )]
+visible = false
+margin_left = 7.45298
+margin_top = 451.114
+margin_right = -414.546
+margin_bottom = -279.886
+sprite = ExtResource( 25 )
+_weapon = ExtResource( 26 )
+_difficulty = 0
+
 [node name="BlueBox" type="ColorRect" parent="."]
 margin_left = 4.0
 margin_top = 661.691
@@ -122,5 +153,6 @@ margin_bottom = -3.98315
 [node name="Alerts" parent="." instance=ExtResource( 4 )]
 [connection signal="minion_spawned" from="MinionSpawner" to="." method="_on_MinionSpawner_minion_spawned"]
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
+[connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
 [connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]

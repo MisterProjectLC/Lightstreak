@@ -1,0 +1,34 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Sounds/Musket Fire-SoundBible.com-2066012668.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/Audio.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/Sphere.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Sphere2.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Music/SpacemanReduced.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Music/omfgdogs.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Music/tranceReduced.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Music/WhereSheDances.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Music/ReDoin.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/Electric Pulse.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/esparks.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/Warp 1.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/Warp 2.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Music/numa numa.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Sounds/Alert.ogg" type="AudioStream" id=15]
+
+[node name="Audio" type="AudioStreamPlayer"]
+script = ExtResource( 2 )
+menu_theme = ExtResource( 6 )
+phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ) ]
+laser = [ ExtResource( 12 ), ExtResource( 13 ) ]
+sphere = [ ExtResource( 3 ), ExtResource( 4 ) ]
+shock = [ ExtResource( 10 ) ]
+shock_hit = [ ExtResource( 11 ) ]
+player_damage = [ ExtResource( 1 ) ]
+alert = [ ExtResource( 15 ) ]
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+
+[node name="Sound2" type="AudioStreamPlayer" parent="."]
+
+[node name="Sound3" type="AudioStreamPlayer" parent="."]

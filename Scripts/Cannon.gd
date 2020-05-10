@@ -1,6 +1,8 @@
 extends Node2D
 
 var _target_position
+var target_lane
+
 export var move_speed = 1
 export(Texture) var sprite
 export(Texture) var highlight
@@ -24,3 +26,9 @@ func set_target_position(_new_position):
 
 func toggle_highlight(toggle):
 	$Highlight.visible = toggle
+
+func set_target_lane(target_lane):
+	self.target_lane = target_lane
+
+func get_target_lane():
+	return target_lane

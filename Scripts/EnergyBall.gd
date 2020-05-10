@@ -1,4 +1,4 @@
-extends "res://Scripts//Weapon.gd"
+extends "res://Scripts/Weapon.gd"
 
 var _color
 var _clock = 0
@@ -8,6 +8,7 @@ export var _animation_frames = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_weapon_offset = Vector2(0, -10)
+	Audio.play_sound(Audio.sphere, 1)
 
 func _process(delta):
 	# frames

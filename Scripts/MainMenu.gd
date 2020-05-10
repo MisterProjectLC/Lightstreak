@@ -71,6 +71,7 @@ func _command_typed(id, text):
 
 			pushback_menu()
 			push_other_menus()
+
 			moving_children['OptionsMenu'] = Vector2(10, 192)
 			
 		"MUSIC":

@@ -83,8 +83,10 @@ func _command_typed(id, text):
 		"SOUNDS":
 			if len(args) == 2:
 				var chosen_volume = int(args[1])
+				print(chosen_volume)
 				if chosen_volume >= 0 and chosen_volume <= 100:
 					Global.set_sounds_volume(chosen_volume)
+					Audio.play_sound(Audio.laser, 0)
 
 		"BACK":
 			if Global.get_lightstreak_typed():

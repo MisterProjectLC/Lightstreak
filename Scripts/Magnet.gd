@@ -41,7 +41,7 @@ func _on_MagnetRight_area_entered(area):
 
 func apply_knockside(area, direction):
 	if area.has_method("set_knockside") and _knockside > Global.get_lane_increase()-5:
-		Audio.play_sound(Audio.shock_hit, 2)
+		Audio.play_sound(Audio.laser, 2)
 		area.set_knockside(direction)
-		area.deal_damage(1)
+		area.take_damage(1)
 		emit_signal('hit_enemy')

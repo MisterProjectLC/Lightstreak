@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/terrormountain.ogg-f118cebdab77dacbb16bec9290b9fe6e.oggstr"
+
+[deps]
+
+source_file="res://Music/terrormountain.ogg"
+dest_files=[ "res://.import/terrormountain.ogg-f118cebdab77dacbb16bec9290b9fe6e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

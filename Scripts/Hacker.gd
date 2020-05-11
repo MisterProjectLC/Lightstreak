@@ -22,11 +22,11 @@ func _process(delta):
 	pass
 
 func generate_char():
-	var rand = randi() % 26
-	var dict = {1:KEY_A, 2:KEY_B, 3:KEY_C, 4:KEY_D, 5:KEY_E, 6:KEY_F, 7:KEY_G, 8:KEY_H, 9:KEY_I, 10:KEY_J,
-		11:KEY_K, 12:KEY_L, 13:KEY_M, 14:KEY_N, 15:KEY_O, 16:KEY_P, 17:KEY_Q, 18:KEY_R, 19:KEY_S, 20:KEY_T,
-		21:KEY_U, 22:KEY_V, 23:KEY_W, 24:KEY_X, 25:KEY_Y, 0:KEY_Z}
-				
+	var dict = [KEY_B, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J,
+		KEY_K, KEY_L, KEY_M, KEY_N, KEY_P, KEY_Q, KEY_R, KEY_S, 
+		KEY_T, KEY_V]
+	var rand = randi() % dict.size()
+
 	return dict[rand]
 
 func change_display_letters():

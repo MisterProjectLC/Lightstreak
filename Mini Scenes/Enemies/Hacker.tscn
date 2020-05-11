@@ -68,5 +68,5 @@ __meta__ = {
 
 [node name="Light" parent="." instance=ExtResource( 5 )]
 [connection signal="changed_stunned" from="." to="." method="_on_Hacker_changed_stunned"]
-[connection signal="hack" from="." to="." method="change_alphabet_letters"]
 [connection signal="hack" from="." to="." method="change_display_letters"]
+[connection signal="hack" from="." to="." method="change_alphabet_letters"]

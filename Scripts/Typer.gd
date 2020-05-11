@@ -31,7 +31,7 @@ func _caret_blinking():
 # ---------------------------------------
 
 
-func _input(event):
+func input_function(event):
 	if event is InputEventKey and event.pressed and _active:
 		# writable input
 		if event.scancode == KEY_SPACE or (event.scancode >= KEY_A and event.scancode <= KEY_Z) or (event.scancode >= KEY_0 and event.scancode <= KEY_9):

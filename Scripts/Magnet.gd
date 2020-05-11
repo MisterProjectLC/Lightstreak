@@ -1,7 +1,7 @@
 extends "res://Scripts/Weapon.gd"
 
 var _fading_speed = 2
-var _knockside = Global.get_lane_increase()
+var _knockside = Global.get_lane_x_increase()
 
 func _ready():
 	_weapon_offset = Vector2(0, -462)
@@ -40,7 +40,7 @@ func _on_MagnetRight_area_entered(area):
 
 
 func apply_knockside(area, direction):
-	if area.has_method("set_knockside") and _knockside > Global.get_lane_increase()-5:
+	if area.has_method("set_knockside") and _knockside > Global.get_lane_x_increase()-5:
 		Audio.play_sound(Audio.laser, 2)
 		area.set_knockside(direction)
 		area.take_damage(1)

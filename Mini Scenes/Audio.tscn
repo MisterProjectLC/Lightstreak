@@ -20,7 +20,7 @@
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource( 2 )
 menu_theme = ExtResource( 6 )
-phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ) ]
+phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 16 ) ]
 laser = [ ExtResource( 12 ), ExtResource( 13 ) ]
 sphere = [ ExtResource( 3 ), ExtResource( 4 ) ]
 shock = [ ExtResource( 10 ) ]

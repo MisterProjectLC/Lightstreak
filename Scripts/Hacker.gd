@@ -7,7 +7,8 @@ export var initial = false
 
 func _ready():
 	._ready()
-	
+
+func ready():
 	if !initial:
 		a = generate_char()
 		b = generate_char()
@@ -15,8 +16,9 @@ func _ready():
 		while a == b:
 			b = generate_char()
 	
-	
-	emit_signal('hack')
+	#emit_signal('hack')
+	change_display_letters()
+	change_alphabet_letters()
 	
 func _process(delta):
 	pass
@@ -35,15 +37,24 @@ func change_display_letters():
 	pass
 	
 func change_alphabet_letters():
-	get_node("/root/Alphabet").add_letter_pair(a, b)
-	
+	activate_hack()
+
 func destroy():
-	get_node("/root/Alphabet").remove_letter_pair(a, b)
+	disable_hack()
 	.destroy()
 
 
 func _on_Hacker_changed_stunned(_new):
 	if _new > 0:
-		get_node("/root/Alphabet").remove_letter_pair(a, b)
+		disable_hack()
 	else:
-		get_node("/root/Alphabet").add_letter_pair(a, b)
+		activate_hack()
+
+
+func activate_hack():
+	get_node("/root/Alphabet").add_letter_pair(a, b)
+	emit_signal('send_alert', (OS.get_scancode_string(a) + ' <-> ' + OS.get_scancode_string(b)), 2)
+	
+func disable_hack():
+	get_node("/root/Alphabet").remove_letter_pair(a, b)
+	emit_signal('send_alert', (OS.get_scancode_string(a) + ' <-> ' + OS.get_scancode_string(b)), 0)

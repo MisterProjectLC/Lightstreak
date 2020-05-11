@@ -2,6 +2,9 @@ extends Area2D
 
 signal pass_threshold
 signal changed_stunned
+signal send_alert
+
+var _lane = 1
 
 var _health
 export(int) var _max_health
@@ -45,6 +48,9 @@ func _process(delta):
 		if _stunned <= 0:
 			emit_signal('changed_stunned', 0)
 		
+
+func set_lane(_lane):
+	self._lane = _lane
 
 func set_health(_new):
 	_health = _new

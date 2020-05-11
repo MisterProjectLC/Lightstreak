@@ -7,11 +7,23 @@ func _ready():
 	get_node("/root/Alphabet").connect('updated_alphabet', self, 'hacker_alert')
 	alerts_list = [find_node('Alert1'), find_node('Alert2'), find_node('Alert3')]
 
+func alert(message, priority):
+	if priority == 0:
+		erase_text(message)
+	else:
+		update_text(message, priority, false)
+
 func hacker_alert(a, b, adding):
 	if adding:
 		update_text(OS.get_scancode_string(a) + ' <-> ' + OS.get_scancode_string(b), 2, false)
 	else:
 		erase_text(OS.get_scancode_string(a) + ' <-> ' + OS.get_scancode_string(b))
+
+func red_alert(lane, incoming):
+	if incoming:
+		update_text('>>> ' + lane + ' <<<', 3, false)
+	else:
+		erase_text('>>> ' + lane + ' <<<')
 
 func damage_alert():
 	update_text('', 100, true)

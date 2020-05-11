@@ -13,6 +13,7 @@ func _ready():
 		Audio.play_music(Audio.menu_theme)
 		$Typer.rect_position = Vector2(117, 641)
 		$Stages.rect_position = Vector2(10, 192)
+		$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
 		pass
 	
 func _process(delta):

@@ -17,6 +17,9 @@ margin_bottom = 285.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Outline" type="TextureRect" parent="."]
 margin_left = -10.0

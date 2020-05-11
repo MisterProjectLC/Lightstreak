@@ -3,6 +3,8 @@ extends Node
 var _cannon_list = ['Cannon1']
 var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 'MagnetTitle']
 
+export var _background_list = []
+
 var _lang
 var _current_phase
 
@@ -16,6 +18,9 @@ func _ready():
 	
 	# setup language
 	_lang = $LangSystem.Language.PORTUGUES
+	
+	# setup arena
+	$Battlefield.set_background(_background_list[_current_phase[Global.Phase.ARENA]])
 	
 	# setup consoles
 	$Console.set_typer_count(_current_phase[Global.Phase.CANNON_COUNT])
@@ -41,6 +46,7 @@ func _ready():
 	# setup minion spawner
 	$MinionSpawner.set_phase_script(_current_phase[Global.Phase.SCRIPT])
 
+# CONSOLE METHODS ----------------------
 
 # tab handler
 func _on_Console_tab_console(typer):
@@ -49,7 +55,6 @@ func _on_Console_tab_console(typer):
 			find_node(_cannon_list[i]).toggle_highlight(true)
 		else:
 			find_node(_cannon_list[i]).toggle_highlight(false)
-
 
 # command handler
 func _on_Console_command_typed(_typer_active, _input):
@@ -60,7 +65,6 @@ func _on_Console_command_typed(_typer_active, _input):
 	# weapon
 	else:
 		_weapon_handler(_typer_active, _input)
-
 
 # weapon 
 func _weapon_handler(_cannon_n, _input):
@@ -94,13 +98,22 @@ func _weapon_handler(_cannon_n, _input):
 			_node.set_text(new_word)
 			break
 
-
 # cannon mover
 func _move_cannon(_cannon_n, _lane):
 	var _cannon = find_node(_cannon_list[_cannon_n])
 	
 	_cannon.set_target_lane(_lane)
-	_cannon.set_target_position(Vector2(get_lane_x(_lane), Global.get_lane_y()))
+	_cannon.set_target_position(Vector2(Global.get_lane_x(_lane), Global.get_lane_y()))
+
+# CANNON METHODS ------------------------
+
+func cannon_damaged(cannon, damage):
+	if damage > 0:
+		$Console.set_damage_typer(_cannon_list.find(cannon.name), true)
+	else:
+		$Console.set_damage_typer(_cannon_list.find(cannon.name), false)
+
+# WIN CONDITIONS --------------------
 
 # Damage / Defeat
 func _on_MinionSpawner_passed_threshold():
@@ -117,10 +130,16 @@ func _on_MinionSpawner_phase_empty(time):
 		get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 
+# MINION SPAWNER -----------------------------
+
 # send back important info to the minion spawner
 func _on_MinionSpawner_minion_spawned(enemy_spawner, enemy_info):
-	enemy_spawner.spawn_enemy(enemy_info[Global.Spawn.MINION], get_lane_x(enemy_info[Global.Spawn.LANE]))
+	enemy_spawner.spawn_enemy(enemy_info[Global.Spawn.MINION], enemy_info[Global.Spawn.LANE])
 
+func send_alert(message, priority):
+	$Alerts.alert(message, priority)
+
+# HELPER FUNCTIONS ---------------------------
 
 # bug fixers
 func _lane(_input):
@@ -133,6 +152,3 @@ func _change_priority(_child, _priority):
 	move_child($Battlefield, 0)
 	move_child($BlackBackground, 0)
 
-
-func get_lane_x(lane):
-	return Global.get_lane_x() + (Global.get_lane_increase() * lane)

@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Cannon.gd" type="Script" id=1]
 [ext_resource path="res://Art/Cannon1.png" type="Texture" id=2]
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=3]
 
-[node name="Cannon" type="Node2D"]
-scale = Vector2( 0.8, 0.8 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.6817, 39.209 )
+
+[node name="Area2D" type="Area2D"]
+monitoring = false
 script = ExtResource( 1 )
 move_speed = 12
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
@@ -17,8 +21,12 @@ __meta__ = {
 
 [node name="Highlight" type="Sprite" parent="."]
 visible = false
-position = Vector2( 0, -425 )
+position = Vector2( 0, -340 )
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

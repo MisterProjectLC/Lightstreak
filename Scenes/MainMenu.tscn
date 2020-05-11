@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/LabelFade.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Art/HackerEnemy.png" type="Texture" id=10]
 [ext_resource path="res://Art/Cannon2.png" type="Texture" id=11]
 [ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=12]
+[ext_resource path="res://Art/RedBattlefield.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -238,6 +239,9 @@ margin_right = 150.624
 margin_bottom = 230.074
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Stage 5" type="TextureRect" parent="Stages/Page 1"]
 margin_left = 64.9666
@@ -246,17 +250,6 @@ margin_right = 151.967
 margin_bottom = 298.561
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Stage 6" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 195.142
-margin_top = 1.72763
-margin_right = 282.143
-margin_bottom = 112.728
-rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -275,6 +268,28 @@ text = "[6   ]
 [10  ]"
 __meta__ = {
 "_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Stage 6" type="TextureRect" parent="Stages/Page 2"]
+margin_left = 55.175
+margin_top = 1.72763
+margin_right = 142.176
+margin_bottom = 112.728
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stage 7" type="TextureRect" parent="Stages/Page 2"]
+margin_left = 55.6668
+margin_top = 49.7993
+margin_right = 683.667
+margin_bottom = 1044.8
+rect_scale = Vector2( 0.056, 0.035 )
+texture = ExtResource( 13 )
+__meta__ = {
 "_edit_use_anchors_": false
 }
 

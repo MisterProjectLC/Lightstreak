@@ -5,7 +5,6 @@ var _phases
 func _ready():
 	var Phase = Global.Phase
 	var Spawn = Global.Spawn
-	var Arena = Global.Arena
 	var Minion = Global.Minion
 	
 	_phases = {1: #009 Trance
@@ -16,7 +15,7 @@ func _ready():
 				Phase.POWER_COUNT:1,
 				Phase.INITIAL_TEXT:'Move 3',
 				Phase.REPLICATE_TEXT:false,
-				Phase.ARENA:Arena.BLUE,
+				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.TROOPER, Spawn.LANE:3}, 
@@ -45,7 +44,7 @@ func _ready():
 				Phase.POWER_COUNT:2,
 				Phase.INITIAL_TEXT:'Dvorak',
 				Phase.REPLICATE_TEXT:true,
-				Phase.ARENA:Arena.BLUE,
+				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:1}, 
@@ -84,7 +83,7 @@ func _ready():
 				Phase.POWER_COUNT:3,
 				Phase.INITIAL_TEXT:'Watt',
 				Phase.REPLICATE_TEXT:true,
-				Phase.ARENA:Arena.BLUE,
+				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1},
@@ -132,7 +131,7 @@ func _ready():
 				Phase.POWER_COUNT:3,
 				Phase.INITIAL_TEXT:'',
 				Phase.REPLICATE_TEXT:false,
-				Phase.ARENA:Arena.BLUE,
+				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.HACKERI, Spawn.LANE:2}, 
@@ -168,7 +167,7 @@ func _ready():
 					{Spawn.TIME:92, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3},
 					]
 				},
-				5: #ReDoin
+				5: #That is where she dances
 				{
 				Phase.GENERATE:true,
 				Phase.DURATION:75,
@@ -176,7 +175,7 @@ func _ready():
 				Phase.POWER_COUNT:3,
 				Phase.INITIAL_TEXT:'Tab',
 				Phase.REPLICATE_TEXT:true,
-				Phase.ARENA:Arena.BLUE,
+				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:2}, 
@@ -217,7 +216,7 @@ func _ready():
 				Phase.POWER_COUNT:4,
 				Phase.INITIAL_TEXT:'Net',
 				Phase.REPLICATE_TEXT:true,
-				Phase.ARENA:Arena.BLUE,
+				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
@@ -283,6 +282,21 @@ func _ready():
 					{Spawn.TIME:136, Spawn.MINION:Minion.TROOPER, Spawn.LANE:2},
 					{Spawn.TIME:138, Spawn.MINION:Minion.TANK, Spawn.LANE:3},
 					{Spawn.TIME:140, Spawn.MINION:Minion.HACKER, Spawn.LANE:5},
+					]
+				},
+				7: #???
+				{
+				Phase.GENERATE:true,
+				Phase.DURATION:75,
+				Phase.CANNON_COUNT:2,
+				Phase.POWER_COUNT:4,
+				Phase.INITIAL_TEXT:'Red',
+				Phase.REPLICATE_TEXT:true,
+				Phase.ARENA:1,
+				Phase.SCRIPT:
+					[
+					{Spawn.TIME:4, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2}, 
+					{Spawn.TIME:10, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
 					]
 				},
 			}

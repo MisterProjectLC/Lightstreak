@@ -2,8 +2,8 @@ extends Node
 
 enum Spawn{TIME, MINION, LANE}
 enum Phase{GENERATE, DURATION, CANNON_COUNT, POWER_COUNT, INITIAL_TEXT, REPLICATE_TEXT, ARENA, SCRIPT}
-enum Minion{TROOPER, TANK, SPEEDER, HACKER, HACKERI}
-enum Arena{BLUE, RED, PURPLE}
+enum Minion{TROOPER, TANK, SPEEDER, HACKER, HACKERI, REDBLAST}
+enum Alert{DAMAGE, HACK, RED}
 
 var language = 0
 var music_volume = 0.7
@@ -58,11 +58,14 @@ func get_debug_enabled():
 func set_debug_enabled(_new):
 	debug_enabled = _new
 
-func get_lane_x():
+func get_lane_x_start():
 	return _lane_x0
 
 func get_lane_y():
 	return _lane_y
 
-func get_lane_increase():
+func get_lane_x_increase():
 	return _lane_x_increase
+
+func get_lane_x(lane):
+	return _lane_x0 + (_lane_x_increase * lane)

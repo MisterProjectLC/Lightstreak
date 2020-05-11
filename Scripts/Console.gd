@@ -28,6 +28,8 @@ func set_input(new_text):
 func set_input_specific(new_text, typer):
 	find_node(typer_list[typer]).set_text(new_text)
 
+func set_damage_typer(typer, damaged):
+	find_node(typer_list[typer]).set_damage(damaged)
 
 func _tab_active():
 	# deactivate this one

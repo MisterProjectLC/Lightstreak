@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Missile.gd" type="Script" id=1]
+[ext_resource path="res://Art/Missile1.png" type="Texture" id=2]
+[ext_resource path="res://Mini Scenes/Weapon/MissileBlast.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.9435, 53.3866 )
+
+[node name="Missile" type="Area2D"]
+script = ExtResource( 1 )
+blast = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light" parent="." instance=ExtResource( 4 )]
+position = Vector2( -0.889509, -1.55463 )
+scale = Vector2( 0.506398, 0.640973 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -1.16248, 0 )
+shape = SubResource( 1 )
+[connection signal="area_entered" from="." to="." method="_on_Missile_area_entered"]

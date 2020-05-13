@@ -290,13 +290,30 @@ func _ready():
 				Phase.DURATION:75,
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:4,
-				Phase.INITIAL_TEXT:'Red',
+				Phase.INITIAL_TEXT:'>',
+				Phase.REPLICATE_TEXT:false,
+				Phase.ARENA:1,
+				Phase.SCRIPT:
+					[
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:2}, 
+					{Spawn.TIME:1, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2}, 
+					]
+				},
+				8: #WAR! Gr1z Forever
+				{
+				Phase.GENERATE:true,
+				Phase.DURATION:75,
+				Phase.CANNON_COUNT:2,
+				Phase.POWER_COUNT:5,
+				Phase.INITIAL_TEXT:'Internet',
 				Phase.REPLICATE_TEXT:true,
 				Phase.ARENA:1,
 				Phase.SCRIPT:
 					[
-					{Spawn.TIME:4, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2}, 
-					{Spawn.TIME:10, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:2}, 
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:0},
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
 					]
 				},
 			}

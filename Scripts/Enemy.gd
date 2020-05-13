@@ -78,7 +78,7 @@ func set_knockback(_new):
 	_knockback = _new
 
 func set_knockside(_new):
-	_knockside = _new*Global.get_lane_increase()
+	_knockside = _new*Global.get_lane_x_increase()
 
 func take_damage(_damage):
 	_health -= _damage

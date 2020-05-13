@@ -1,7 +1,7 @@
 extends Node2D
 
 var _target_position
-var target_lane
+export var target_lane = 1
 
 var _red_color = 0
 var _redding = true

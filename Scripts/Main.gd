@@ -1,7 +1,8 @@
 extends Node
 
 var _cannon_list = ['Cannon1']
-var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 'MagnetTitle']
+var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 'MagnetTitle',
+					'MissileTitle']
 
 export var _background_list = []
 
@@ -48,6 +49,10 @@ func _ready():
 
 # CONSOLE METHODS ----------------------
 
+func _input(event):
+	if event is InputEventKey and event.pressed and event.scancode == KEY_ESCAPE:
+		get_tree().change_scene("res://Scenes/MainMenu.tscn")
+
 # tab handler
 func _on_Console_tab_console(typer):
 	for i in range(_cannon_list.size()):
@@ -61,7 +66,13 @@ func _on_Console_command_typed(_typer_active, _input):
 	# move
 	if _input.left(5) == 'Move ' and _input.length() >= 6 and _lane(_input) != null:
 		_move_cannon(_typer_active, _lane(_input))
-		
+	
+	elif _input.left(1) == '<':
+		shift_cannon(_typer_active, true)
+
+	elif _input.left(1) == '>':
+		shift_cannon(_typer_active, false)
+
 	# weapon
 	else:
 		_weapon_handler(_typer_active, _input)
@@ -104,6 +115,21 @@ func _move_cannon(_cannon_n, _lane):
 	
 	_cannon.set_target_lane(_lane)
 	_cannon.set_target_position(Vector2(Global.get_lane_x(_lane), Global.get_lane_y()))
+	
+func shift_cannon(_cannon_n, _left):
+	var _cannon = find_node(_cannon_list[_cannon_n])
+	var _lane = _cannon.get_target_lane()
+	
+	if _left:
+		if _lane <= 0:
+			return
+		_lane -= 1
+	else:
+		if _lane >= 6:
+			return
+		_lane += 1
+	
+	_move_cannon(_cannon_n, _lane)
 
 # CANNON METHODS ------------------------
 

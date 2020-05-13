@@ -11,5 +11,5 @@ dest_files=[ "res://.import/terrormountain.ogg-f118cebdab77dacbb16bec9290b9fe6e.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

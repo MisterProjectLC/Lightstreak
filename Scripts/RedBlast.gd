@@ -17,6 +17,9 @@ func ready():
 func _on_RedBlast_area_entered(area):
 	if area.has_method("cannon_damage"):
 		area.cannon_damage()
+	
+	if area.has_method("take_damage"):
+		area.take_damage(5)
 
 func _process(delta):
 	if _warning > 0:

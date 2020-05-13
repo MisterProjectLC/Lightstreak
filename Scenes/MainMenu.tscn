@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/LabelFade.gd" type="Script" id=2]
@@ -12,7 +12,8 @@
 [ext_resource path="res://Art/HackerEnemy.png" type="Texture" id=10]
 [ext_resource path="res://Art/Cannon2.png" type="Texture" id=11]
 [ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=12]
-[ext_resource path="res://Art/RedBattlefield.png" type="Texture" id=13]
+[ext_resource path="res://Art/RedIcon.png" type="Texture" id=13]
+[ext_resource path="res://Art/MissileIcon.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -283,12 +284,23 @@ __meta__ = {
 }
 
 [node name="Stage 7" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 55.6668
-margin_top = 49.7993
-margin_right = 683.667
-margin_bottom = 1044.8
-rect_scale = Vector2( 0.056, 0.035 )
+margin_left = 55.8511
+margin_top = 49.1349
+margin_right = 142.851
+margin_bottom = 136.135
+rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stage 8" type="TextureRect" parent="Stages/Page 2"]
+margin_left = 58.6204
+margin_top = 97.0842
+margin_right = 145.62
+margin_bottom = 184.084
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

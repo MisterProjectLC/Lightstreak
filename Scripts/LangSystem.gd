@@ -4,25 +4,32 @@ enum Language{PORTUGUES, ENGLISH, DEUTSCH}
 
 var _vortoj = [['Mini', 'Watt', 'Ego', 'Web', 'Ok'], 
 			['Wrona', 'Dvorak', 'Hacker', 'Turing', 'Kraken', 'Oxford', 'Online', 'Super',
-			'Newton', 'Design'], []]
+			'Newton', 'Design', 'Alien', 'Linux'], 
+			['Internet']]
 var _palavras = [['Caos', 'Triz', 'Fogo', 'Nave', 'Luz', 'Fim', 'Jogo', 'Sol', 'Lua',
 				'Zero', 'Um', 'Dois', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Base',
 				'Hoje', 'Foco', 'Sim', 'Nada', 'Ato', 'Vida', 'Paz', 'Mar',
-				'Tema', 'Era', 'Raio', 'Caso', 'Lei', 'Ar', 'Eco', 'Asa', 'Ata', 'Tom',
-				'Foz', 'Dom', 'Bem', 'Mau', 'Via', 'Som', 'Ira'],
+				'Tema', 'Era', 'Raio', 'Caso', 'Lei', 'Ar', 'Eco', 'Asa', 'Voo', 'Tom',
+				'Foz', 'Dom', 'Bem', 'Mau', 'Via', 'Som', 'Ira', 'Medo'],
 				['Texto', 'Magia', 'Coral', 'Portal', 'Assis', 'Lobato', 'Forum',
 				'Equipe', 'Disco', 'Musica', 'Caneta', 'Terra', 'Marca', 'Tumba',
-				'Codigo', 'Escola', 'Espada', 'Classe', 'Navio', 'Dragao', 'Porta',
-				'Prata', 'Bronze', 'Ferro', 'Carta', 'Disco', 'Tempo', 'Morte',
+				'Codigo', 'Escola', 'Espada', 'Classe', 'Navio', 'Dinamo', 'Porta',
+				'Prata', 'Coluna', 'Ferro', 'Carta', 'Disco', 'Tempo', 'Morte',
 				'Vento', 'Perigo', 'Livro', 'Ataque', 'Regra', 'Estado', 'Animal',
 				'Frota', 'Poder', 'Quatro', 'Cinco', 'Listra', 'Linha', 'Corte', 'Escuro', 
-				'Pauta', 'Coisa', 'Ontem'], []]
-var _words = [['Easy', 'Star', 'Club', 'Card', 'New', 'Far', 'End', 'Time', 'Life', 'City', 'Word', 'Car', 
-			'Run'], 
+				'Pauta', 'Coisa', 'Ontem', 'Torre', 'Fonte', 'Metodo', 'Queda', 'Cidade',
+				'Futuro', 'Marte'], 
+				['Montagem', 'Imperador', 'Aventura', 'Visitante', 'Velocidade', 'Estudante',
+				'Digitacao', 'Holograma', 'Logistica', 'Universo']]
+var _words = [['Easy', 'Star', 'Club', 'Card', 'New', 'Far', 'End', 'Time', 'Life', 'City', 'Word', 
+			'Car', 'Run', 'Font', 'Book', 'Four', 'Mars'], 
 			['Color', 'System', 'Scene', 'Weight', 'Coffee', 'Trial', 'Focus', 'Light',
-				'Debuff', 'School', 'Worker', 'System', 'Death'], []]
-var _worter = [['Wort', 'Zeit', 'Bau', 'Ja', 'Nein', ''], 
-		['Farbe', 'Goethe', 'Faust', 'Werner', 'Feuer', 'Wasser', 'Licht'], []]
+			'Debuff', 'School', 'Worker', 'System', 'Death', 'Earth', 'Realm', 'Speed',
+			'Method', 'Humor'], 
+			['Reference', 'Universe']]
+var _worter = [['Wort', 'Zeit', 'Bau', 'Art', 'Nein', 'Erde', 'Buch', 'Witz', 'Drei'], 
+		['Farbe', 'Goethe', 'Faust', 'Werner', 'Feuer', 'Wasser', 'Licht', 'Weise', 'Schiff'], 
+		['Referenz', 'Universum']]
 
 func _ready():
 	randomize()

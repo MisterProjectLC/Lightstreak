@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/LangSystem.gd" type="Script" id=2]
@@ -22,11 +22,16 @@
 [ext_resource path="res://Mini Scenes/Enemies/Hacker.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Mini Scenes/Enemies/HackerInit.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Mini Scenes/Enemies/RedBlast.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Art/Shotgun2.png" type="Texture" id=23]
 [ext_resource path="res://Mini Scenes/PhaseManager.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=25]
 [ext_resource path="res://Mini Scenes/Weapon/Magnet.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Art/Battlefield3.png" type="Texture" id=27]
 [ext_resource path="res://Art/RedBattlefield.png" type="Texture" id=28]
+[ext_resource path="res://Art/MissileBlastMid.png" type="Texture" id=29]
+[ext_resource path="res://Art/MissileBlastRight.png" type="Texture" id=30]
+[ext_resource path="res://Mini Scenes/Weapon/Missile.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Art/MissileIcon.png" type="Texture" id=32]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -54,15 +59,31 @@ script = ExtResource( 2 )
 
 [node name="PhaseManager" parent="." instance=ExtResource( 24 )]
 
-[node name="BlueBox2" type="ColorRect" parent="."]
-margin_left = 3.11078
-margin_top = 335.274
-margin_right = 299.111
-margin_bottom = 346.274
-color = Color( 0.0823529, 0.258824, 0.670588, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 410.188, 627.197 )
+scale = Vector2( 0.781053, 0.943096 )
+texture = ExtResource( 23 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 435.308, 405.847 )
+scale = Vector2( 0.781053, 0.943096 )
+texture = ExtResource( 30 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 377.901, 405.959 )
+scale = Vector2( 0.781053, 0.943096 )
+texture = ExtResource( 30 )
+flip_h = true
+
+[node name="Sprite4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 577.474, 256.8 )
+scale = Vector2( 0.781053, 0.943096 )
+texture = ExtResource( 29 )
+flip_h = true
 
 [node name="Cannon1" parent="." instance=ExtResource( 5 )]
 position = Vector2( 410, 739.451 )
@@ -72,14 +93,34 @@ highlight = ExtResource( 7 )
 [node name="Cannon2" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 480, 740 )
+target_lane = 2
 sprite = ExtResource( 8 )
 highlight = ExtResource( 9 )
 
 [node name="Cannon3" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 623.732, 739.451 )
+target_lane = 4
 sprite = ExtResource( 10 )
 highlight = ExtResource( 11 )
+
+[node name="BlackBackground2" type="ColorRect" parent="."]
+margin_right = 300.0
+margin_bottom = 794.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlueBox2" type="ColorRect" parent="."]
+margin_left = 3.11078
+margin_top = 335.274
+margin_right = 299.111
+margin_bottom = 346.274
+color = Color( 0.0823529, 0.258824, 0.670588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LaserTitle" parent="." instance=ExtResource( 13 )]
 margin_left = 7.89237
@@ -116,6 +157,16 @@ margin_bottom = -279.886
 sprite = ExtResource( 25 )
 _weapon = ExtResource( 26 )
 _difficulty = 0
+
+[node name="MissileTitle" parent="." instance=ExtResource( 13 )]
+visible = false
+margin_left = 7.45298
+margin_top = 398.628
+margin_right = -414.546
+margin_bottom = -332.372
+sprite = ExtResource( 32 )
+_weapon = ExtResource( 31 )
+_difficulty = 2
 
 [node name="BlueBox" type="ColorRect" parent="."]
 margin_left = 4.0

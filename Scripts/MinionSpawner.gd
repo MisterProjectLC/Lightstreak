@@ -6,6 +6,7 @@ export(PackedScene) var speeder
 export(PackedScene) var hacker
 export(PackedScene) var hacker_init
 export(PackedScene) var red_blast
+export(PackedScene) var bomber
 var enemy_object = {}
 
 var _clock = 0
@@ -23,7 +24,8 @@ signal send_alert
 func _ready():
 	var Minion = Global.Minion
 	enemy_object = {Minion.TROOPER:trooper, Minion.TANK:tank, Minion.SPEEDER:speeder, 
-	Minion.HACKER:hacker, Minion.HACKERI:hacker_init, Minion.REDBLAST:red_blast}
+	Minion.HACKER:hacker, Minion.HACKERI:hacker_init, Minion.REDBLAST:red_blast,
+	Minion.BOMBER:bomber}
 
 
 func _process(delta):

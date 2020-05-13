@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/LangSystem.gd" type="Script" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://Art/MissileBlastRight.png" type="Texture" id=30]
 [ext_resource path="res://Mini Scenes/Weapon/Missile.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Art/MissileIcon.png" type="Texture" id=32]
+[ext_resource path="res://Mini Scenes/Enemies/Bomber.tscn" type="PackedScene" id=33]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -53,6 +54,7 @@ position = Vector2( 40, 0 )
 hacker = ExtResource( 20 )
 hacker_init = ExtResource( 21 )
 red_blast = ExtResource( 22 )
+bomber = ExtResource( 33 )
 
 [node name="LangSystem" type="Node" parent="."]
 script = ExtResource( 2 )

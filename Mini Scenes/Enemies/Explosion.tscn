@@ -1,0 +1,39 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Explosion.gd" type="Script" id=1]
+[ext_resource path="res://Art/Explosion5.png" type="Texture" id=2]
+[ext_resource path="res://Art/Explosion3.png" type="Texture" id=3]
+[ext_resource path="res://Art/Explosion7.png" type="Texture" id=4]
+[ext_resource path="res://Art/Explosion6.png" type="Texture" id=5]
+[ext_resource path="res://Art/Explosion2.png" type="Texture" id=6]
+[ext_resource path="res://Art/Explosion1.png" type="Texture" id=7]
+[ext_resource path="res://Art/Explosion9.png" type="Texture" id=8]
+[ext_resource path="res://Art/Explosion8.png" type="Texture" id=9]
+[ext_resource path="res://Art/Explosion4.png" type="Texture" id=10]
+[ext_resource path="res://Art/Explosion10.png" type="Texture" id=11]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 33.2493
+
+[node name="Explosion" type="Node2D"]
+position = Vector2( 0, 42.1941 )
+script = ExtResource( 1 )
+_animation_frames = [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 11 ) ]
+
+[node name="Explosion" type="Area2D" parent="."]
+position = Vector2( -2.10525, 30.5263 )
+scale = Vector2( 3, 3 )
+
+[node name="Sprite" type="Sprite" parent="Explosion"]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Explosion"]
+shape = SubResource( 1 )
+disabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="area_entered" from="Explosion" to="." method="_on_Explosion_area_entered"]

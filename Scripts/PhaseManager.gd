@@ -307,13 +307,14 @@ func _ready():
 				Phase.POWER_COUNT:5,
 				Phase.INITIAL_TEXT:'Internet',
 				Phase.REPLICATE_TEXT:true,
-				Phase.ARENA:1,
+				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:2}, 
 					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:0},
 					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
 					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
+					{Spawn.TIME:5, Spawn.MINION:Minion.BOMBER, Spawn.LANE:3},
 					]
 				},
 			}

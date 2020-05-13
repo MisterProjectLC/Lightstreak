@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Art/Bomber2Enemy.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Bomber.gd" type="Script" id=2]
+[ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
+[ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Mini Scenes/Enemies/Explosion.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 27.9135
+
+[node name="Bomber" type="Area2D"]
+script = ExtResource( 2 )
+_max_health = 3
+_speed = 2
+explosion = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Paralysis" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 4
+frame = 7
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light" parent="." instance=ExtResource( 4 )]
+
+[node name="Node2D" type="Node2D" parent="."]

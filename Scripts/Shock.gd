@@ -14,6 +14,6 @@ func _on_Shock_area_entered(area):
 	if area.has_method("take_damage"):
 		Audio.play_sound(Audio.shock_hit, 2)
 		area.take_damage(1)
-		area.set_stunned(8)
+		area.set_stunned(15)
 		emit_signal('hit_enemy')
 		queue_free()

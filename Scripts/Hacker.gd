@@ -13,7 +13,8 @@ func ready():
 		a = generate_char()
 		b = generate_char()
 	
-		while a == b:
+		while a == b || Alphabet.check_letter_pair(a, b):
+			a = generate_char()
 			b = generate_char()
 	
 	#emit_signal('hack')

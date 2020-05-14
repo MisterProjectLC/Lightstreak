@@ -51,7 +51,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey and event.pressed and event.scancode == KEY_ESCAPE:
-		get_tree().change_scene("res://Scenes/MainMenu.tscn")
+		leave_game()
 
 # tab handler
 func _on_Console_tab_console(typer):
@@ -153,8 +153,12 @@ func _on_MinionSpawner_passed_threshold():
 # Victory
 func _on_MinionSpawner_phase_empty(time):
 	if _current_phase[Global.Phase.DURATION] <= time:
-		get_tree().change_scene("res://Scenes/MainMenu.tscn")
+		leave_game()
 
+
+func leave_game():
+	Alphabet.reset()
+	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 # MINION SPAWNER -----------------------------
 

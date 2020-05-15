@@ -16,7 +16,7 @@ func _ready():
 		$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
 		pass
 	
-func _process(delta):
+func _process(_delta):
 	for child in moving_children.keys():
 		var object = find_node(child)
 		if object.rect_position != moving_children[child]:

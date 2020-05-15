@@ -44,4 +44,4 @@ func apply_knockside(area, direction):
 		Audio.play_sound(Audio.laser, 2)
 		area.set_knockside(direction)
 		area.take_damage(1)
-		emit_signal('hit_enemy')
+		#emit_signal('hit_enemy')

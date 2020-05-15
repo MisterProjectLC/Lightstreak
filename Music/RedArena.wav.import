@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/RedArena.wav-d7f8c48b888346be40b7a619a5228aa2.sample"
+
+[deps]
+
+source_file="res://Music/RedArena.wav"
+dest_files=[ "res://.import/RedArena.wav-d7f8c48b888346be40b7a619a5228aa2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

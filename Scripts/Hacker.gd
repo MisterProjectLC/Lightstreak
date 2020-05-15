@@ -1,6 +1,5 @@
 extends "res://Scripts/Enemy.gd"
 
-signal hack
 var a = KEY_M
 var b = KEY_V
 export var initial = false
@@ -20,9 +19,6 @@ func ready():
 	#emit_signal('hack')
 	change_display_letters()
 	change_alphabet_letters()
-	
-func _process(delta):
-	pass
 
 func generate_char():
 	var dict = [KEY_B, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J,

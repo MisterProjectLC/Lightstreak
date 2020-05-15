@@ -5,7 +5,7 @@
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15.6817, 39.209 )
+extents = Vector2( 13.9871, 37.1086 )
 
 [node name="Area2D" type="Area2D"]
 monitoring = false
@@ -30,3 +30,4 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+disabled = true

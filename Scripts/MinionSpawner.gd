@@ -60,7 +60,10 @@ func spawn_enemy(enemy_type, lane):
 	_new.set_lane(lane)
 
 	_new.set_position(Vector2(Global.get_lane_x(lane), _spawn_y))
-	_new.connect('pass_threshold', self, 'passed_threshold')
+	
+	for i in _new.get_signal_list().size():
+		if _new.get_signal_list()[i]["name"] == "pass_threshold":
+			_new.connect('pass_threshold', self, 'passed_threshold')
 	
 	if _new.has_method("ready"):
 		_new.ready()

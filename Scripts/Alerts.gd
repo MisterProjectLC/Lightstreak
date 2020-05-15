@@ -51,6 +51,10 @@ func erase_text(text):
 
 func get_available_alert(priority):
 	for alert in alerts_list:
+		if alert.get_priority() == 0:
+			return alert
+	
+	for alert in alerts_list:
 		if alert.get_priority() < priority:
 			return alert
 	return null

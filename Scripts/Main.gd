@@ -1,6 +1,6 @@
 extends Node
 
-var _cannon_list = ['Cannon1']
+var _cannon_list = []
 var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 'MagnetTitle',
 					'MissileTitle']
 
@@ -28,9 +28,10 @@ func _ready():
 	$Console.set_input_specific(_current_phase[Global.Phase.INITIAL_TEXT], _current_phase[Global.Phase.CANNON_COUNT]-1)
 	
 	# setup cannon
-	for i in range(1, _current_phase[Global.Phase.CANNON_COUNT]):
+	for i in range(0, _current_phase[Global.Phase.CANNON_COUNT]):
 		_cannon_list.append("Cannon" + str(i+1))
-		find_node(_cannon_list[i]).set_visible(true)
+		find_node(_cannon_list[i]).activate()
+	find_node(_cannon_list[0]).toggle_highlight(true)
 	
 	# setup weapon lists
 	for i in range(1, _current_phase[Global.Phase.POWER_COUNT]+1):
@@ -134,6 +135,8 @@ func shift_cannon(_cannon_n, _left):
 # CANNON METHODS ------------------------
 
 func cannon_damaged(cannon, damage):
+	print(cannon.name)
+	
 	if damage > 0:
 		$Console.set_damage_typer(_cannon_list.find(cannon.name), true)
 	else:

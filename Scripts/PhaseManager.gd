@@ -284,10 +284,10 @@ func _ready():
 					{Spawn.TIME:140, Spawn.MINION:Minion.HACKER, Spawn.LANE:5},
 					]
 				},
-				7: #???
+				7: # Red Arena
 				{
 				Phase.GENERATE:true,
-				Phase.DURATION:75,
+				Phase.DURATION:84,
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:4,
 				Phase.INITIAL_TEXT:'>',
@@ -296,7 +296,68 @@ func _ready():
 				Phase.SCRIPT:
 					[
 					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:2}, 
-					{Spawn.TIME:1, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2}, 
+					{Spawn.TIME:1, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					{Spawn.TIME:4, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
+					{Spawn.TIME:4, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
+					{Spawn.TIME:7, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:5},
+					{Spawn.TIME:9, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1},
+					{Spawn.TIME:11, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3},
+					{Spawn.TIME:13, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:5},
+					{Spawn.TIME:13, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					
+					{Spawn.TIME:16, Spawn.MINION:Minion.TANK, Spawn.LANE:0},
+					{Spawn.TIME:16, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
+					{Spawn.TIME:19, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					{Spawn.TIME:19, Spawn.MINION:Minion.HACKER, Spawn.LANE:3},
+					{Spawn.TIME:19, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:4},
+					
+					{Spawn.TIME:25, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:27, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1},
+					{Spawn.TIME:27, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:5},
+					{Spawn.TIME:31, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:0},
+					
+					{Spawn.TIME:37, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					{Spawn.TIME:38, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:39, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:5},
+					{Spawn.TIME:43, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:4},
+					{Spawn.TIME:44, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					
+					{Spawn.TIME:46, Spawn.MINION:Minion.TROOPER, Spawn.LANE:0}, 
+					{Spawn.TIME:46, Spawn.MINION:Minion.TROOPER, Spawn.LANE:2}, 
+					{Spawn.TIME:46, Spawn.MINION:Minion.TROOPER, Spawn.LANE:4}, 
+					{Spawn.TIME:46, Spawn.MINION:Minion.TROOPER, Spawn.LANE:6}, 
+					{Spawn.TIME:49, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					{Spawn.TIME:49, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:49, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:5},
+					
+					{Spawn.TIME:54, Spawn.MINION:Minion.TANK, Spawn.LANE:0},
+					{Spawn.TIME:54, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
+					{Spawn.TIME:54, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:0},
+					{Spawn.TIME:57, Spawn.MINION:Minion.TROOPER, Spawn.LANE:1},
+					{Spawn.TIME:57, Spawn.MINION:Minion.TROOPER, Spawn.LANE:5},
+					{Spawn.TIME:57, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					{Spawn.TIME:60, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2},
+					{Spawn.TIME:60, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4},
+					{Spawn.TIME:60, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					{Spawn.TIME:63, Spawn.MINION:Minion.HACKER, Spawn.LANE:3},
+					{Spawn.TIME:63, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:66, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2},
+					{Spawn.TIME:66, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4},
+					{Spawn.TIME:66, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:4},
+					{Spawn.TIME:69, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1},
+					{Spawn.TIME:69, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:5},
+					{Spawn.TIME:69, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:5},
+					{Spawn.TIME:72, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:0},
+					{Spawn.TIME:72, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:6},
+					{Spawn.TIME:72, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:6},
+					
+					#{Spawn.TIME:77, Spawn.MINION:Minion.HACKER, Spawn.LANE:0},
+					#{Spawn.TIME:77, Spawn.MINION:Minion.HACKER, Spawn.LANE:6},
+					{Spawn.TIME:76, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					{Spawn.TIME:77, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					{Spawn.TIME:78, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:79, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:4},
+					{Spawn.TIME:80, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:5},
 					]
 				},
 				8: #WAR! Gr1z Forever

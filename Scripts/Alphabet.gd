@@ -1,6 +1,6 @@
 extends Node
 
-var alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:">"}
+var alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:"→"}
 signal updated_alphabet
 
 func get_letter(input):

@@ -24,10 +24,7 @@ func _process(delta):
 		_knockback -= 4*delta
 	
 	# Knockside
-	if abs(_knockside) > 2:
-		var speed = 200*delta*(abs(_knockside)/_knockside)
-		position.x += speed
-		_knockside -= speed
+	_manage_knockside(delta)
 	
 	# Movement
 	if _stunned <= 0:
@@ -47,10 +44,19 @@ func _process(delta):
 		
 		if _stunned <= 0:
 			emit_signal('changed_stunned', 0)
-		
+
+func _manage_knockside(delta):
+	# Knockside
+	if abs(_knockside) > 2:
+		var speed = 200*delta*(abs(_knockside)/_knockside)
+		position.x += speed
+		_knockside -= speed
 
 func set_lane(_lane):
 	self._lane = _lane
+
+func get_lane():
+	return _lane
 
 func set_health(_new):
 	_health = _new
@@ -79,6 +85,7 @@ func set_knockback(_new):
 
 func set_knockside(_new):
 	_knockside = _new*Global.get_lane_x_increase()
+	set_lane(_lane+_new)
 
 func take_damage(_damage):
 	_health -= _damage

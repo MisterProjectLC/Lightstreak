@@ -1,16 +1,20 @@
 extends Node
 
 var _cannon_list = []
-var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 'MagnetTitle',
-					'MissileTitle']
+var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 
+					'MagnetTitle','MissileTitle', 'BlastTitle', 
+					'MachineTitle', 'DispTitle', 'LightTitle']
 
 export var _background_list = []
+export(PackedScene) var heylook
 
 var _lang
 var _current_phase
 
 var player_health = 3
 
+signal cannon_moved
+signal weapon_activated
 
 func _ready():
 	# setup phase
@@ -47,6 +51,10 @@ func _ready():
 	
 	# setup minion spawner
 	$MinionSpawner.set_phase_script(_current_phase[Global.Phase.SCRIPT])
+	
+	# setup tutorial
+	if Global.get_current_phase() == 1:
+		summon_heylook()
 
 # CONSOLE METHODS ----------------------
 
@@ -67,6 +75,7 @@ func _on_Console_command_typed(_typer_active, _input):
 	# move
 	if _input.left(5) == 'Move ' and _input.length() >= 6 and _lane(_input) != null:
 		_move_cannon(_typer_active, _lane(_input))
+		emit_signal("cannon_moved")
 	
 	elif _input.left(1) == '<':
 		shift_cannon(_typer_active, true)
@@ -84,6 +93,7 @@ func _weapon_handler(_cannon_n, _input):
 	
 	for _weapon_title in _weapon_list:
 		if find_node(_weapon_title).get_text() == _input:
+			emit_signal("weapon_activated")
 			var _node = find_node(_weapon_title)
 			# summon weapon
 			var _new_weapon = _node.get_weapon().instance()
@@ -173,6 +183,15 @@ func send_alert(message, priority):
 	$Alerts.alert(message, priority)
 
 # HELPER FUNCTIONS ---------------------------
+
+func summon_heylook():
+	var new = heylook.instance()
+	add_child(new)
+	move_child(new, get_child_count()-1)
+	new.rect_position.x = 9
+	new.rect_position.y = 607
+	connect('cannon_moved', new, 'start')
+	connect('weapon_activated', new, 'destroy')
 
 # bug fixers
 func _lane(_input):

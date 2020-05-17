@@ -1,8 +1,9 @@
 extends Node
 
 var _cannon_list = []
-var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 'MagnetTitle',
-					'MissileTitle']
+var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 
+					'MagnetTitle','MissileTitle', 'BlastTitle', 
+					'MachineTitle', 'DispTitle', 'LightTitle']
 
 export var _background_list = []
 export(PackedScene) var heylook

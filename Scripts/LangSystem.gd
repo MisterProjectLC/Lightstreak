@@ -3,9 +3,9 @@ extends Node
 enum Language{PORTUGUES, ENGLISH, DEUTSCH}
 
 var _vortoj = [['Mini', 'Watt', 'Ego', 'Web', 'Ok'], 
-			['Wrona', 'Dvorak', 'Hacker', 'Turing', 'Kraken', 'Oxford', 'Online', 'Super',
+			['Wrona', 'Hacker', 'Turing', 'Kraken', 'Oxford', 'Online', 'Super',
 			'Newton', 'Design', 'Alien', 'Linux'], 
-			['Internet']]
+			[]]
 var _palavras = [['Caos', 'Triz', 'Fogo', 'Nave', 'Luz', 'Fim', 'Jogo', 'Sol', 'Lua',
 				'Zero', 'Um', 'Dois', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez', 'Base',
 				'Hoje', 'Foco', 'Sim', 'Nada', 'Ato', 'Vida', 'Paz', 'Mar',
@@ -14,13 +14,13 @@ var _palavras = [['Caos', 'Triz', 'Fogo', 'Nave', 'Luz', 'Fim', 'Jogo', 'Sol', '
 				['Texto', 'Magia', 'Coral', 'Portal', 'Assis', 'Lobato', 'Forum',
 				'Equipe', 'Disco', 'Musica', 'Caneta', 'Terra', 'Marca', 'Tumba',
 				'Codigo', 'Escola', 'Espada', 'Classe', 'Navio', 'Dinamo', 'Porta',
-				'Prata', 'Coluna', 'Ferro', 'Carta', 'Disco', 'Tempo', 'Morte',
+				'Prata', 'Coluna', 'Teste', 'Carta', 'Disco', 'Tempo', 'Morte',
 				'Vento', 'Perigo', 'Livro', 'Ataque', 'Regra', 'Estado', 'Animal',
 				'Frota', 'Poder', 'Quatro', 'Cinco', 'Listra', 'Linha', 'Corte', 'Escuro', 
 				'Pauta', 'Coisa', 'Ontem', 'Torre', 'Fonte', 'Metodo', 'Queda', 'Cidade',
-				'Futuro', 'Marte'], 
+				'Futuro', 'Marte', 'Orbita'], 
 				['Montagem', 'Imperador', 'Aventura', 'Visitante', 'Velocidade', 'Estudante',
-				'Digitacao', 'Holograma', 'Logistica', 'Universo']]
+				'Digitacao', 'Holograma', 'Logistica', 'Universo', 'Silencio', 'Quadrado']]
 var _words = [['Easy', 'Star', 'Club', 'Card', 'New', 'Far', 'End', 'Time', 'Life', 'City', 'Word', 
 			'Car', 'Run', 'Font', 'Book', 'Four', 'Mars'], 
 			['Color', 'System', 'Scene', 'Weight', 'Coffee', 'Trial', 'Focus', 'Light',

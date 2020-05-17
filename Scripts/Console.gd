@@ -14,7 +14,11 @@ func _input(event):
 	if event is InputEventKey and event.pressed:
 		# tab
 		if event.scancode == KEY_TAB:
-			_tab_active()
+			_tab_active(true)
+		
+		# tab
+		if event.scancode == KEY_SHIFT:
+			_tab_active(false)
 
 func set_typer_count(count):
 	for i in range(1, count):
@@ -31,14 +35,19 @@ func set_input_specific(new_text, typer):
 func set_damage_typer(typer, damaged):
 	find_node(typer_list[typer]).set_damage(damaged)
 
-func _tab_active():
+func _tab_active(forward):
 	# deactivate this one
 	find_node(typer_list[typer_active]).activate_selected(false)
 	
 	# advance to next console
-	typer_active += 1
-	if typer_active >= typer_list.size():
-		typer_active = 0
+	if forward:
+		typer_active += 1
+		if typer_active >= typer_list.size():
+			typer_active = 0
+	else:
+		typer_active -= 1
+		if typer_active < 0:
+			typer_active = typer_list.size()-1
 	
 	# activate next one
 	set_input(find_node(typer_list[typer_active]).get_text())

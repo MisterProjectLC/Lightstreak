@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/LabelFade.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=12]
 [ext_resource path="res://Art/RedIcon.png" type="Texture" id=13]
 [ext_resource path="res://Art/MissileIcon.png" type="Texture" id=14]
+[ext_resource path="res://Art/BlinkEnemy.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -305,6 +306,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Stage 9" type="TextureRect" parent="Stages/Page 2"]
+margin_left = 57.594
+margin_top = 140.1
+margin_right = 111.594
+margin_bottom = 195.1
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Page 3" type="Label" parent="Stages"]
 margin_left = 271.074
 margin_top = 47.9543
@@ -331,9 +343,7 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "[16  ] 
 [17  ]
-[18  ]
-[19  ]
-[20  ]"
+[18  ]"
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false

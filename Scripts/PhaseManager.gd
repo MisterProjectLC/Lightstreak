@@ -41,7 +41,7 @@ func _ready():
 				Phase.GENERATE:true,
 				Phase.DURATION:84,
 				Phase.CANNON_COUNT:1,
-				Phase.POWER_COUNT:2,
+				Phase.POWER_COUNT:6,
 				Phase.INITIAL_TEXT:'Dvorak',
 				Phase.REPLICATE_TEXT:true,
 				Phase.ARENA:0,
@@ -363,7 +363,7 @@ func _ready():
 				8: #WAR! Gr1z Forever
 				{
 				Phase.GENERATE:true,
-				Phase.DURATION:130,
+				Phase.DURATION:122,
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:5,
 				Phase.INITIAL_TEXT:'Internet',
@@ -447,6 +447,28 @@ func _ready():
 					{Spawn.TIME:121, Spawn.MINION:Minion.BOMBER, Spawn.LANE:5},
 					{Spawn.TIME:122, Spawn.MINION:Minion.BOMBER, Spawn.LANE:0},
 					{Spawn.TIME:122, Spawn.MINION:Minion.BOMBER, Spawn.LANE:6},
+					]
+				},
+				9: # Hugh Theme Remix
+				{
+				Phase.GENERATE:true,
+				Phase.DURATION:130,
+				Phase.CANNON_COUNT:2,
+				Phase.POWER_COUNT:5,
+				Phase.INITIAL_TEXT:'',
+				Phase.REPLICATE_TEXT:true,
+				Phase.ARENA:0,
+				Phase.SCRIPT:
+					[
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:0}, 
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:2},
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
+					{Spawn.TIME:4, Spawn.MINION:Minion.TROOPER, Spawn.LANE:1}, 
+					{Spawn.TIME:4, Spawn.MINION:Minion.TROOPER, Spawn.LANE:3},
+					{Spawn.TIME:4, Spawn.MINION:Minion.TROOPER, Spawn.LANE:5},
+					{Spawn.TIME:9, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:6},
+					{Spawn.TIME:10, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4},
 					]
 				},
 			}

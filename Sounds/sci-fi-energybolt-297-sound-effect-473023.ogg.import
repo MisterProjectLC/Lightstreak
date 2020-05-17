@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sci-fi-energybolt-297-sound-effect-473023.ogg-21eea43152bff405106f2e5d59265371.oggstr"
+
+[deps]
+
+source_file="res://Sounds/sci-fi-energybolt-297-sound-effect-473023.ogg"
+dest_files=[ "res://.import/sci-fi-energybolt-297-sound-effect-473023.ogg-21eea43152bff405106f2e5d59265371.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

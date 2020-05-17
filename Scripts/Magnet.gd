@@ -5,7 +5,7 @@ var _knockside = Global.get_lane_x_increase()
 
 func _ready():
 	_weapon_offset = Vector2(0, -462)
-	Audio.play_sound(Audio.laser, 1)
+	Audio.play_sound(Audio.magnet, 1)
 
 
 func _process(delta):
@@ -41,7 +41,7 @@ func _on_MagnetRight_area_entered(area):
 
 func apply_knockside(area, direction):
 	if area.has_method("set_knockside") and _knockside > Global.get_lane_x_increase()-5:
-		Audio.play_sound(Audio.laser, 2)
+		#Audio.play_sound(Audio.magnet, 2)
 		area.set_knockside(direction)
 		area.take_damage(1)
 		#emit_signal('hit_enemy')

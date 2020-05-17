@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PulseMagnet.ogg-930709fd2eea5c3c6c03644e181448fd.oggstr"
+
+[deps]
+
+source_file="res://Sounds/PulseMagnet.ogg"
+dest_files=[ "res://.import/PulseMagnet.ogg-930709fd2eea5c3c6c03644e181448fd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

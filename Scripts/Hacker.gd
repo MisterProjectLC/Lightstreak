@@ -4,6 +4,8 @@ var a = KEY_M
 var b = KEY_V
 export var initial = false
 
+signal hack
+
 func _ready():
 	._ready()
 

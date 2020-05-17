@@ -6,10 +6,14 @@ export var laser = []
 export var sphere = []
 export var shock = []
 export var shock_hit = []
+export var magnet = []
+export var missile_hit = []
+export var bomber = []
 export var player_damage = []
 export var alert = []
+export var red_arena = []
 
-var sounds = ['Sound', 'Sound2', 'Sound3']
+var sounds = ['Sound', 'Sound2', 'Sound3', 'Sound4']
 
 func play_music(path):
 	stream = path

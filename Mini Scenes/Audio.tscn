@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Sounds/Musket Fire-SoundBible.com-2066012668.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scripts/Audio.gd" type="Script" id=2]
@@ -16,8 +16,12 @@
 [ext_resource path="res://Music/numa numa.ogg" type="AudioStream" id=14]
 [ext_resource path="res://Sounds/Alert.ogg" type="AudioStream" id=15]
 [ext_resource path="res://Music/terrormountain2.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Music/111401__Kriz____Forever.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Music/KrizForever.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Music/RedArena2.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Sounds/PulseMagnet.ogg" type="AudioStream" id=19]
+[ext_resource path="res://Sounds/sci-fi-energybolt-297-sound-effect-473023.ogg" type="AudioStream" id=20]
+[ext_resource path="res://Sounds/Blast-SoundBible.com-2068539061.ogg" type="AudioStream" id=21]
+[ext_resource path="res://Sounds/Impact.ogg" type="AudioStream" id=22]
 
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource( 2 )
@@ -27,11 +31,17 @@ laser = [ ExtResource( 12 ), ExtResource( 13 ) ]
 sphere = [ ExtResource( 3 ), ExtResource( 4 ) ]
 shock = [ ExtResource( 10 ) ]
 shock_hit = [ ExtResource( 11 ) ]
+magnet = [ ExtResource( 19 ) ]
+missile_hit = [ ExtResource( 20 ) ]
+bomber = [ ExtResource( 21 ) ]
 player_damage = [ ExtResource( 1 ) ]
 alert = [ ExtResource( 15 ) ]
+red_arena = [ ExtResource( 22 ) ]
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 
 [node name="Sound2" type="AudioStreamPlayer" parent="."]
 
 [node name="Sound3" type="AudioStreamPlayer" parent="."]
+
+[node name="Sound4" type="AudioStreamPlayer" parent="."]

@@ -28,7 +28,7 @@ func _process(delta):
 	
 	if _warned == false:
 		_warned = true
-		Audio.play_sound(Audio.laser, 2)
+		Audio.play_sound(Audio.red_arena, 2)
 		$RedBlast/Collision.disabled = false
 	
 	if _fading:

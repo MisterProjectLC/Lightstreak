@@ -13,7 +13,7 @@
 [ext_resource path="res://Art/Explosion10.png" type="Texture" id=11]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 33.2493
+radius = 35.1913
 
 [node name="Explosion" type="Node2D"]
 position = Vector2( 0, 42.1941 )

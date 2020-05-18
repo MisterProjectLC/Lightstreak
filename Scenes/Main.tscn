@@ -35,8 +35,8 @@
 [ext_resource path="res://Mini Scenes/Enemies/Bomber.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Mini Scenes/HeyLook.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Mini Scenes/Enemies/Slick.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Mini Scenes/Weapon/Blast.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Art/Shotgun.png" type="Texture" id=37]
+[ext_resource path="res://Mini Scenes/Weapon/Bomb.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Art/BombIcon.png" type="Texture" id=37]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -131,33 +131,30 @@ __meta__ = {
 }
 
 [node name="LaserTitle" parent="." instance=ExtResource( 13 )]
-margin_left = 9.15284
-margin_top = 607.434
-margin_right = -412.847
-margin_bottom = -123.566
+margin_left = 8.45451
+margin_top = 610.926
+margin_right = -413.545
+margin_bottom = -120.074
 _weapon = ExtResource( 14 )
 
 [node name="SphereTitle" parent="." instance=ExtResource( 13 )]
-visible = false
 margin_left = 9.3734
-margin_top = 556.596
+margin_top = 560.088
 margin_right = -412.626
-margin_bottom = -174.404
+margin_bottom = -170.912
 sprite = ExtResource( 15 )
 _weapon = ExtResource( 16 )
 
 [node name="ShockTitle" parent="." instance=ExtResource( 13 )]
-visible = false
 margin_left = 8.7107
-margin_top = 507.345
+margin_top = 509.44
 margin_right = -413.288
-margin_bottom = -223.655
+margin_bottom = -221.56
 sprite = ExtResource( 19 )
 _weapon = ExtResource( 17 )
 _difficulty = 0
 
 [node name="MagnetTitle" parent="." instance=ExtResource( 13 )]
-visible = false
 margin_left = 8.94335
 margin_top = 458.026
 margin_right = -413.056
@@ -167,49 +164,45 @@ _weapon = ExtResource( 26 )
 _difficulty = 0
 
 [node name="MissileTitle" parent="." instance=ExtResource( 13 )]
-visible = false
 margin_left = 9.06641
-margin_top = 408.338
+margin_top = 407.011
 margin_right = -412.933
-margin_bottom = -322.662
+margin_bottom = -323.989
 sprite = ExtResource( 32 )
 _weapon = ExtResource( 31 )
 _difficulty = 2
 
-[node name="BlastTitle" parent="." instance=ExtResource( 13 )]
+[node name="BombTitle" parent="." instance=ExtResource( 13 )]
 margin_left = 9.25822
-margin_top = 357.594
+margin_top = 356.267
 margin_right = -412.741
-margin_bottom = -373.406
+margin_bottom = -374.733
 sprite = ExtResource( 37 )
 _weapon = ExtResource( 36 )
 
 [node name="MachineTitle" parent="." instance=ExtResource( 13 )]
-visible = false
 margin_left = 7.62922
-margin_top = 308.378
+margin_top = 305.061
 margin_right = -414.37
-margin_bottom = -422.622
+margin_bottom = -425.939
 sprite = ExtResource( 32 )
 _weapon = ExtResource( 31 )
 _difficulty = 2
 
 [node name="DispTitle" parent="." instance=ExtResource( 13 )]
-visible = false
 margin_left = 8.44373
-margin_top = 256.142
+margin_top = 254.152
 margin_right = -413.555
-margin_bottom = -474.858
+margin_bottom = -476.848
 sprite = ExtResource( 32 )
 _weapon = ExtResource( 31 )
 _difficulty = 2
 
 [node name="LightTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 7.62922
-margin_top = 206.457
-margin_right = -414.37
-margin_bottom = -524.543
+margin_left = 8.01306
+margin_top = 203.337
+margin_right = -413.986
+margin_bottom = -527.663
 sprite = ExtResource( 32 )
 _weapon = ExtResource( 31 )
 _difficulty = 2

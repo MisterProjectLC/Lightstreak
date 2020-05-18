@@ -2,7 +2,7 @@ extends Node
 
 var _cannon_list = []
 var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 
-					'MagnetTitle','MissileTitle', 'BlastTitle', 
+					'MagnetTitle','MissileTitle', 'BombTitle', 
 					'MachineTitle', 'DispTitle', 'LightTitle']
 
 export var _background_list = []

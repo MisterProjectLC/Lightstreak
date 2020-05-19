@@ -11,9 +11,5 @@ dest_files=[ "res://.import/KrizForever.ogg-23500e85e504ec412bc18a568eb9b99d.ogg
 
 [params]
 
-<<<<<<< HEAD
-loop=true
-=======
 loop=false
->>>>>>> 3d89e829e0567072bf21751b33cc8ab5b74d303b
 loop_offset=0

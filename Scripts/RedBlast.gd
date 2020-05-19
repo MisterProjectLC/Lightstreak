@@ -22,25 +22,36 @@ func _on_RedBlast_area_entered(area):
 		area.take_damage(5)
 
 func _process(delta):
+	if _fading:
+		if $RedBlast/Sprite.get_modulate().a <= 0.1:
+			if _warned  == true:
+				emit_signal('send_alert', (">>>" + str(_lane) + "<<<"), 0)
+				queue_free()
+			else:
+				_fading = false
+		$RedBlast/Sprite.set_modulate($RedBlast/Sprite.get_modulate() + Color(0, 0, 0, -delta*_fading_speed))
+	
+	else:
+		if $RedBlast/Sprite.get_modulate().a >= 0.5:
+			if _warned  == false or $RedBlast/Sprite.get_modulate().a >= 1:
+				_fading = true
+	
+		if _warned == false:
+			$RedBlast/Sprite.set_modulate($RedBlast/Sprite.get_modulate() + Color(0, 0, 0, 5*delta*_fading_speed))
+		else:
+			$RedBlast/Sprite.set_modulate($RedBlast/Sprite.get_modulate() + Color(0, 0, 0, 15*delta*_fading_speed))
+	
 	if _warning > 0:
 		_warning -= delta
 		return
 	
 	if _warned == false:
 		_warned = true
-		Audio.play_sound(Audio.red_arena, 2)
+		Audio.play_sound(Audio.red_arena)
 		$RedBlast/Collision.disabled = false
-	
-	if _fading:
-		$RedBlast/Sprite.set_modulate($RedBlast/Sprite.get_modulate() + Color(0, 0, 0, -delta*_fading_speed))
-		if $RedBlast/Sprite.get_modulate().a <= 0.1:
-			emit_signal('send_alert', (">>>" + str(_lane) + "<<<"), 0)
-			queue_free()
-	else:
-		$RedBlast/Sprite.set_modulate($RedBlast/Sprite.get_modulate() + Color(0, 0, 0, delta*15*_fading_speed))
-		if $RedBlast/Sprite.get_modulate().a >= 1:
-			_fading = true
-			#$RedBlast/Collision.disabled = true
+		$RedBlast/Sprite.set_modulate(Color($RedBlast/Sprite.get_modulate().r, $RedBlast/Sprite.get_modulate().g, 
+										$RedBlast/Sprite.get_modulate().b, 0))
+		_fading = false
 
 
 func set_lane(_lane):

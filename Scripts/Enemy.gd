@@ -18,6 +18,9 @@ func _ready():
 	set_health(_max_health)
 
 func _process(delta):
+	pass
+
+func process(delta):
 	# Knockback
 	if _knockback > 0:
 		position.y -= _knockback*25*delta
@@ -32,6 +35,7 @@ func _process(delta):
 		position.y += _speed*25*delta
 	
 		if position.y > 850:
+			print("pass")
 			emit_signal("pass_threshold")
 			destroy()
 	else:

@@ -5,7 +5,7 @@ var _knockside = Global.get_lane_x_increase()
 
 func _ready():
 	_weapon_offset = Vector2(0, -462)
-	Audio.play_sound(Audio.magnet, 1)
+	Audio.play_sound(Audio.magnet)
 
 
 func _process(delta):

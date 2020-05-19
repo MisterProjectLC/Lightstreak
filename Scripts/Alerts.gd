@@ -4,7 +4,7 @@ var alerts_list = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("/root/Alphabet").connect('updated_alphabet', self, 'hacker_alert')
+	#get_node("/root/Alphabet").connect('updated_alphabet', self, 'hacker_alert')
 	alerts_list = [find_node('Alert1'), find_node('Alert2'), find_node('Alert3')]
 
 func alert(message, priority):
@@ -13,23 +13,11 @@ func alert(message, priority):
 	else:
 		update_text(message, priority, false)
 
-func hacker_alert(a, b, adding):
-	if adding:
-		update_text(OS.get_scancode_string(a) + ' <-> ' + OS.get_scancode_string(b), 2, false)
-	else:
-		erase_text(OS.get_scancode_string(a) + ' <-> ' + OS.get_scancode_string(b))
-
-func red_alert(lane, incoming):
-	if incoming:
-		update_text('>>> ' + lane + ' <<<', 3, false)
-	else:
-		erase_text('>>> ' + lane + ' <<<')
-
 func damage_alert():
 	update_text('', 100, true)
 
 func update_text(text, priority, dmg):
-	Audio.play_sound(Audio.alert, 3)
+	Audio.play_sound(Audio.alert)
 	var alert = get_available_alert(priority)
 	if alert == null:
 		return

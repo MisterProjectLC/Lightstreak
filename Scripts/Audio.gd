@@ -13,7 +13,10 @@ export var player_damage = []
 export var alert = []
 export var red_arena = []
 
-var sounds = ['Sound', 'Sound2', 'Sound3', 'Sound4']
+var players = []
+
+func _ready():
+	players = get_children()
 
 func play_music(path):
 	stream = path
@@ -23,7 +26,12 @@ func play_music(path):
 func play_phase_theme(index):
 	play_music(phase_themes[index])
 
-func play_sound(sound_list, player):
-	find_node(sounds[player-1]).stream = sound_list[rand_range(0, sound_list.size())]
-	find_node(sounds[player-1]).playing = true
-	find_node(sounds[player-1]).volume_db = linear2db(Global.get_sounds_volume())
+func play_sound(sound_list):
+	var the_player = players[players.size()-1]
+	for player in players:
+		if !player.playing:
+			the_player = player
+	
+	the_player.stream = sound_list[rand_range(0, sound_list.size())]
+	the_player.playing = true
+	the_player.volume_db = linear2db(Global.get_sounds_volume())

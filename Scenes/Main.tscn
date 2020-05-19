@@ -138,6 +138,7 @@ margin_bottom = -120.074
 _weapon = ExtResource( 14 )
 
 [node name="SphereTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 9.3734
 margin_top = 560.088
 margin_right = -412.626
@@ -146,6 +147,7 @@ sprite = ExtResource( 15 )
 _weapon = ExtResource( 16 )
 
 [node name="ShockTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 8.7107
 margin_top = 509.44
 margin_right = -413.288
@@ -155,6 +157,7 @@ _weapon = ExtResource( 17 )
 _difficulty = 0
 
 [node name="MagnetTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 8.94335
 margin_top = 458.026
 margin_right = -413.056
@@ -164,6 +167,7 @@ _weapon = ExtResource( 26 )
 _difficulty = 0
 
 [node name="MissileTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 9.06641
 margin_top = 407.011
 margin_right = -412.933
@@ -173,6 +177,7 @@ _weapon = ExtResource( 31 )
 _difficulty = 2
 
 [node name="BombTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 9.25822
 margin_top = 356.267
 margin_right = -412.741
@@ -181,6 +186,7 @@ sprite = ExtResource( 37 )
 _weapon = ExtResource( 36 )
 
 [node name="MachineTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 7.62922
 margin_top = 305.061
 margin_right = -414.37
@@ -190,6 +196,7 @@ _weapon = ExtResource( 31 )
 _difficulty = 2
 
 [node name="DispTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 8.44373
 margin_top = 254.152
 margin_right = -413.555
@@ -199,6 +206,7 @@ _weapon = ExtResource( 31 )
 _difficulty = 2
 
 [node name="LightTitle" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 8.01306
 margin_top = 203.337
 margin_right = -413.986

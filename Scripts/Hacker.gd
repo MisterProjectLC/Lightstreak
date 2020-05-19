@@ -22,6 +22,9 @@ func ready():
 	change_display_letters()
 	change_alphabet_letters()
 
+func _process(delta):
+	process(delta)
+
 func generate_char():
 	var dict = [KEY_B, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J,
 		KEY_K, KEY_L, KEY_M, KEY_N, KEY_P, KEY_Q, KEY_R, KEY_S, 

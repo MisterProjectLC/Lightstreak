@@ -63,5 +63,5 @@ func get_target_lane():
 	return target_lane
 
 func cannon_damage():
-	_damaged = 10
+	_damaged = 4
 	emit_signal("damaged", self, _damaged)

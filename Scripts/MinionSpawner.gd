@@ -42,7 +42,6 @@ func _process(delta):
 			if _last_spawned < _phase_script.size() and _phase_script[_last_spawned][Global.Spawn.TIME] == _time:
 				emit_signal("minion_spawned", self, _phase_script[_last_spawned])
 				_last_spawned += 1
-				print(_time)
 			else:
 				break
 				
@@ -65,6 +64,7 @@ func spawn_enemy(enemy_type, lane):
 	for i in _new.get_signal_list().size():
 		if _new.get_signal_list()[i]["name"] == "pass_threshold":
 			_new.connect('pass_threshold', self, 'passed_threshold')
+			break
 	
 	if _new.has_method("ready"):
 		_new.ready()
@@ -72,7 +72,7 @@ func spawn_enemy(enemy_type, lane):
 
 func passed_threshold():
 	emit_signal("passed_threshold")
-	
+
 func set_phase_script(_phase_script):
 	self._phase_script = _phase_script
 

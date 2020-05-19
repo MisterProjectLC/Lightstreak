@@ -27,4 +27,3 @@ scale = Vector2( 0.4, 0.4 )
 visible = false
 position = Vector2( -1.16248, 0 )
 shape = SubResource( 1 )
-[connection signal="area_entered" from="." to="." method="_on_Missile_area_entered"]

@@ -8,7 +8,7 @@ export(PackedScene) var blast
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_weapon_offset = Vector2(0, -10)
-	Audio.play_sound(Audio.sphere, 1)
+	Audio.play_sound(Audio.sphere)
 
 func _process(delta):
 	# frames
@@ -29,5 +29,5 @@ func _on_Missile_area_entered(area):
 		
 		var new = blast.instance()
 		new.position = position
-		get_parent().add_child(new)
+		get_parent().call_deferred("add_child", new)
 		queue_free()

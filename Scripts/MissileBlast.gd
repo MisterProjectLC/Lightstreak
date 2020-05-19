@@ -10,7 +10,7 @@ var distance_speed = 1600
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_weapon_offset = Vector2(0, -462)
-	Audio.play_sound(Audio.missile_hit, 2)
+	Audio.play_sound(Audio.missile_hit)
 
 func _process(delta):
 	if distance_to_go > 0:

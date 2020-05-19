@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Sounds/Musket Fire-SoundBible.com-2066012668.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scripts/Audio.gd" type="Script" id=2]
@@ -22,11 +22,13 @@
 [ext_resource path="res://Sounds/sci-fi-energybolt-297-sound-effect-473023.ogg" type="AudioStream" id=20]
 [ext_resource path="res://Sounds/Blast-SoundBible.com-2068539061.ogg" type="AudioStream" id=21]
 [ext_resource path="res://Sounds/Impact.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Music/HeavysPizzaSong.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Music/SurpriseButtsecks.ogg" type="AudioStream" id=24]
 
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource( 2 )
 menu_theme = ExtResource( 6 )
-phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ) ]
+phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 23 ) ]
 laser = [ ExtResource( 12 ), ExtResource( 13 ) ]
 sphere = [ ExtResource( 3 ), ExtResource( 4 ) ]
 shock = [ ExtResource( 10 ) ]

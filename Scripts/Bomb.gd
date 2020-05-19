@@ -29,7 +29,6 @@ func _explode():
 	var new = blast.instance()
 	new.position = position
 	new.set_modulate(Color(0, 1, 0.78, 1))
-	new.scale.y *= 1.3
-	new.scale.x *= 1.15
+	new.scale *= 1.37
 	get_parent().add_child(new)
 	queue_free()

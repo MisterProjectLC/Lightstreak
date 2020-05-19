@@ -6,7 +6,7 @@ export var _animation_frames = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Audio.play_sound(Audio.sphere, 2)
+	Audio.play_sound(Audio.sphere)
 	$Explosion/Sprite.texture = _animation_frames[0]
 
 func _process(delta):

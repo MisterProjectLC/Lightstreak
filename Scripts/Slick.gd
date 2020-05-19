@@ -1,20 +1,29 @@
 extends "res://Scripts/Enemy.gd"
 
-
-var _timer = 0
+var _timer = 2
 
 func _process(delta):
-	if _timer > 0:
-		_timer -= delta
-	else:
-		_timer = 2
-		
-		var knocksider = randi() % 7
-		knocksider -= get_lane()
-		
-		set_knockside(knocksider)
+	if !_stunned:
+		if _timer > 0:
+			_timer -= delta
+		else:
+			_timer = 2
+			
+			var knocksider = randi() % 7
+			knocksider -= get_lane()
+			
+			set_knockside(knocksider)
 
-	._process(delta)
+	process(delta)
+
+func set_lane(_lane):
+	self._lane = _lane
+
+func set_knockside(_new):
+	_knockside = _new*Global.get_lane_x_increase()
+	
+	var _actual_lane = (position.x - Global.get_lane_x_start())/Global.get_lane_x_increase()
+	set_lane(int(_actual_lane)+_new)
 
 func _manage_knockside(delta):
 		# Knockside

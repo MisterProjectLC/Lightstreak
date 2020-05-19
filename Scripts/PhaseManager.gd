@@ -14,7 +14,7 @@ func _ready():
 				Phase.CANNON_COUNT:1,
 				Phase.POWER_COUNT:1,
 				Phase.INITIAL_TEXT:'Move 3',
-				Phase.REPLICATE_TEXT:false,
+				Phase.REPLICATE_TEXT:0,
 				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
@@ -41,9 +41,9 @@ func _ready():
 				Phase.GENERATE:true,
 				Phase.DURATION:84,
 				Phase.CANNON_COUNT:1,
-				Phase.POWER_COUNT:6,
+				Phase.POWER_COUNT:2,
 				Phase.INITIAL_TEXT:'Dvorak',
-				Phase.REPLICATE_TEXT:true,
+				Phase.REPLICATE_TEXT:2,
 				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
@@ -82,7 +82,7 @@ func _ready():
 				Phase.CANNON_COUNT:1,
 				Phase.POWER_COUNT:3,
 				Phase.INITIAL_TEXT:'Watt',
-				Phase.REPLICATE_TEXT:true,
+				Phase.REPLICATE_TEXT:3,
 				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
@@ -130,7 +130,7 @@ func _ready():
 				Phase.CANNON_COUNT:1,
 				Phase.POWER_COUNT:3,
 				Phase.INITIAL_TEXT:'',
-				Phase.REPLICATE_TEXT:false,
+				Phase.REPLICATE_TEXT:0,
 				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
@@ -174,7 +174,7 @@ func _ready():
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:3,
 				Phase.INITIAL_TEXT:'Tab',
-				Phase.REPLICATE_TEXT:true,
+				Phase.REPLICATE_TEXT:3,
 				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
@@ -215,7 +215,7 @@ func _ready():
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:4,
 				Phase.INITIAL_TEXT:'Net',
-				Phase.REPLICATE_TEXT:true,
+				Phase.REPLICATE_TEXT:4,
 				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
@@ -291,7 +291,7 @@ func _ready():
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:4,
 				Phase.INITIAL_TEXT:'>',
-				Phase.REPLICATE_TEXT:false,
+				Phase.REPLICATE_TEXT:0,
 				Phase.ARENA:1,
 				Phase.SCRIPT:
 					[
@@ -367,7 +367,7 @@ func _ready():
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:5,
 				Phase.INITIAL_TEXT:'Internet',
-				Phase.REPLICATE_TEXT:true,
+				Phase.REPLICATE_TEXT:5,
 				Phase.ARENA:0,
 				Phase.SCRIPT:
 					[
@@ -449,26 +449,182 @@ func _ready():
 					{Spawn.TIME:122, Spawn.MINION:Minion.BOMBER, Spawn.LANE:6},
 					]
 				},
-				9: # Hugh Theme Remix
+				9: # Surprise Buttsecks Instrumental
 				{
 				Phase.GENERATE:true,
-				Phase.DURATION:130,
+				Phase.DURATION:112,
 				Phase.CANNON_COUNT:2,
 				Phase.POWER_COUNT:5,
-				Phase.INITIAL_TEXT:'',
-				Phase.REPLICATE_TEXT:true,
-				Phase.ARENA:0,
+				Phase.INITIAL_TEXT:'Watt',
+				Phase.REPLICATE_TEXT:3,
+				Phase.ARENA:1,
+				Phase.SCRIPT:
+					[ 
+					{Spawn.TIME:1, Spawn.MINION:Minion.SLICK, Spawn.LANE:2},
+					{Spawn.TIME:5, Spawn.MINION:Minion.TROOPER, Spawn.LANE:1},
+					{Spawn.TIME:5, Spawn.MINION:Minion.SLICK, Spawn.LANE:5},
+					{Spawn.TIME:5, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:6},
+					{Spawn.TIME:11, Spawn.MINION:Minion.TROOPER, Spawn.LANE:1}, 
+					{Spawn.TIME:12, Spawn.MINION:Minion.BOMBER, Spawn.LANE:3}, 
+					{Spawn.TIME:14, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4},
+					{Spawn.TIME:20, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:0},
+					{Spawn.TIME:20, Spawn.MINION:Minion.TANK, Spawn.LANE:5},
+					{Spawn.TIME:20, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:6},
+					{Spawn.TIME:21, Spawn.MINION:Minion.TANK, Spawn.LANE:1},
+					{Spawn.TIME:22, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:27, Spawn.MINION:Minion.SLICK, Spawn.LANE:2},
+					{Spawn.TIME:28, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					
+					{Spawn.TIME:35, Spawn.MINION:Minion.SLICK, Spawn.LANE:0},
+					{Spawn.TIME:36, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:37, Spawn.MINION:Minion.SLICK, Spawn.LANE:6},
+					{Spawn.TIME:46, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:0},
+					{Spawn.TIME:46, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2},
+					{Spawn.TIME:47, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:6},
+					{Spawn.TIME:47, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4},
+					{Spawn.TIME:48, Spawn.MINION:Minion.TROOPER, Spawn.LANE:1},
+					{Spawn.TIME:49, Spawn.MINION:Minion.TROOPER, Spawn.LANE:5},
+					{Spawn.TIME:51, Spawn.MINION:Minion.TANK, Spawn.LANE:0},
+					{Spawn.TIME:54, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
+					{Spawn.TIME:54, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					
+					{Spawn.TIME:60, Spawn.MINION:Minion.HACKER, Spawn.LANE:3},
+					{Spawn.TIME:60, Spawn.MINION:Minion.BOMBER, Spawn.LANE:1},
+					{Spawn.TIME:60, Spawn.MINION:Minion.BOMBER, Spawn.LANE:5},
+					{Spawn.TIME:60, Spawn.MINION:Minion.SLICK, Spawn.LANE:2},
+					{Spawn.TIME:60, Spawn.MINION:Minion.SLICK, Spawn.LANE:4},
+					{Spawn.TIME:60, Spawn.MINION:Minion.SLICK, Spawn.LANE:0},
+					{Spawn.TIME:60, Spawn.MINION:Minion.SLICK, Spawn.LANE:6},
+					{Spawn.TIME:61, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					{Spawn.TIME:63, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:5},
+					
+					{Spawn.TIME:70, Spawn.MINION:Minion.TROOPER, Spawn.LANE:0},
+					{Spawn.TIME:70, Spawn.MINION:Minion.TROOPER, Spawn.LANE:2},
+					{Spawn.TIME:70, Spawn.MINION:Minion.TROOPER, Spawn.LANE:4},
+					{Spawn.TIME:70, Spawn.MINION:Minion.TROOPER, Spawn.LANE:6},
+					
+					{Spawn.TIME:73, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:1},
+					{Spawn.TIME:77, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					
+					{Spawn.TIME:80, Spawn.MINION:Minion.SLICK, Spawn.LANE:0},
+					{Spawn.TIME:80, Spawn.MINION:Minion.TROOPER, Spawn.LANE:2},
+					{Spawn.TIME:80, Spawn.MINION:Minion.TROOPER, Spawn.LANE:4},
+					{Spawn.TIME:80, Spawn.MINION:Minion.SLICK, Spawn.LANE:6},
+					
+					{Spawn.TIME:82, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:5},
+					{Spawn.TIME:85, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:4},
+					{Spawn.TIME:89, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:0},
+					
+					{Spawn.TIME:90, Spawn.MINION:Minion.SLICK, Spawn.LANE:0},
+					{Spawn.TIME:90, Spawn.MINION:Minion.SLICK, Spawn.LANE:2},
+					{Spawn.TIME:90, Spawn.MINION:Minion.SLICK, Spawn.LANE:4},
+					{Spawn.TIME:90, Spawn.MINION:Minion.SLICK, Spawn.LANE:6},
+					
+					{Spawn.TIME:92, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:6},
+					{Spawn.TIME:96, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					
+					{Spawn.TIME:100, Spawn.MINION:Minion.SLICK, Spawn.LANE:0},
+					{Spawn.TIME:101, Spawn.MINION:Minion.BOMBER, Spawn.LANE:1},
+					{Spawn.TIME:102, Spawn.MINION:Minion.SLICK, Spawn.LANE:2},
+					{Spawn.TIME:103, Spawn.MINION:Minion.BOMBER, Spawn.LANE:3},
+					{Spawn.TIME:104, Spawn.MINION:Minion.SLICK, Spawn.LANE:4},
+					{Spawn.TIME:105, Spawn.MINION:Minion.BOMBER, Spawn.LANE:5},
+					{Spawn.TIME:106, Spawn.MINION:Minion.SLICK, Spawn.LANE:6},
+					
+					]
+				},
+				10: # Heavy's Pizza Song Instrumental
+				{
+				Phase.GENERATE:true,
+				Phase.DURATION:98,
+				Phase.CANNON_COUNT:2,
+				Phase.POWER_COUNT:6,
+				Phase.INITIAL_TEXT:'Kaboom',
+				Phase.REPLICATE_TEXT:6,
+				Phase.ARENA:1,
 				Phase.SCRIPT:
 					[
-					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:0}, 
-					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:2},
-					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
-					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
-					{Spawn.TIME:4, Spawn.MINION:Minion.TROOPER, Spawn.LANE:1}, 
-					{Spawn.TIME:4, Spawn.MINION:Minion.TROOPER, Spawn.LANE:3},
-					{Spawn.TIME:4, Spawn.MINION:Minion.TROOPER, Spawn.LANE:5},
-					{Spawn.TIME:9, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:6},
-					{Spawn.TIME:10, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4},
+					{Spawn.TIME:1, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1}, 
+					{Spawn.TIME:1, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:1, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3}, 
+					{Spawn.TIME:2, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1}, 
+					{Spawn.TIME:2, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:2, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3}, 
+					{Spawn.TIME:3, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1}, 
+					{Spawn.TIME:3, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:3, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3}, 
+					{Spawn.TIME:10, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:10, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4}, 
+					{Spawn.TIME:10, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:5}, 
+					{Spawn.TIME:10, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:6}, 
+					{Spawn.TIME:11, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4}, 
+					{Spawn.TIME:11, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:5}, 
+					{Spawn.TIME:11, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:6}, 
+					{Spawn.TIME:12, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4}, 
+					{Spawn.TIME:12, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:5}, 
+					{Spawn.TIME:12, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:6}, 
+					{Spawn.TIME:12, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1}, 
+					{Spawn.TIME:12, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:12, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:0}, 
+					{Spawn.TIME:13, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1}, 
+					{Spawn.TIME:13, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:13, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:0}, 
+					{Spawn.TIME:13, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:1}, 
+					{Spawn.TIME:13, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:13, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:0}, 
+					{Spawn.TIME:15, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:21, Spawn.MINION:Minion.SLICK, Spawn.LANE:3},
+					{Spawn.TIME:24, Spawn.MINION:Minion.TANK, Spawn.LANE:2},
+					{Spawn.TIME:25, Spawn.MINION:Minion.TROOPER, Spawn.LANE:3},
+					{Spawn.TIME:26, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
+					
+					{Spawn.TIME:32, Spawn.MINION:Minion.TANK, Spawn.LANE:1},
+					{Spawn.TIME:32, Spawn.MINION:Minion.TANK, Spawn.LANE:3},
+					{Spawn.TIME:32, Spawn.MINION:Minion.TANK, Spawn.LANE:5},
+					{Spawn.TIME:34, Spawn.MINION:Minion.TANK, Spawn.LANE:0},
+					{Spawn.TIME:34, Spawn.MINION:Minion.TANK, Spawn.LANE:2},
+					{Spawn.TIME:34, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
+					{Spawn.TIME:34, Spawn.MINION:Minion.TANK, Spawn.LANE:6},
+					{Spawn.TIME:34, Spawn.MINION:Minion.HACKER, Spawn.LANE:3},
+					{Spawn.TIME:34, Spawn.MINION:Minion.TANK, Spawn.LANE:0},
+					{Spawn.TIME:34, Spawn.MINION:Minion.TANK, Spawn.LANE:5},
+					{Spawn.TIME:37, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:37, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2},
+					{Spawn.TIME:37, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4},
+					{Spawn.TIME:44, Spawn.MINION:Minion.SLICK, Spawn.LANE:2},
+					{Spawn.TIME:45, Spawn.MINION:Minion.SLICK, Spawn.LANE:4},
+					{Spawn.TIME:46, Spawn.MINION:Minion.SLICK, Spawn.LANE:3},
+					{Spawn.TIME:47, Spawn.MINION:Minion.SLICK, Spawn.LANE:5},
+					
+					{Spawn.TIME:55, Spawn.MINION:Minion.HACKER, Spawn.LANE:1},
+					{Spawn.TIME:59, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:2},
+					{Spawn.TIME:62, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3},
+					{Spawn.TIME:63, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:3},
+					{Spawn.TIME:66, Spawn.MINION:Minion.HACKER, Spawn.LANE:5},
+					{Spawn.TIME:67, Spawn.MINION:Minion.REDBLAST, Spawn.LANE:4},
+					{Spawn.TIME:71, Spawn.MINION:Minion.TANK, Spawn.LANE:2},
+					{Spawn.TIME:71, Spawn.MINION:Minion.TANK, Spawn.LANE:3},
+					{Spawn.TIME:71, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
+					
+					{Spawn.TIME:76, Spawn.MINION:Minion.TROOPER, Spawn.LANE:1},
+					{Spawn.TIME:76, Spawn.MINION:Minion.TANK, Spawn.LANE:2},
+					{Spawn.TIME:76, Spawn.MINION:Minion.BOMBER, Spawn.LANE:3},
+					{Spawn.TIME:76, Spawn.MINION:Minion.TANK, Spawn.LANE:4},
+					{Spawn.TIME:76, Spawn.MINION:Minion.TROOPER, Spawn.LANE:5},
+					
+					{Spawn.TIME:81, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:81, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3}, 
+					{Spawn.TIME:81, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4}, 
+					{Spawn.TIME:82, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:2}, 
+					{Spawn.TIME:82, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3}, 
+					{Spawn.TIME:82, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:4}, 
+					
+					{Spawn.TIME:89, Spawn.MINION:Minion.SLICK, Spawn.LANE:1},
+					{Spawn.TIME:89, Spawn.MINION:Minion.BOMBER, Spawn.LANE:2},
+					{Spawn.TIME:89, Spawn.MINION:Minion.SPEEDER, Spawn.LANE:3},
+					{Spawn.TIME:89, Spawn.MINION:Minion.BOMBER, Spawn.LANE:4},
+					{Spawn.TIME:89, Spawn.MINION:Minion.SLICK, Spawn.LANE:5},
+					
 					]
 				},
 			}

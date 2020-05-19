@@ -1,7 +1,6 @@
 extends Node
 
-var alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:"→"}
-signal updated_alphabet
+var alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:">"}
 
 func get_letter(input):
 	if alphabet.has(input):

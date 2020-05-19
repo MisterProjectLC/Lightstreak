@@ -46,8 +46,8 @@ func _ready():
 			find_node(_weapon).set_text($LangSystem.get_word(find_node(_weapon).get_difficulty(), 
 										_lang))
 	
-	if _current_phase[Global.Phase.REPLICATE_TEXT]:
-		find_node(_weapon_list[_current_phase[Global.Phase.POWER_COUNT]-1]).set_text(_current_phase[Global.Phase.INITIAL_TEXT])
+	if _current_phase[Global.Phase.REPLICATE_TEXT] != 0:
+		find_node(_weapon_list[_current_phase[Global.Phase.REPLICATE_TEXT]-1]).set_text(_current_phase[Global.Phase.INITIAL_TEXT])
 	
 	# setup minion spawner
 	$MinionSpawner.set_phase_script(_current_phase[Global.Phase.SCRIPT])
@@ -158,16 +158,18 @@ func cannon_damaged(cannon, damage):
 func _on_MinionSpawner_passed_threshold():
 	if player_health > 0:
 		$Alerts.damage_alert()
-		Audio.play_sound(Audio.player_damage, 3);
+		Audio.play_sound(Audio.player_damage)
 		player_health -= 1
 	else:
-		print("GAME OVER")
+		game_over()
 
 # Victory
 func _on_MinionSpawner_phase_empty(time):
 	if _current_phase[Global.Phase.DURATION] <= time:
 		leave_game()
 
+func game_over():
+	leave_game()
 
 func leave_game():
 	Alphabet.reset()

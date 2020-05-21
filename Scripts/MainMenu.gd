@@ -7,15 +7,26 @@ var fading_children = {
 	
 }
 
+var outlines = ["Play", "Powers_List", "Options", "Credits", "Quit",
+				"OptionsMenu/Music", "OptionsMenu/Sounds", "OptionsMenu/Back",
+				"Stages/Back"]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	for i in range(outlines.size()):
+		outlines[i] = find_outline(outlines[i])
+	
 	if Global.get_lightstreak_typed():
 		Audio.play_music(Audio.menu_theme)
 		$Typer.rect_position = Vector2(117, 641)
 		$Stages.rect_position = Vector2(10, 192)
 		$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
 		pass
-	
+
+func find_outline(text):
+	text = "./" + text + "/Outline"
+	return get_node(text)
+
 func _process(_delta):
 	for child in moving_children.keys():
 		var object = find_node(child)
@@ -42,11 +53,7 @@ func _command_typed(id, text):
 			if !Global.get_lightstreak_typed():
 				Audio.play_music(Audio.menu_theme)
 				moving_children['Typer'] = Vector2(117, 641)
-				moving_children['Play'] = Vector2(10, 190)
-				moving_children['Powers_List'] = Vector2(10, 260)
-				moving_children['Options'] = Vector2(10, 330)
-				moving_children['Credits'] = Vector2(10, 400)
-				moving_children['Quit'] = Vector2(10, 470)
+				pull_menu()
 				fading_children['GameBackground'] = 1
 				$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
 				Global.set_lightstreak_typed(true)
@@ -96,6 +103,10 @@ func _command_typed(id, text):
 				
 		"QUIT":
 			get_tree().quit()
+
+func _update_outlines(id, text):
+	for outline in outlines:
+		outline.update_text(text)
 
 func push_other_menus():
 	moving_children['Stages'] = Vector2(-810, 192)

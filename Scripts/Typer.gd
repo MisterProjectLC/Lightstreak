@@ -8,6 +8,7 @@ var _caret_active = false
 var _active = false
 
 signal command_typed
+signal typer_updated
 
 # Caret -----------------------
 func _process(delta):
@@ -35,7 +36,8 @@ func input_function(event):
 	if event is InputEventKey and event.pressed and _active:
 		# writable input
 		if (event.scancode in Alphabet.alphabet.keys() or 
-		(event.scancode >= KEY_A and event.scancode <= KEY_Z) or (event.scancode >= KEY_0 and event.scancode <= KEY_9)):
+		(event.scancode >= KEY_A and event.scancode <= KEY_Z) or 
+		(event.scancode >= KEY_0 and event.scancode <= KEY_9)):
 			var kchar = OS.get_scancode_string(event.scancode)
 			
 			# checking alphabet
@@ -48,15 +50,20 @@ func input_function(event):
 			
 			# append letter
 			set_text(self._actual_text + kchar)
-			
+
+
 		# backspace
 		elif event.scancode == KEY_BACKSPACE:
 			set_text(_actual_text.left(_actual_text.length()-1))
-			
+
+
 		# enter
 		elif event.scancode == KEY_ENTER:
 			emit_signal("command_typed", id, _actual_text)
 			set_text('')
+		
+		# update outlines
+		emit_signal("typer_updated", id, _actual_text)
 
 
 func get_text():

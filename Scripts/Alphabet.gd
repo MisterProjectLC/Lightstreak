@@ -1,6 +1,6 @@
 extends Node
 
-var alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:">"}
+var alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:">", KEY_MINUS:"_"}
 
 func get_letter(input):
 	if alphabet.has(input):
@@ -9,7 +9,7 @@ func get_letter(input):
 		return null
 
 func reset():
-	alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:">"}
+	alphabet = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:">", KEY_MINUS:"_"}
 
 func check_letter_pair(a, b):
 	if a in alphabet.keys() or b in alphabet.keys():

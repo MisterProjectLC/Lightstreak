@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/LabelFade.gd" type="Script" id=2]
@@ -16,8 +16,13 @@
 [ext_resource path="res://Art/MissileIcon.png" type="Texture" id=14]
 [ext_resource path="res://Art/BlinkEnemy.png" type="Texture" id=15]
 [ext_resource path="res://Art/BombIcon.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/Outline.gd" type="Script" id=17]
 
 [sub_resource type="DynamicFont" id=1]
+size = 56
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
 size = 56
 font_data = ExtResource( 1 )
 
@@ -94,6 +99,7 @@ rect_scale = Vector2( 1.05, 1.4 )
 texture = ExtResource( 5 )
 
 [node name="Play" type="Label" parent="."]
+visible = false
 margin_left = 800.0
 margin_top = 190.0
 margin_right = 1164.0
@@ -106,7 +112,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Outline" type="Label" parent="Play"]
+margin_right = 345.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Powers_List" type="Label" parent="."]
+visible = false
 margin_left = 800.0
 margin_top = 260.0
 margin_right = 1169.0
@@ -119,7 +136,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Outline" type="Label" parent="Powers_List"]
+margin_left = 0.0616456
+margin_top = 0.166626
+margin_right = 345.061
+margin_bottom = 44.1667
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Options" type="Label" parent="."]
+visible = false
 margin_left = 800.0
 margin_top = 330.0
 margin_right = 1164.0
@@ -132,7 +162,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Outline" type="Label" parent="Options"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Credits" type="Label" parent="."]
+visible = false
 margin_left = 800.0
 margin_top = 400.0
 margin_right = 1164.0
@@ -145,7 +186,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Outline" type="Label" parent="Credits"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Quit" type="Label" parent="."]
+visible = false
 margin_left = 800.0
 margin_top = 470.0
 margin_right = 1164.0
@@ -159,19 +211,100 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Outline" type="Label" parent="Quit"]
+margin_right = 364.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "
+"
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="OptionsMenu" type="Label" parent="."]
+visible = false
 margin_left = -810.0
 margin_top = 192.0
 margin_right = -274.0
 margin_bottom = 424.0
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "OPTIONS        BACK
-MUSIC <0-100>
-SOUNDS <0-100>
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "OPTIONS
 "
 __meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Label" parent="OptionsMenu"]
+margin_left = -2.0
+margin_top = 47.0
+margin_right = 355.0
+margin_bottom = 138.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "MUSIC <0-100>
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="OptionsMenu/Music"]
+margin_right = 536.0
+margin_bottom = 232.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "
+"
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sounds" type="Label" parent="OptionsMenu"]
+margin_top = 94.0
+margin_right = 400.0
+margin_bottom = 185.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SOUNDS <0-100>
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="OptionsMenu/Sounds"]
+margin_right = 400.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Label" parent="OptionsMenu"]
+margin_left = 389.0
+margin_right = 531.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "BACK
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="OptionsMenu/Back"]
+margin_right = 400.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -182,8 +315,8 @@ margin_right = -277.0
 margin_bottom = 471.0
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "PLAY <...>        BACK"
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "PHASES"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -195,21 +328,135 @@ margin_right = 115.0
 margin_bottom = 282.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "[1   ] 
-[2   ]
-[3   ]
-[4   ]
-[5   ]"
+text = "[    ] 
+[    ]
+[    ]
+[    ]
+[    ]"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P1" type="Label" parent="Stages/Page 1"]
+margin_left = 17.0
+margin_right = 56.0
+margin_bottom = 44.0
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 1/P1"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P2" type="Label" parent="Stages/Page 1"]
+margin_left = 18.1053
+margin_top = 46.9798
+margin_right = 57.1053
+margin_bottom = 90.9798
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 1/P2"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P3" type="Label" parent="Stages/Page 1"]
+margin_left = 18.1053
+margin_top = 93.3695
+margin_right = 57.1053
+margin_bottom = 137.369
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 1/P3"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P4" type="Label" parent="Stages/Page 1"]
+margin_left = 19.103
+margin_top = 144.249
+margin_right = 58.103
+margin_bottom = 188.249
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 1/P4"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P5" type="Label" parent="Stages/Page 1"]
+margin_left = 20.0466
+margin_top = 187.983
+margin_right = 59.0466
+margin_bottom = 231.983
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 1/P5"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Stage 1" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 58.9603
-margin_top = 1.5769
-margin_right = 145.96
-margin_bottom = 88.5769
+margin_left = 54.4761
+margin_top = 2.15869
+margin_right = 141.476
+margin_bottom = 89.1587
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 9 )
 __meta__ = {
@@ -217,18 +464,18 @@ __meta__ = {
 }
 
 [node name="Stage 2" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 58.9603
-margin_top = 48.9639
-margin_right = 145.96
-margin_bottom = 135.964
+margin_left = 56.0513
+margin_top = 49.5457
+margin_right = 143.051
+margin_bottom = 136.546
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="Stage 3" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 59.7415
-margin_top = 96.7146
-margin_right = 146.742
-margin_bottom = 183.715
+margin_left = 56.4968
+margin_top = 96.3929
+margin_right = 143.497
+margin_bottom = 183.393
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -236,10 +483,10 @@ __meta__ = {
 }
 
 [node name="Stage 4" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 63.624
-margin_top = 143.074
-margin_right = 150.624
-margin_bottom = 230.074
+margin_left = 57.0
+margin_top = 144.0
+margin_right = 113.0
+margin_bottom = 210.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 10 )
 __meta__ = {
@@ -247,10 +494,10 @@ __meta__ = {
 }
 
 [node name="Stage 5" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 64.9666
-margin_top = 187.561
-margin_right = 151.967
-margin_bottom = 298.561
+margin_left = 60.629
+margin_top = 188.143
+margin_right = 147.629
+margin_bottom = 299.143
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 11 )
 __meta__ = {
@@ -264,21 +511,137 @@ margin_right = 254.967
 margin_bottom = 282.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "[6   ] 
-[7   ]
-[8   ]
-[9   ]
-[10  ]"
+text = "[    ] 
+[    ]
+[    ]
+[    ]
+[    ]"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P6" type="Label" parent="Stages/Page 2"]
+margin_left = 13.2013
+margin_top = -0.876938
+margin_right = 52.2013
+margin_bottom = 43.1231
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 2/P6"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P7" type="Label" parent="Stages/Page 2"]
+margin_left = 14.3066
+margin_top = 46.1028
+margin_right = 53.3066
+margin_bottom = 90.1028
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 2/P7"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P8" type="Label" parent="Stages/Page 2"]
+margin_left = 17.6067
+margin_top = 94.3259
+margin_right = 56.6067
+margin_bottom = 138.326
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 2/P8"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P9" type="Label" parent="Stages/Page 2"]
+margin_left = 16.4043
+margin_top = 143.372
+margin_right = 55.4043
+margin_bottom = 234.372
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "9
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 2/P9"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P10" type="Label" parent="Stages/Page 2"]
+margin_left = 13.604
+margin_top = 190.985
+margin_right = 59.604
+margin_bottom = 234.985
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 2/P10"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Stage 6" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 55.175
-margin_top = 1.72763
-margin_right = 142.176
-margin_bottom = 112.728
+margin_left = 54.4154
+margin_top = -0.0743713
+margin_right = 141.416
+margin_bottom = 110.926
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 12 )
 __meta__ = {
@@ -286,10 +649,10 @@ __meta__ = {
 }
 
 [node name="Stage 7" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 55.8511
-margin_top = 49.1349
-margin_right = 142.851
-margin_bottom = 136.135
+margin_left = 55.6007
+margin_top = 47.3329
+margin_right = 142.601
+margin_bottom = 134.333
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 13 )
 __meta__ = {
@@ -297,10 +660,10 @@ __meta__ = {
 }
 
 [node name="Stage 8" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 58.6204
-margin_top = 97.0842
-margin_right = 145.62
-margin_bottom = 184.084
+margin_left = 57.3265
+margin_top = 95.0578
+margin_right = 144.326
+margin_bottom = 182.058
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 14 )
 __meta__ = {
@@ -308,10 +671,10 @@ __meta__ = {
 }
 
 [node name="Stage 9" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 57.594
-margin_top = 140.1
-margin_right = 111.594
-margin_bottom = 195.1
+margin_left = 55.8973
+margin_top = 139.05
+margin_right = 109.897
+margin_bottom = 194.05
 rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 15 )
 __meta__ = {
@@ -319,10 +682,10 @@ __meta__ = {
 }
 
 [node name="Stage 10" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 69.5398
-margin_top = 189.132
-margin_right = 156.54
-margin_bottom = 276.132
+margin_left = 60.5047
+margin_top = 189.586
+margin_right = 147.505
+margin_bottom = 276.586
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 16 )
 __meta__ = {
@@ -361,6 +724,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Back" type="Label" parent="Stages"]
+margin_left = 385.632
+margin_top = 0.903564
+margin_right = 527.632
+margin_bottom = 232.904
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Back"]
+margin_right = 142.0
+margin_bottom = 232.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="DigiteLightstreak" type="Label" parent="."]
 visible = false
 margin_left = 244.471
@@ -378,3 +763,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="command_typed" from="Typer" to="." method="_command_typed"]
+[connection signal="typer_updated" from="Typer" to="." method="_update_outlines"]

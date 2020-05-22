@@ -1,9 +1,7 @@
 extends Node
 
 var _cannon_list = []
-var _weapon_list = ['LaserTitle', 'SphereTitle', 'ShockTitle', 
-					'MagnetTitle','MissileTitle', 'BombTitle', 
-					'MachineTitle', 'DispTitle', 'LightTitle']
+var _weapon_list = []
 
 export var _background_list = []
 export(PackedScene) var heylook
@@ -20,6 +18,11 @@ func _ready():
 	# setup phase
 	_current_phase = $PhaseManager.get_phase(Global.get_current_phase())
 	Audio.play_music(Audio.phase_themes[Global.get_current_phase()-1])
+	_weapon_list = [get_node('LaserTitle'), get_node('SphereTitle'), 
+					get_node('ShockTitle'), get_node('MagnetTitle'),
+					get_node('MissileTitle'), get_node('BombTitle'), 
+					get_node('MachineTitle'), get_node('DispTitle'), 
+					get_node('LightTitle')]
 	
 	# setup language
 	_lang = $LangSystem.Language.PORTUGUES
@@ -33,21 +36,23 @@ func _ready():
 	
 	# setup cannon
 	for i in range(0, _current_phase[Global.Phase.CANNON_COUNT]):
-		_cannon_list.append("Cannon" + str(i+1))
-		find_node(_cannon_list[i]).activate()
-	find_node(_cannon_list[0]).toggle_highlight(true)
+		_cannon_list.append(get_node("Cannon" + str(i+1)))
+		_cannon_list[i].activate()
+	_cannon_list[0].toggle_highlight(true)
 	
 	# setup weapon lists
 	for i in range(1, _current_phase[Global.Phase.POWER_COUNT]+1):
-		find_node(_weapon_list[i-1]).set_visible(true)
+		_weapon_list[i-1].set_visible(true)
 	
 	if _current_phase[Global.Phase.GENERATE]:
 		for _weapon in _weapon_list:
-			find_node(_weapon).set_text($LangSystem.get_word(find_node(_weapon).get_difficulty(), 
+			_weapon.set_text($LangSystem.get_word(_weapon.get_difficulty(), 
 										_lang))
 	
+	# replicate text
 	if _current_phase[Global.Phase.REPLICATE_TEXT] != 0:
-		find_node(_weapon_list[_current_phase[Global.Phase.REPLICATE_TEXT]-1]).set_text(_current_phase[Global.Phase.INITIAL_TEXT])
+		_weapon_list[_current_phase[Global.Phase.REPLICATE_TEXT]-1].set_text(_current_phase[Global.Phase.INITIAL_TEXT])
+		typer_updated(_current_phase[Global.Phase.INITIAL_TEXT])
 	
 	# setup minion spawner
 	$MinionSpawner.set_phase_script(_current_phase[Global.Phase.SCRIPT])
@@ -66,9 +71,9 @@ func _input(event):
 func _on_Console_tab_console(typer):
 	for i in range(_cannon_list.size()):
 		if i == typer:
-			find_node(_cannon_list[i]).toggle_highlight(true)
+			_cannon_list[i].toggle_highlight(true)
 		else:
-			find_node(_cannon_list[i]).toggle_highlight(false)
+			_cannon_list[i].toggle_highlight(false)
 
 # command handler
 func _on_Console_command_typed(_typer_active, _input):
@@ -87,14 +92,18 @@ func _on_Console_command_typed(_typer_active, _input):
 	else:
 		_weapon_handler(_typer_active, _input)
 
+func typer_updated(text):
+	for title in _weapon_list:
+		title.update_outline(text)
+
 # weapon 
 func _weapon_handler(_cannon_n, _input):
-	var _cannon = find_node(_cannon_list[_cannon_n])
+	var _cannon = _cannon_list[_cannon_n]
 	
 	for _weapon_title in _weapon_list:
-		if find_node(_weapon_title).get_text() == _input:
+		if _weapon_title.get_text() == _input:
 			emit_signal("weapon_activated")
-			var _node = find_node(_weapon_title)
+			var _node = _weapon_title
 			# summon weapon
 			var _new_weapon = _node.get_weapon().instance()
 			add_child(_new_weapon)
@@ -109,7 +118,7 @@ func _weapon_handler(_cannon_n, _input):
 			while (1):
 				var repeats = false
 				for i in range(_current_phase[Global.Phase.POWER_COUNT]):
-					if _weapon_list[i] != _weapon_title and find_node(_weapon_list[i]).get_text() == new_word:
+					if _weapon_list[i] != _weapon_title and _weapon_list[i].get_text() == new_word:
 						new_word = $LangSystem.get_word(_node.get_difficulty(), _lang)
 						repeats = true
 						break
@@ -122,13 +131,13 @@ func _weapon_handler(_cannon_n, _input):
 
 # cannon mover
 func _move_cannon(_cannon_n, _lane):
-	var _cannon = find_node(_cannon_list[_cannon_n])
+	var _cannon = _cannon_list[_cannon_n]
 	
 	_cannon.set_target_lane(_lane)
 	_cannon.set_target_position(Vector2(Global.get_lane_x(_lane), Global.get_lane_y()))
 	
 func shift_cannon(_cannon_n, _left):
-	var _cannon = find_node(_cannon_list[_cannon_n])
+	var _cannon = _cannon_list[_cannon_n]
 	var _lane = _cannon.get_target_lane()
 	
 	if _left:
@@ -205,4 +214,5 @@ func _change_priority(_child, _priority):
 	move_child(_child, _priority)
 	move_child($Battlefield, 0)
 	move_child($BlackBackground, 0)
+
 

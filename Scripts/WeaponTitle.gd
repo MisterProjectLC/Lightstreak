@@ -9,8 +9,13 @@ export var _difficulty = 1
 func _ready():
 	$Icon.texture = sprite
 
+func update_outline(text):
+	$Label/Outline.update_text(text)
+
 func set_text(newText):
 	$Label.text = newText
+	$Label/Outline.update_expected_text(newText)
+	$Label/Outline.update_text("")
 
 func get_text():
 	return $Label.text

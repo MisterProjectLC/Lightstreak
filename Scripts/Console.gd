@@ -1,13 +1,15 @@
 extends Control
 
-var typer_list = ["Typer1"]
+var typer_list
 var typer_active = 0
 
+signal typer_updated
 signal command_typed
 signal tab_console
 
 func _ready():
-	find_node(typer_list[typer_active]).activate_selected(true)
+	typer_list = [get_node("Typer1")]
+	typer_list[typer_active].activate_selected(true)
 	emit_signal('tab_console', typer_active)
 
 func _input(event):
@@ -22,7 +24,7 @@ func _input(event):
 
 func set_typer_count(count):
 	for i in range(1, count):
-		typer_list.append("Typer" + str(i+1))
+		typer_list.append(get_node("Typer" + str(i+1)))
 
 
 func set_input(new_text):
@@ -30,14 +32,14 @@ func set_input(new_text):
 
 
 func set_input_specific(new_text, typer):
-	find_node(typer_list[typer]).set_text(new_text)
+	typer_list[typer].set_text(new_text)
 
 func set_damage_typer(typer, damaged):
-	find_node(typer_list[typer]).set_damage(damaged)
+	typer_list[typer].set_damage(damaged)
 
 func _tab_active(forward):
 	# deactivate this one
-	find_node(typer_list[typer_active]).activate_selected(false)
+	typer_list[typer_active].activate_selected(false)
 	
 	# advance to next console
 	if forward:
@@ -53,8 +55,12 @@ func _tab_active(forward):
 	set_input(find_node(typer_list[typer_active]).get_text())
 	find_node(typer_list[typer_active]).activate_selected(true)
 	emit_signal('tab_console', typer_active)
+	emit_signal("typer_updated", typer_list[typer_active].get_text())
 
 
 func _command_typed(typer_n, text):
 	emit_signal('command_typed', typer_n, text)
 	pass
+
+func _update_outlines(id, text):
+	emit_signal("typer_updated", text)

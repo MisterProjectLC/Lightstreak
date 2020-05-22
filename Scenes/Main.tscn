@@ -241,3 +241,4 @@ margin_bottom = -3.98315
 [connection signal="damaged" from="Cannon3" to="." method="cannon_damaged"]
 [connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
 [connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]
+[connection signal="typer_updated" from="Console" to="." method="typer_updated"]

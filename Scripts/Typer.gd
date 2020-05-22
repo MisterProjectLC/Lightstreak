@@ -63,7 +63,7 @@ func input_function(event):
 			set_text('')
 		
 		# update outlines
-		emit_signal("typer_updated", id, _actual_text)
+		emit_signal("typer_updated", _actual_text)
 
 
 func get_text():

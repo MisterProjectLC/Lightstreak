@@ -9,7 +9,10 @@ var fading_children = {
 
 var outlines = ["Play", "Powers_List", "Options", "Credits", "Quit",
 				"OptionsMenu/Music", "OptionsMenu/Sounds", "OptionsMenu/Back",
-				"Stages/Back"]
+				"Stages/Back", "Stages/Page 1/P1", "Stages/Page 1/P2",
+				"Stages/Page 1/P3", "Stages/Page 1/P4", "Stages/Page 1/P5",
+				"Stages/Page 2/P6", "Stages/Page 2/P7", "Stages/Page 2/P8",
+				"Stages/Page 2/P9", "Stages/Page 2/P10"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -104,7 +107,7 @@ func _command_typed(id, text):
 		"QUIT":
 			get_tree().quit()
 
-func _update_outlines(id, text):
+func _update_outlines(text):
 	for outline in outlines:
 		outline.update_text(text)
 

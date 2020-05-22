@@ -11,7 +11,6 @@ func _ready():
 
 func update_expected_text(text):
 	expected_text = text
-	update_text(self.text)
 
 func update_text(received_text):
 	if received_text.length() == 0:

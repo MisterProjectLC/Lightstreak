@@ -52,8 +52,8 @@ func _tab_active(forward):
 			typer_active = typer_list.size()-1
 	
 	# activate next one
-	set_input(find_node(typer_list[typer_active]).get_text())
-	find_node(typer_list[typer_active]).activate_selected(true)
+	set_input(typer_list[typer_active].get_text())
+	typer_list[typer_active].activate_selected(true)
 	emit_signal('tab_console', typer_active)
 	emit_signal("typer_updated", typer_list[typer_active].get_text())
 
@@ -62,5 +62,5 @@ func _command_typed(typer_n, text):
 	emit_signal('command_typed', typer_n, text)
 	pass
 
-func _update_outlines(id, text):
+func _update_outlines(text):
 	emit_signal("typer_updated", text)

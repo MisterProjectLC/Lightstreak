@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/LangSystem.gd" type="Script" id=2]
@@ -37,10 +37,12 @@
 [ext_resource path="res://Mini Scenes/Enemies/Slick.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Mini Scenes/Weapon/Bomb.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Art/BombIcon.png" type="Texture" id=37]
+[ext_resource path="res://Art/VioletBattlefield.png" type="Texture" id=38]
+[ext_resource path="res://Mini Scenes/Enemies/VioletBlast.tscn" type="PackedScene" id=39]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
-_background_list = [ ExtResource( 27 ), ExtResource( 28 ) ]
+_background_list = [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 38 ) ]
 heylook = ExtResource( 34 )
 
 [node name="BlackBackground" type="ColorRect" parent="."]
@@ -61,6 +63,7 @@ hacker_init = ExtResource( 21 )
 red_blast = ExtResource( 22 )
 bomber = ExtResource( 33 )
 slick = ExtResource( 35 )
+violet_blast = ExtResource( 39 )
 
 [node name="LangSystem" type="Node" parent="."]
 script = ExtResource( 2 )

@@ -10,22 +10,22 @@ extents = Vector2( 35.877, 461.146 )
 position = Vector2( 0, 42.1941 )
 script = ExtResource( 1 )
 
-[node name="RedBlast" type="Area2D" parent="."]
+[node name="Blast" type="Area2D" parent="."]
 position = Vector2( -2.10525, 30.5263 )
 scale = Vector2( 0.75, 0.89 )
 
-[node name="Sprite" type="Sprite" parent="RedBlast"]
-modulate = Color( 1, 1, 1, 0 )
+[node name="Sprite" type="Sprite" parent="Blast"]
+modulate = Color( 0.388235, 0, 0, 0 )
 scale = Vector2( 0.755, 0.999 )
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Collision" type="CollisionShape2D" parent="RedBlast"]
+[node name="Collision" type="CollisionShape2D" parent="Blast"]
 shape = SubResource( 1 )
 disabled = true
 __meta__ = {
 "_edit_lock_": true
 }
-[connection signal="area_entered" from="RedBlast" to="." method="_on_RedBlast_area_entered"]
+[connection signal="area_entered" from="Blast" to="." method="_on_Blast_area_entered"]

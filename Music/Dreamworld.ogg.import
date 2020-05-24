@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dreamworld.ogg-7e4244b28fe3d7b3a983e7e75e6f61e9.oggstr"
+
+[deps]
+
+source_file="res://Music/Dreamworld.ogg"
+dest_files=[ "res://.import/Dreamworld.ogg-7e4244b28fe3d7b3a983e7e75e6f61e9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

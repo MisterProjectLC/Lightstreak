@@ -9,18 +9,22 @@ extents = Vector2( 35.877, 461.146 )
 [node name="VioletBlast" type="Node2D"]
 position = Vector2( 0, 42.1941 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Blast" type="Area2D" parent="."]
 position = Vector2( -2.10525, 30.5263 )
 scale = Vector2( 0.75, 0.89 )
-
-[node name="Sprite" type="Sprite" parent="Blast"]
-modulate = Color( 0.313726, 0.0196078, 0.482353, 0 )
-scale = Vector2( 0.755, 0.999 )
-texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Sprite" type="Sprite" parent="Blast"]
+modulate = Color( 0.313726, 0.0196078, 0.482353, 0 )
+position = Vector2( 3.08862, 1.04109 )
+scale = Vector2( 0.77, 0.999 )
+texture = ExtResource( 2 )
 
 [node name="Collision" type="CollisionShape2D" parent="Blast"]
 shape = SubResource( 1 )

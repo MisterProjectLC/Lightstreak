@@ -29,7 +29,7 @@ Audio="*res://Mini Scenes/Audio.tscn"
 
 [display]
 
-window/size/width=800
+window/size/width=805
 window/size/height=800
 
 [rendering]

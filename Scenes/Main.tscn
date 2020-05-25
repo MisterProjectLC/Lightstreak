@@ -26,7 +26,7 @@
 [ext_resource path="res://Mini Scenes/PhaseManager.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=25]
 [ext_resource path="res://Mini Scenes/Weapon/Magnet.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Art/Battlefield3.png" type="Texture" id=27]
+[ext_resource path="res://Art/BlueBattlefield.png" type="Texture" id=27]
 [ext_resource path="res://Art/RedBattlefield.png" type="Texture" id=28]
 [ext_resource path="res://Art/MissileBlastMid.png" type="Texture" id=29]
 [ext_resource path="res://Art/MissileBlastRight.png" type="Texture" id=30]

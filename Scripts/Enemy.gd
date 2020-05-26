@@ -12,6 +12,7 @@ export(int) var _speed
 var _knockback = 0
 var _knockside = 0
 var _stunned = 0
+var _protected = false
 var _clock = 0
 
 func _ready():
@@ -92,9 +93,15 @@ func set_knockside(_new):
 	set_lane(_lane+_new)
 
 func take_damage(_damage):
+	if _protected:
+		return
+	
 	_health -= _damage
 	if _health <= 0:
 		destroy()
+
+func set_protected(_new):
+	_protected = _new
 
 func destroy():
 	queue_free()

@@ -30,5 +30,5 @@ func _process(delta):
 func _on_Energy_Ball_area_entered(area):
 	if area.has_method("take_damage"):
 		area.take_damage(3)
-		area.set_knockback(4)
+		#area.set_knockback(4)
 		queue_free()

@@ -103,7 +103,7 @@ highlight = ExtResource( 7 )
 
 [node name="Cannon2" parent="." instance=ExtResource( 5 )]
 visible = false
-position = Vector2( 480, 740 )
+position = Vector2( 482.398, 740 )
 target_lane = 2
 sprite = ExtResource( 8 )
 highlight = ExtResource( 9 )

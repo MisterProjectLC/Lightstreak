@@ -23,6 +23,8 @@ signal minion_spawned
 signal passed_threshold
 signal send_alert
 
+var blasts = 0
+
 func _ready():
 	var Minion = Global.Minion
 	enemy_object = {Minion.TROOPER:trooper, Minion.TANK:tank, Minion.SPEEDER:speeder, 
@@ -47,7 +49,7 @@ func _process(delta):
 				break
 				
 		# signal when there are no enemies around
-		if get_child_count() <= 0:
+		if get_child_count() - blasts <= 0:
 			emit_signal("phase_empty", _time)
 
 
@@ -56,6 +58,9 @@ func spawn_enemy(enemy_type, lane):
 	var _new = enemy_object[enemy_type].instance()
 	add_child(_new)
 	move_child(_new, get_child_count()-1)
+	
+	if _new.has_method("i_am_vblast"):
+		blasts += 1
 	
 	_new.connect('send_alert', self, 'send_alerts')
 	_new.set_lane(lane)

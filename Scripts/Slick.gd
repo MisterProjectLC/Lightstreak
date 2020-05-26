@@ -7,7 +7,7 @@ func _process(delta):
 		if _timer > 0:
 			_timer -= delta
 		else:
-			_timer = 2
+			_timer = 3
 			
 			var knocksider = randi() % 7
 			knocksider -= get_lane()

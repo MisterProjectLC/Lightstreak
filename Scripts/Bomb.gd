@@ -19,7 +19,7 @@ func _process(delta):
 	
 	# move upwards
 	#position.y -= 750*delta
-	var deltar = 7*delta
+	var deltar = 9*delta
 	position.y = position.y *(1- deltar) + 470 * deltar
 	if position.y < 480:
 		_explode()

@@ -15,3 +15,6 @@ func _process(delta):
 func _on_Blast_area_entered(area):
 	if area.has_method("cannon_damage"):
 		area.cannon_damage()
+
+func i_am_vblast(): # gambiarra pesada
+	pass

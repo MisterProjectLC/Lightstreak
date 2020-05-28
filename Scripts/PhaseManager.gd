@@ -758,6 +758,20 @@ func _ready():
 					{Spawn.TIME:114, Spawn.MINION:Minion.BOMBER, Spawn.LANE:5},
 					]
 				},
+				13: # I'm Blue Remix
+				{
+				Phase.GENERATE:true,
+				Phase.DURATION:84,
+				Phase.CANNON_COUNT:3,
+				Phase.POWER_COUNT:7,
+				Phase.INITIAL_TEXT:'Videogame',
+				Phase.REPLICATE_TEXT:7,
+				Phase.ARENA:0,
+				Phase.SCRIPT:
+					[
+					{Spawn.TIME:1, Spawn.MINION:Minion.TANK, Spawn.LANE:1}, 
+					]
+				},
 			}
 			
 func get_phase(value):

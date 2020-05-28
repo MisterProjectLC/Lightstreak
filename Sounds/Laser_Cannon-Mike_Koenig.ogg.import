@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Laser_Cannon-Mike_Koenig.ogg-67951529131cd174c18008a44b6fcfd8.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Laser_Cannon-Mike_Koenig.ogg"
+dest_files=[ "res://.import/Laser_Cannon-Mike_Koenig.ogg-67951529131cd174c18008a44b6fcfd8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

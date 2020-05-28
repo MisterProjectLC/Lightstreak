@@ -50,7 +50,7 @@ position = Vector2( -0.123907, 0 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Shield"]
-modulate = Color( 0.0941176, 0.658824, 0.831373, 0.490196 )
+modulate = Color( 0.831373, 0.0941176, 0.0941176, 0.490196 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true

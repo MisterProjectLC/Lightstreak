@@ -154,12 +154,12 @@ func shift_cannon(_cannon_n, _left):
 # CANNON METHODS ------------------------
 
 func cannon_damaged(cannon, damage):
-	print(cannon.name)
+	# Yep, I'm lazy as FUCK
 	
 	if damage > 0:
-		$Console.set_damage_typer(_cannon_list.find(cannon.name), true)
+		$Console.set_damage_typer(_cannon_list.find(get_node(cannon.name)), true)
 	else:
-		$Console.set_damage_typer(_cannon_list.find(cannon.name), false)
+		$Console.set_damage_typer(_cannon_list.find(get_node(cannon.name)), false)
 
 # WIN CONDITIONS --------------------
 

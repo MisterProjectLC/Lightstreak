@@ -2,7 +2,7 @@ extends Area2D
 
 var clock = 0
 var shield_phase = 0
-var teal = Color(24.0/255.0, 168.0/255.0, 212.0/255.0, 0.5)
+var teal = Color(212.0/255.0, 24.0/255.0, 24.0/255.0, 0.5)
 var protected = []
 
 var off_cooldown_duration = 20

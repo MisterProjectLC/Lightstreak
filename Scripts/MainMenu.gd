@@ -12,7 +12,8 @@ var outlines = ["Play", "Powers_List", "Options", "Credits", "Quit",
 				"Stages/Back", "Stages/Page 1/P1", "Stages/Page 1/P2",
 				"Stages/Page 1/P3", "Stages/Page 1/P4", "Stages/Page 1/P5",
 				"Stages/Page 2/P6", "Stages/Page 2/P7", "Stages/Page 2/P8",
-				"Stages/Page 2/P9", "Stages/Page 2/P10"]
+				"Stages/Page 2/P9", "Stages/Page 2/P10", "Stages/Page 3/P11",
+				"Stages/Page 3/P12", "Stages/Page 3/P13"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

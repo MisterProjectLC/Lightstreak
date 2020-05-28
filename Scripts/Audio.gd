@@ -7,11 +7,12 @@ export var sphere = []
 export var shock = []
 export var shock_hit = []
 export var magnet = []
-export var missile_hit = []
 export var bomber = []
 export var player_damage = []
 export var alert = []
 export var red_arena = []
+export var bullet = []
+export var missile_blast = []
 
 var players = []
 

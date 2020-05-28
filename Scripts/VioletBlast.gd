@@ -2,6 +2,7 @@ extends "res://Scripts/Blast.gd"
 
 func _ready():
 	Audio.play_sound(Audio.red_arena)
+	ready()
 
 func _process(delta):
 	if !_fading:

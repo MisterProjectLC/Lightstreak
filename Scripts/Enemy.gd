@@ -15,6 +15,8 @@ var _stunned = 0
 var _protected = false
 var _clock = 0
 
+export(Texture) var damaged_sprite
+
 func _ready():
 	set_health(_max_health)
 
@@ -97,6 +99,9 @@ func take_damage(_damage):
 		return
 	
 	_health -= _damage
+	
+	if damaged_sprite:
+		$Sprite.texture = damaged_sprite
 	if _health <= 0:
 		destroy()
 

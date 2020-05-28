@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Sounds/Musket Fire-SoundBible.com-2066012668.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Scripts/Audio.gd" type="Script" id=2]
@@ -19,28 +19,31 @@
 [ext_resource path="res://Music/KrizForever.ogg" type="AudioStream" id=17]
 [ext_resource path="res://Music/RedArena2.ogg" type="AudioStream" id=18]
 [ext_resource path="res://Sounds/PulseMagnet.ogg" type="AudioStream" id=19]
-[ext_resource path="res://Sounds/sci-fi-energybolt-297-sound-effect-473023.ogg" type="AudioStream" id=20]
 [ext_resource path="res://Sounds/Blast-SoundBible.com-2068539061.ogg" type="AudioStream" id=21]
 [ext_resource path="res://Sounds/Impact.ogg" type="AudioStream" id=22]
 [ext_resource path="res://Music/HeavysPizzaSong.ogg" type="AudioStream" id=23]
 [ext_resource path="res://Music/SurpriseButtsecks.ogg" type="AudioStream" id=24]
 [ext_resource path="res://Music/Dreamworld2.ogg" type="AudioStream" id=25]
 [ext_resource path="res://Music/Leek spin remix.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Music/I am Blue [AwesomiZer] - Original Mix.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Sounds/Laser_Cannon-Mike_Koenig.ogg" type="AudioStream" id=28]
+[ext_resource path="res://Sounds/147908__john129pats__laser-cannon.ogg" type="AudioStream" id=29]
 
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource( 2 )
 menu_theme = ExtResource( 6 )
-phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ) ]
+phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ]
 laser = [ ExtResource( 12 ), ExtResource( 13 ) ]
 sphere = [ ExtResource( 3 ), ExtResource( 4 ) ]
 shock = [ ExtResource( 10 ) ]
 shock_hit = [ ExtResource( 11 ) ]
 magnet = [ ExtResource( 19 ) ]
-missile_hit = [ ExtResource( 20 ) ]
 bomber = [ ExtResource( 21 ) ]
 player_damage = [ ExtResource( 1 ) ]
 alert = [ ExtResource( 15 ) ]
 red_arena = [ ExtResource( 22 ) ]
+bullet = [ ExtResource( 28 ) ]
+missile_blast = [ ExtResource( 29 ) ]
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
 

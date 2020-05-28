@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/210043__ianm32__laser-shots.wav-6ec3848fc6738ef298c8cb34e9c34242.sample"
+
+[deps]
+
+source_file="res://Sounds/210043__ianm32__laser-shots.wav"
+dest_files=[ "res://.import/210043__ianm32__laser-shots.wav-6ec3848fc6738ef298c8cb34e9c34242.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -55,4 +55,6 @@ texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
+[connection signal="changed_stunned" from="." to="Shield" method="_on_Guardian_changed_stunned"]
 [connection signal="area_entered" from="Shield" to="Shield" method="_on_Shield_area_entered"]
+[connection signal="area_exited" from="Shield" to="Shield" method="_on_Shield_area_exited"]

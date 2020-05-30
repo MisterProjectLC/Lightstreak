@@ -11,5 +11,5 @@ dest_files=[ "res://.import/I am Blue [AwesomiZer] - Original Mix.ogg-e49ada6adf
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

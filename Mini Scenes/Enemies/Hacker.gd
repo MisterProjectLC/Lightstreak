@@ -1,4 +1,4 @@
-extends "res://Scripts/Enemy.gd"
+extends "res://Mini Scenes/Enemies/Enemy.gd"
 
 var a = KEY_M
 var b = KEY_V

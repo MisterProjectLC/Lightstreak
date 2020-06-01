@@ -1,4 +1,4 @@
-extends "res://Scripts/Projectile.gd"
+extends "res://Mini Scenes/Weapon/Projectile.gd"
 
 func _ready():
 	Audio.play_sound(Audio.bullet)

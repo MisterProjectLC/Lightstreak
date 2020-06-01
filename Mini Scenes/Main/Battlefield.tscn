@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Art/BlueBattlefield.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Battlefield.gd" type="Script" id=2]
+[ext_resource path="res://Mini Scenes/Main/Battlefield.gd" type="Script" id=2]
+
+
 
 [node name="Battlefield" type="Node2D"]
 script = ExtResource( 2 )

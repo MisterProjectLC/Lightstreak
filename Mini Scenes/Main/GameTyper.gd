@@ -1,4 +1,4 @@
-extends "Typer.gd"
+extends "res://Mini Scenes/Typer.gd"
 
 export(Texture) var sprite
 

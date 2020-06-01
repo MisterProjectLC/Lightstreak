@@ -1,4 +1,4 @@
-extends "res://Scripts/Projectile.gd"
+extends "res://Mini Scenes/Weapon/Projectile.gd"
 
 var _color
 var _clock = 0

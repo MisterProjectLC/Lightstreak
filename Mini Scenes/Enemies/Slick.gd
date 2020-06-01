@@ -1,4 +1,4 @@
-extends "res://Scripts/Enemy.gd"
+extends "res://Mini Scenes/Enemies/Enemy.gd"
 
 var _timer = 2
 

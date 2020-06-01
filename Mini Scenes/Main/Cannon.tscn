@@ -1,8 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Cannon.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/Main/Cannon.gd" type="Script" id=1]
 [ext_resource path="res://Art/Cannon1.png" type="Texture" id=2]
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=3]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.9871, 37.1086 )

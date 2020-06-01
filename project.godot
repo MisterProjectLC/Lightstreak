@@ -21,7 +21,7 @@ config/icon="res://Art/LaserIcon.png"
 
 [autoload]
 
-Lane="*res://Scripts/Lane.gd"
+Lane="*res://Mini Scenes/Lane.gd"
 Alphabet="*res://Mini Scenes/Alphabet.tscn"
 Enums="*res://Scripts/Enums.gd"
 Global="*res://Global.gd"

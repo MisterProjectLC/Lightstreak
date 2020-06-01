@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Sounds/Musket Fire-SoundBible.com-2066012668.ogg" type="AudioStream" id=1]
-[ext_resource path="res://Scripts/Audio.gd" type="Script" id=2]
+[ext_resource path="res://Mini Scenes/Audio.gd" type="Script" id=2]
 [ext_resource path="res://Sounds/Sphere.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Sounds/Sphere2.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Music/SpacemanReduced.ogg" type="AudioStream" id=5]
@@ -28,6 +28,7 @@
 [ext_resource path="res://Music/I am Blue [AwesomiZer] - Original Mix.ogg" type="AudioStream" id=27]
 [ext_resource path="res://Sounds/Laser_Cannon-Mike_Koenig.ogg" type="AudioStream" id=28]
 [ext_resource path="res://Sounds/147908__john129pats__laser-cannon.ogg" type="AudioStream" id=29]
+
 
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource( 2 )

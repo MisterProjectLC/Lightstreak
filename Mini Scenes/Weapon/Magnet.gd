@@ -1,4 +1,4 @@
-extends "res://Scripts/Weapon.gd"
+extends "res://Mini Scenes/Weapon/Weapon.gd"
 
 var _fading_speed = 2
 var _knockside = Global.get_lane_x_increase()

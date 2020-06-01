@@ -1,4 +1,4 @@
-extends "res://Scripts/Blast.gd"
+extends "res://Mini Scenes/Weapon/Blast.gd"
 
 var _warning = 3
 var _warned = false

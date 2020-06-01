@@ -1,4 +1,4 @@
-extends "res://Scripts/Blast.gd"
+extends "res://Mini Scenes/Weapon/Blast.gd"
 
 func _ready():
 	Audio.play_sound(Audio.red_arena)

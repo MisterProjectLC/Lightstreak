@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Magnet.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/Weapon/Magnet.gd" type="Script" id=1]
 [ext_resource path="res://Art/MagnetMid.png" type="Texture" id=2]
 [ext_resource path="res://Art/Magnet.png" type="Texture" id=3]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.3188, 394.048 )

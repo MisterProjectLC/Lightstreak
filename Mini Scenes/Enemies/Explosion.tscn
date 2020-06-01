@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scripts/Explosion.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/Explosion.gd" type="Script" id=1]
 [ext_resource path="res://Art/Explosion5.png" type="Texture" id=2]
 [ext_resource path="res://Art/Explosion3.png" type="Texture" id=3]
 [ext_resource path="res://Art/Explosion7.png" type="Texture" id=4]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Art/Explosion8.png" type="Texture" id=9]
 [ext_resource path="res://Art/Explosion4.png" type="Texture" id=10]
 [ext_resource path="res://Art/Explosion10.png" type="Texture" id=11]
+
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 35.1913

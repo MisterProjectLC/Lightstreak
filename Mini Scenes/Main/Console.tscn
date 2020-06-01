@@ -1,10 +1,14 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/Console.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/Main/Console.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/Typer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/Typer1.png" type="Texture" id=3]
 [ext_resource path="res://Art/Typer2.png" type="Texture" id=4]
 [ext_resource path="res://Art/Typer3.png" type="Texture" id=5]
+
+
+
+
 
 [node name="Console" type="Control"]
 anchor_right = 1.0

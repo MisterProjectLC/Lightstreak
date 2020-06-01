@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/MinionSpawner.gd" type="Script" id=1]
+[ext_resource path="res://Mini Scenes/MinionSpawner.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/Enemies/Trooper.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Mini Scenes/Enemies/Tank.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Mini Scenes/Enemies/Speeder.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Mini Scenes/Enemies/Guardian.tscn" type="PackedScene" id=5]
+
 
 [node name="MinionSpawner" type="Node"]
 script = ExtResource( 1 )

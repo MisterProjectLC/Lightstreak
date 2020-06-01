@@ -1,4 +1,4 @@
-extends "res://Scripts/Weapon.gd"
+extends "res://Mini Scenes/Weapon/Weapon.gd"
 
 export var _speed = 1000
 

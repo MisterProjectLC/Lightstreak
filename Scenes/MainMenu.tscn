@@ -5,21 +5,21 @@
 [ext_resource path="res://Mini Scenes/Menu/MenuTyper.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=4]
 [ext_resource path="res://Art/Typer1.png" type="Texture" id=5]
-[ext_resource path="res://Art/Battlefield.png" type="Texture" id=6]
-[ext_resource path="res://Art/EnergyBallIcon.png" type="Texture" id=7]
-[ext_resource path="res://Art/ThunderIcon.png" type="Texture" id=8]
-[ext_resource path="res://Art/LaserIcon.png" type="Texture" id=9]
-[ext_resource path="res://Art/HackerEnemy.png" type="Texture" id=10]
+[ext_resource path="res://Art/Battlefields/Battlefield.png" type="Texture" id=6]
+[ext_resource path="res://Art/Icons/MachineIcon.png" type="Texture" id=7]
+[ext_resource path="res://Art/Icons/LaserIcon.png" type="Texture" id=8]
+[ext_resource path="res://Art/Icons/ThunderIcon.png" type="Texture" id=9]
+[ext_resource path="res://Art/Icons/EnergyBallIcon.png" type="Texture" id=10]
 [ext_resource path="res://Art/Cannon2.png" type="Texture" id=11]
-[ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=12]
-[ext_resource path="res://Art/RedIcon.png" type="Texture" id=13]
-[ext_resource path="res://Art/MissileIcon.png" type="Texture" id=14]
-[ext_resource path="res://Art/BlinkEnemy.png" type="Texture" id=15]
-[ext_resource path="res://Art/BombIcon.png" type="Texture" id=16]
+[ext_resource path="res://Art/Enemies/HackerEnemy.png" type="Texture" id=12]
+[ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=13]
+[ext_resource path="res://Art/Icons/RedIcon.png" type="Texture" id=14]
+[ext_resource path="res://Art/Enemies/BlinkEnemy.png" type="Texture" id=15]
+[ext_resource path="res://Art/Icons/MissileIcon.png" type="Texture" id=16]
 [ext_resource path="res://Mini Scenes/Outline.gd" type="Script" id=17]
-[ext_resource path="res://Art/VioletIcon.png" type="Texture" id=18]
+[ext_resource path="res://Art/Icons/VioletIcon.png" type="Texture" id=18]
 [ext_resource path="res://Art/Cannon3.png" type="Texture" id=19]
-[ext_resource path="res://Art/MachineIcon.png" type="Texture" id=20]
+[ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -459,7 +459,7 @@ margin_top = 2.15869
 margin_right = 141.476
 margin_bottom = 89.1587
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -470,7 +470,7 @@ margin_top = 49.5457
 margin_right = 143.051
 margin_bottom = 136.546
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 
 [node name="Stage 3" type="TextureRect" parent="Stages/Page 1"]
 margin_left = 56.4968
@@ -478,7 +478,7 @@ margin_top = 96.3929
 margin_right = 143.497
 margin_bottom = 183.393
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -489,7 +489,7 @@ margin_top = 144.0
 margin_right = 113.0
 margin_bottom = 210.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -649,7 +649,7 @@ margin_top = -0.0743713
 margin_right = 141.416
 margin_bottom = 110.926
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -660,7 +660,7 @@ margin_top = 47.3329
 margin_right = 142.601
 margin_bottom = 134.333
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -671,7 +671,7 @@ margin_top = 95.0578
 margin_right = 144.326
 margin_bottom = 182.058
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -693,7 +693,7 @@ margin_top = 189.586
 margin_right = 147.505
 margin_bottom = 276.586
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 16 )
+texture = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -815,7 +815,7 @@ margin_top = 99.1925
 margin_right = 148.517
 margin_bottom = 210.192
 rect_scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 20 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

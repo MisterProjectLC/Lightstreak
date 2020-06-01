@@ -1,23 +1,22 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Mini Scenes/Weapon/EnergyBall.gd" type="Script" id=1]
-[ext_resource path="res://Art/EnergyBall1.png" type="Texture" id=2]
-[ext_resource path="res://Art/EnergyBall2.png" type="Texture" id=3]
-[ext_resource path="res://Art/EnergyBall3.png" type="Texture" id=4]
-[ext_resource path="res://Art/EnergyBall4.png" type="Texture" id=5]
-[ext_resource path="res://Art/EnergyBall5.png" type="Texture" id=6]
-
+[ext_resource path="res://Art/Powers/EnergyBall3.png" type="Texture" id=2]
+[ext_resource path="res://Art/Powers/EnergyBall4.png" type="Texture" id=3]
+[ext_resource path="res://Art/Powers/EnergyBall5.png" type="Texture" id=4]
+[ext_resource path="res://Art/Powers/EnergyBall2.png" type="Texture" id=5]
+[ext_resource path="res://Art/Powers/EnergyBall1.png" type="Texture" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 24.8356
 
 [node name="Energy Ball" type="Area2D"]
 script = ExtResource( 1 )
-_animation_frames = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
+_animation_frames = [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.8, 1.8 )
-texture = ExtResource( 2 )
+texture = ExtResource( 7 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( -0.36805, 0 )

@@ -1,13 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Mini Scenes/Main/Cannon.gd" type="Script" id=1]
-[ext_resource path="res://Art/Cannon1.png" type="Texture" id=2]
+[ext_resource path="res://Art/Canhao (1).png" type="Texture" id=2]
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=3]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13.9871, 37.1086 )
+extents = Vector2( 13.9871, 21.8128 )
 
 [node name="Area2D" type="Area2D"]
 monitoring = false
@@ -15,21 +13,18 @@ script = ExtResource( 1 )
 move_speed = 12
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.8, 0.8 )
+position = Vector2( -3.55529, -5.21243 )
+scale = Vector2( 2.34, 2.34 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Highlight" type="Sprite" parent="."]
 visible = false
-position = Vector2( 0, -340 )
+position = Vector2( 0, -323.766 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.394768, 11.7742 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 1 )
 disabled = true

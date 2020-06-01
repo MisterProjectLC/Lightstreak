@@ -1,11 +1,11 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
 [ext_resource path="res://Mini Scenes/Main/Battlefield.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Mini Scenes/Main/Alerts.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Mini Scenes/Main/Cannon.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Art/Cannon1.png" type="Texture" id=6]
+[ext_resource path="res://Art/Canhao (1).png" type="Texture" id=6]
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=7]
 [ext_resource path="res://Art/Cannon2.png" type="Texture" id=8]
 [ext_resource path="res://Art/Highlight2.png" type="Texture" id=9]
@@ -14,44 +14,36 @@
 [ext_resource path="res://Mini Scenes/Main/Console.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Mini Scenes/Main/WeaponTitle.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Mini Scenes/Weapon/Laser.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Art/EnergyBallIcon.png" type="Texture" id=15]
+[ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=15]
 [ext_resource path="res://Mini Scenes/Weapon/EnergyBall.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Mini Scenes/Weapon/ShockW.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Mini Scenes/MinionSpawner.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Art/ThunderIcon.png" type="Texture" id=19]
+[ext_resource path="res://Art/Icons/MissileIcon.png" type="Texture" id=19]
 [ext_resource path="res://Mini Scenes/Enemies/Hacker.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Mini Scenes/Enemies/HackerInit.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Mini Scenes/Enemies/RedBlast.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Art/Shotgun2.png" type="Texture" id=23]
+[ext_resource path="res://Art/Numbers.png" type="Texture" id=23]
 [ext_resource path="res://Mini Scenes/PhaseManager.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Art/MagnetIcon.png" type="Texture" id=25]
+[ext_resource path="res://Art/Icons/ThunderIcon.png" type="Texture" id=25]
 [ext_resource path="res://Mini Scenes/Weapon/Magnet.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Art/BlueBattlefield.png" type="Texture" id=27]
-[ext_resource path="res://Art/RedBattlefield.png" type="Texture" id=28]
-[ext_resource path="res://Art/MissileBlastMid.png" type="Texture" id=29]
-[ext_resource path="res://Art/MissileBlastRight.png" type="Texture" id=30]
+[ext_resource path="res://Art/Battlefields/VioletBattlefield.png" type="Texture" id=27]
+[ext_resource path="res://Art/Battlefields/RedBattlefield.png" type="Texture" id=28]
+[ext_resource path="res://Art/Battlefields/Battlefield3.png" type="Texture" id=29]
+[ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=30]
 [ext_resource path="res://Mini Scenes/Weapon/Missile.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Art/MissileIcon.png" type="Texture" id=32]
+[ext_resource path="res://Art/Icons/EnergyBallIcon.png" type="Texture" id=32]
 [ext_resource path="res://Mini Scenes/Enemies/Bomber.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Mini Scenes/Main/HeyLook.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Mini Scenes/Enemies/Slick.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Mini Scenes/Weapon/Bomb.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Art/BombIcon.png" type="Texture" id=37]
-[ext_resource path="res://Art/VioletBattlefield.png" type="Texture" id=38]
+[ext_resource path="res://Art/Icons/LaserIcon.png" type="Texture" id=37]
+[ext_resource path="res://Art/Icons/MachineIcon.png" type="Texture" id=38]
 [ext_resource path="res://Mini Scenes/Enemies/VioletBlast.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Mini Scenes/Weapon/MachinegunW.tscn" type="PackedScene" id=40]
-[ext_resource path="res://Art/MachineIcon.png" type="Texture" id=41]
-
-
-
-
-
-
-
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
-_background_list = [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 38 ) ]
+_background_list = [ ExtResource( 29 ), ExtResource( 28 ), ExtResource( 27 ) ]
 heylook = ExtResource( 34 )
 
 [node name="BlackBackground" type="ColorRect" parent="."]
@@ -79,34 +71,8 @@ script = ExtResource( 2 )
 
 [node name="PhaseManager" parent="." instance=ExtResource( 24 )]
 
-[node name="Sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 410.188, 627.197 )
-scale = Vector2( 0.781053, 0.943096 )
-texture = ExtResource( 23 )
-
-[node name="Sprite2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 435.308, 405.847 )
-scale = Vector2( 0.781053, 0.943096 )
-texture = ExtResource( 30 )
-
-[node name="Sprite3" type="Sprite" parent="."]
-visible = false
-position = Vector2( 377.901, 405.959 )
-scale = Vector2( 0.781053, 0.943096 )
-texture = ExtResource( 30 )
-flip_h = true
-
-[node name="Sprite4" type="Sprite" parent="."]
-visible = false
-position = Vector2( 577.474, 256.8 )
-scale = Vector2( 0.781053, 0.943096 )
-texture = ExtResource( 29 )
-flip_h = true
-
 [node name="Cannon1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 410, 739.451 )
+position = Vector2( 409.878, 723.766 )
 sprite = ExtResource( 6 )
 highlight = ExtResource( 7 )
 
@@ -147,6 +113,7 @@ margin_left = 8.45451
 margin_top = 610.926
 margin_right = -413.545
 margin_bottom = -120.074
+sprite = ExtResource( 37 )
 _weapon = ExtResource( 14 )
 
 [node name="SphereTitle" parent="." instance=ExtResource( 13 )]
@@ -155,7 +122,7 @@ margin_left = 9.3734
 margin_top = 560.088
 margin_right = -412.626
 margin_bottom = -170.912
-sprite = ExtResource( 15 )
+sprite = ExtResource( 32 )
 _weapon = ExtResource( 16 )
 
 [node name="ShockTitle" parent="." instance=ExtResource( 13 )]
@@ -164,7 +131,7 @@ margin_left = 8.7107
 margin_top = 509.44
 margin_right = -413.288
 margin_bottom = -221.56
-sprite = ExtResource( 19 )
+sprite = ExtResource( 25 )
 _weapon = ExtResource( 17 )
 _difficulty = 0
 
@@ -174,7 +141,7 @@ margin_left = 8.94335
 margin_top = 458.026
 margin_right = -413.056
 margin_bottom = -272.974
-sprite = ExtResource( 25 )
+sprite = ExtResource( 30 )
 _weapon = ExtResource( 26 )
 _difficulty = 0
 
@@ -184,7 +151,7 @@ margin_left = 9.06641
 margin_top = 407.011
 margin_right = -412.933
 margin_bottom = -323.989
-sprite = ExtResource( 32 )
+sprite = ExtResource( 19 )
 _weapon = ExtResource( 31 )
 _difficulty = 2
 
@@ -194,7 +161,7 @@ margin_left = 9.25822
 margin_top = 356.267
 margin_right = -412.741
 margin_bottom = -374.733
-sprite = ExtResource( 37 )
+sprite = ExtResource( 15 )
 _weapon = ExtResource( 36 )
 
 [node name="MachineTitle" parent="." instance=ExtResource( 13 )]
@@ -203,7 +170,7 @@ margin_left = 7.62922
 margin_top = 305.061
 margin_right = -414.37
 margin_bottom = -425.939
-sprite = ExtResource( 41 )
+sprite = ExtResource( 38 )
 _weapon = ExtResource( 40 )
 _difficulty = 2
 
@@ -213,7 +180,7 @@ margin_left = 8.44373
 margin_top = 254.152
 margin_right = -413.555
 margin_bottom = -476.848
-sprite = ExtResource( 32 )
+sprite = ExtResource( 19 )
 _weapon = ExtResource( 31 )
 _difficulty = 2
 
@@ -223,7 +190,7 @@ margin_left = 8.01306
 margin_top = 203.337
 margin_right = -413.986
 margin_bottom = -527.663
-sprite = ExtResource( 32 )
+sprite = ExtResource( 19 )
 _weapon = ExtResource( 31 )
 _difficulty = 2
 
@@ -244,6 +211,11 @@ margin_right = -486.052
 margin_bottom = -3.98315
 
 [node name="Alerts" parent="." instance=ExtResource( 4 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 553.015, 755.228 )
+scale = Vector2( 0.806, 0.812 )
+texture = ExtResource( 23 )
 [connection signal="minion_spawned" from="MinionSpawner" to="." method="_on_MinionSpawner_minion_spawned"]
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
 [connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]

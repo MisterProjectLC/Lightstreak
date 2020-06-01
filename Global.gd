@@ -15,7 +15,7 @@ var lightstreak_typed = false
 
 var _lane_x0 = 340
 var _lane_x_increase = 71
-var _lane_y = 740
+var _lane_y = 723.766
 
 var debug_enabled = false
 

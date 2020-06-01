@@ -1,9 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Mini Scenes/Weapon/Magnet.gd" type="Script" id=1]
-[ext_resource path="res://Art/MagnetMid.png" type="Texture" id=2]
-[ext_resource path="res://Art/Magnet.png" type="Texture" id=3]
-
+[ext_resource path="res://Art/Powers/MagnetMid.png" type="Texture" id=2]
+[ext_resource path="res://Art/Powers/Magnet.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41.3188, 394.048 )
@@ -22,7 +21,7 @@ scale = Vector2( 0.86, 1 )
 
 [node name="Sprite" type="Sprite" parent="MagnetLeft"]
 scale = Vector2( 0.59, 0.85 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 flip_h = true
 __meta__ = {
 "_edit_lock_": true
@@ -43,7 +42,7 @@ scale = Vector2( 0.86, 1 )
 
 [node name="Sprite" type="Sprite" parent="MagnetRight"]
 scale = Vector2( 0.59, 0.85 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }

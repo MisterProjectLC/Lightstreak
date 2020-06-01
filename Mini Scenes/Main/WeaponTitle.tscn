@@ -1,13 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Mini Scenes/Main/WeaponTitle.gd" type="Script" id=1]
-[ext_resource path="res://Art/LaserIcon.png" type="Texture" id=2]
 [ext_resource path="res://Art/WeaponTitle.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Mini Scenes/Outline.gd" type="Script" id=5]
-
-
-
+[ext_resource path="res://Art/Icons/LaserIcon.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -23,7 +20,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-sprite = ExtResource( 2 )
+sprite = ExtResource( 6 )
 
 [node name="Sprite" type="TextureRect" parent="."]
 margin_right = 40.0
@@ -39,7 +36,10 @@ margin_top = 4.89858
 margin_right = 396.736
 margin_bottom = 91.8986
 rect_scale = Vector2( 0.57, 0.57 )
-texture = ExtResource( 2 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 13.3333

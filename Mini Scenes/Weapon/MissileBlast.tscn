@@ -1,9 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Mini Scenes/Weapon/MissileBlast.gd" type="Script" id=1]
-[ext_resource path="res://Art/MissileBlastMid.png" type="Texture" id=2]
-[ext_resource path="res://Art/MissileBlastRight.png" type="Texture" id=3]
-
+[ext_resource path="res://Art/Powers/MissileBlastMid.png" type="Texture" id=2]
+[ext_resource path="res://Art/Powers/MissileBlastRight.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.0078, 14.0819 )
@@ -14,13 +13,13 @@ script = ExtResource( 1 )
 [node name="Left" type="Sprite" parent="."]
 position = Vector2( -29.0785, 0.275446 )
 scale = Vector2( 0.86, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 flip_h = true
 
 [node name="Right" type="Sprite" parent="."]
 position = Vector2( 31.9188, 0.440132 )
 scale = Vector2( 0.86, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="Mid" type="Area2D" parent="."]
 

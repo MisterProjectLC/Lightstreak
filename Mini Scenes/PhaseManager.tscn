@@ -2,6 +2,5 @@
 
 [ext_resource path="res://Mini Scenes/PhaseManager.gd" type="Script" id=1]
 
-
 [node name="PhaseManager" type="Node"]
 script = ExtResource( 1 )

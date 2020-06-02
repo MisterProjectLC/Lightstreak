@@ -27,11 +27,10 @@ signal send_alert
 var blasts = 0
 
 func _ready():
-	var Minion = Global.Minion
-	enemy_object = {Minion.TROOPER:trooper, Minion.TANK:tank, Minion.SPEEDER:speeder, 
-	Minion.HACKER:hacker, Minion.HACKERI:hacker_init, Minion.REDBLAST:red_blast,
-	Minion.BOMBER:bomber, Minion.SLICK:slick, Minion.VIOLETBLAST:violet_blast,
-	Minion.GUARDIAN:guardian}
+	enemy_object = {"TROOPER":trooper, "TANK":tank, "SPEEDER":speeder, 
+	"HACKER":hacker, "HACKERI":hacker_init, "REDBLAST":red_blast,
+	"BOMBER":bomber, "SLICK":slick, "VIOLETBLAST":violet_blast,
+	"GUARDIAN":guardian}
 
 
 func _process(delta):
@@ -44,7 +43,7 @@ func _process(delta):
 		
 		# spawn enemy
 		while true:
-			if _last_spawned < _phase_script.size() and _phase_script[_last_spawned][Global.Spawn.TIME] == _time:
+			if _last_spawned < _phase_script.size() and _phase_script[_last_spawned]["TIME"] == _time:
 				emit_signal("minion_spawned", self, _phase_script[_last_spawned])
 				_last_spawned += 1
 			else:

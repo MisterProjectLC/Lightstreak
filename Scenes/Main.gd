@@ -16,7 +16,9 @@ signal weapon_activated
 
 func _ready():
 	# setup phase
-	_current_phase = $PhaseManager.get_phase(Global.get_current_phase())
+	$PhaseManager.load_phase(Global.get_current_phase())
+	_current_phase = $PhaseManager.get_phase()
+	
 	Audio.play_music(Audio.phase_themes[Global.get_current_phase()-1])
 	_weapon_list = [get_node('LaserTitle'), get_node('SphereTitle'), 
 					get_node('ShockTitle'), get_node('MagnetTitle'),
@@ -28,34 +30,34 @@ func _ready():
 	_lang = $LangSystem.Language.PORTUGUES
 	
 	# setup arena
-	$Battlefield.set_background(_background_list[_current_phase[Global.Phase.ARENA]])
+	$Battlefield.set_background(_background_list[_current_phase["ARENA"]])
 	
 	# setup consoles
-	$Console.set_typer_count(_current_phase[Global.Phase.CANNON_COUNT])
-	$Console.set_input_specific(_current_phase[Global.Phase.INITIAL_TEXT], _current_phase[Global.Phase.CANNON_COUNT]-1)
+	$Console.set_typer_count(_current_phase["CANNON_COUNT"])
+	$Console.set_input_specific(_current_phase["INITIAL_TEXT"], _current_phase["CANNON_COUNT"]-1)
 	
 	# setup cannon
-	for i in range(0, _current_phase[Global.Phase.CANNON_COUNT]):
+	for i in range(0, _current_phase["CANNON_COUNT"]):
 		_cannon_list.append(get_node("Cannon" + str(i+1)))
 		_cannon_list[i].activate()
 	_cannon_list[0].toggle_highlight(true)
 	
 	# setup weapon lists
-	for i in range(1, _current_phase[Global.Phase.POWER_COUNT]+1):
+	for i in range(1, _current_phase["POWER_COUNT"]+1):
 		_weapon_list[i-1].set_visible(true)
 	
-	if _current_phase[Global.Phase.GENERATE]:
+	if _current_phase["GENERATE"]:
 		for _weapon in _weapon_list:
 			_weapon.set_text($LangSystem.get_word(_weapon.get_difficulty(), 
 										_lang))
 	
 	# replicate text
-	if _current_phase[Global.Phase.REPLICATE_TEXT] != 0:
-		_weapon_list[_current_phase[Global.Phase.REPLICATE_TEXT]-1].set_text(_current_phase[Global.Phase.INITIAL_TEXT])
-		typer_updated(_current_phase[Global.Phase.INITIAL_TEXT])
+	if _current_phase["REPLICATE_TEXT"] != 0:
+		_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"])
+		typer_updated(_current_phase["INITIAL_TEXT"])
 	
 	# setup minion spawner
-	$MinionSpawner.set_phase_script(_current_phase[Global.Phase.SCRIPT])
+	$MinionSpawner.set_phase_script(_current_phase["SCRIPT"])
 	
 	# setup tutorial
 	if Global.get_current_phase() == 1:
@@ -117,7 +119,7 @@ func _weapon_handler(_cannon_n, _input):
 			# if word is a repeat, try again
 			while (1):
 				var repeats = false
-				for i in range(_current_phase[Global.Phase.POWER_COUNT]):
+				for i in range(_current_phase["POWER_COUNT"]):
 					if _weapon_list[i] != _weapon_title and _weapon_list[i].get_text() == new_word:
 						new_word = $LangSystem.get_word(_node.get_difficulty(), _lang)
 						repeats = true
@@ -174,7 +176,7 @@ func _on_MinionSpawner_passed_threshold():
 
 # Victory
 func _on_MinionSpawner_phase_empty(time):
-	if _current_phase[Global.Phase.DURATION] <= time:
+	if _current_phase["DURATION"] <= time:
 		leave_game()
 
 func game_over():
@@ -188,7 +190,7 @@ func leave_game():
 
 # send back important info to the minion spawner
 func _on_MinionSpawner_minion_spawned(enemy_spawner, enemy_info):
-	enemy_spawner.spawn_enemy(enemy_info[Global.Spawn.MINION], enemy_info[Global.Spawn.LANE])
+	enemy_spawner.spawn_enemy(enemy_info["MINION"], enemy_info["LANE"])
 
 func send_alert(message, priority):
 	$Alerts.alert(message, priority)

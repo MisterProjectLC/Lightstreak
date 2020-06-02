@@ -15,14 +15,7 @@ func _ready():
 				_linguas[lingua][diff].append(word)
 	
 func get_word(_diff, _lang):
-	match _lang:
-		Language.PORTUGUES:
-			return _linguas[1][_diff][randi() % _linguas[1][_diff].size()]
-		Language.ENGLISH:
-			return _linguas[2][_diff][randi() % _linguas[2][_diff].size()]
-		Language.DEUTSCH:
-			return _linguas[3][_diff][randi() % _linguas[3][_diff].size()]
-
+	return _linguas[_lang+1][_diff][randi() % _linguas[_lang+1][_diff].size()]
 
 func load_words():
 # warning-ignore:unused_variable

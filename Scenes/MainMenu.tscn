@@ -222,7 +222,6 @@ __meta__ = {
 }
 
 [node name="OptionsMenu" type="Label" parent="."]
-visible = false
 margin_left = -810.0
 margin_top = 192.0
 margin_right = -274.0
@@ -278,6 +277,29 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lang" type="Label" parent="OptionsMenu"]
+margin_left = -1.25574
+margin_top = 137.952
+margin_right = 398.744
+margin_bottom = 228.952
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "LANG <EN/PT/DE>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="OptionsMenu/Lang"]
+margin_right = 400.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

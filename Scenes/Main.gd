@@ -6,7 +6,6 @@ var _weapon_list = []
 export var _background_list = []
 export(PackedScene) var heylook
 
-var _lang
 var _current_phase
 
 var player_health = 3
@@ -25,9 +24,6 @@ func _ready():
 					get_node('MissileTitle'), get_node('BombTitle'), 
 					get_node('MachineTitle'), get_node('DispTitle'), 
 					get_node('LightTitle')]
-	
-	# setup language
-	_lang = $LangSystem.Language.PORTUGUES
 	
 	# setup arena
 	$Battlefield.set_background(_background_list[_current_phase["ARENA"]])
@@ -49,7 +45,7 @@ func _ready():
 	if _current_phase["GENERATE"]:
 		for _weapon in _weapon_list:
 			_weapon.set_text($LangSystem.get_word(_weapon.get_difficulty(), 
-										_lang))
+										Global.get_language()))
 	
 	# replicate text
 	if _current_phase["REPLICATE_TEXT"] != 0:
@@ -114,14 +110,14 @@ func _weapon_handler(_cannon_n, _input):
 			_new_weapon.set_weapon_lane(_cannon.get_target_lane())
 
 			# replace word
-			var new_word = $LangSystem.get_word(_node.get_difficulty(), _lang)
+			var new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
 
 			# if word is a repeat, try again
 			while (1):
 				var repeats = false
 				for i in range(_current_phase["POWER_COUNT"]):
 					if _weapon_list[i] != _weapon_title and _weapon_list[i].get_text() == new_word:
-						new_word = $LangSystem.get_word(_node.get_difficulty(), _lang)
+						new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
 						repeats = true
 						break
 					

@@ -25,11 +25,11 @@
 size = 56
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 78
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 56
 font_data = ExtResource( 1 )
 
@@ -99,7 +99,7 @@ margin_left = 5.8895
 margin_top = 13.9712
 margin_right = 530.89
 margin_bottom = 78.9712
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 scroll_active = false
 __meta__ = {
@@ -133,7 +133,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Play"]
 margin_right = 345.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {

@@ -87,7 +87,7 @@ func _command_typed(id, text):
 			push_other_menus()
 
 			moving_children['OptionsMenu'] = Vector2(10, 192)
-			
+
 		"MUSIC":
 			if len(args) == 2:
 				var chosen_volume = int(args[1])

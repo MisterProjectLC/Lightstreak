@@ -7,7 +7,7 @@
 [ext_resource path="res://Mini Scenes/Main/Cannon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Art/Canhao (1).png" type="Texture" id=6]
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=7]
-[ext_resource path="res://Art/Canhao2.png" type="Texture" id=8]
+[ext_resource path="res://Art/Canhao2V2.png" type="Texture" id=8]
 [ext_resource path="res://Art/Highlight2.png" type="Texture" id=9]
 [ext_resource path="res://Art/Cannon3.png" type="Texture" id=10]
 [ext_resource path="res://Art/Highlight3.png" type="Texture" id=11]

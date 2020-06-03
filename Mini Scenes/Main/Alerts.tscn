@@ -4,8 +4,6 @@
 [ext_resource path="res://Mini Scenes/Main/Alert.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=3]
 
-
-
 [sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 3 )

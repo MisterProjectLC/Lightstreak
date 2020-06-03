@@ -19,7 +19,7 @@ func _input(event):
 			_tab_active(true)
 		
 		# tab
-		if event.scancode == KEY_SHIFT:
+		if event.scancode == KEY_CONTROL:
 			_tab_active(false)
 
 func set_typer_count(count):

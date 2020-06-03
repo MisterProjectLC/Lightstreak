@@ -2,6 +2,5 @@
 
 [ext_resource path="res://Mini Scenes/Alphabet.gd" type="Script" id=1]
 
-
 [node name="Alphabet" type="Node"]
 script = ExtResource( 1 )

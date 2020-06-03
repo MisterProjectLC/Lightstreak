@@ -4,8 +4,6 @@
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Mini Scenes/Main/Alert.gd" type="Script" id=3]
 
-
-
 [sub_resource type="DynamicFont" id=1]
 size = 48
 outline_color = Color( 0.682353, 0.0901961, 0.0901961, 1 )

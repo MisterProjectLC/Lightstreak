@@ -9,7 +9,7 @@
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=7]
 [ext_resource path="res://Art/Canhao2V2.png" type="Texture" id=8]
 [ext_resource path="res://Art/Highlight2.png" type="Texture" id=9]
-[ext_resource path="res://Art/Cannon3.png" type="Texture" id=10]
+[ext_resource path="res://Art/Canhao3.png" type="Texture" id=10]
 [ext_resource path="res://Art/Highlight3.png" type="Texture" id=11]
 [ext_resource path="res://Mini Scenes/Main/Console.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Mini Scenes/Main/WeaponTitle.tscn" type="PackedScene" id=13]
@@ -84,7 +84,7 @@ highlight = ExtResource( 9 )
 
 [node name="Cannon3" parent="." instance=ExtResource( 5 )]
 visible = false
-position = Vector2( 623.732, 739.451 )
+position = Vector2( 623.732, 721.539 )
 target_lane = 4
 sprite = ExtResource( 10 )
 highlight = ExtResource( 11 )

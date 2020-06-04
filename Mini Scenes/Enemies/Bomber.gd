@@ -6,9 +6,10 @@ func _process(delta):
 	process(delta)
 
 func destroy():
-	Audio.play_sound(Audio.bomber)
-	var new = explosion.instance()
-	new.position = position
-	get_parent().add_child(new)
+	if (!_stunned):
+		Audio.play_sound(Audio.bomber)
+		var new = explosion.instance()
+		new.position = position
+		get_parent().add_child(new)
 	
 	.destroy()

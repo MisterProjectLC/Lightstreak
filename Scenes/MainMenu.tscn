@@ -18,7 +18,7 @@
 [ext_resource path="res://Art/Icons/MissileIcon.png" type="Texture" id=16]
 [ext_resource path="res://Mini Scenes/Outline.gd" type="Script" id=17]
 [ext_resource path="res://Art/Icons/VioletIcon.png" type="Texture" id=18]
-[ext_resource path="res://Art/Cannon3.png" type="Texture" id=19]
+[ext_resource path="res://Art/Canhao3.png" type="Texture" id=19]
 [ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=20]
 
 [sub_resource type="DynamicFont" id=1]
@@ -836,11 +836,10 @@ __meta__ = {
 }
 
 [node name="Stage 12" type="TextureRect" parent="Stages/Page 3"]
-margin_left = 64.7953
-margin_top = 45.3101
-margin_right = 151.795
-margin_bottom = 156.31
-rect_scale = Vector2( 0.4, 0.4 )
+margin_left = 50.2426
+margin_top = 34.9792
+margin_right = 105.243
+margin_bottom = 97.9792
 texture = ExtResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false

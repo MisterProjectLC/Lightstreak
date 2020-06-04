@@ -17,6 +17,7 @@ damaged_sprite = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+flip_v = true
 __meta__ = {
 "_edit_lock_": true
 }

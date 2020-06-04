@@ -1,6 +1,6 @@
 {
 	"GENERATE":true,
-	"DURATION":95,
+	"DURATION":135,
 	"CANNON_COUNT":1,
 	"POWER_COUNT":3,
 	"INITIAL_TEXT":"Watt",
@@ -43,5 +43,23 @@
 		{"TIME":88, "MINION":"TROOPER", "LANE":2},
 		{"TIME":88, "MINION":"SPEEDER", "LANE":3},
 		{"TIME":88, "MINION":"TROOPER", "LANE":4},
-		]
+		{"TIME":93, "MINION":"SPEEDER", "LANE":1},
+		{"TIME":93, "MINION":"SPEEDER", "LANE":5},
+        {"TIME":95, "MINION":"TROOPER", "LANE":2},
+        {"TIME":95, "MINION":"TROOPER", "LANE":4},
+        {"TIME":97, "MINION":"TANK", "LANE":4},
+		{"TIME":97, "MINION":"TANK", "LANE":5},
+        {"TIME":103, "MINION":"SPEEDER", "LANE":1},
+        {"TIME":105, "MINION":"SPEEDER", "LANE":2},
+        {"TIME":107, "MINION":"SPEEDER", "LANE":3},
+        {"TIME":111, "MINION":"TROOPER", "LANE":1},
+		{"TIME":111, "MINION":"TROOPER", "LANE":2},
+        {"TIME":111, "MINION":"TROOPER", "LANE":3},
+        {"TIME":111, "MINION":"TROOPER", "LANE":4},
+        {"TIME":111, "MINION":"TROOPER", "LANE":5},
+        {"TIME":125, "MINION":"TANK", "LANE":3},
+        {"TIME":127, "MINION":"TANK", "LANE":3},
+        {"TIME":130, "MINION":"TANK", "LANE":3},
+        {"TIME":132, "MINION":"TANK", "LANE":3},
+    ]
 	}

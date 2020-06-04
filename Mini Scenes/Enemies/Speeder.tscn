@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Tank.gd" type="Script" id=1]
-[ext_resource path="res://Art/Enemies/Speeder.png" type="Texture" id=2]
+[ext_resource path="res://Art/Enemies/SpeederV2.png" type="Texture" id=2]
 [ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Art/Enemies/SpeederLowOP.png" type="Texture" id=5]
+[ext_resource path="res://Art/Enemies/SpeederV2LowOP.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 23.6903, 13.703 )
+extents = Vector2( 27.5332, 13.703 )
 
 [node name="Speeder" type="Area2D"]
 script = ExtResource( 1 )
@@ -16,10 +16,9 @@ _speed = 3
 damaged_sprite = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.168297, -9.08165 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
+flip_v = true
 
 [node name="Paralysis" type="Sprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
@@ -32,7 +31,10 @@ __meta__ = {
 }
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( -1.04924, -4.75978 )
+position = Vector2( -0.0527343, -4.42762 )
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Light" parent="." instance=ExtResource( 4 )]

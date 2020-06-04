@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Mini Scenes/LabelFade.gd" type="Script" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Art/Icons/LaserIcon.png" type="Texture" id=8]
 [ext_resource path="res://Art/Icons/ThunderIcon.png" type="Texture" id=9]
 [ext_resource path="res://Art/Icons/EnergyBallIcon.png" type="Texture" id=10]
-[ext_resource path="res://Art/Cannon2.png" type="Texture" id=11]
+[ext_resource path="res://Art/Canhao2V2.png" type="Texture" id=11]
 [ext_resource path="res://Art/Enemies/HackerEnemy.png" type="Texture" id=12]
 [ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=13]
 [ext_resource path="res://Art/Icons/RedIcon.png" type="Texture" id=14]
@@ -26,6 +26,10 @@ size = 56
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 78
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
 size = 56
 font_data = ExtResource( 1 )
 
@@ -80,26 +84,38 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Typer" type="Label" parent="."]
-margin_left = 117.205
-margin_top = 63.4864
-margin_right = 481.206
-margin_bottom = 107.486
-rect_scale = Vector2( 1.4, 1.4 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+[node name="Typer" type="Control" parent="."]
+margin_left = 112.1
+margin_top = 48.4502
+margin_right = 152.1
+margin_bottom = 88.4502
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Text" type="RichTextLabel" parent="Typer"]
+margin_left = 5.8895
+margin_top = 13.9712
+margin_right = 530.89
+margin_bottom = 78.9712
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureRect" type="TextureRect" parent="Typer"]
-margin_left = -11.054
-margin_top = -6.0797
-margin_right = 351.946
-margin_bottom = 33.9203
-rect_scale = Vector2( 1.05, 1.4 )
+margin_left = -9.5972
+margin_top = 6.946
+margin_right = 353.403
+margin_bottom = 46.946
+rect_scale = Vector2( 1.46, 2 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Play" type="Label" parent="."]
 margin_left = 800.0
@@ -117,7 +133,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Play"]
 margin_right = 345.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -222,7 +238,6 @@ __meta__ = {
 }
 
 [node name="OptionsMenu" type="Label" parent="."]
-visible = false
 margin_left = -810.0
 margin_top = 192.0
 margin_right = -274.0
@@ -278,6 +293,29 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lang" type="Label" parent="OptionsMenu"]
+margin_left = -1.25574
+margin_top = 137.952
+margin_right = 398.744
+margin_bottom = 228.952
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "LANG <EN/PT/DE>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="OptionsMenu/Lang"]
+margin_right = 400.0
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -495,11 +533,10 @@ __meta__ = {
 }
 
 [node name="Stage 5" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 60.629
-margin_top = 188.143
-margin_right = 147.629
-margin_bottom = 299.143
-rect_scale = Vector2( 0.4, 0.4 )
+margin_left = 42.015
+margin_top = 177.953
+margin_right = 97.015
+margin_bottom = 232.953
 texture = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false

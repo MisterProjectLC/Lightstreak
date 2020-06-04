@@ -9,6 +9,7 @@ var fading_children = {
 
 var outlines = ["Play", "Powers_List", "Options", "Credits", "Quit",
 				"OptionsMenu/Music", "OptionsMenu/Sounds", "OptionsMenu/Back",
+				"OptionsMenu/Lang",
 				"Stages/Back", "Stages/Page 1/P1", "Stages/Page 1/P2",
 				"Stages/Page 1/P3", "Stages/Page 1/P4", "Stages/Page 1/P5",
 				"Stages/Page 2/P6", "Stages/Page 2/P7", "Stages/Page 2/P8",
@@ -86,7 +87,7 @@ func _command_typed(id, text):
 			push_other_menus()
 
 			moving_children['OptionsMenu'] = Vector2(10, 192)
-			
+
 		"MUSIC":
 			if len(args) == 2:
 				var chosen_volume = int(args[1])
@@ -100,6 +101,12 @@ func _command_typed(id, text):
 				if chosen_volume >= 0 and chosen_volume <= 100:
 					Global.set_sounds_volume(chosen_volume)
 					Audio.play_sound(Audio.laser)
+		
+		"LANG":
+			if len(args) == 2:
+				var dict = {"EN":0, "PT":1, "DE":2}
+				if args[1] in dict.keys():
+					Global.set_language(dict[args[1]])
 
 		"BACK":
 			if Global.get_lightstreak_typed():

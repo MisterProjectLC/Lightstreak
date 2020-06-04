@@ -4,7 +4,7 @@
 [ext_resource path="res://Mini Scenes/Audio.gd" type="Script" id=2]
 [ext_resource path="res://Sounds/Sphere.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Sounds/Sphere2.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Music/SpacemanReduced.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Music/123.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Music/omfgdogs.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Music/tranceReduced.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Music/WhereSheDances.ogg" type="AudioStream" id=8]
@@ -17,7 +17,7 @@
 [ext_resource path="res://Sounds/Alert.ogg" type="AudioStream" id=15]
 [ext_resource path="res://Music/terrormountain2.ogg" type="AudioStream" id=16]
 [ext_resource path="res://Music/KrizForever.ogg" type="AudioStream" id=17]
-[ext_resource path="res://Music/RedArena2.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Music/RedAlert.ogg" type="AudioStream" id=18]
 [ext_resource path="res://Sounds/PulseMagnet.ogg" type="AudioStream" id=19]
 [ext_resource path="res://Sounds/Blast-SoundBible.com-2068539061.ogg" type="AudioStream" id=21]
 [ext_resource path="res://Sounds/Impact.ogg" type="AudioStream" id=22]
@@ -28,7 +28,6 @@
 [ext_resource path="res://Music/I am Blue [AwesomiZer] - Original Mix.ogg" type="AudioStream" id=27]
 [ext_resource path="res://Sounds/Laser_Cannon-Mike_Koenig.ogg" type="AudioStream" id=28]
 [ext_resource path="res://Sounds/147908__john129pats__laser-cannon.ogg" type="AudioStream" id=29]
-
 
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource( 2 )

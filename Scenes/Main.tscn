@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://Mini Scenes/Main/Cannon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Art/Canhao (1).png" type="Texture" id=6]
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=7]
-[ext_resource path="res://Art/Cannon2.png" type="Texture" id=8]
+[ext_resource path="res://Art/Canhao2V2.png" type="Texture" id=8]
 [ext_resource path="res://Art/Highlight2.png" type="Texture" id=9]
 [ext_resource path="res://Art/Cannon3.png" type="Texture" id=10]
 [ext_resource path="res://Art/Highlight3.png" type="Texture" id=11]
@@ -36,7 +36,6 @@
 [ext_resource path="res://Mini Scenes/Main/HeyLook.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Mini Scenes/Enemies/Slick.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Mini Scenes/Weapon/Bomb.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Art/Icons/LaserIcon.png" type="Texture" id=37]
 [ext_resource path="res://Art/Icons/MachineIcon.png" type="Texture" id=38]
 [ext_resource path="res://Mini Scenes/Enemies/VioletBlast.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Mini Scenes/Weapon/MachinegunW.tscn" type="PackedScene" id=40]
@@ -78,7 +77,7 @@ highlight = ExtResource( 7 )
 
 [node name="Cannon2" parent="." instance=ExtResource( 5 )]
 visible = false
-position = Vector2( 482.398, 740 )
+position = Vector2( 481.885, 724.086 )
 target_lane = 2
 sprite = ExtResource( 8 )
 highlight = ExtResource( 9 )
@@ -113,7 +112,6 @@ margin_left = 8.45451
 margin_top = 610.926
 margin_right = -413.545
 margin_bottom = -120.074
-sprite = ExtResource( 37 )
 _weapon = ExtResource( 14 )
 
 [node name="SphereTitle" parent="." instance=ExtResource( 13 )]

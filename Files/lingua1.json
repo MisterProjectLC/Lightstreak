@@ -1,8 +1,11 @@
 {
-"0":["Easy", "Star", "Club", "Card", "New", "Far", "End", "Time", "Life", "City", "Word", "Car", "Run", "Font", "Book", "Four", "Mars"],
+"0":["Easy", "Star", "Club", "Card", "New", "Far", "End", "Time", "City", "Word", "Car", "Run", "Font", "Book", "Four", "Mars", "War", "Art", "Eye", "Blue", "Red", "Dash",
+     "Past", "Half", "Life", "Air", "Game", "Song"],
 
-"1":["Color", "System", "Scene", "Weight", "Coffee", "Trial", "Focus", "Light", "Debuff", "School", "Worker", "System", "Death", "Earth", "Realm", "Speed", "Method", "Humor"],
+"1":["Color", "System", "Scene", "Weight", "Coffee", "Trial", "Focus", "Light", "Debuff", "School", "Worker", "System", "Death", "Earth", "Realm", "Speed", "Method", "Humor", "Memory",
+     "Googol", "Logic", "Reason", "Space", "Alpha", "Galaxy", "Violet", "Parody", "Center", "Cable", "Turtle", "State", "Power", "Dream", "Valve", "Worth", "Sequel", "Melody"],
 
-"2":["Reference", "Universe"]
+"2":["Reference", "Universe", "Kangaroo", "Certificate", "Hologram", "Velocity", "Professor", "Fireflies", "Hitchhiker", "Computer", "Cellphone", "Direction", "Tomorrow", "Deadline", 
+     "Yesterday", "Instrument", "Skateboard", "Roommate", "Objection"]
 
 }

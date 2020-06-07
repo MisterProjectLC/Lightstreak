@@ -45,6 +45,9 @@ func update_shield_phase():
 
 func take_damage(damage):
 	shield_phase = off_cooldown_duration+4
+	
+func set_stunned(damage):
+	take_damage(damage)
 
 func _on_Shield_area_entered(area):
 	if area.has_method("set_protected"):

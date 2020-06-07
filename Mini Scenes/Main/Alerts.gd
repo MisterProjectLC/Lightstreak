@@ -43,7 +43,7 @@ func get_available_alert(priority):
 			return alert
 	
 	for alert in alerts_list:
-		if alert.get_priority() < priority:
+		if alert.get_priority() <= priority:
 			return alert
 	return null
 

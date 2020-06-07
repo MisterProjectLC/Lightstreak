@@ -1,13 +1,13 @@
-extends "res://Mini Scenes/Weapon/Blast.gd"
+extends "res://Mini Scenes/Enemies/Blast.gd"
 
 var _warning = 3
 var _warned = false
 
 signal send_alert
 
-func _ready():
+func ready():
 	emit_signal('send_alert', (">>>" + str(_lane) + "<<<"), 3)
-	ready()
+	.ready()
 
 func _on_Blast_area_entered(area):
 	if area.has_method("cannon_damage"):

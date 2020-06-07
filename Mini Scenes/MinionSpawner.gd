@@ -10,6 +10,7 @@ export(PackedScene) var bomber
 export(PackedScene) var slick
 export(PackedScene) var violet_blast
 export(PackedScene) var guardian
+export(PackedScene) var captain
 var enemy_object = {}
 
 var _clock = 0
@@ -30,7 +31,7 @@ func _ready():
 	enemy_object = {"TROOPER":trooper, "TANK":tank, "SPEEDER":speeder, 
 	"HACKER":hacker, "HACKERI":hacker_init, "REDBLAST":red_blast,
 	"BOMBER":bomber, "SLICK":slick, "VIOLETBLAST":violet_blast,
-	"GUARDIAN":guardian}
+	"GUARDIAN":guardian, "CAPTAIN":captain}
 
 
 func _process(delta):

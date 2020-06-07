@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Mini Scenes/Enemies/Captain.gd" type="Script" id=1]
+[ext_resource path="res://Art/Enemies/captain2.png" type="Texture" id=2]
+[ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
+[ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/Enemies/RedBlast.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.8445, 1230.24 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 28.3262, 27.6763 )
+
+[node name="Captain" type="Area2D"]
+script = ExtResource( 1 )
+_max_health = 3
+_speed = 1
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Detector"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Detector"]
+modulate = Color( 0.972549, 0.956863, 0.956863, 0.768627 )
+scale = Vector2( 0.556, 2.645 )
+texture = ExtResource( 5 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Paralysis" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 4
+frame = 7
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light" parent="." instance=ExtResource( 4 )]
+[connection signal="changed_stunned" from="." to="." method="_on_Captain_changed_stunned"]
+[connection signal="area_entered" from="Detector" to="." method="_on_Detector_area_entered"]
+[connection signal="area_exited" from="Detector" to="." method="_on_Detector_area_exited"]

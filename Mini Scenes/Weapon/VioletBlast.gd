@@ -1,8 +1,7 @@
-extends "res://Mini Scenes/Weapon/Blast.gd"
+extends "res://Mini Scenes/Enemies/Blast.gd"
 
-func _ready():
-	Audio.play_sound(Audio.red_arena)
-	ready()
+func ready():
+	.ready()
 
 func _process(delta):
 	if !_fading:

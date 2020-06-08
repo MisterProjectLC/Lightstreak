@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Mini Scenes/LabelFade.gd" type="Script" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Art/Canhao3.png" type="Texture" id=19]
 [ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=20]
 [ext_resource path="res://Art/Enemies/captain2.png" type="Texture" id=21]
+[ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=22]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -849,6 +850,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="P15" type="Label" parent="Stages/Page 3"]
+margin_left = 14.6103
+margin_top = 189.242
+margin_right = 61.6103
+margin_bottom = 233.242
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "15"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 3/P15"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="Stage 11" type="TextureRect" parent="Stages/Page 3"]
 margin_left = 56.655
 margin_top = 0.586395
@@ -888,6 +913,17 @@ margin_right = 114.305
 margin_bottom = 195.879
 rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stage 15" type="TextureRect" parent="Stages/Page 3"]
+margin_left = 57.9261
+margin_top = 189.0
+margin_right = 144.926
+margin_bottom = 277.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

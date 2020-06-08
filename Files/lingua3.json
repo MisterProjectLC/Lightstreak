@@ -1,9 +1,10 @@
 {
-"0":["Wort", "Zeit", "Bau", "Art", "Nein", "Erde", "Buch", "Witz", "Drei", "Blau", "Rot", "Wahr", "Haus", "Weg", "Auge"],
+"0":["Wort", "Zeit", "Bau", "Art", "Nein", "Erde", "Buch", "Witz", "Drei", "Blau", "Rot", "Wahr", "Haus", "Weg", "Auge", "Kalt"],
 
 "1":["Farbe", "Goethe", "Faust", "Werner", "Feuer", "Wasser", "Licht", "Weise", "Schiff", "Violet", "Handy", "Waffe", "Mensch", "Heute", "Kraft", "Traum", "Erfolg", "Spiel",
-     "Stern", "Kaffee", "Musik"],
+     "Stern", "Kaffee", "Musik", "Stahl"],
 
-"2":["Referenz", "Universum", "Profisionell", "Schwerkraft", "Computer", "Richtung", "Genauigkeit", "Luftballon", "Vergangenheit", "Mitglied", "Werkzeug", "Einspruch", "Regenbogen"]
+"2":["Referenz", "Universum", "Wahrheit", "Schwerkraft", "Computer", "Richtung", "Genauigkeit", "Luftballon", "Mitglied", "Werkzeug", "Einspruch", "Regenbogen",
+    ""]
 
 }

@@ -5,7 +5,7 @@
         <meta name="author" content="Dan Isamu">
         <meta name="description" content="Lightstreak page">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <link href="Lightstreak/styles/style.css" rel="stylesheet" type="text/css">
+        <link href="Lightstreak/docs/styles/style.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="Images/Icon.png">
         <title>Lightstreak</title>
     </head>

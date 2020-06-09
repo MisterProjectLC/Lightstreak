@@ -7,9 +7,9 @@
 extents = Vector2( 148.703, 3.90662 )
 
 [node name="Push" type="Area2D"]
-scale = Vector2( 0.8, 0.8 )
+scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 2 )
-_speed = 200
+_speed = 400
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.563381, 0.1521 )

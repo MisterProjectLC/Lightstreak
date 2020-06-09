@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang = "en-US" class="german1">
+<html lang = "en-US">
     <head>
         <meta charset="utf-8">
         <meta name="author" content="Dan Isamu">

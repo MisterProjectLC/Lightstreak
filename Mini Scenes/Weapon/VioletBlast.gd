@@ -1,6 +1,7 @@
 extends "res://Mini Scenes/Enemies/Blast.gd"
 
 func ready():
+	Audio.play_sound(Audio.red_arena)
 	.ready()
 
 func _process(delta):

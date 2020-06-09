@@ -12,6 +12,9 @@ func _ready():
 	protect(get_parent(), true)
 
 func _process(delta):
+	position.x = 0
+	position.y = 0
+	
 	if shield_phase != 0:
 		clock += delta
 		if clock >= 0.1:

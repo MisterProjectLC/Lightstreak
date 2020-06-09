@@ -182,6 +182,7 @@ margin_right = -413.555
 margin_bottom = -476.848
 sprite = ExtResource( 37 )
 _weapon = ExtResource( 41 )
+_difficulty = 0
 
 [node name="LightTitle" parent="." instance=ExtResource( 13 )]
 visible = false

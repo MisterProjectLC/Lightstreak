@@ -8,7 +8,7 @@ func _ready():
 
 func _process(delta):
 	for minion in pushed_minions:
-		minion.position.y = position.y - 28
+		minion.position.y = position.y - 15
 
 func _on_Push_area_entered(area):
 	if not area in pushed_minions and area.has_method("take_damage"):

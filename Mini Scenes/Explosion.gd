@@ -4,10 +4,17 @@ var _clock = 0
 var _current_frame = 0
 export var _animation_frames = []
 
+var _lightstreak = false
+export var _lightstreak_frames = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Audio.play_sound(Audio.sphere)
-	$Explosion/Sprite.texture = _animation_frames[0]
+	
+	if _lightstreak:
+		$Explosion/Sprite.texture = _lightstreak_frames[0]
+	else:
+		$Explosion/Sprite.texture = _animation_frames[0]
 
 func _process(delta):
 	# frames
@@ -22,7 +29,10 @@ func _process(delta):
 		if _current_frame >= _animation_frames.size()-1:
 			queue_free()
 		
-		$Explosion/Sprite.texture = _animation_frames[_current_frame]
+		if _lightstreak:
+			$Explosion/Sprite.texture = _lightstreak_frames[_current_frame]
+		else:
+			$Explosion/Sprite.texture = _animation_frames[_current_frame]
 
 
 func _on_Explosion_area_entered(area):

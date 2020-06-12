@@ -2,11 +2,15 @@ extends "res://Mini Scenes/Weapon/Weapon.gd"
 
 var _fading_speed = 2
 var _knockside = Global.get_lane_x_increase()
+export(Texture) var _lightstreak_magnet_sprite
 
 func _ready():
 	_weapon_offset = Vector2(0, -462)
 	Audio.play_sound(Audio.magnet)
-
+	if _lightstreak:
+		$Sprite.texture = _lightstreak_sprite
+		$MagnetLeft/Sprite.texture = _lightstreak_magnet_sprite
+		$MagnetRight/Sprite.texture = _lightstreak_magnet_sprite
 
 func _process(delta):
 	if _knockside > 0:

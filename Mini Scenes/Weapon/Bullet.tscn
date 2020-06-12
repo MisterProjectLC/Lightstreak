@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Mini Scenes/Weapon/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Art/Powers/Bullet.png" type="Texture" id=2]
+[ext_resource path="res://Art/Powers/Lightstreak/Bullet.png" type="Texture" id=3]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -9,6 +10,7 @@ extents = Vector2( 11.5693, 38.2688 )
 
 [node name="Bullet" type="Area2D"]
 script = ExtResource( 1 )
+_lightstreak_sprite = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.8, 1.8 )

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Art/WhiteBlock.png" type="Texture" id=1]
 [ext_resource path="res://Mini Scenes/Weapon/Push.gd" type="Script" id=2]
+[ext_resource path="res://Art/Powers/Lightstreak/WhiteBlock.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 148.703, 3.90662 )
@@ -9,6 +10,7 @@ extents = Vector2( 148.703, 3.90662 )
 [node name="Push" type="Area2D"]
 scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 2 )
+_lightstreak_sprite = ExtResource( 3 )
 _speed = 400
 
 [node name="Sprite" type="Sprite" parent="."]

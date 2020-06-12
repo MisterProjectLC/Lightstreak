@@ -7,10 +7,17 @@ var _fading_speed = 12
 var distance_to_go = 800
 var distance_speed = 1600
 
+export(Texture) var _lightstreak_side_sprite
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_weapon_offset = Vector2(0, -462)
 	Audio.play_sound(Audio.missile_blast)
+	
+	if _lightstreak:
+		$Mid/Sprite.texture = _lightstreak_sprite
+		$Left.texture = _lightstreak_side_sprite
+		$Right.texture = _lightstreak_side_sprite
 
 func _process(delta):
 	if distance_to_go > 0:

@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Mini Scenes/Weapon/MissileBlast.gd" type="Script" id=1]
 [ext_resource path="res://Art/Powers/MissileBlastMid.png" type="Texture" id=2]
+[ext_resource path="res://Art/Powers/Lightstreak/MissileBlastMid.png" type="Texture" id=3]
 [ext_resource path="res://Art/Powers/MissileBlastRight.png" type="Texture" id=4]
+[ext_resource path="res://Art/Powers/Lightstreak/MissileBlastRight.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 37.0078, 14.0819 )
 
 [node name="MissileBlast" type="Node2D"]
 script = ExtResource( 1 )
+_lightstreak_sprite = ExtResource( 3 )
+_lightstreak_side_sprite = ExtResource( 5 )
 
 [node name="Left" type="Sprite" parent="."]
 position = Vector2( -29.0785, 0.275446 )

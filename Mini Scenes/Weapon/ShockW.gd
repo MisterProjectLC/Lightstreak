@@ -24,6 +24,7 @@ func _process(delta):
 		# setup position and texture
 		_shockposition += Vector2(0, -33)
 		new.position = _shockposition
+		new.set_lightstreak(_lightstreak)
 		new.connect('hit_enemy', self, 'append_to_hit')
 		new.append_to_hit(enemies_hit)
 		
@@ -33,6 +34,9 @@ func _process(delta):
 	_time += delta
 	if _time > 0.4:
 		delete_chain()
+
+func adjust_lightstreak():
+	pass
 
 func append_to_hit(area):
 	enemies_hit.append(area)

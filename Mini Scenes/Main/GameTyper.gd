@@ -8,7 +8,7 @@ func _ready():
 	$Outline.texture = sprite
 	
 func _capital(kchar):
-	if _actual_text.length() == 0:
+	if _actual_text.length() == 0 or _actual_text[-1] == " ":
 		return kchar.to_upper()
 	else:
 		return kchar.to_lower()

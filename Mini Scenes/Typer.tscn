@@ -5,7 +5,7 @@
 [ext_resource path="res://Art/Typer1.png" type="Texture" id=3]
 [ext_resource path="res://Art/TyperSelected.png" type="Texture" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 1 )
 
@@ -18,10 +18,9 @@ __meta__ = {
 }
 
 [node name="Text" type="RichTextLabel" parent="."]
-margin_left = 0.440125
-margin_right = 288.081
+margin_right = 444.0
 margin_bottom = 40.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 scroll_active = false
 __meta__ = {

@@ -15,7 +15,10 @@ func _ready():
 				_linguas[lingua][diff].append(word)
 	
 func get_word(_diff, _lang):
-	return _linguas[_lang+1][_diff][randi() % _linguas[_lang+1][_diff].size()]
+	if _diff == 3:
+		return "Lightstreak"
+	else:
+		return _linguas[_lang+1][_diff][randi() % _linguas[_lang+1][_diff].size()]
 
 func load_words():
 # warning-ignore:unused_variable

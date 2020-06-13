@@ -9,9 +9,6 @@ export(PackedScene) var blast
 func _ready():
 	_weapon_offset = Vector2(0, -10)
 	#Audio.play_sound(Audio.sphere, 1)
-	
-	if _lightstreak:
-		$Sprite.texture = _lightstreak_sprite
 
 func _process(delta):
 	# frames
@@ -32,7 +29,8 @@ func _explode():
 	var new = blast.instance()
 	new.position = position
 	new._lightstreak = _lightstreak
-	new.set_modulate(Color(0, 1, 0.78, 1))
+	if !_lightstreak:
+		new.set_modulate(Color(0, 1, 0.78, 1))
 	new.scale *= 1.37
 	get_parent().add_child(new)
 	queue_free()

@@ -8,9 +8,6 @@ var enemies_hit = []
 func _ready():
 	_weapon_offset = Vector2(0, 0)
 	Audio.play_sound(Audio.shock)
-	
-	if _lightstreak:
-		$Sprite.texture = _lightstreak_sprite
 
 
 func _on_Shock_area_entered(area):

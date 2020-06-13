@@ -7,10 +7,7 @@ export(Texture) var _lightstreak_magnet_sprite
 func _ready():
 	_weapon_offset = Vector2(0, -462)
 	Audio.play_sound(Audio.magnet)
-	if _lightstreak:
-		$Sprite.texture = _lightstreak_sprite
-		$MagnetLeft/Sprite.texture = _lightstreak_magnet_sprite
-		$MagnetRight/Sprite.texture = _lightstreak_magnet_sprite
+	
 
 func _process(delta):
 	if _knockside > 0:
@@ -42,6 +39,12 @@ func _on_MagnetLeft_area_entered(area):
 func _on_MagnetRight_area_entered(area):
 	apply_knockside(area, -1)
 
+
+func adjust_lightstreak():
+	if _lightstreak:
+		$Sprite.texture = _lightstreak_sprite
+		$MagnetLeft/Sprite.texture = _lightstreak_magnet_sprite
+		$MagnetRight/Sprite.texture = _lightstreak_magnet_sprite
 
 func apply_knockside(area, direction):
 	if area.has_method("set_knockside") and _knockside > Global.get_lane_x_increase()-5:

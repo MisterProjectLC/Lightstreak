@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
@@ -41,6 +41,7 @@
 [ext_resource path="res://Mini Scenes/Enemies/VioletBlast.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Mini Scenes/Weapon/MachinegunW.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Mini Scenes/Weapon/Push.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=42]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -190,9 +191,9 @@ margin_left = 8.01306
 margin_top = 203.337
 margin_right = -413.986
 margin_bottom = -527.663
-sprite = ExtResource( 19 )
+sprite = ExtResource( 42 )
 _weapon = ExtResource( 31 )
-_difficulty = 2
+_difficulty = 3
 
 [node name="BlueBox" type="ColorRect" parent="."]
 margin_left = 4.0

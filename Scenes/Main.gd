@@ -75,6 +75,9 @@ func _on_Console_tab_console(typer):
 
 # command handler
 func _on_Console_command_typed(_typer_active, _input):
+	Console_command_typed(_typer_active, _input, false)
+
+func Console_command_typed(_typer_active, _input, _lightstreak):
 	# move
 	if _input.left(5) == 'Move ' and _input.length() >= 6 and _lane(_input) != null:
 		_move_cannon(_typer_active, _lane(_input))
@@ -86,16 +89,33 @@ func _on_Console_command_typed(_typer_active, _input):
 	elif _input.left(1) == '>':
 		shift_cannon(_typer_active, false)
 
+	# lightstreak
+	elif _input.left(12) == 'Lightstreak ':
+		_lightstreak_handler(_input)
+
 	# weapon
 	else:
-		_weapon_handler(_typer_active, _input)
+		return _weapon_handler(_typer_active, _input, _lightstreak)
+	
+	return _input
 
 func typer_updated(text):
 	for title in _weapon_list:
 		title.update_outline(text)
 
+func _lightstreak_handler(_input):
+	if _weapon_list[-1].get_text() != "Lightstreak":
+		return ""
+	
+	var final_input = _input.lstrip("Lightstreak ")
+	
+	print("Lightstreak activated: " + final_input)
+	for i in range(len(_cannon_list)):
+		var helper = Console_command_typed(i, final_input, true)
+		final_input = helper
+
 # weapon 
-func _weapon_handler(_cannon_n, _input):
+func _weapon_handler(_cannon_n, _input, _lightstreak):
 	var _cannon = _cannon_list[_cannon_n]
 	
 	for _weapon_title in _weapon_list:
@@ -108,6 +128,7 @@ func _weapon_handler(_cannon_n, _input):
 			_change_priority(_new_weapon, 3)
 			_new_weapon.position = _cannon.position + _new_weapon.get_weapon_offset()
 			_new_weapon.set_weapon_lane(_cannon.get_target_lane())
+			_new_weapon.set_lightstreak(_lightstreak)
 
 			# replace word
 			var new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
@@ -125,7 +146,9 @@ func _weapon_handler(_cannon_n, _input):
 					break
 			
 			_node.set_text(new_word)
-			break
+			return new_word
+			
+	return _input
 
 # cannon mover
 func _move_cannon(_cannon_n, _lane):

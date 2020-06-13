@@ -15,9 +15,11 @@ func _process(delta):
 		var _new = bullet.instance()
 		get_parent().add_child(_new)
 		_new.position = position
-		_new._lightstreak = _lightstreak
+		_new.set_lightstreak(_lightstreak)
 		
 		_bullets_fired += 1
 		if _bullets_fired >= 4:
 			queue_free()
 
+func adjust_lightstreak():
+	pass

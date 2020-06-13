@@ -8,9 +8,7 @@ var _fading_speed = 2
 func _ready():
 	_weapon_offset = Vector2(0, -462)
 	Audio.play_sound(Audio.laser)
-	
-	if _lightstreak:
-		$Sprite.texture = _lightstreak_sprite
+
 
 func _process(delta):
 	if _fading:

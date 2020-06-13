@@ -8,8 +8,6 @@ export(PackedScene) var blast
 func _ready():
 	Audio.play_sound(Audio.sphere)
 	ready()
-	if _lightstreak:
-		$Sprite.texture = _lightstreak_sprite
 
 func _process(delta):
 	# frames
@@ -22,7 +20,7 @@ func _on_Missile_area_entered(area):
 	if area.has_method("take_damage"):
 		var new = blast.instance()
 		new.position = position
-		new._lightstreak = _lightstreak
+		new.set_lightstreak(_lightstreak)
 		get_parent().call_deferred("add_child", new)
 	
 	damage(area)

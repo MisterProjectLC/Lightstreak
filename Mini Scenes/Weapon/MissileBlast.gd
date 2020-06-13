@@ -13,11 +13,6 @@ export(Texture) var _lightstreak_side_sprite
 func _ready():
 	_weapon_offset = Vector2(0, -462)
 	Audio.play_sound(Audio.missile_blast)
-	
-	if _lightstreak:
-		$Mid/Sprite.texture = _lightstreak_sprite
-		$Left.texture = _lightstreak_side_sprite
-		$Right.texture = _lightstreak_side_sprite
 
 func _process(delta):
 	if distance_to_go > 0:
@@ -39,6 +34,12 @@ func _process(delta):
 
 func set_fading(_new):
 	_fading = _new
+
+func adjust_lightstreak():
+	if _lightstreak:
+		$Mid/Sprite.texture = _lightstreak_sprite
+		$Left.texture = _lightstreak_side_sprite
+		$Right.texture = _lightstreak_side_sprite
 
 func _on_MissileBlast_area_entered(area):
 	if area.has_method("take_damage"):

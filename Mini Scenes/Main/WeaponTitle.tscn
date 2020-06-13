@@ -42,17 +42,18 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 13.3333
-margin_top = 2.78747
-margin_right = 378.333
-margin_bottom = 62.7875
+margin_left = 10.0582
+margin_top = 5.55018
+margin_right = 375.058
+margin_bottom = 65.5502
+rect_scale = Vector2( 0.9, 0.95 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "Chair"
+text = "Skateboard"
 valign = 1
 __meta__ = {
-"_edit_lock_": true
+"_edit_use_anchors_": false
 }
 
 [node name="Outline" type="Label" parent="Label"]

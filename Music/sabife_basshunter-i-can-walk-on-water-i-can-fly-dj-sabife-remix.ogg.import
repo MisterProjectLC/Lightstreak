@@ -11,5 +11,5 @@ dest_files=[ "res://.import/sabife_basshunter-i-can-walk-on-water-i-can-fly-dj-s
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

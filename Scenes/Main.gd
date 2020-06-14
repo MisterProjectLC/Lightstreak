@@ -49,7 +49,11 @@ func _ready():
 	
 	# replicate text
 	if _current_phase["REPLICATE_TEXT"] != 0:
-		_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"])
+		if _current_phase["INITIAL_TEXT"].left(12) == 'Lightstreak ':
+			_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"].lstrip("Lightstreak "))
+		else:
+			_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"])
+		
 		typer_updated(_current_phase["INITIAL_TEXT"])
 	
 	# setup minion spawner
@@ -90,7 +94,7 @@ func Console_command_typed(_typer_active, _input, _lightstreak):
 		shift_cannon(_typer_active, false)
 
 	# lightstreak
-	elif _input.left(12) == 'Lightstreak ':
+	elif _input.left(12) == 'Lightstreak ' and len(_input) >= 12:
 		_lightstreak_handler(_input)
 
 	# weapon
@@ -102,12 +106,14 @@ func Console_command_typed(_typer_active, _input, _lightstreak):
 func typer_updated(text):
 	for title in _weapon_list:
 		title.update_outline(text)
+		if text.left(12) == 'Lightstreak ' and title.get_text() != "Lightstreak":
+			title.update_outline(text.lstrip("Lightstreak "))
 
 func _lightstreak_handler(_input):
 	if _weapon_list[-1].get_text() != "Lightstreak":
 		return ""
 	
-	var final_input = _input.lstrip("Lightstreak ")
+	var final_input = _input.right(12)
 	
 	print("Lightstreak activated: " + final_input)
 	for i in range(len(_cannon_list)):

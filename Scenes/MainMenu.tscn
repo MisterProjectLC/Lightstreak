@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Mini Scenes/LabelFade.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=20]
 [ext_resource path="res://Art/Enemies/captain2.png" type="Texture" id=21]
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=22]
+[ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -935,23 +936,107 @@ margin_right = 547.041
 margin_bottom = 279.954
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "[16  ] 
-[17  ]
-[18  ]"
+text = "[    ] 
+[    ]
+[    ]"
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
+[node name="P16" type="Label" parent="Stages/Page 4"]
+margin_left = 13.3949
+margin_top = 3.04674
+margin_right = 60.3949
+margin_bottom = 47.0468
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "16"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 4/P16"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P17" type="Label" parent="Stages/Page 4"]
+margin_left = 13.0282
+margin_top = 48.5143
+margin_right = 60.0282
+margin_bottom = 92.5143
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "17"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 4/P17"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="P18" type="Label" parent="Stages/Page 4"]
+margin_left = 13.7616
+margin_top = 97.2819
+margin_right = 60.7616
+margin_bottom = 141.282
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "18"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Stages/Page 4/P18"]
+margin_right = 39.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Stage 16" type="TextureRect" parent="Stages/Page 4"]
+margin_left = 56.2525
+margin_top = 1.75909
+margin_right = 143.252
+margin_bottom = 88.7591
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Back" type="Label" parent="Stages"]
-margin_left = 385.632
-margin_top = 0.903564
-margin_right = 527.632
-margin_bottom = 232.904
+margin_left = 386.0
+margin_top = 1.0
+margin_right = 528.0
+margin_bottom = 45.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "BACK"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -962,6 +1047,7 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

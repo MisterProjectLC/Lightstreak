@@ -1,0 +1,136 @@
+{
+	"GENERATE":true,
+	"DURATION":160,
+	"CANNON_COUNT":3,
+	"POWER_COUNT":9,
+	"INITIAL_TEXT":"Lightstreak Newgrounds",
+	"REPLICATE_TEXT":5,
+	"ARENA":2,
+	"SCRIPT":
+		[
+        {"TIME":1, "MINION":"SPEEDER", "LANE":0},
+		{"TIME":1, "MINION":"SPEEDER", "LANE":1},
+		{"TIME":1, "MINION":"SPEEDER", "LANE":3},
+		{"TIME":1, "MINION":"SPEEDER", "LANE":5},
+		{"TIME":1, "MINION":"SPEEDER", "LANE":6},
+		
+        {"TIME":2, "MINION":"SPEEDER", "LANE":0},
+		{"TIME":2, "MINION":"SPEEDER", "LANE":1},
+        {"TIME":2, "MINION":"SPEEDER", "LANE":2},
+		{"TIME":2, "MINION":"SPEEDER", "LANE":3},
+		{"TIME":2, "MINION":"SPEEDER", "LANE":5},
+		{"TIME":2, "MINION":"SPEEDER", "LANE":6},
+
+        {"TIME":3, "MINION":"SPEEDER", "LANE":0},
+		{"TIME":3, "MINION":"SPEEDER", "LANE":1},
+        {"TIME":3, "MINION":"SPEEDER", "LANE":2},
+		{"TIME":3, "MINION":"SPEEDER", "LANE":3},
+        {"TIME":3, "MINION":"SPEEDER", "LANE":4},
+		{"TIME":3, "MINION":"SPEEDER", "LANE":5},
+		{"TIME":3, "MINION":"SPEEDER", "LANE":6},
+
+        {"TIME":5, "MINION":"TANK", "LANE":1},
+		{"TIME":6, "MINION":"TANK", "LANE":2},
+		{"TIME":7, "MINION":"TANK", "LANE":4},
+
+        {"TIME":13, "MINION":"VIOLETBLAST", "LANE":3},
+        {"TIME":13, "MINION":"SPEEDER", "LANE":1},
+        {"TIME":14, "MINION":"SPEEDER", "LANE":2},
+        {"TIME":15, "MINION":"SPEEDER", "LANE":4},
+
+        {"TIME":20, "MINION":"SLICK", "LANE":1},
+        {"TIME":20, "MINION":"SLICK", "LANE":2},
+        {"TIME":20, "MINION":"SLICK", "LANE":4},
+
+        {"TIME":22, "MINION":"BOMBER", "LANE":1},
+        {"TIME":22, "MINION":"BOMBER", "LANE":2},
+        {"TIME":22, "MINION":"BOMBER", "LANE":4},
+
+        {"TIME":27, "MINION":"VIOLETBLAST", "LANE":6},
+        {"TIME":27, "MINION":"GUARDIAN", "LANE":1},
+        {"TIME":28, "MINION":"GUARDIAN", "LANE":2},
+        {"TIME":29, "MINION":"GUARDIAN", "LANE":4},
+        {"TIME":30, "MINION":"TROOPER", "LANE":1},
+		{"TIME":31, "MINION":"TROOPER", "LANE":2},
+		{"TIME":32, "MINION":"TROOPER", "LANE":4},
+        {"TIME":41, "MINION":"CAPTAIN", "LANE":1},
+		{"TIME":42, "MINION":"CAPTAIN", "LANE":2},
+		{"TIME":43, "MINION":"CAPTAIN", "LANE":4},
+
+        {"TIME":45, "MINION":"SPEEDER", "LANE":1},
+        {"TIME":45, "MINION":"SPEEDER", "LANE":2},
+        {"TIME":45, "MINION":"SPEEDER", "LANE":5},
+
+        {"TIME":49, "MINION":"TROOPER", "LANE":1},
+
+        {"TIME":54, "MINION":"TANK", "LANE":0},
+        {"TIME":54, "MINION":"TANK", "LANE":3},
+        {"TIME":54, "MINION":"TANK", "LANE":5},
+
+        {"TIME":58, "MINION":"TROOPER", "LANE":1},
+        {"TIME":58, "MINION":"BOMBER", "LANE":2},
+        {"TIME":58, "MINION":"TROOPER", "LANE":4},
+
+        {"TIME":61, "MINION":"SLICK", "LANE":1},
+        {"TIME":62, "MINION":"BOMBER", "LANE":4},
+        {"TIME":65, "MINION":"TANK", "LANE":2},
+        {"TIME":67, "MINION":"GUARDIAN", "LANE":0},
+        {"TIME":67, "MINION":"TANK", "LANE":6},
+        {"TIME":70, "MINION":"SPEEDER", "LANE":5},
+        {"TIME":72, "MINION":"SLICK", "LANE":4},
+        {"TIME":73, "MINION":"TROOPER", "LANE":2},
+        {"TIME":75, "MINION":"TROOPER", "LANE":1},
+        {"TIME":78, "MINION":"BOMBER", "LANE":4},
+
+        {"TIME":82, "MINION":"HACKER", "LANE":3},
+        {"TIME":83, "MINION":"SLICK", "LANE":1},
+        {"TIME":84, "MINION":"BOMBER", "LANE":4},
+        {"TIME":87, "MINION":"TANK", "LANE":2},
+        {"TIME":89, "MINION":"GUARDIAN", "LANE":0},
+        {"TIME":89, "MINION":"TANK", "LANE":6},
+        {"TIME":92, "MINION":"SPEEDER", "LANE":5},
+        {"TIME":94, "MINION":"SLICK", "LANE":4},
+        {"TIME":95, "MINION":"TROOPER", "LANE":2},
+        {"TIME":97, "MINION":"TROOPER", "LANE":1},
+        {"TIME":100, "MINION":"BOMBER", "LANE":4},
+
+        {"TIME":112, "MINION":"CAPTAIN", "LANE":1},
+        {"TIME":112, "MINION":"CAPTAIN", "LANE":2},
+        {"TIME":112, "MINION":"CAPTAIN", "LANE":4},
+        {"TIME":114, "MINION":"SPEEDER", "LANE":1},
+        {"TIME":114, "MINION":"SPEEDER", "LANE":2},
+        {"TIME":114, "MINION":"SPEEDER", "LANE":4},
+        {"TIME":114, "MINION":"GUARDIAN", "LANE":1},
+        {"TIME":114, "MINION":"GUARDIAN", "LANE":2},
+        {"TIME":114, "MINION":"GUARDIAN", "LANE":4},
+        {"TIME":116, "MINION":"TANK", "LANE":1},
+        {"TIME":116, "MINION":"TANK", "LANE":2},
+        {"TIME":116, "MINION":"TANK", "LANE":4},
+
+        {"TIME":126, "MINION":"HACKER", "LANE":1},
+        {"TIME":128, "MINION":"HACKER", "LANE":2},
+        {"TIME":130, "MINION":"HACKER", "LANE":4},
+
+        {"TIME":140, "MINION":"TANK", "LANE":0},
+        {"TIME":140, "MINION":"GUARDIAN", "LANE":1},
+        {"TIME":140, "MINION":"GUARDIAN", "LANE":2},
+        {"TIME":140, "MINION":"TANK", "LANE":3},
+        {"TIME":140, "MINION":"GUARDIAN", "LANE":4},
+        {"TIME":140, "MINION":"TANK", "LANE":5},
+        {"TIME":140, "MINION":"TANK", "LANE":6},
+        {"TIME":146, "MINION":"SPEEDER", "LANE":1},
+        {"TIME":148, "MINION":"SPEEDER", "LANE":4},
+        {"TIME":150, "MINION":"SPEEDER", "LANE":2},
+
+        {"TIME":152, "MINION":"SLICK", "LANE":1},
+        {"TIME":154, "MINION":"SLICK", "LANE":4},
+        {"TIME":156, "MINION":"SLICK", "LANE":2},
+
+
+		]
+}
+
+
+
+
+

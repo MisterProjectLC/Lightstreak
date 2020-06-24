@@ -1,0 +1,71 @@
+{
+	"GENERATE":true,
+	"DURATION":160,
+	"CANNON_COUNT":3,
+	"POWER_COUNT":9,
+	"INITIAL_TEXT":"",
+	"REPLICATE_TEXT":0,
+	"ARENA":0,
+	"SCRIPT":
+	[
+        {"TIME":1, "MINION":"TROOPER", "LANE":0},
+	{"TIME":1, "MINION":"TROOPER", "LANE":3},
+	{"TIME":1, "MINION":"TROOPER", "LANE":5},
+        {"TIME":5, "MINION":"CAPTAIN", "LANE":3},
+	{"TIME":7, "MINION":"BOMBER", "LANE":2},
+	{"TIME":7, "MINION":"BOMBER", "LANE":4},
+        {"TIME":10, "MINION":"SPEEDER", "LANE":0},
+        {"TIME":10, "MINION":"SPEEDER", "LANE":6},
+        {"TIME":13, "MINION":"SPEEDER", "LANE":3},
+        {"TIME":13, "MINION":"SPEEDER", "LANE":4},
+        {"TIME":16, "MINION":"SLICK", "LANE":2},
+        {"TIME":16, "MINION":"TANK", "LANE":4},
+	{"TIME":18, "MINION":"SLICK", "LANE":4},
+        {"TIME":18, "MINION":"TANK", "LANE":2},
+	{"TIME":20, "MINION":"TANK", "LANE":1},
+	{"TIME":21, "MINION":"CAPTAIN", "LANE":2},
+	{"TIME":22, "MINION":"TROOPER", "LANE":0},
+	{"TIME":23, "MINION":"BOMBER", "LANE":0},
+	{"TIME":24, "MINION":"GUARDIAN", "LANE":6},
+	{"TIME":27, "MINION":"HACKER", "LANE":4},
+
+	{"TIME":30, "MINION":"TANK", "LANE":1},
+	{"TIME":35, "MINION":"SPEEDER", "LANE":2},
+	{"TIME":40, "MINION":"GUARDIAN", "LANE":3},
+	{"TIME":45, "MINION":"CAPTAIN", "LANE":4},
+
+	{"TIME":55, "MINION":"GUARDIAN", "LANE":3},
+	{"TIME":56, "MINION":"BOMBER", "LANE":2},
+	{"TIME":56, "MINION":"BOMBER", "LANE":4},
+	{"TIME":57, "MINION":"BOMBER", "LANE":1},
+	{"TIME":57, "MINION":"BOMBER", "LANE":5},
+	{"TIME":58, "MINION":"GUARDIAN", "LANE":0},
+	{"TIME":58, "MINION":"GUARDIAN", "LANE":6},
+
+        {"TIME":60, "MINION":"TANK", "LANE":2},
+	{"TIME":60, "MINION":"TROOPER", "LANE":0},
+
+	{"TIME":62, "MINION":"SPEEDER", "LANE":0},
+	{"TIME":62, "MINION":"SPEEDER", "LANE":2},
+	{"TIME":62, "MINION":"SPEEDER", "LANE":4},
+	{"TIME":62, "MINION":"SPEEDER", "LANE":6},
+
+        {"TIME":66, "MINION":"TROOPER", "LANE":2},
+	{"TIME":66, "MINION":"SLICK", "LANE":5},
+
+	{"TIME":68, "MINION":"CAPTAIN", "LANE":1},
+	{"TIME":68, "MINION":"CAPTAIN", "LANE":3},
+	{"TIME":68, "MINION":"CAPTAIN", "LANE":5},
+
+        {"TIME":74, "MINION":"SLICK", "LANE":2},
+	{"TIME":74, "MINION":"TANK", "LANE":6},
+
+	{"TIME":80, "MINION":"HACKER", "LANE":3},
+	{"TIME":80, "MINION":"HACKER", "LANE":4},
+	]
+}
+
+
+
+
+

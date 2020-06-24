@@ -17,7 +17,7 @@ func _process(delta):
 	process(delta)
 
 func set_lane(_lane):
-	self._lane = _lane
+	self.lane = _lane
 
 func set_knockside(_new):
 	_knockside = _new*Global.get_lane_x_increase()

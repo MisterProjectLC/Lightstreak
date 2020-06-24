@@ -56,8 +56,8 @@ func set_target_position(_new_position):
 func toggle_highlight(toggle):
 	$Highlight.visible = toggle
 
-func set_target_lane(target_lane):
-	self.target_lane = target_lane
+func set_target_lane(_target_lane):
+	self.target_lane = _target_lane
 
 func get_target_lane():
 	return target_lane

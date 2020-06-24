@@ -110,5 +110,5 @@ func activate_selected(active):
 		$Selected.hide()
 		_caret_toggle(false)
 
-func _capital(kchar):
+func _capital(_kchar):
 	pass

@@ -6,7 +6,7 @@ func _ready():
 	Audio.play_sound(Audio.sphere)
 	ready()
 
-func _process(delta):
+func _process(_delta):
 	for minion in pushed_minions:
 		minion.position.y = position.y - 15
 

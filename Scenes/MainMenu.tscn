@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Mini Scenes/LabelFade.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Art/Enemies/captain2.png" type="Texture" id=21]
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=22]
 [ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=23]
+[ext_resource path="res://Art/Icons/QueeeIcon.png" type="Texture" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -1023,6 +1024,17 @@ margin_right = 143.252
 margin_bottom = 88.7591
 rect_scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stage 17" type="TextureRect" parent="Stages/Page 4"]
+margin_left = 56.7951
+margin_top = 49.4514
+margin_right = 143.795
+margin_bottom = 136.451
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

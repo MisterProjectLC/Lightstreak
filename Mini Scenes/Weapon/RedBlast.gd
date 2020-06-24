@@ -6,7 +6,7 @@ var _warned = false
 signal send_alert
 
 func ready():
-	emit_signal('send_alert', (">>>" + str(_lane) + "<<<"), 3)
+	emit_signal('send_alert', (">>>" + str(lane) + "<<<"), 3)
 	.ready()
 
 func _on_Blast_area_entered(area):
@@ -20,7 +20,7 @@ func _process(delta):
 	if _fading:
 		if $Blast/Sprite.get_modulate().a <= 0.1:
 			if _warned  == true:
-				emit_signal('send_alert', (">>>" + str(_lane) + "<<<"), 0)
+				emit_signal('send_alert', (">>>" + str(lane) + "<<<"), 0)
 				queue_free()
 			else:
 				_fading = false

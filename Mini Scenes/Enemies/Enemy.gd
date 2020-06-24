@@ -2,9 +2,9 @@ extends Area2D
 
 signal pass_threshold
 signal changed_stunned
-signal send_alert
+signal send_alert    # DON'T DELETE THIS
 
-var _lane = 1
+var lane = 1
 
 var _health
 export(int) var _max_health
@@ -19,9 +19,6 @@ export(Texture) var damaged_sprite
 
 func _ready():
 	set_health(_max_health)
-
-func _process(delta):
-	pass
 
 func process(delta):
 	# Knockback
@@ -60,10 +57,10 @@ func _manage_knockside(delta):
 		_knockside -= speed
 
 func set_lane(_lane):
-	self._lane = _lane
+	self.lane = _lane
 
 func get_lane():
-	return _lane
+	return lane
 
 func set_health(_new):
 	_health = _new
@@ -92,7 +89,7 @@ func set_knockback(_new):
 
 func set_knockside(_new):
 	_knockside = _new*Global.get_lane_x_increase()
-	set_lane(_lane+_new)
+	set_lane(lane+_new)
 
 func take_damage(_damage):
 	if _protected:

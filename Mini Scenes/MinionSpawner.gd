@@ -18,7 +18,7 @@ var _time = 0
 var _last_spawned = 0
 export(int) var _spawn_y = 0
 
-var _phase_script = []
+var phase_script = []
 
 signal phase_empty
 signal minion_spawned
@@ -44,8 +44,8 @@ func _process(delta):
 		
 		# spawn enemy
 		while true:
-			if _last_spawned < _phase_script.size() and _phase_script[_last_spawned]["TIME"] == _time:
-				emit_signal("minion_spawned", self, _phase_script[_last_spawned])
+			if _last_spawned < phase_script.size() and phase_script[_last_spawned]["TIME"] == _time:
+				emit_signal("minion_spawned", self, phase_script[_last_spawned])
 				_last_spawned += 1
 			else:
 				break
@@ -82,7 +82,7 @@ func passed_threshold():
 	emit_signal("passed_threshold")
 
 func set_phase_script(_phase_script):
-	self._phase_script = _phase_script
+	self.phase_script = _phase_script
 
 func send_alerts(message, priority):
 	emit_signal("send_alert", message, priority)

@@ -46,7 +46,7 @@ func update_shield_phase():
 	else:
 		$Sprite.set_modulate(Color(0, 0, 0, 0.5))
 
-func take_damage(damage):
+func take_damage(_damage):
 	shield_phase = off_cooldown_duration+4
 	
 func set_stunned(damage):

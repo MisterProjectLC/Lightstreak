@@ -17,8 +17,8 @@ func _input(event):
 	if !damaged:
 		input_function(event)
 
-func set_damage(damaged):
-	self.damaged = damaged
+func set_damage(_damaged):
+	self.damaged = _damaged
 	
 	if damaged:
 		$Outline.set_modulate(Color(1, 0, 0, 1))

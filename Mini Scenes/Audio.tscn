@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Sounds/Musket Fire-SoundBible.com-2066012668.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Mini Scenes/Audio.gd" type="Script" id=2]
@@ -31,11 +31,12 @@
 [ext_resource path="res://Sounds/147908__john129pats__laser-cannon.ogg" type="AudioStream" id=29]
 [ext_resource path="res://Music/Chocolate Rain - Eurobeat Remix.ogg" type="AudioStream" id=30]
 [ext_resource path="res://Music/sabife_basshunter-i-can-walk-on-water-i-can-fly-dj-sabife-remix.ogg" type="AudioStream" id=31]
+[ext_resource path="res://Music/Nyan Cat Nightcore.ogg" type="AudioStream" id=32]
 
 [node name="Audio" type="AudioStreamPlayer"]
 script = ExtResource( 2 )
 menu_theme = ExtResource( 6 )
-phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 31 ) ]
+phase_themes = [ ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ]
 laser = [ ExtResource( 12 ), ExtResource( 13 ) ]
 sphere = [ ExtResource( 3 ), ExtResource( 4 ) ]
 shock = [ ExtResource( 10 ) ]

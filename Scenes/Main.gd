@@ -43,9 +43,22 @@ func _ready():
 		_weapon_list[i-1].set_visible(true)
 	
 	if _current_phase["GENERATE"]:
-		for _weapon in _weapon_list:
-			_weapon.set_text($LangSystem.get_word(_weapon.get_difficulty(), 
-										Global.get_language()))
+		for w in range(len(_weapon_list)):
+			var new_word = $LangSystem.get_word(_weapon_list[w].get_difficulty(), 
+										Global.get_language())
+			# if word is a repeat, try again
+			while (1):
+				var repeats = false
+				for i in range(_current_phase["POWER_COUNT"]):
+					if _weapon_list[i] != _weapon_list[w] and _weapon_list[i].get_text() == new_word:
+						new_word = $LangSystem.get_word(_weapon_list[i].get_difficulty(), Global.get_language())
+						repeats = true
+						break
+				
+				if repeats == false:
+					break
+		
+			_weapon_list[w].set_text(new_word)
 	
 	# replicate text
 	if _current_phase["REPLICATE_TEXT"] != 0:
@@ -147,7 +160,7 @@ func _weapon_handler(_cannon_n, _input, _lightstreak):
 						new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
 						repeats = true
 						break
-					
+				
 				if repeats == false:
 					break
 			

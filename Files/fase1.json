@@ -1,6 +1,6 @@
 {
 	"GENERATE":true,
-	"DURATION:64,
+	"DURATION":64,
 	"CANNON_COUNT":1,
 	"POWER_COUNT":1,
 	"INITIAL_TEXT":"Move 3",

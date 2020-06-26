@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Slick.gd" type="Script" id=1]
-[ext_resource path="res://Art/Enemies/BlinkEnemy.png" type="Texture" id=2]
+[ext_resource path="res://Art/Enemies/Slick2.png" type="Texture" id=2]
 [ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 27.3983, 27.5578 )
+extents = Vector2( 24.981, 24.2239 )
 
 [node name="Slick" type="Area2D"]
 script = ExtResource( 1 )
@@ -14,10 +14,8 @@ _max_health = 2
 _speed = 2
 
 [node name="Sprite" type="Sprite" parent="."]
+rotation = -0.0538372
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Paralysis" type="Sprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
@@ -30,9 +28,8 @@ __meta__ = {
 }
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0.90374, 1.35561 )
+rotation = -0.785398
 shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Light" parent="." instance=ExtResource( 4 )]

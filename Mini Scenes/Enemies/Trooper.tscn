@@ -1,23 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Tank.gd" type="Script" id=1]
-[ext_resource path="res://Art/Enemies/TrooperEnemy.png" type="Texture" id=2]
+[ext_resource path="res://Art/Enemies/Tooper.png" type="Texture" id=2]
 [ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/Enemies/TooperOP.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 22.8474, 22.5935 )
+extents = Vector2( 23.823, 27.0455 )
 
 [node name="Trooper" type="Area2D"]
+position = Vector2( -3.67032, 0 )
 script = ExtResource( 1 )
 _max_health = 2
 _speed = 2
+damaged_sprite = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2.44688, 0.203907 )
+scale = Vector2( 1.75, 1.75 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Paralysis" type="Sprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
@@ -25,14 +27,9 @@ texture = ExtResource( 3 )
 vframes = 2
 hframes = 4
 frame = 7
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0443802, -7.51157 )
 shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Light" parent="." instance=ExtResource( 4 )]

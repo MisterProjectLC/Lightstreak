@@ -217,7 +217,6 @@ margin_bottom = -3.98315
 position = Vector2( 553.015, 755.228 )
 scale = Vector2( 0.806, 0.812 )
 texture = ExtResource( 23 )
-[connection signal="minion_spawned" from="MinionSpawner" to="." method="_on_MinionSpawner_minion_spawned"]
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
 [connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="send_alert" from="MinionSpawner" to="." method="send_alert"]

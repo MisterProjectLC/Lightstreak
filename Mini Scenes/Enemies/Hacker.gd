@@ -21,7 +21,7 @@ func ready():
 	change_alphabet_letters()
 
 func _process(delta):
-	process(delta)
+	__process(delta)
 
 func generate_char():
 	var dict = [KEY_B, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J,

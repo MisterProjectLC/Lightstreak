@@ -26,7 +26,7 @@ func _ready():
 					get_node('LightTitle')]
 	
 	# setup arena
-	$Battlefield.set_background(_background_list[_current_phase["ARENA"]])
+	set_background(_current_phase["ARENA"])
 	
 	# setup consoles
 	$Console.set_typer_count(_current_phase["CANNON_COUNT"])
@@ -227,13 +227,16 @@ func leave_game():
 # MINION SPAWNER -----------------------------
 
 # send back important info to the minion spawner
-func _on_MinionSpawner_minion_spawned(enemy_spawner, enemy_info):
-	enemy_spawner.spawn_enemy(enemy_info["MINION"], enemy_info["LANE"])
+func spawn_enemy(enemy_minion_name, enemy_lane):
+	return $MinionSpawner.spawn_enemy(enemy_minion_name, enemy_lane)
 
 func send_alert(message, priority):
 	$Alerts.alert(message, priority)
 
 # HELPER FUNCTIONS ---------------------------
+
+func set_background(_new_arena):
+	$Battlefield.set_background(_background_list[_new_arena])
 
 func summon_heylook():
 	var new = heylook.instance()

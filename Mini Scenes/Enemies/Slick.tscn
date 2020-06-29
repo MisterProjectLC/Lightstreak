@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Slick.gd" type="Script" id=1]
 [ext_resource path="res://Art/Enemies/Slick2.png" type="Texture" id=2]
 [ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/Enemies/Slick2_LowOP.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.981, 24.2239 )
@@ -12,6 +13,7 @@ extents = Vector2( 24.981, 24.2239 )
 script = ExtResource( 1 )
 _max_health = 2
 _speed = 2
+damaged_sprite = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = -0.0538372

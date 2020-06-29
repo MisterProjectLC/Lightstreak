@@ -1,0 +1,110 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Art/Enemies/Boss Individual.png" type="Texture" id=1]
+[ext_resource path="res://Mini Scenes/Enemies/Triangle.tres" type="Shape2D" id=2]
+[ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
+[ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Mini Scenes/Enemies/Boss.gd" type="Script" id=5]
+[ext_resource path="res://Art/Enemies/BossBlue.png" type="Texture" id=6]
+[ext_resource path="res://Art/Enemies/BossRed.png" type="Texture" id=7]
+[ext_resource path="res://Art/Enemies/BossViolet.png" type="Texture" id=8]
+[ext_resource path="res://Mini Scenes/Enemies/BossArea.gd" type="Script" id=9]
+
+[node name="Boss" type="Area2D"]
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+_max_health = 15
+_speed = 1
+
+[node name="AreaMid" type="Area2D" parent="."]
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite Mid" type="Sprite" parent="AreaMid"]
+position = Vector2( 0, -17.1982 )
+texture = ExtResource( 1 )
+
+[node name="Collision" type="CollisionShape2D" parent="AreaMid"]
+visible = false
+position = Vector2( 0.191757, -0.353142 )
+shape = ExtResource( 2 )
+
+[node name="AreaBlue" type="Area2D" parent="."]
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+color = "blue"
+
+[node name="Collision2" type="CollisionShape2D" parent="AreaBlue"]
+visible = false
+position = Vector2( -36.9736, -48.4829 )
+rotation = -3.14159
+shape = ExtResource( 2 )
+
+[node name="Sprite Blue" type="Sprite" parent="AreaBlue"]
+position = Vector2( -39.6667, -39.112 )
+texture = ExtResource( 6 )
+
+[node name="AreaRed" type="Area2D" parent="."]
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+color = "red"
+
+[node name="Collision3" type="CollisionShape2D" parent="AreaRed"]
+visible = false
+position = Vector2( 37.0723, -49.1949 )
+rotation = -3.14159
+shape = ExtResource( 2 )
+
+[node name="Sprite Red" type="Sprite" parent="AreaRed"]
+position = Vector2( 39.9441, -39.6667 )
+texture = ExtResource( 7 )
+
+[node name="AreaViolet" type="Area2D" parent="."]
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+color = "violet"
+
+[node name="Collision4" type="CollisionShape2D" parent="AreaViolet"]
+visible = false
+position = Vector2( 0.369026, 14.7675 )
+rotation = -3.14159
+shape = ExtResource( 2 )
+
+[node name="Sprite Violet" type="Sprite" parent="AreaViolet"]
+position = Vector2( 7.62939e-06, 28.5712 )
+texture = ExtResource( 8 )
+
+[node name="Paralysis" type="Sprite" parent="."]
+position = Vector2( 1.00137, -16.022 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 4
+frame = 7
+
+[node name="Light" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0.137459, -14.3714 )
+
+[node name="LightBlue" parent="." instance=ExtResource( 4 )]
+self_modulate = Color( 0.0313726, 0, 1, 1 )
+position = Vector2( -37.1639, -35.6507 )
+
+[node name="LightRed" parent="." instance=ExtResource( 4 )]
+position = Vector2( 38.6905, -32.6465 )
+
+[node name="LightViolet" parent="." instance=ExtResource( 4 )]
+self_modulate = Color( 0.384314, 0, 0.67451, 1 )
+position = Vector2( -0.112892, 28.1871 )
+[connection signal="damaged" from="AreaBlue" to="." method="_on_AreaBlue_damaged"]
+[connection signal="damaged" from="AreaRed" to="." method="_on_AreaRed_damaged"]
+[connection signal="damaged" from="AreaViolet" to="." method="_on_AreaViolet_damaged"]

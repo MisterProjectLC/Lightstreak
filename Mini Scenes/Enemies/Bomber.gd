@@ -3,7 +3,7 @@ extends "res://Mini Scenes/Enemies/Enemy.gd"
 export(PackedScene) var explosion
 
 func _process(delta):
-	process(delta)
+	__process(delta)
 
 func destroy():
 	if (!_stunned):

@@ -21,7 +21,6 @@ export(int) var _spawn_y = 0
 var phase_script = []
 
 signal phase_empty
-signal minion_spawned
 signal passed_threshold
 signal send_alert
 
@@ -45,7 +44,7 @@ func _process(delta):
 		# spawn enemy
 		while true:
 			if _last_spawned < phase_script.size() and phase_script[_last_spawned]["TIME"] == _time:
-				emit_signal("minion_spawned", self, phase_script[_last_spawned])
+				spawn_enemy(phase_script[_last_spawned]["MINION"], phase_script[_last_spawned]["LANE"])
 				_last_spawned += 1
 			else:
 				break
@@ -62,7 +61,8 @@ func spawn_enemy(enemy_type, lane):
 	move_child(_new, get_child_count()-1)
 	
 	if _new.has_method("i_am_vblast"):
-		blasts += 1
+		_new.connect("blast_destroyed", self, "add_blasts")
+		add_blasts(1)
 	
 	_new.connect('send_alert', self, 'send_alerts')
 	_new.set_lane(lane)
@@ -76,7 +76,11 @@ func spawn_enemy(enemy_type, lane):
 	
 	if _new.has_method("ready"):
 		_new.ready()
+	
+	return _new
 
+func add_blasts(_new):
+	blasts += _new
 
 func passed_threshold():
 	emit_signal("passed_threshold")

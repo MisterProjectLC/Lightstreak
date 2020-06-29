@@ -1,5 +1,7 @@
 extends "res://Mini Scenes/Enemies/Blast.gd"
 
+signal blast_destroyed
+
 func ready():
 	Audio.play_sound(Audio.red_arena)
 	.ready()
@@ -17,5 +19,9 @@ func _on_Blast_area_entered(area):
 	if area.has_method("cannon_damage"):
 		area.cannon_damage()
 
-func i_am_vblast(): # gambiarra pesada
-	pass
+func destroy():
+	i_am_vblast()
+	.destroy()
+
+func i_am_vblast(): # gambiarra pesada, nao apaga
+	emit_signal("blast_destroyed", -1)

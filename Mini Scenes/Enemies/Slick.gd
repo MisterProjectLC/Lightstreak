@@ -14,7 +14,7 @@ func _process(delta):
 			
 			set_knockside(knocksider)
 
-	process(delta)
+	__process(delta)
 
 func set_lane(_lane):
 	self.lane = _lane

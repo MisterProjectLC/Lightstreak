@@ -18,9 +18,9 @@ var _clock = 0
 export(Texture) var damaged_sprite
 
 func _ready():
-	set_health(_max_health)
+	_set_health(_max_health)
 
-func process(delta):
+func __process(delta):
 	# Knockback
 	if _knockback > 0:
 		position.y -= _knockback*25*delta
@@ -62,16 +62,16 @@ func set_lane(_lane):
 func get_lane():
 	return lane
 
-func set_health(_new):
+func _set_health(_new):
 	_health = _new
 
-func get_health():
+func _get_health():
 	return _health
 	
-func set_max_health(_new):
+func _set_max_health(_new):
 	_max_health = _new
 
-func get_max_health():
+func _get_max_health():
 	return _max_health
 	
 func set_speed(_new):

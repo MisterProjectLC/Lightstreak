@@ -3,7 +3,7 @@ extends "res://Mini Scenes/Enemies/Enemy.gd"
 var minions = []
 
 func _process(delta):
-	process(delta)
+	__process(delta)
 
 func _on_Detector_area_entered(area):
 	if area.has_method("set_speed") and area != self and _stunned <= 0:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Mini Scenes/LabelFade.gd" type="Script" id=2]
@@ -14,7 +14,7 @@
 [ext_resource path="res://Art/Enemies/HackerEnemy.png" type="Texture" id=12]
 [ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=13]
 [ext_resource path="res://Art/Icons/RedIcon.png" type="Texture" id=14]
-[ext_resource path="res://Art/Enemies/BlinkEnemy.png" type="Texture" id=15]
+[ext_resource path="res://Art/Enemies/Slick2.png" type="Texture" id=15]
 [ext_resource path="res://Art/Icons/MissileIcon.png" type="Texture" id=16]
 [ext_resource path="res://Mini Scenes/Outline.gd" type="Script" id=17]
 [ext_resource path="res://Art/Icons/VioletIcon.png" type="Texture" id=18]
@@ -24,6 +24,9 @@
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=22]
 [ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=23]
 [ext_resource path="res://Art/Icons/QueeeIcon.png" type="Texture" id=24]
+[ext_resource path="res://Art/Enemies/BossViolet.png" type="Texture" id=25]
+[ext_resource path="res://Art/Enemies/BossRed.png" type="Texture" id=26]
+[ext_resource path="res://Art/Enemies/BossBlue.png" type="Texture" id=27]
 
 [sub_resource type="DynamicFont" id=1]
 size = 56
@@ -36,6 +39,23 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=3]
 size = 56
 font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Stage18"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 27 ), ExtResource( 26 ), ExtResource( 25 ) ]
+}
 
 [node name="MainMenu" type="Control"]
 anchor_right = 5.319
@@ -718,10 +738,10 @@ __meta__ = {
 }
 
 [node name="Stage 9" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 55.8973
-margin_top = 139.05
-margin_right = 109.897
-margin_bottom = 194.05
+margin_left = 49.0879
+margin_top = 135.078
+margin_right = 119.088
+margin_bottom = 205.078
 rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 15 )
 __meta__ = {
@@ -1038,6 +1058,20 @@ texture = ExtResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Stage 18" type="TextureRect" parent="Stages/Page 4"]
+margin_left = 55.955
+margin_top = 91.4716
+margin_right = 110.955
+margin_bottom = 146.472
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stages/Page 4/Stage 18"]
+anims/Stage18 = SubResource( 4 )
 
 [node name="Back" type="Label" parent="Stages"]
 margin_left = 386.0

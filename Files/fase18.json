@@ -1,0 +1,52 @@
+{
+	"GENERATE":true,
+	"DURATION":10,
+	"CANNON_COUNT":3,
+	"POWER_COUNT":9,
+	"INITIAL_TEXT":"",
+	"REPLICATE_TEXT":0,
+	"ARENA":0,
+	"SCRIPT":
+	[
+        {"TIME":1, "MINION":"BOSS", "LANE":3},
+        {"TIME":2, "MINION":"TANK", "LANE":0},
+	{"TIME":2, "MINION":"TANK", "LANE":6},
+        {"TIME":17, "MINION":"TROOPER", "LANE":1},
+        {"TIME":18, "MINION":"TROOPER", "LANE":2},
+        {"TIME":19, "MINION":"TROOPER", "LANE":3},
+        {"TIME":20, "MINION":"SPEEDER", "LANE":4},
+        {"TIME":21, "MINION":"SPEEDER", "LANE":5},
+
+        {"TIME":28, "MINION":"GUARDIAN", "LANE":0},
+        {"TIME":28, "MINION":"GUARDIAN", "LANE":6},
+
+        {"TIME":30, "MINION":"TANK", "LANE":1},
+	{"TIME":30, "MINION":"TANK", "LANE":2},
+        {"TIME":38, "MINION":"SLICK", "LANE":3},
+	{"TIME":38, "MINION":"BOMBER", "LANE":4},
+
+        {"TIME":40, "MINION":"CAPTAIN", "LANE":2},
+	{"TIME":40, "MINION":"CAPTAIN", "LANE":5},
+
+	{"TIME":44, "MINION":"BOMBER", "LANE":1},
+	{"TIME":44, "MINION":"BOMBER", "LANE":5},
+
+       	{"TIME":51, "MINION":"TANK", "LANE":0},
+        {"TIME":51, "MINION":"TANK", "LANE":1},
+        {"TIME":51, "MINION":"TANK", "LANE":2},
+       	{"TIME":51, "MINION":"TANK", "LANE":3},
+        {"TIME":51, "MINION":"TANK", "LANE":4},
+        {"TIME":51, "MINION":"TANK", "LANE":5},
+        {"TIME":51, "MINION":"TANK", "LANE":6},
+
+        {"TIME":60, "MINION":"HACKER", "LANE":6},
+        {"TIME":62, "MINION":"SLICK", "LANE":6},
+        {"TIME":64, "MINION":"SPEEDER", "LANE":4},
+        {"TIME":68, "MINION":"SLICK", "LANE":1},
+	]
+}
+
+
+
+
+

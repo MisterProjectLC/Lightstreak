@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SeuMadruga.ogg-f757ee55743815d81b265d4f69570f1d.oggstr"
+
+[deps]
+
+source_file="res://Music/SeuMadruga.ogg"
+dest_files=[ "res://.import/SeuMadruga.ogg-f757ee55743815d81b265d4f69570f1d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

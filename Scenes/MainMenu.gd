@@ -15,10 +15,13 @@ var outlines = ["Play", "Powers_List", "Options", "Credits", "Quit",
 				"Stages/Page 2/P6", "Stages/Page 2/P7", "Stages/Page 2/P8",
 				"Stages/Page 2/P9", "Stages/Page 2/P10", "Stages/Page 3/P11",
 				"Stages/Page 3/P12", "Stages/Page 3/P13", "Stages/Page 3/P14",
-				"Stages/Page 3/P15", "Stages/Page 4/P16", "Stages/Page 4/P17"]
+				"Stages/Page 3/P15", "Stages/Page 4/P16", "Stages/Page 4/P17",
+				"Stages/Page 4/P18"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$"Stages/Page 4/Stage 18/AnimationPlayer".play("Stage18")
+	
 	for i in range(outlines.size()):
 		outlines[i] = find_outline(outlines[i])
 	

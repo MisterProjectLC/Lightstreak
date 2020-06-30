@@ -35,9 +35,7 @@ func __process(delta):
 		position.y += _speed*25*delta
 	
 		if position.y > 850:
-			print("pass")
-			emit_signal("pass_threshold")
-			destroy()
+			_pass_threshold()
 	else:
 		_stunned -= delta
 		_clock += delta
@@ -56,11 +54,18 @@ func _manage_knockside(delta):
 		position.x += speed
 		_knockside -= speed
 
+func _pass_threshold():
+	emit_signal("pass_threshold")
+	destroy()
+
 func set_lane(_lane):
 	self.lane = _lane
 
 func get_lane():
 	return lane
+
+func set_position_y(_new):
+	position.y = _new
 
 func _set_health(_new):
 	_health = _new
@@ -95,7 +100,7 @@ func take_damage(_damage):
 	if _protected:
 		return
 	
-	_health -= _damage
+	_set_health(_health - _damage)
 	
 	if damaged_sprite:
 		$Sprite.texture = damaged_sprite

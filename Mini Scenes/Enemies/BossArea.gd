@@ -5,6 +5,9 @@ export(String, "mid","blue", "red", "violet") var color
 
 signal damaged
 
+func set_position_y(_new):
+	get_parent().set_position_y(_new)
+
 func set_lane(_lane):
 	get_parent().set_lane(_lane)
 
@@ -27,7 +30,8 @@ func set_knockside(_new):
 	get_parent().set_knockside(_new)
 
 func take_damage(_damage):
-	emit_signal("damaged")
+	if _damage > 1:
+		emit_signal("damaged")
 	get_parent().take_damage(_damage)
 
 func set_protected(_new):

@@ -226,9 +226,8 @@ func leave_game():
 
 # MINION SPAWNER -----------------------------
 
-# send back important info to the minion spawner
-func spawn_enemy(enemy_minion_name, enemy_lane):
-	return $MinionSpawner.spawn_enemy(enemy_minion_name, enemy_lane)
+func spawn_enemy(enemy_minion_name, enemy_lane, requester = null):
+	$MinionSpawner.spawn_enemy(enemy_minion_name, enemy_lane)
 
 func send_alert(message, priority):
 	$Alerts.alert(message, priority)
@@ -237,6 +236,9 @@ func send_alert(message, priority):
 
 func set_background(_new_arena):
 	$Battlefield.set_background(_background_list[_new_arena])
+	
+	if _new_arena != 2:
+		$MinionSpawner.clear_blasts()
 
 func summon_heylook():
 	var new = heylook.instance()

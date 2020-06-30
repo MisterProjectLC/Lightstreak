@@ -11,6 +11,7 @@ export(PackedScene) var slick
 export(PackedScene) var violet_blast
 export(PackedScene) var guardian
 export(PackedScene) var captain
+export(PackedScene) var boss
 var enemy_object = {}
 
 var _clock = 0
@@ -24,13 +25,13 @@ signal phase_empty
 signal passed_threshold
 signal send_alert
 
-var blasts = 0
+var blasts = []
 
 func _ready():
 	enemy_object = {"TROOPER":trooper, "TANK":tank, "SPEEDER":speeder, 
 	"HACKER":hacker, "HACKERI":hacker_init, "REDBLAST":red_blast,
 	"BOMBER":bomber, "SLICK":slick, "VIOLETBLAST":violet_blast,
-	"GUARDIAN":guardian, "CAPTAIN":captain}
+	"GUARDIAN":guardian, "CAPTAIN":captain, "BOSS":boss}
 
 
 func _process(delta):
@@ -50,7 +51,7 @@ func _process(delta):
 				break
 				
 		# signal when there are no enemies around
-		if get_child_count() - blasts <= 0:
+		if get_child_count() - len(blasts) <= 0:
 			emit_signal("phase_empty", _time)
 
 
@@ -61,10 +62,10 @@ func spawn_enemy(enemy_type, lane):
 	move_child(_new, get_child_count()-1)
 	
 	if _new.has_method("i_am_vblast"):
-		_new.connect("blast_destroyed", self, "add_blasts")
-		add_blasts(1)
-	
-	_new.connect('send_alert', self, 'send_alerts')
+		add_blasts(_new)
+	else:
+		_new.connect('send_alert', self, 'send_alerts')
+		
 	_new.set_lane(lane)
 
 	_new.set_position(Vector2(Global.get_lane_x(lane), _spawn_y))
@@ -79,8 +80,16 @@ func spawn_enemy(enemy_type, lane):
 	
 	return _new
 
+
 func add_blasts(_new):
-	blasts += _new
+	blasts.append(_new)
+
+
+func clear_blasts():
+	for blast in blasts:
+		blast.queue_free()
+	blasts.clear()
+
 
 func passed_threshold():
 	emit_signal("passed_threshold")

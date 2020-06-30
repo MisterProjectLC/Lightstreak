@@ -1,45 +1,36 @@
 extends "res://Mini Scenes/Enemies/Enemy.gd"
 
-var _timer = 8
+var clock = 0
 var _main
-var violetblast = null
+var first = true
 var color = 0
 
-func set_main(_new):
-	_main = _new
+func set_main():
+	_main = get_tree().get_root().get_node("Main")
+
+func _ready():
+	$"AreaBlue/Sprite Blue".get_material().set_shader_param("max_health", _get_max_health())
+	set_main()
 
 func _process(delta):
-	if !_stunned:
-		if _timer > 0:
-			_timer -= delta
-		else:
-			_timer = 3
-			
-			var knocksider = 1 + (randi() % 5)
-			knocksider -= get_lane()
-			
-			set_knockside(knocksider)
-
+	set_knockside(0)
 	__process(delta)
-
-func _set_lane(_lane):
-	self.lane = _lane
-
-func set_knockside(_new):
-	_knockside = _new*Global.get_lane_x_increase()
 	
-	var _actual_lane = (position.x - Global.get_lane_x_start())/Global.get_lane_x_increase()
-	set_lane(int(_actual_lane)+_new)
+	clock += delta
+	if clock > 205:
+		destroy()
 
-func _manage_knockside(delta):
-		# Knockside
-	if abs(_knockside) > 2:
-		var speed = 200*delta*(abs(_knockside)/_knockside)
-		position.x += speed
-		_knockside -= speed
-		
-		# 120 graus - lane increase
-		rotation_degrees += speed*120/Global.get_lane_x_increase()
+
+func _pass_threshold():
+	emit_signal("pass_threshold")
+	emit_signal("pass_threshold")
+	emit_signal("pass_threshold")
+	destroy()
+
+
+func _set_health(_new):
+	._set_health(_new)
+	$"AreaBlue/Sprite Blue".get_material().set_shader_param("health", _new)
 
 
 func _on_AreaBlue_damaged():
@@ -48,25 +39,22 @@ func _on_AreaBlue_damaged():
 	
 	color = 0
 	_main.set_background(color)
-	if is_instance_valid(violetblast):
-		violetblast.destroy()
+
+
 
 func _on_AreaRed_damaged():
 	if color == 1:
 		return
 	
 	color = 1
-	_main.spawn_enemy("REDBLAST", 4 + (randi() % 3))
-	_main.spawn_enemy("REDBLAST", randi() % 4)
+	_main.call_deferred("spawn_enemy", "REDBLAST", 4 + (randi() % 3))
+	_main.call_deferred("spawn_enemy", "REDBLAST", randi() % 4)
 	_main.set_background(color)
-	if is_instance_valid(violetblast):
-		violetblast.destroy()
-
 
 func _on_AreaViolet_damaged():
 	if color == 2:
 		return
-	
 	color = 2
-	violetblast = _main.spawn_enemy("VIOLETBLAST", 3)
+
+	_main.call_deferred("spawn_enemy", "VIOLETBLAST", 2, self)
 	_main.set_background(color)

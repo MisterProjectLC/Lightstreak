@@ -21,7 +21,7 @@ func _on_Blast_area_entered(area):
 
 func destroy():
 	i_am_vblast()
-	.destroy()
+	queue_free()
 
 func i_am_vblast(): # gambiarra pesada, nao apaga
 	emit_signal("blast_destroyed", -1)

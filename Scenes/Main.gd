@@ -214,11 +214,19 @@ func _on_MinionSpawner_passed_threshold():
 
 # Victory
 func _on_MinionSpawner_phase_empty(time):
-	if _current_phase["DURATION"] <= time:
+	if _current_phase["DURATION"] == 10:
+		credits()
+	elif _current_phase["DURATION"] <= time:
 		leave_game()
 
 func game_over():
 	leave_game()
+
+func credits():
+	$AnimationPlayer.play("Fade")
+
+func _on_AnimationPlayer_animation_finished(_anim_name):
+	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 func leave_game():
 	Alphabet.reset()
@@ -259,5 +267,3 @@ func _change_priority(_child, _priority):
 	move_child(_child, _priority)
 	move_child($Battlefield, 0)
 	move_child($BlackBackground, 0)
-
-

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
@@ -42,6 +42,22 @@
 [ext_resource path="res://Mini Scenes/Weapon/MachinegunW.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Mini Scenes/Weapon/Push.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=42]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fade"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -217,6 +233,19 @@ margin_bottom = -3.98315
 position = Vector2( 553.015, 755.228 )
 scale = Vector2( 0.806, 0.812 )
 texture = ExtResource( 23 )
+
+[node name="BlackFade" type="ColorRect" parent="."]
+margin_left = 2.0
+margin_top = -9.0
+margin_right = 1730.0
+margin_bottom = 1198.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fade = SubResource( 1 )
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
 [connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="send_alert" from="MinionSpawner" to="." method="send_alert"]
@@ -226,3 +255,4 @@ texture = ExtResource( 23 )
 [connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
 [connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]
 [connection signal="typer_updated" from="Console" to="." method="typer_updated"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

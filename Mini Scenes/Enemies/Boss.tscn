@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Art/Enemies/Boss Individual.png" type="Texture" id=1]
 [ext_resource path="res://Mini Scenes/Enemies/Triangle.tres" type="Shape2D" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Art/Enemies/BossViolet.png" type="Texture" id=8]
 [ext_resource path="res://Mini Scenes/Enemies/BossArea.gd" type="Script" id=9]
 [ext_resource path="res://Mini Scenes/Enemies/Boss.tres" type="Material" id=10]
+[ext_resource path="res://Mini Scenes/Enemies/Explosion.tscn" type="PackedScene" id=11]
 
 [node name="Boss" type="Area2D"]
 scale = Vector2( 2, 2 )
@@ -19,6 +20,7 @@ __meta__ = {
 }
 _max_health = 404
 _speed = 1
+explosion = ExtResource( 11 )
 
 [node name="AreaMid" type="Area2D" parent="."]
 script = ExtResource( 9 )

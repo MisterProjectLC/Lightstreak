@@ -7,7 +7,7 @@ var fading_children = {
 	
 }
 
-var outlines = ["Play", "Powers_List", "Options", "Credits", "Quit",
+var outlines = ["Play", "Options", "Credits", "Quit",
 				"OptionsMenu/Music", "OptionsMenu/Sounds", "OptionsMenu/Back",
 				"OptionsMenu/Lang",
 				"Stages/Back", "Stages/Page 1/P1", "Stages/Page 1/P2",
@@ -33,9 +33,11 @@ func _ready():
 		$GameBackground.set_modulate(Color(1, 1, 1, 1))
 		pass
 
+
 func find_outline(text):
 	text = "./" + text + "/Outline"
 	return get_node(text)
+
 
 func _process(_delta):
 	for child in moving_children.keys():
@@ -47,6 +49,7 @@ func _process(_delta):
 		var object = find_node(child)
 		if object.modulate.a != fading_children[child]:
 			object.modulate.a += 0.05*(fading_children[child] - object.modulate.a)
+
 
 func _command_typed(_id, text):
 	var args = text.rsplit(" ", false, 0)
@@ -116,28 +119,33 @@ func _command_typed(_id, text):
 			if Global.get_lightstreak_typed():
 				pull_menu()
 				push_other_menus()
-				
+		
+		"CREDITS":
+			get_tree().change_scene("res://Scenes/Credits.tscn")
+		
 		"QUIT":
 			get_tree().quit()
+
 
 func _update_outlines(text):
 	for outline in outlines:
 		outline.update_text(text)
 
+
 func push_other_menus():
 	moving_children['Stages'] = Vector2(-810, 192)
 	moving_children['OptionsMenu'] = Vector2(-810, 192)
 
+
 func pull_menu():
 	moving_children['Play'] = Vector2(10, 190)
-	moving_children['Powers_List'] = Vector2(10, 260)
-	moving_children['Options'] = Vector2(10, 330)
-	moving_children['Credits'] = Vector2(10, 400)
-	moving_children['Quit'] = Vector2(10, 470)
+	moving_children['Options'] = Vector2(10, 260)
+	moving_children['Credits'] = Vector2(10, 330)
+	moving_children['Quit'] = Vector2(10, 400)
+
 
 func pushback_menu():
 	moving_children['Play'] = Vector2(800, 190)
-	moving_children['Powers_List'] = Vector2(800, 260)
-	moving_children['Options'] = Vector2(800, 330)
-	moving_children['Credits'] = Vector2(800, 400)
-	moving_children['Quit'] = Vector2(800, 470)
+	moving_children['Options'] = Vector2(800, 260)
+	moving_children['Credits'] = Vector2(800, 330)
+	moving_children['Quit'] = Vector2(800, 400)

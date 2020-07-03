@@ -57,13 +57,13 @@ func _ready():
 				
 				if repeats == false:
 					break
-		
+			
 			_weapon_list[w].set_text(new_word)
 	
 	# replicate text
 	if _current_phase["REPLICATE_TEXT"] != 0:
-		if _current_phase["INITIAL_TEXT"].left(12) == 'Lightstreak ':
-			_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"].lstrip("Lightstreak "))
+		if _current_phase["INITIAL_TEXT"].left(6) == 'Light ':
+			_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"].lstrip("Light "))
 		else:
 			_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"])
 		
@@ -82,6 +82,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed and event.scancode == KEY_ESCAPE:
 		leave_game()
 
+
 # tab handler
 func _on_Console_tab_console(typer):
 	for i in range(_cannon_list.size()):
@@ -90,9 +91,11 @@ func _on_Console_tab_console(typer):
 		else:
 			_cannon_list[i].toggle_highlight(false)
 
+
 # command handler
 func _on_Console_command_typed(_typer_active, _input):
 	Console_command_typed(_typer_active, _input, false)
+
 
 func Console_command_typed(_typer_active, _input, _lightstreak):
 	# move
@@ -107,7 +110,7 @@ func Console_command_typed(_typer_active, _input, _lightstreak):
 		shift_cannon(_typer_active, false)
 
 	# lightstreak
-	elif _input.left(12) == 'Lightstreak ' and len(_input) >= 12:
+	elif (_input.left(6) == 'Light ' and len(_input) >= 6) or (_input.left(7) == 'Streak ' and len(_input) >= 7):
 		_lightstreak_handler(_input)
 
 	# weapon
@@ -116,22 +119,34 @@ func Console_command_typed(_typer_active, _input, _lightstreak):
 	
 	return _input
 
+
 func typer_updated(text):
 	for title in _weapon_list:
 		title.update_outline(text)
-		if text.left(12) == 'Lightstreak ' and title.get_text() != "Lightstreak":
-			title.update_outline(text.lstrip("Lightstreak "))
+		if text.left(6) == 'Light ' and title.get_text() != "Light":
+			title.update_outline(text.lstrip("Light "))
+		elif text.left(7) == 'Streak ' and title.get_text() != "Streak":
+			title.update_outline(text.lstrip("Streak "))
+
 
 func _lightstreak_handler(_input):
-	if _weapon_list[-1].get_text() != "Lightstreak":
+	var final_input
+	if _weapon_list[-1].get_text() == "Light": 
+		final_input = _input.right(6)
+	elif _weapon_list[-1].get_text() == "Streak":
+		final_input = _input.right(7)
+	else:
 		return ""
 	
-	var final_input = _input.right(12)
+	# replace word
+	var new_word = ["Light", "Streak"][randi() % 2]
+	_weapon_list[-1].set_text(new_word)
 	
 	print("Lightstreak activated: " + final_input)
 	for i in range(len(_cannon_list)):
 		var helper = Console_command_typed(i, final_input, true)
 		final_input = helper
+
 
 # weapon 
 func _weapon_handler(_cannon_n, _input, _lightstreak):
@@ -148,10 +163,10 @@ func _weapon_handler(_cannon_n, _input, _lightstreak):
 			_new_weapon.position = _cannon.position + _new_weapon.get_weapon_offset()
 			_new_weapon.set_weapon_lane(_cannon.get_target_lane())
 			_new_weapon.set_lightstreak(_lightstreak)
-
+			
 			# replace word
 			var new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
-
+			
 			# if word is a repeat, try again
 			while (1):
 				var repeats = false
@@ -169,13 +184,15 @@ func _weapon_handler(_cannon_n, _input, _lightstreak):
 			
 	return _input
 
+
 # cannon mover
 func _move_cannon(_cannon_n, _lane):
 	var _cannon = _cannon_list[_cannon_n]
 	
 	_cannon.set_target_lane(_lane)
 	_cannon.set_target_position(Vector2(Global.get_lane_x(_lane), Global.get_lane_y()))
-	
+
+
 func shift_cannon(_cannon_n, _left):
 	var _cannon = _cannon_list[_cannon_n]
 	var _lane = _cannon.get_target_lane()
@@ -219,14 +236,18 @@ func _on_MinionSpawner_phase_empty(time):
 	elif _current_phase["DURATION"] <= time:
 		leave_game()
 
+
 func game_over():
 	leave_game()
+
 
 func credits():
 	$AnimationPlayer.play("Fade")
 
+
 func _on_AnimationPlayer_animation_finished(_anim_name):
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")
+
 
 func leave_game():
 	Alphabet.reset()

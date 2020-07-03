@@ -1,6 +1,7 @@
 extends AudioStreamPlayer
 
 export(AudioStream) var menu_theme
+export(AudioStream) var credits_theme
 export var phase_themes = []
 export var laser = []
 export var sphere = []

@@ -16,7 +16,7 @@ func _ready():
 	
 func get_word(_diff, _lang):
 	if _diff == 3:
-		return "Lightstreak"
+		return "Light"
 	else:
 		return _linguas[_lang+1][_diff][randi() % _linguas[_lang+1][_diff].size()]
 

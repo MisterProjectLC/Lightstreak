@@ -1,23 +1,244 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/Credits.gd" type="Script" id=2]
 [ext_resource path="res://Mini Scenes/Menu/MenuTyper.gd" type="Script" id=3]
+[ext_resource path="res://Art/Gamedev Ufscar.png" type="Texture" id=4]
 [ext_resource path="res://Art/Typer1.png" type="Texture" id=5]
 [ext_resource path="res://Art/Battlefields/Battlefield.png" type="Texture" id=6]
 [ext_resource path="res://Mini Scenes/Outline.gd" type="Script" id=17]
 
-[sub_resource type="DynamicFont" id=2]
-size = 78
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 40
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=1]
 size = 56
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 56
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 56
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "start"
+length = 214.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade In:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Gamedev Ufscar:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 9.5, 10.7, 18.4, 19.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MasterProject:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 20, 20.7 ),
+"transitions": PoolRealArray( 1, 0.33 ),
+"update": 0,
+"values": [ Vector2( 835.042, 287.477 ), Vector2( 100, 287.477 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MasterProject2:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 21.6, 22.3 ),
+"transitions": PoolRealArray( 1, 0.329877 ),
+"update": 0,
+"values": [ Vector2( 840.342, 414.679 ), Vector2( 100, 414.679 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MasterProject:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 26.6, 27.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("MasterProject2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 26.6, 27.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Art/Leeroy:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 27.5, 28.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 783.893, 135.146 ), Vector2( 0, 135.146 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Art/MasterProject3:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 29.5, 30.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 781.014, 286.992 ), Vector2( 0, 286.992 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Art:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 26.7, 27.7, 52.5, 53.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Art/Leeroy:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 36, 37.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Art/MasterProject3:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 36, 37.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Art:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.2, 26.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Art/CreativeStall:rect_position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 37.5, 38.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 785.801, 92 ), Vector2( 0, 92 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Art/Zero400539:rect_position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 41.5, 42.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 785.801, 232 ), Vector2( 0, 232 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Art/frogatto:rect_position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 45.5, 46.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 785, 368 ), Vector2( 0, 368 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Fade In:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Music:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0.1, 53, 54 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Music/SebastianWolff:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 51.9, 55.3, 56.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Credits" type="Control"]
 anchor_right = 5.319
@@ -58,50 +279,64 @@ __meta__ = {
 }
 
 [node name="Typer" type="Control" parent="."]
-margin_left = 5.72571
-margin_top = 668.371
-margin_right = 523.726
-margin_bottom = 749.371
+margin_left = 30.0
+margin_top = 659.0
+margin_right = 662.0
+margin_bottom = 740.0
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Text" type="RichTextLabel" parent="Typer"]
-margin_left = 5.8895
-margin_top = 13.9712
-margin_right = 530.89
-margin_bottom = 78.9712
-custom_fonts/normal_font = SubResource( 2 )
-bbcode_enabled = true
-scroll_active = false
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
+[node name="Text" type="RichTextLabel" parent="Typer"]
+margin_left = 5.04999
+margin_top = 22.55
+margin_right = 716.05
+margin_bottom = 87.55
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureRect" type="TextureRect" parent="Typer"]
-margin_left = -9.5972
-margin_top = 6.946
-margin_right = 353.403
-margin_bottom = 46.946
-rect_scale = Vector2( 1.46, 2 )
+anchor_left = 0.074
+anchor_top = 0.136
+anchor_right = 0.98
+anchor_bottom = 1.123
+margin_left = -58.2246
+margin_top = -5.4485
+margin_right = -238.817
+margin_bottom = -45.3955
+rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Credits" type="Label" parent="."]
-margin_left = 25.9398
-margin_top = 58.5246
-margin_right = 509.94
-margin_bottom = 102.525
-rect_scale = Vector2( 1.4, 1.4 )
+[node name="Lightstreak" type="Label" parent="."]
+margin_left = 206.349
+margin_top = 48.9925
+margin_right = 570.349
+margin_bottom = 99.9925
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "LIGHTSTREAK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="."]
+margin_left = 274.081
+margin_top = 119.348
+margin_right = 510.081
+margin_bottom = 163.348
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "OBRIGADO POR JOGAR
-ESTE JOGO"
+text = "CREDITS"
 align = 1
 valign = 1
 __meta__ = {
@@ -111,12 +346,432 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Credits"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="Gamedev Ufscar" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 6.35783e-07 )
+margin_left = 137.184
+margin_top = 454.991
+margin_right = 616.184
+margin_bottom = 545.991
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "GAMEDEV UFSCAR"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Gamedev Ufscar"]
+margin_left = -0.892708
+margin_top = 22.3958
+margin_right = 478.107
+margin_bottom = 113.396
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Gamedev" type="TextureRect" parent="Gamedev Ufscar"]
+margin_left = 120.778
+margin_top = -253.327
+margin_right = 1172.78
+margin_bottom = 798.673
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterProject" type="Label" parent="."]
+margin_left = 835.042
+margin_top = 287.477
+margin_right = 1278.04
+margin_bottom = 331.477
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "MASTERPROJECT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="MasterProject"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Game Design" type="Label" parent="MasterProject"]
+margin_top = -57.279
+margin_right = 236.0
+margin_bottom = -13.279
+custom_fonts/font = SubResource( 2 )
+text = "GAME DESIGN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dan" type="Label" parent="MasterProject"]
+visible = false
+margin_left = 467.652
+margin_top = -3.83307
+margin_right = 833.652
+margin_bottom = 40.1669
+custom_fonts/font = SubResource( 2 )
+text = "(DAN ISAMU)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterProject2" type="Label" parent="."]
+margin_left = 840.342
+margin_top = 414.679
+margin_right = 1283.34
+margin_bottom = 458.679
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "MASTERPROJECT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="MasterProject2"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Programming" type="Label" parent="MasterProject2"]
+margin_top = -57.279
+margin_right = 236.0
+margin_bottom = -13.279
+custom_fonts/font = SubResource( 2 )
+text = "PROGRAMMING"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dan" type="Label" parent="MasterProject2"]
+visible = false
+margin_left = 455.573
+margin_top = 10.2036
+margin_right = 836.573
+margin_bottom = 54.2036
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+text = "(DAN ISAMU)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Art" type="Label" parent="."]
+visible = false
+margin_left = 49.729
+margin_top = 196.48
+margin_right = 413.729
+margin_bottom = 247.48
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "ART"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leeroy" type="Label" parent="Art"]
+margin_left = 1249.87
+margin_top = 125.125
+margin_right = 1692.87
+margin_bottom = 169.125
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "LEEROY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Art/Leeroy"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Trooper" type="Label" parent="Art/Leeroy"]
+margin_left = 0.455475
+margin_top = -85.3956
+margin_right = 783.455
+margin_bottom = 8.60445
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "Trooper, Tank, Speeder, Hacker,
+Bomber, Slick and Guardian "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterProject3" type="Label" parent="Art"]
+margin_left = 1247.0
+margin_top = 276.97
+margin_right = 1690.0
+margin_bottom = 320.97
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "MASTERPROJECT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Art/MasterProject3"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Boss" type="Label" parent="Art/MasterProject3"]
+margin_left = -2.0
+margin_top = -84.491
+margin_right = 685.0
+margin_bottom = 6.509
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "Boss, Laser, Sphere, Shock,
+Magnet and Barrage "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreativeStall" type="Label" parent="Art"]
+margin_left = 1922.57
+margin_top = 59.5729
+margin_right = 2372.57
+margin_bottom = 103.573
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "CREATIVE STALL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Art/CreativeStall"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="missile" type="Label" parent="Art/CreativeStall"]
+margin_left = 2.0
+margin_top = -38.0
+margin_right = 248.0
+margin_bottom = 6.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "missile by"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="from" type="Label" parent="Art/CreativeStall"]
+margin_left = 2.85742
+margin_top = 44.7627
+margin_right = 556.857
+margin_bottom = 88.7627
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "from the Noun Project"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Zero400539" type="Label" parent="Art"]
+margin_left = 1925.91
+margin_top = 200.816
+margin_right = 2375.91
+margin_bottom = 244.816
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "ZERO400539"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Art/Zero400539"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MissileBlast" type="Label" parent="Art/Zero400539"]
+margin_left = 2.0
+margin_top = -38.0
+margin_right = 248.0
+margin_bottom = 6.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "MissileBlast by"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="from" type="Label" parent="Art/Zero400539"]
+margin_left = 2.85742
+margin_top = 44.7627
+margin_right = 556.857
+margin_bottom = 88.7627
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "from DeviantArt"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="frogatto" type="Label" parent="Art"]
+margin_left = 1925.91
+margin_top = 335.684
+margin_right = 2375.91
+margin_bottom = 426.684
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "FROGATTO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Art/frogatto"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Explosion" type="Label" parent="Art/frogatto"]
+margin_left = 2.0
+margin_top = -38.0
+margin_right = 248.0
+margin_bottom = 6.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "Explosion by"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="from" type="Label" parent="Art/frogatto"]
+margin_left = 2.85742
+margin_top = 44.7627
+margin_right = 556.857
+margin_bottom = 88.7627
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "from OpenGameArt"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="Label" parent="."]
+margin_left = 50.0
+margin_top = 196.0
+margin_right = 222.0
+margin_bottom = 240.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "MUSIC"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SebastianWolff" type="Label" parent="Music"]
+margin_left = -8.40353
+margin_top = 101.188
+margin_right = 490.596
+margin_bottom = 145.188
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SEBASTIAN WOLFF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/SebastianWolff"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="OMFGDOGS" type="Label" parent="Music/SebastianWolff"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81133
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 2 )
+text = "OMFGDOGS (Main Menu Theme)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade In" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.002
+anchor_bottom = 1.0
+margin_left = -33.0
+margin_top = -1.0
+margin_right = -3439.43
+margin_bottom = -1362.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/start = SubResource( 4 )
 [connection signal="command_typed" from="Typer" to="." method="_command_typed"]
 [connection signal="typer_updated" from="Typer" to="." method="_update_outlines"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

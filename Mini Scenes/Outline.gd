@@ -1,8 +1,9 @@
-extends Node
+extends Label
 
 var expected_text = ""
 var options_text = false
 var lang_text = false
+var already_activated = false
 
 func _ready():
 	expected_text = get_parent().text
@@ -13,10 +14,25 @@ func _ready():
 	elif expected_text.ends_with(">"):
 		lang_text = true
 
+
+func get_expected_text():
+	return expected_text
+
+
+func activate():
+	already_activated = true
+	self.set_modulate(Color(1, 1, 115.0/255.0, 1))
+	self.text = expected_text
+
+
 func update_expected_text(text):
 	expected_text = text
 
+
 func update_text(received_text):
+	if already_activated:
+		return false
+	
 	if received_text.length() == 0:
 		self.text = ""
 		return false

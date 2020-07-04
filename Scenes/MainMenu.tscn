@@ -155,6 +155,7 @@ __meta__ = {
 }
 
 [node name="Outline" type="Label" parent="Play"]
+modulate = Color( 1, 1, 0.784314, 1 )
 margin_right = 345.0
 margin_bottom = 44.0
 custom_fonts/font = SubResource( 3 )

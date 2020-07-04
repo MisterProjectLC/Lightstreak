@@ -12,11 +12,11 @@
 size = 56
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 56
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 56
 font_data = ExtResource( 1 )
 
@@ -234,10 +234,154 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 51.9, 55.3, 56.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 51.9, 55.3, 56.5, 59.6, 60.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Music/dCi:rect_position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 60, 61 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -499.878, 100.012 ), Vector2( 0, 100.012 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Music/dCi2:rect_position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 61, 62 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 196.201 ), Vector2( 0, 196.201 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Music/dCi3:rect_position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 62, 63 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500.178, 292.755 ), Vector2( 0, 292.755 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Music/dCi4:rect_position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 63, 64 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 388.495 ), Vector2( 0, 388.495 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Music/dCi:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 67, 68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Music/dCi2:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 67, 68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Music/dCi3:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 67, 68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Music/dCi4:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 67, 68 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Music/JerryTerry:rect_position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 68, 69 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 695 ), Vector2( 0, 100 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Music/HydroDalek:rect_position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 70, 71 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 25.957, 820 ), Vector2( 25.957, 225 ) ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("Music/DaftPunk:rect_position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 72.5, 73.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 25, 905 ), Vector2( 25, 305 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("Music/PandaBear:rect_position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 72.6, 73.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 27.216, 955 ), Vector2( 27.216, 355 ) ]
 }
 
 [node name="Credits" type="Control"]
@@ -322,7 +466,7 @@ margin_left = 206.349
 margin_top = 48.9925
 margin_right = 570.349
 margin_bottom = 99.9925
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "LIGHTSTREAK"
 __meta__ = {
@@ -334,7 +478,7 @@ margin_left = 274.081
 margin_top = 119.348
 margin_right = 510.081
 margin_bottom = 163.348
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "CREDITS"
 align = 1
@@ -346,7 +490,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Credits"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -360,7 +504,7 @@ margin_left = 137.184
 margin_top = 454.991
 margin_right = 616.184
 margin_bottom = 545.991
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "GAMEDEV UFSCAR"
 valign = 1
@@ -373,7 +517,7 @@ margin_left = -0.892708
 margin_top = 22.3958
 margin_right = 478.107
 margin_bottom = 113.396
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -397,7 +541,7 @@ margin_left = 835.042
 margin_top = 287.477
 margin_right = 1278.04
 margin_bottom = 331.477
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "MASTERPROJECT"
 __meta__ = {
@@ -407,7 +551,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="MasterProject"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -419,7 +563,7 @@ __meta__ = {
 margin_top = -57.279
 margin_right = 236.0
 margin_bottom = -13.279
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "GAME DESIGN"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -431,7 +575,7 @@ margin_left = 467.652
 margin_top = -3.83307
 margin_right = 833.652
 margin_bottom = 40.1669
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "(DAN ISAMU)"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -442,7 +586,7 @@ margin_left = 840.342
 margin_top = 414.679
 margin_right = 1283.34
 margin_bottom = 458.679
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "MASTERPROJECT"
 __meta__ = {
@@ -452,7 +596,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="MasterProject2"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -464,7 +608,7 @@ __meta__ = {
 margin_top = -57.279
 margin_right = 236.0
 margin_bottom = -13.279
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "PROGRAMMING"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -477,7 +621,7 @@ margin_top = 10.2036
 margin_right = 836.573
 margin_bottom = 54.2036
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "(DAN ISAMU)"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -489,7 +633,7 @@ margin_left = 49.729
 margin_top = 196.48
 margin_right = 413.729
 margin_bottom = 247.48
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "ART"
 __meta__ = {
@@ -501,7 +645,7 @@ margin_left = 1249.87
 margin_top = 125.125
 margin_right = 1692.87
 margin_bottom = 169.125
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "LEEROY"
 __meta__ = {
@@ -511,7 +655,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Art/Leeroy"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -525,7 +669,7 @@ margin_top = -85.3956
 margin_right = 783.455
 margin_bottom = 8.60445
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Trooper, Tank, Speeder, Hacker,
 Bomber, Slick and Guardian "
 __meta__ = {
@@ -537,7 +681,7 @@ margin_left = 1247.0
 margin_top = 276.97
 margin_right = 1690.0
 margin_bottom = 320.97
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "MASTERPROJECT"
 __meta__ = {
@@ -547,7 +691,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Art/MasterProject3"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -561,7 +705,7 @@ margin_top = -84.491
 margin_right = 685.0
 margin_bottom = 6.509
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Boss, Laser, Sphere, Shock,
 Magnet and Barrage "
 __meta__ = {
@@ -573,7 +717,7 @@ margin_left = 1922.57
 margin_top = 59.5729
 margin_right = 2372.57
 margin_bottom = 103.573
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "CREATIVE STALL"
 __meta__ = {
@@ -583,7 +727,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Art/CreativeStall"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -597,7 +741,7 @@ margin_top = -38.0
 margin_right = 248.0
 margin_bottom = 6.0
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "missile by"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -609,7 +753,7 @@ margin_top = 44.7627
 margin_right = 556.857
 margin_bottom = 88.7627
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "from the Noun Project"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -620,7 +764,7 @@ margin_left = 1925.91
 margin_top = 200.816
 margin_right = 2375.91
 margin_bottom = 244.816
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "ZERO400539"
 __meta__ = {
@@ -630,7 +774,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Art/Zero400539"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -644,7 +788,7 @@ margin_top = -38.0
 margin_right = 248.0
 margin_bottom = 6.0
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "MissileBlast by"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -656,7 +800,7 @@ margin_top = 44.7627
 margin_right = 556.857
 margin_bottom = 88.7627
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "from DeviantArt"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -667,7 +811,7 @@ margin_left = 1925.91
 margin_top = 335.684
 margin_right = 2375.91
 margin_bottom = 426.684
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "FROGATTO"
 __meta__ = {
@@ -677,7 +821,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Art/frogatto"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -691,7 +835,7 @@ margin_top = -38.0
 margin_right = 248.0
 margin_bottom = 6.0
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Explosion by"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -703,7 +847,7 @@ margin_top = 44.7627
 margin_right = 556.857
 margin_bottom = 88.7627
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "from OpenGameArt"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -714,7 +858,7 @@ margin_left = 50.0
 margin_top = 196.0
 margin_right = 222.0
 margin_bottom = 240.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "MUSIC"
 __meta__ = {
@@ -726,7 +870,7 @@ margin_left = -8.40353
 margin_top = 101.188
 margin_right = 490.596
 margin_bottom = 145.188
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "SEBASTIAN WOLFF"
 __meta__ = {
@@ -736,7 +880,7 @@ __meta__ = {
 [node name="Outline" type="Label" parent="Music/SebastianWolff"]
 margin_right = 364.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -750,14 +894,293 @@ margin_top = -43.1887
 margin_right = 784.442
 margin_bottom = 2.81133
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "OMFGDOGS (Main Menu Theme)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="dCi" type="Label" parent="Music"]
+margin_left = -499.878
+margin_top = 100.012
+margin_right = -0.878632
+margin_bottom = 144.012
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "DCI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/dCi"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 1" type="Label" parent="Music/dCi"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81133
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "??? (Phase 1)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dCi2" type="Label" parent="Music"]
+margin_left = -500.986
+margin_top = 196.201
+margin_right = -1.9863
+margin_bottom = 240.201
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "DCI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/dCi2"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 2" type="Label" parent="Music/dCi2"]
+margin_left = 1.0
+margin_top = -43.0
+margin_right = 336.0
+margin_bottom = 1.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "??? (Phase 2)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dCi3" type="Label" parent="Music"]
+margin_left = -500.178
+margin_top = 292.755
+margin_right = -1.17847
+margin_bottom = 336.755
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "DCI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/dCi3"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 3" type="Label" parent="Music/dCi3"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81133
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Rocket (Phase 3)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dCi4" type="Label" parent="Music"]
+margin_left = -502.461
+margin_top = 388.495
+margin_right = -3.46191
+margin_bottom = 432.495
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "DCI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/dCi4"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 1" type="Label" parent="Music/dCi4"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81133
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Red Alert (Phase 7)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JerryTerry" type="Label" parent="Music"]
+margin_left = -2.85172
+margin_top = 695.238
+margin_right = 496.148
+margin_bottom = 739.238
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "JERRYTERRY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/JerryTerry"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ReDoin" type="Label" parent="Music/JerryTerry"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81133
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "ReDoin (Phase 4)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sources" type="Label" parent="Music/JerryTerry"]
+margin_left = 6.16525
+margin_top = 45.5709
+margin_right = 789.166
+margin_bottom = 91.5709
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "sources:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HydroDalek" type="Label" parent="Music"]
+margin_left = 25.9572
+margin_top = 821.554
+margin_right = 524.957
+margin_bottom = 865.554
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "HYDRODALEK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/HydroDalek"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Doin" type="Label" parent="Music/HydroDalek"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81131
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Doin"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DaftPunk" type="Label" parent="Music"]
+margin_left = 25.0
+margin_top = 910.0
+margin_right = 524.0
+margin_bottom = 954.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "DAFT PUNK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/DaftPunk"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Doin it Right" type="Label" parent="Music/DaftPunk"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81131
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Doin' it Right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PandaBear" type="Label" parent="Music"]
+margin_left = 27.216
+margin_top = 955.0
+margin_right = 526.216
+margin_bottom = 999.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "PANDA BEAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/PandaBear"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="Fade In" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.002
 anchor_bottom = 1.0
 margin_left = -33.0

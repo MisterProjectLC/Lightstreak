@@ -2,7 +2,8 @@ extends Control
 
 var outlines = [
 "Credits", "Gamedev Ufscar", "MasterProject", "MasterProject2", "Art/Leeroy", "Art/MasterProject3",
-"Art/CreativeStall", "Art/Zero400539", "Art/frogatto", "Music/SebastianWolff"]
+"Art/CreativeStall", "Art/Zero400539", "Art/frogatto", "Music/SebastianWolff", "Music/dCi", "Music/dCi2",
+"Music/dCi3", "Music/dCi4", "Music/JerryTerry", "Music/HydroDalek", "Music/DaftPunk", "Music/PandaBear"]
 
 var animations = ["start"]
 var current_anim = 0
@@ -19,7 +20,7 @@ func _command_typed(_id, text):
 	var to_exclude = []
 	print_debug(text)
 	for outline in outlines:
-		print_debug(text, " ", outline.get_expected_text())
+		#print_debug(text, " ", outline.get_expected_text())
 		if text == outline.get_expected_text():
 			outline.activate()
 			typed_count += 1

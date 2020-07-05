@@ -3,7 +3,10 @@ extends Control
 var outlines = [
 "Credits", "Gamedev Ufscar", "MasterProject", "MasterProject2", "Art/Leeroy", "Art/MasterProject3",
 "Art/CreativeStall", "Art/Zero400539", "Art/frogatto", "Music/SebastianWolff", "Music/dCi", "Music/dCi2",
-"Music/dCi3", "Music/dCi4", "Music/JerryTerry", "Music/HydroDalek", "Music/DaftPunk", "Music/PandaBear"]
+"Music/dCi3", "Music/dCi4", "Music/JerryTerry", "Music/HydroDalek", "Music/DaftPunk", "Music/PandaBear",
+"Music/sabife", "Music/sabife2", "Music/sabife3", "Music/Basshunter", "Music/Swimmer One", "Music/kr1z", 
+"Music/Kairamen", "Music/Scoutellite", "Music/Syrsa", "Music/XenoGenic", "Music/TheLivingTombstone", 
+"Music/excalibur"]
 
 var animations = ["start"]
 var current_anim = 0

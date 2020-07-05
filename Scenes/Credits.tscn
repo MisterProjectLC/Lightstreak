@@ -54,10 +54,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 20, 20.7 ),
-"transitions": PoolRealArray( 1, 0.33 ),
+"times": PoolRealArray( 0, 20, 20.7 ),
+"transitions": PoolRealArray( 1, 1, 0.33 ),
 "update": 0,
-"values": [ Vector2( 835.042, 287.477 ), Vector2( 100, 287.477 ) ]
+"values": [ Vector2( 835.042, 287.477 ), Vector2( 835.042, 287.477 ), Vector2( 100, 287.477 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("MasterProject2:rect_position")
@@ -66,10 +66,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 21.6, 22.3 ),
-"transitions": PoolRealArray( 1, 0.329877 ),
+"times": PoolRealArray( 0, 21.6, 22.3 ),
+"transitions": PoolRealArray( 1, 1, 0.329877 ),
 "update": 0,
-"values": [ Vector2( 840.342, 414.679 ), Vector2( 100, 414.679 ) ]
+"values": [ Vector2( 840.342, 414.679 ), Vector2( 840.342, 414.679 ), Vector2( 100, 414.679 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("MasterProject:modulate")
@@ -78,10 +78,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 26.6, 27.7 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 26.6, 27.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("MasterProject2:modulate")
@@ -90,10 +90,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 26.6, 27.6 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 26.6, 27.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Art/Leeroy:rect_position")
@@ -102,10 +102,10 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 27.5, 28.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 27.1, 28.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 783.893, 135.146 ), Vector2( 0, 135.146 ) ]
+"values": [ Vector2( 783.893, 135.146 ), Vector2( 783.893, 135.146 ), Vector2( 0, 135.146 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("Art/MasterProject3:rect_position")
@@ -114,10 +114,10 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 29.5, 30.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 29.1, 30.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 781.014, 286.992 ), Vector2( 0, 286.992 ) ]
+"values": [ Vector2( 781.014, 286.992 ), Vector2( 781.014, 286.992 ), Vector2( 0, 286.992 ) ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Art:modulate")
@@ -138,10 +138,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 36, 37.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 36, 37.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Art/MasterProject3:modulate")
@@ -150,10 +150,10 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 36, 37.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 36, 37.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("Art:visible")
@@ -174,10 +174,10 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 37.5, 38.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 37.5, 38.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 785.801, 92 ), Vector2( 0, 92 ) ]
+"values": [ Vector2( 785.801, 92 ), Vector2( 785.801, 92 ), Vector2( 0, 92 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Art/Zero400539:rect_position")
@@ -186,10 +186,10 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 41.5, 42.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 41.5, 42.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 785.801, 232 ), Vector2( 0, 232 ) ]
+"values": [ Vector2( 785.801, 232 ), Vector2( 785.801, 232 ), Vector2( 0, 232 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("Art/frogatto:rect_position")
@@ -198,10 +198,10 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 45.5, 46.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 45.5, 46.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 785, 368 ), Vector2( 0, 368 ) ]
+"values": [ Vector2( 785, 368 ), Vector2( 785, 368 ), Vector2( 0, 368 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("Fade In:visible")
@@ -234,10 +234,10 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 51.9, 55.3, 56.5, 59.6, 60.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 51.9, 55.3, 56.5, 59.6, 60.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/18/type = "value"
 tracks/18/path = NodePath("Music/dCi:rect_position")
@@ -246,10 +246,10 @@ tracks/18/loop_wrap = true
 tracks/18/imported = false
 tracks/18/enabled = true
 tracks/18/keys = {
-"times": PoolRealArray( 60, 61 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 60, 61 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -499.878, 100.012 ), Vector2( 0, 100.012 ) ]
+"values": [ Vector2( -499.878, 100.012 ), Vector2( -499.878, 100.012 ), Vector2( 0, 100.012 ) ]
 }
 tracks/19/type = "value"
 tracks/19/path = NodePath("Music/dCi2:rect_position")
@@ -258,10 +258,10 @@ tracks/19/loop_wrap = true
 tracks/19/imported = false
 tracks/19/enabled = true
 tracks/19/keys = {
-"times": PoolRealArray( 61, 62 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 61, 62 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 800, 196.201 ), Vector2( 0, 196.201 ) ]
+"values": [ Vector2( 800, 196.201 ), Vector2( 800, 196.201 ), Vector2( 0, 196.201 ) ]
 }
 tracks/20/type = "value"
 tracks/20/path = NodePath("Music/dCi3:rect_position")
@@ -270,10 +270,10 @@ tracks/20/loop_wrap = true
 tracks/20/imported = false
 tracks/20/enabled = true
 tracks/20/keys = {
-"times": PoolRealArray( 62, 63 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 62, 63 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -500.178, 292.755 ), Vector2( 0, 292.755 ) ]
+"values": [ Vector2( -500.178, 292.755 ), Vector2( -500.178, 292.755 ), Vector2( 0, 292.755 ) ]
 }
 tracks/21/type = "value"
 tracks/21/path = NodePath("Music/dCi4:rect_position")
@@ -282,10 +282,10 @@ tracks/21/loop_wrap = true
 tracks/21/imported = false
 tracks/21/enabled = true
 tracks/21/keys = {
-"times": PoolRealArray( 63, 64 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 63, 64 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 800, 388.495 ), Vector2( 0, 388.495 ) ]
+"values": [ Vector2( 800, 388.495 ), Vector2( 800, 388.495 ), Vector2( 0, 388.495 ) ]
 }
 tracks/22/type = "value"
 tracks/22/path = NodePath("Music/dCi:modulate")
@@ -294,10 +294,10 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 67, 68 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 67, 68 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/23/type = "value"
 tracks/23/path = NodePath("Music/dCi2:modulate")
@@ -306,10 +306,10 @@ tracks/23/loop_wrap = true
 tracks/23/imported = false
 tracks/23/enabled = true
 tracks/23/keys = {
-"times": PoolRealArray( 67, 68 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 67, 68 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/24/type = "value"
 tracks/24/path = NodePath("Music/dCi3:modulate")
@@ -318,10 +318,10 @@ tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 67, 68 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 67, 68 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/25/type = "value"
 tracks/25/path = NodePath("Music/dCi4:modulate")
@@ -330,10 +330,10 @@ tracks/25/loop_wrap = true
 tracks/25/imported = false
 tracks/25/enabled = true
 tracks/25/keys = {
-"times": PoolRealArray( 67, 68 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 67, 68 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/26/type = "value"
 tracks/26/path = NodePath("Music/JerryTerry:rect_position")
@@ -342,10 +342,10 @@ tracks/26/loop_wrap = true
 tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = {
-"times": PoolRealArray( 68, 69 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 68, 69 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 695 ), Vector2( 0, 100 ) ]
+"values": [ Vector2( 0, 700 ), Vector2( 0, 700 ), Vector2( 0, 100 ) ]
 }
 tracks/27/type = "value"
 tracks/27/path = NodePath("Music/HydroDalek:rect_position")
@@ -354,10 +354,10 @@ tracks/27/loop_wrap = true
 tracks/27/imported = false
 tracks/27/enabled = true
 tracks/27/keys = {
-"times": PoolRealArray( 70, 71 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 70, 71 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 25.957, 820 ), Vector2( 25.957, 225 ) ]
+"values": [ Vector2( 26, 823 ), Vector2( 26, 823 ), Vector2( 26, 223 ) ]
 }
 tracks/28/type = "value"
 tracks/28/path = NodePath("Music/DaftPunk:rect_position")
@@ -366,10 +366,10 @@ tracks/28/loop_wrap = true
 tracks/28/imported = false
 tracks/28/enabled = true
 tracks/28/keys = {
-"times": PoolRealArray( 72.5, 73.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 72.5, 73.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 25, 905 ), Vector2( 25, 305 ) ]
+"values": [ Vector2( 25, 913 ), Vector2( 25, 913 ), Vector2( 25, 313 ) ]
 }
 tracks/29/type = "value"
 tracks/29/path = NodePath("Music/PandaBear:rect_position")
@@ -378,10 +378,346 @@ tracks/29/loop_wrap = true
 tracks/29/imported = false
 tracks/29/enabled = true
 tracks/29/keys = {
-"times": PoolRealArray( 72.6, 73.5 ),
+"times": PoolRealArray( 0, 72.5, 73.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 28, 955 ), Vector2( 28, 955 ), Vector2( 28, 355 ) ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("Music/JerryTerry:modulate")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0, 83, 84.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("Music/HydroDalek:modulate")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0, 83, 84.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("Music/DaftPunk:modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"times": PoolRealArray( 0, 83, 84.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/33/type = "value"
+tracks/33/path = NodePath("Music/PandaBear:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"times": PoolRealArray( 0, 83, 84.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/34/type = "value"
+tracks/34/path = NodePath("Music/sabife:rect_position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = {
+"times": PoolRealArray( 0, 85, 86 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1275.82, 95 ), Vector2( 800, 95 ), Vector2( 0, 95 ) ]
+}
+tracks/35/type = "value"
+tracks/35/path = NodePath("Music/sabife2:rect_position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"times": PoolRealArray( 0, 86, 87 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1275.82, 185 ), Vector2( 800, 185 ), Vector2( 0, 185 ) ]
+}
+tracks/36/type = "value"
+tracks/36/path = NodePath("Music/sabife3:rect_position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = {
+"times": PoolRealArray( 0, 87, 88 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1274.71, 278 ), Vector2( 800, 278 ), Vector2( 0, 278 ) ]
+}
+tracks/37/type = "value"
+tracks/37/path = NodePath("Music/Basshunter:rect_position")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = {
+"times": PoolRealArray( 0, 88, 89 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1299.86, 400 ), Vector2( 800, 400 ), Vector2( 0, 400 ) ]
+}
+tracks/38/type = "value"
+tracks/38/path = NodePath("Music/Basshunter:modulate")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = {
+"times": PoolRealArray( 0, 92, 93.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/39/type = "value"
+tracks/39/path = NodePath("Music/sabife:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = {
+"times": PoolRealArray( 0, 92, 93.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/40/type = "value"
+tracks/40/path = NodePath("Music/sabife2:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = {
+"times": PoolRealArray( 0, 92, 93.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/41/type = "value"
+tracks/41/path = NodePath("Music/sabife3:modulate")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/keys = {
+"times": PoolRealArray( 0, 92, 93.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/42/type = "value"
+tracks/42/path = NodePath("Music/Swimmer One:rect_position")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/keys = {
+"times": PoolRealArray( 0, 93, 94 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1000, 129.164 ), Vector2( 800, 129.164 ), Vector2( 0, 129.164 ) ]
+}
+tracks/43/type = "value"
+tracks/43/path = NodePath("Music/kr1z:rect_position")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/keys = {
+"times": PoolRealArray( 0, 96, 97 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1000, 224.841 ), Vector2( 800, 224.841 ), Vector2( 0, 224.841 ) ]
+}
+tracks/44/type = "value"
+tracks/44/path = NodePath("Music/kr1z:modulate")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/keys = {
+"times": PoolRealArray( 0, 101, 102 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/45/type = "value"
+tracks/45/path = NodePath("Music/Swimmer One:modulate")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/keys = {
+"times": PoolRealArray( 0, 101, 102 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/46/type = "value"
+tracks/46/path = NodePath("Music/Kairamen:modulate")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/keys = {
+"times": PoolRealArray( 0, 102, 103 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/47/type = "value"
+tracks/47/path = NodePath("Music/Scoutellite:modulate")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = {
+"times": PoolRealArray( 0, 104, 105 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/48/type = "value"
+tracks/48/path = NodePath("Music/Syrsa:modulate")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = {
+"times": PoolRealArray( 0, 106, 107 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/49/type = "value"
+tracks/49/path = NodePath("Music/Syrsa:rect_position")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = {
+"times": PoolRealArray( 0, 114, 115 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 23.4319, 332.306 ), Vector2( 23.4319, 332.306 ), Vector2( -1000, 332.306 ) ]
+}
+tracks/50/type = "value"
+tracks/50/path = NodePath("Music/Scoutellite:rect_position")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = {
+"times": PoolRealArray( 0, 113, 114 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 21.9246, 246.387 ), Vector2( 21.9246, 246.387 ), Vector2( 1000, 246.387 ) ]
+}
+tracks/51/type = "value"
+tracks/51/path = NodePath("Music/Kairamen:rect_position")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = {
+"times": PoolRealArray( 0, 112, 113 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.64694, 122.159 ), Vector2( -4.64694, 122.159 ), Vector2( -1000, 122.159 ) ]
+}
+tracks/52/type = "value"
+tracks/52/path = NodePath("Music/XenoGenic:rect_position")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = {
+"times": PoolRealArray( 0, 116, 117 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2000, 131.941 ), Vector2( 800, 131.941 ), Vector2( 0, 131.941 ) ]
+}
+tracks/53/type = "value"
+tracks/53/path = NodePath("Music/TheLivingTombstone:rect_position")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = {
+"times": PoolRealArray( 0, 118, 119 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2032.47, 254.488 ), Vector2( 800, 254.488 ), Vector2( 0, 254.488 ) ]
+}
+tracks/54/type = "value"
+tracks/54/path = NodePath("Music/excalibur:rect_position")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"times": PoolRealArray( 0, 120, 121 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 301.359 ), Vector2( 800, 301.359 ), Vector2( 0, 301.359 ) ]
+}
+tracks/55/type = "value"
+tracks/55/path = NodePath("Music/XenoGenic:modulate")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = {
+"times": PoolRealArray( 131, 132 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 27.216, 955 ), Vector2( 27.216, 355 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/56/type = "value"
+tracks/56/path = NodePath("Music/TheLivingTombstone:modulate")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = {
+"times": PoolRealArray( 131, 132 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/57/type = "value"
+tracks/57/path = NodePath("Music/excalibur:modulate")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"times": PoolRealArray( 131, 132 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="Credits" type="Control"]
@@ -499,7 +835,7 @@ __meta__ = {
 }
 
 [node name="Gamedev Ufscar" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 6.35783e-07 )
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 137.184
 margin_top = 454.991
 margin_right = 616.184
@@ -629,6 +965,7 @@ __meta__ = {
 
 [node name="Art" type="Label" parent="."]
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 49.729
 margin_top = 196.48
 margin_right = 413.729
@@ -641,10 +978,10 @@ __meta__ = {
 }
 
 [node name="Leeroy" type="Label" parent="Art"]
-margin_left = 1249.87
-margin_top = 125.125
-margin_right = 1692.87
-margin_bottom = 169.125
+margin_left = 783.893
+margin_top = 135.146
+margin_right = 1226.89
+margin_bottom = 179.146
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "LEEROY"
@@ -677,10 +1014,10 @@ __meta__ = {
 }
 
 [node name="MasterProject3" type="Label" parent="Art"]
-margin_left = 1247.0
-margin_top = 276.97
-margin_right = 1690.0
-margin_bottom = 320.97
+margin_left = 781.014
+margin_top = 286.992
+margin_right = 1224.01
+margin_bottom = 330.992
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "MASTERPROJECT"
@@ -713,10 +1050,10 @@ __meta__ = {
 }
 
 [node name="CreativeStall" type="Label" parent="Art"]
-margin_left = 1922.57
-margin_top = 59.5729
-margin_right = 2372.57
-margin_bottom = 103.573
+margin_left = 785.801
+margin_top = 92.0
+margin_right = 1235.8
+margin_bottom = 136.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "CREATIVE STALL"
@@ -760,10 +1097,10 @@ __meta__ = {
 }
 
 [node name="Zero400539" type="Label" parent="Art"]
-margin_left = 1925.91
-margin_top = 200.816
-margin_right = 2375.91
-margin_bottom = 244.816
+margin_left = 785.801
+margin_top = 232.0
+margin_right = 1235.8
+margin_bottom = 276.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "ZERO400539"
@@ -807,10 +1144,10 @@ __meta__ = {
 }
 
 [node name="frogatto" type="Label" parent="Art"]
-margin_left = 1925.91
-margin_top = 335.684
-margin_right = 2375.91
-margin_bottom = 426.684
+margin_left = 785.0
+margin_top = 368.0
+margin_right = 1235.0
+margin_bottom = 459.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "FROGATTO"
@@ -866,6 +1203,7 @@ __meta__ = {
 }
 
 [node name="SebastianWolff" type="Label" parent="Music"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -8.40353
 margin_top = 101.188
 margin_right = 490.596
@@ -936,9 +1274,9 @@ __meta__ = {
 }
 
 [node name="dCi2" type="Label" parent="Music"]
-margin_left = -500.986
+margin_left = 800.0
 margin_top = 196.201
-margin_right = -1.9863
+margin_right = 1299.0
 margin_bottom = 240.201
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -1006,9 +1344,9 @@ __meta__ = {
 }
 
 [node name="dCi4" type="Label" parent="Music"]
-margin_left = -502.461
+margin_left = 800.0
 margin_top = 388.495
-margin_right = -3.46191
+margin_right = 1299.0
 margin_bottom = 432.495
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -1041,10 +1379,9 @@ __meta__ = {
 }
 
 [node name="JerryTerry" type="Label" parent="Music"]
-margin_left = -2.85172
-margin_top = 695.238
-margin_right = 496.148
-margin_bottom = 739.238
+margin_top = 700.0
+margin_right = 499.0
+margin_bottom = 744.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "JERRYTERRY"
@@ -1076,10 +1413,10 @@ __meta__ = {
 }
 
 [node name="sources" type="Label" parent="Music/JerryTerry"]
-margin_left = 6.16525
-margin_top = 45.5709
-margin_right = 789.166
-margin_bottom = 91.5709
+margin_left = 5.21527
+margin_top = 43.1578
+margin_right = 788.216
+margin_bottom = 89.1578
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
 text = "sources:"
@@ -1088,10 +1425,10 @@ __meta__ = {
 }
 
 [node name="HydroDalek" type="Label" parent="Music"]
-margin_left = 25.9572
-margin_top = 821.554
-margin_right = 524.957
-margin_bottom = 865.554
+margin_left = 26.0
+margin_top = 823.0
+margin_right = 525.0
+margin_bottom = 867.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "HYDRODALEK"
@@ -1112,9 +1449,9 @@ __meta__ = {
 
 [node name="Doin" type="Label" parent="Music/HydroDalek"]
 margin_left = 1.44153
-margin_top = -43.1887
+margin_top = -39.5132
 margin_right = 784.442
-margin_bottom = 2.81131
+margin_bottom = 6.4868
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
 text = "Doin"
@@ -1124,9 +1461,9 @@ __meta__ = {
 
 [node name="DaftPunk" type="Label" parent="Music"]
 margin_left = 25.0
-margin_top = 910.0
+margin_top = 913.0
 margin_right = 524.0
-margin_bottom = 954.0
+margin_bottom = 957.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 text = "DAFT PUNK"
@@ -1146,10 +1483,10 @@ __meta__ = {
 }
 
 [node name="Doin it Right" type="Label" parent="Music/DaftPunk"]
-margin_left = 1.44153
-margin_top = -43.1887
-margin_right = 784.442
-margin_bottom = 2.81131
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
 text = "Doin' it Right"
@@ -1158,9 +1495,9 @@ __meta__ = {
 }
 
 [node name="PandaBear" type="Label" parent="Music"]
-margin_left = 27.216
+margin_left = 28.0
 margin_top = 955.0
-margin_right = 526.216
+margin_right = 527.0
 margin_bottom = 999.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -1177,6 +1514,574 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="sabife" type="Label" parent="Music"]
+margin_left = 1275.82
+margin_top = 95.0
+margin_right = 1774.82
+margin_bottom = 139.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SABIFE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/sabife"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 5" type="Label" parent="Music/sabife"]
+margin_left = -3.20117
+margin_top = -42.4149
+margin_right = 889.799
+margin_bottom = 3.5851
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "That is Where She Dances (Phase 5)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sabife2" type="Label" parent="Music"]
+margin_left = 1275.82
+margin_top = 185.0
+margin_right = 1774.82
+margin_bottom = 229.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SABIFE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/sabife2"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 11" type="Label" parent="Music/sabife2"]
+margin_left = -3.20117
+margin_top = -42.4149
+margin_right = 889.799
+margin_bottom = 3.5851
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Dreamworld (Phase 11)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sabife3" type="Label" parent="Music"]
+margin_left = 1274.71
+margin_top = 278.0
+margin_right = 1773.71
+margin_bottom = 322.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SABIFE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/sabife3"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 11" type="Label" parent="Music/sabife3"]
+margin_left = -3.20117
+margin_top = -42.4149
+margin_right = 889.799
+margin_bottom = 3.5851
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "I can Walk on Water (Phase 16)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/sabife3"]
+margin_left = 0.9552
+margin_top = 44.308
+margin_right = 181.955
+margin_bottom = 90.308
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Basshunter" type="Label" parent="Music"]
+margin_left = 1299.86
+margin_top = 400.0
+margin_right = 1798.86
+margin_bottom = 444.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "BASSHUNTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Basshunter"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="I can walk" type="Label" parent="Music/Basshunter"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "I can Walk on Water I can Fly"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Swimmer One" type="Label" parent="Music"]
+margin_left = 1000.0
+margin_top = 129.164
+margin_right = 1499.0
+margin_bottom = 173.164
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SWIMMER ONE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Swimmer One"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 6" type="Label" parent="Music/Swimmer One"]
+margin_left = 1.66528
+margin_top = -76.2791
+margin_right = 691.665
+margin_bottom = 14.7209
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "This Club is for Everybody, 
+Even You (Phase 6)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="kr1z" type="Label" parent="Music"]
+margin_left = 1000.0
+margin_top = 224.841
+margin_right = 1499.0
+margin_bottom = 268.841
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "KR1Z"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/kr1z"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 8" type="Label" parent="Music/kr1z"]
+margin_left = -3.20117
+margin_top = -39.257
+margin_right = 889.799
+margin_bottom = 6.74303
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Forever (Phase 8)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kairamen" type="Label" parent="Music"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -4.64694
+margin_top = 122.159
+margin_right = 494.353
+margin_bottom = 166.159
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "KAIRAMEN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Kairamen"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 6" type="Label" parent="Music/Kairamen"]
+margin_left = 2.0
+margin_top = -76.0
+margin_right = 858.0
+margin_bottom = 15.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Surprise Buttsecks (Instrumental)
+(Phase 9)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sources" type="Label" parent="Music/Kairamen"]
+margin_left = -1.0
+margin_top = 42.0596
+margin_right = 209.0
+margin_bottom = 91.0596
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "sources:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scoutellite" type="Label" parent="Music"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 21.9246
+margin_top = 246.387
+margin_right = 520.924
+margin_bottom = 290.387
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SCOUTELLITE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Scoutellite"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Surprise" type="Label" parent="Music/Scoutellite"]
+margin_left = -3.20117
+margin_top = -39.257
+margin_right = 889.799
+margin_bottom = 6.74303
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Surprise Buttsecks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Syrsa" type="Label" parent="Music"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 23.4319
+margin_top = 332.306
+margin_right = 522.432
+margin_bottom = 376.306
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SYRSA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Syrsa"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Yonk" type="Label" parent="Music/Syrsa"]
+margin_left = -3.0
+margin_top = -39.0
+margin_right = 144.0
+margin_bottom = 5.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Yonk"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XenoGenic" type="Label" parent="Music"]
+margin_left = 2000.0
+margin_top = 131.941
+margin_right = 2499.0
+margin_bottom = 175.941
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "XENOGENIC"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/XenoGenic"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 10" type="Label" parent="Music/XenoGenic"]
+margin_left = -3.20117
+margin_top = -78.5912
+margin_right = 889.799
+margin_bottom = 12.4088
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Heavy's Pizza Song [Instrumental]
+(Phase 10)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/XenoGenic"]
+margin_left = 2.0
+margin_top = 45.0
+margin_right = 201.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TheLivingTombstone" type="Label" parent="Music"]
+margin_left = 2032.47
+margin_top = 254.488
+margin_right = 2672.47
+margin_bottom = 298.488
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "THE LIVING TOMBSTONE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/TheLivingTombstone"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="I can walk" type="Label" parent="Music/TheLivingTombstone"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Heavy's Pizza Song "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="excalibur" type="Label" parent="Music"]
+margin_left = 2039.7
+margin_top = 301.359
+margin_right = 2679.7
+margin_bottom = 345.359
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "2007EXCALIBUR2007"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/excalibur"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Syrex" type="Label" parent="Music"]
+margin_left = 2712.3
+margin_top = 129.783
+margin_right = 3211.3
+margin_bottom = 173.783
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "SYREX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Syrex"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 10" type="Label" parent="Music/Syrex"]
+margin_left = -3.20117
+margin_top = -78.5912
+margin_right = 889.799
+margin_bottom = 12.4088
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Heavy's Pizza Song [Instrumental]
+(Phase 10)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/Syrex"]
+margin_left = 2.0
+margin_top = 45.0
+margin_right = 201.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loituma" type="Label" parent="Music"]
+margin_left = 2744.76
+margin_top = 252.329
+margin_right = 3384.76
+margin_bottom = 296.329
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "THE LIVING TOMBSTONE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Loituma"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="I can walk" type="Label" parent="Music/Loituma"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Heavy's Pizza Song "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loituma2" type="Label" parent="Music"]
+margin_left = 2744.76
+margin_top = 252.329
+margin_right = 3384.76
+margin_bottom = 296.329
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "THE LIVING TOMBSTONE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Loituma2"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="I can walk" type="Label" parent="Music/Loituma2"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Heavy's Pizza Song "
+__meta__ = {
 "_edit_use_anchors_": false
 }
 

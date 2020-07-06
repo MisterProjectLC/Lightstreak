@@ -11,5 +11,5 @@ dest_files=[ "res://.import/FastTurtle.ogg-95828068bbc9a714b2ef9d1fe736c4e9.oggs
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -30,10 +30,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2, 210.4, 212.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Gamedev Ufscar:modulate")
@@ -42,10 +42,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 9.5, 10.7, 18.4, 19.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 9.5, 10.7, 18.4, 19.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("MasterProject:rect_position")
@@ -222,10 +222,10 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0.1, 53, 54 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0.1, 53, 54, 198, 199.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("Music/SebastianWolff:modulate")
@@ -477,7 +477,7 @@ tracks/37/keys = {
 "times": PoolRealArray( 0, 88, 89 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1299.86, 400 ), Vector2( 800, 400 ), Vector2( 0, 400 ) ]
+"values": [ Vector2( 1299.86, 400 ), Vector2( 800, 400 ), Vector2( 26, 400 ) ]
 }
 tracks/38/type = "value"
 tracks/38/path = NodePath("Music/Basshunter:modulate")
@@ -669,7 +669,7 @@ tracks/53/keys = {
 "times": PoolRealArray( 0, 118, 119 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 2032.47, 254.488 ), Vector2( 800, 254.488 ), Vector2( 0, 254.488 ) ]
+"values": [ Vector2( 2032.47, 254.488 ), Vector2( 800, 254.488 ), Vector2( 26, 254.488 ) ]
 }
 tracks/54/type = "value"
 tracks/54/path = NodePath("Music/excalibur:rect_position")
@@ -681,7 +681,7 @@ tracks/54/keys = {
 "times": PoolRealArray( 0, 120, 121 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 800, 301.359 ), Vector2( 800, 301.359 ), Vector2( 0, 301.359 ) ]
+"values": [ Vector2( 800, 301.359 ), Vector2( 800, 301.359 ), Vector2( 26, 301.359 ) ]
 }
 tracks/55/type = "value"
 tracks/55/path = NodePath("Music/XenoGenic:modulate")
@@ -690,7 +690,7 @@ tracks/55/loop_wrap = true
 tracks/55/imported = false
 tracks/55/enabled = true
 tracks/55/keys = {
-"times": PoolRealArray( 131, 132 ),
+"times": PoolRealArray( 130, 131 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -702,7 +702,7 @@ tracks/56/loop_wrap = true
 tracks/56/imported = false
 tracks/56/enabled = true
 tracks/56/keys = {
-"times": PoolRealArray( 131, 132 ),
+"times": PoolRealArray( 130, 131 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -714,10 +714,322 @@ tracks/57/loop_wrap = true
 tracks/57/imported = false
 tracks/57/enabled = true
 tracks/57/keys = {
-"times": PoolRealArray( 131, 132 ),
+"times": PoolRealArray( 130, 131 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/58/type = "value"
+tracks/58/path = NodePath("Music/Syrex:rect_position")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"times": PoolRealArray( 0, 131, 132 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2712.3, 129.783 ), Vector2( 800, 129.783 ), Vector2( 0, 129.783 ) ]
+}
+tracks/59/type = "value"
+tracks/59/path = NodePath("Music/Loituma:rect_position")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = {
+"times": PoolRealArray( 0, 135, 136 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2744.76, 252.329 ), Vector2( 800, 252.329 ), Vector2( 26, 252.329 ) ]
+}
+tracks/60/type = "value"
+tracks/60/path = NodePath("Music/Eino:rect_position")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/keys = {
+"times": PoolRealArray( 0, 139, 140 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2746.98, 335.432 ), Vector2( 800, 335.432 ), Vector2( 26, 335.432 ) ]
+}
+tracks/61/type = "value"
+tracks/61/path = NodePath("Music/Syrex:modulate")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/keys = {
+"times": PoolRealArray( 146, 147 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/62/type = "value"
+tracks/62/path = NodePath("Music/Loituma:modulate")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/keys = {
+"times": PoolRealArray( 146, 147 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/63/type = "value"
+tracks/63/path = NodePath("Music/Eino:modulate")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/keys = {
+"times": PoolRealArray( 146, 147 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/64/type = "value"
+tracks/64/path = NodePath("Music/AwesomiZer:rect_position")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/keys = {
+"times": PoolRealArray( 0, 146, 148 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3297.63, 125.089 ), Vector2( 800, 125.089 ), Vector2( 0, 125.089 ) ]
+}
+tracks/65/type = "value"
+tracks/65/path = NodePath("Music/Eiffel65:rect_position")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/keys = {
+"times": PoolRealArray( 148, 150 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 248 ), Vector2( 26, 248 ) ]
+}
+tracks/66/type = "value"
+tracks/66/path = NodePath("Music/Eiffel65:modulate")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/keys = {
+"times": PoolRealArray( 0, 156.5, 157.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/67/type = "value"
+tracks/67/path = NodePath("Music/AwesomiZer:modulate")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/keys = {
+"times": PoolRealArray( 0, 156.5, 157.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/68/type = "value"
+tracks/68/path = NodePath("Music/S4b3rw0lf:rect_position")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/keys = {
+"times": PoolRealArray( 0, 156, 158 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3743.63, 123.238 ), Vector2( 800, 123.238 ), Vector2( 0, 123.238 ) ]
+}
+tracks/69/type = "value"
+tracks/69/path = NodePath("Music/S4b3rw0lf:modulate")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/keys = {
+"times": PoolRealArray( 166.5, 167.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/70/type = "value"
+tracks/70/path = NodePath("Music/Jeffrey:rect_position")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/keys = {
+"times": PoolRealArray( 0, 158, 160 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3761, 246.149 ), Vector2( 800, 246.149 ), Vector2( 26, 246.149 ) ]
+}
+tracks/71/type = "value"
+tracks/71/path = NodePath("Music/Jeffrey:modulate")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/keys = {
+"times": PoolRealArray( 166.5, 167.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/72/type = "value"
+tracks/72/path = NodePath("Music/Vikas:rect_position")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/keys = {
+"times": PoolRealArray( 166, 168 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 120.588 ), Vector2( 0, 120.588 ) ]
+}
+tracks/73/type = "value"
+tracks/73/path = NodePath("Music/Vikas:modulate")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/keys = {
+"times": PoolRealArray( 0, 177.5, 178.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/74/type = "value"
+tracks/74/path = NodePath("Music/TayZonday:rect_position")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/keys = {
+"times": PoolRealArray( 169, 171 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 243.499 ), Vector2( 0, 243.499 ) ]
+}
+tracks/75/type = "value"
+tracks/75/path = NodePath("Music/TayZonday:modulate")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/keys = {
+"times": PoolRealArray( 0, 177.5, 178.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/76/type = "value"
+tracks/76/path = NodePath("Music/DJBassFox28:rect_position")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/keys = {
+"times": PoolRealArray( 177, 179 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 81.834 ), Vector2( 0, 81.834 ) ]
+}
+tracks/77/type = "value"
+tracks/77/path = NodePath("Music/DJBassFox28:modulate")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/keys = {
+"times": PoolRealArray( 0, 185.5, 187 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/78/type = "value"
+tracks/78/path = NodePath("Music/daniwell:rect_position")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/keys = {
+"times": PoolRealArray( 179, 181 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 204.745 ), Vector2( 26, 204.745 ) ]
+}
+tracks/79/type = "value"
+tracks/79/path = NodePath("Music/daniwell:modulate")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/keys = {
+"times": PoolRealArray( 0, 185.5, 187 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/80/type = "value"
+tracks/80/path = NodePath("Music/Anamanaguchi:modulate")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/keys = {
+"times": PoolRealArray( 0, 187, 189, 198 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/81/type = "value"
+tracks/81/path = NodePath("Music/Anamanaguchi2:modulate")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/keys = {
+"times": PoolRealArray( 0, 187, 189.1, 198 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/82/type = "value"
+tracks/82/path = NodePath("Music/mestre3224:modulate")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/keys = {
+"times": PoolRealArray( 0, 187, 189, 198 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/83/type = "value"
+tracks/83/path = NodePath("SpecialThanks:modulate")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/keys = {
+"times": PoolRealArray( 0, 199.5, 201, 210.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="Credits" type="Control"]
@@ -965,7 +1277,6 @@ __meta__ = {
 
 [node name="Art" type="Label" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 49.729
 margin_top = 196.48
 margin_right = 413.729
@@ -1864,7 +2175,7 @@ __meta__ = {
 [node name="XenoGenic" type="Label" parent="Music"]
 margin_left = 2000.0
 margin_top = 131.941
-margin_right = 2499.0
+margin_right = 2499.05
 margin_bottom = 175.941
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -1945,9 +2256,9 @@ __meta__ = {
 }
 
 [node name="excalibur" type="Label" parent="Music"]
-margin_left = 2039.7
+margin_left = 800.0
 margin_top = 301.359
-margin_right = 2679.7
+margin_right = 1440.0
 margin_bottom = 345.359
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -1997,8 +2308,8 @@ margin_right = 889.799
 margin_bottom = 12.4088
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
-text = "Heavy's Pizza Song [Instrumental]
-(Phase 10)"
+text = "Ievan Polkka (VSNS Remix)
+(Phase 12)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2018,11 +2329,11 @@ __meta__ = {
 [node name="Loituma" type="Label" parent="Music"]
 margin_left = 2744.76
 margin_top = 252.329
-margin_right = 3384.76
+margin_right = 3426.76
 margin_bottom = 296.329
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "THE LIVING TOMBSTONE"
+text = "LOITUMA"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2038,31 +2349,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="I can walk" type="Label" parent="Music/Loituma"]
+[node name="Ievan Polkka" type="Label" parent="Music/Loituma"]
 margin_left = 2.17664
 margin_top = -38.0431
 margin_right = 785.177
 margin_bottom = 7.95695
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
-text = "Heavy's Pizza Song "
+text = "Ievan Polkka / Eva's polka "
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Loituma2" type="Label" parent="Music"]
-margin_left = 2744.76
-margin_top = 252.329
-margin_right = 3384.76
-margin_bottom = 296.329
+[node name="Eino" type="Label" parent="Music"]
+margin_left = 2746.98
+margin_top = 335.432
+margin_right = 3386.98
+margin_bottom = 379.432
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "THE LIVING TOMBSTONE"
+text = "EINO KETUNNEN"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Outline" type="Label" parent="Music/Loituma2"]
+[node name="Outline" type="Label" parent="Music/Eino"]
 margin_right = 364.0
 margin_bottom = 44.0
 custom_fonts/font = SubResource( 2 )
@@ -2073,15 +2384,571 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="I can walk" type="Label" parent="Music/Loituma2"]
+[node name="Ievan Polkka" type="Label" parent="Music/Eino"]
 margin_left = 2.17664
 margin_top = -38.0431
 margin_right = 785.177
 margin_bottom = 7.95695
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
-text = "Heavy's Pizza Song "
+text = "Ievan Polkka "
 __meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AwesomiZer" type="Label" parent="Music"]
+margin_left = 3297.63
+margin_top = 125.089
+margin_right = 3796.63
+margin_bottom = 169.089
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "AWESOMIZER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/AwesomiZer"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 10" type="Label" parent="Music/AwesomiZer"]
+margin_left = -3.20117
+margin_top = -78.5912
+margin_right = 889.799
+margin_bottom = 12.4088
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "I Am Blue Original Mix
+(Phase 13)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/AwesomiZer"]
+margin_left = 2.0
+margin_top = 45.0
+margin_right = 201.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Eiffel65" type="Label" parent="Music"]
+margin_left = 3315.0
+margin_top = 248.0
+margin_right = 3644.0
+margin_bottom = 292.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "EIFFEL 65"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Eiffel65"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Ievan Polkka" type="Label" parent="Music/Eiffel65"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "I'm Blue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="S4b3rw0lf" type="Label" parent="Music"]
+margin_left = 3743.63
+margin_top = 123.238
+margin_right = 4242.63
+margin_bottom = 167.238
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "S4B3RW0LF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/S4b3rw0lf"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 10" type="Label" parent="Music/S4b3rw0lf"]
+margin_left = -3.20117
+margin_top = -78.5912
+margin_right = 889.799
+margin_bottom = 12.4088
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "All your base Techno Remix
+(Phase 14)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/S4b3rw0lf"]
+margin_left = 2.0
+margin_top = 45.0
+margin_right = 201.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jeffrey" type="Label" parent="Music"]
+margin_left = 3761.0
+margin_top = 246.149
+margin_right = 4393.0
+margin_bottom = 290.149
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "JEFFREY RAY ROBERTS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Jeffrey"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="All your base" type="Label" parent="Music/Jeffrey"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "All your base are belong to us "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vikas" type="Label" parent="Music"]
+margin_left = 4414.1
+margin_top = 120.588
+margin_right = 4913.1
+margin_bottom = 164.588
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "VIKAS BEATBOX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Vikas"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 10" type="Label" parent="Music/Vikas"]
+margin_left = -3.20117
+margin_top = -78.5912
+margin_right = 889.799
+margin_bottom = 12.4088
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Chocolate Rain - Eurobeat Remix 
+(Phase 15)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/Vikas"]
+margin_left = 2.0
+margin_top = 45.0
+margin_right = 201.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TayZonday" type="Label" parent="Music"]
+margin_left = 4431.46
+margin_top = 243.499
+margin_right = 5063.46
+margin_bottom = 287.499
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "TAY ZONDAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/TayZonday"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Chocolate Rain" type="Label" parent="Music/TayZonday"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Chocolate Rain "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DJBassFox28" type="Label" parent="Music"]
+margin_left = 5094.67
+margin_top = 81.8343
+margin_right = 5593.67
+margin_bottom = 125.834
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "DJBASSFOX28"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/DJBassFox28"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Phase 17" type="Label" parent="Music/DJBassFox28"]
+margin_left = 1.21094
+margin_top = -42.1577
+margin_right = 894.211
+margin_bottom = 1.84227
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Nyan Cat Remix (Phase 15)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/DJBassFox28"]
+margin_left = 2.0
+margin_top = 45.0
+margin_right = 201.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="daniwell" type="Label" parent="Music"]
+margin_left = 5112.04
+margin_top = 204.745
+margin_right = 5744.04
+margin_bottom = 248.745
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "DANIWELL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/daniwell"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Nyan" type="Label" parent="Music/daniwell"]
+margin_left = 2.17664
+margin_top = -38.0431
+margin_right = 785.177
+margin_bottom = 7.95695
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Nyanyanyanyanyanyanya "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mestre3224" type="Label" parent="Music"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -8.40353
+margin_top = 101.188
+margin_right = 490.596
+margin_bottom = 145.188
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "MESTRE3224"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/mestre3224"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="OMFGDOGS" type="Label" parent="Music/mestre3224"]
+margin_left = 1.44153
+margin_top = -43.1887
+margin_right = 784.442
+margin_bottom = 2.81133
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Seu Madruga Will Go On (Phase 18)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="source" type="Label" parent="Music/mestre3224"]
+margin_left = 4.05445
+margin_top = 44.2082
+margin_right = 787.055
+margin_bottom = 90.2082
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "source:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Anamanaguchi" type="Label" parent="Music"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 16.4713
+margin_top = 225.761
+margin_right = 515.471
+margin_bottom = 269.761
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "ANAMANAGUCHI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Anamanaguchi"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Skateboard" type="Label" parent="Music/Anamanaguchi"]
+margin_left = 1.44153
+margin_top = -39.3887
+margin_right = 784.442
+margin_bottom = 6.61134
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "My skateboard will go on "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Anamanaguchi2" type="Label" parent="Music"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -16.6903
+margin_top = 331.275
+margin_right = 482.31
+margin_bottom = 375.275
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "ANAMANAGUCHI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Music/Anamanaguchi2"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="FastTurtle" type="Label" parent="Music/Anamanaguchi2"]
+margin_left = 1.44153
+margin_top = -39.3887
+margin_right = 784.442
+margin_bottom = 6.61134
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 3 )
+text = "Fast Turtle (Credits Theme)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpecialThanks" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 49.729
+margin_top = 196.48
+margin_right = 413.729
+margin_bottom = 247.48
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "SPECIAL THANKS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Anderson" type="Label" parent="SpecialThanks"]
+margin_left = -4.4165
+margin_top = 58.6887
+margin_right = 445.583
+margin_bottom = 102.689
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "ANDERSON GARROTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="SpecialThanks/Anderson"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Bariani" type="Label" parent="SpecialThanks"]
+margin_left = -1.83179
+margin_top = 105.214
+margin_right = 448.168
+margin_bottom = 149.214
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "ANDRE BARIANI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="SpecialThanks/Bariani"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Vitor" type="Label" parent="SpecialThanks"]
+margin_left = -5.70889
+margin_top = 156.908
+margin_right = 444.291
+margin_bottom = 200.908
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "VITOR MALCHER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="SpecialThanks/Vitor"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Lorenz" type="Label" parent="SpecialThanks"]
+margin_left = -5.70889
+margin_top = 207.31
+margin_right = 444.291
+margin_bottom = 251.31
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "LORENZ"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="SpecialThanks/Lorenz"]
+margin_right = 364.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

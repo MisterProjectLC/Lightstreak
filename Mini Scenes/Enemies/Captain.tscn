@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Captain.gd" type="Script" id=1]
-[ext_resource path="res://Art/Enemies/captain2.png" type="Texture" id=2]
+[ext_resource path="res://Art/Enemies/Captain2.png" type="Texture" id=2]
 [ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Art/Enemies/RedBlast.png" type="Texture" id=5]
+[ext_resource path="res://Art/Enemies/Captain2_LowOP.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.8445, 1230.24 )
@@ -16,6 +17,7 @@ extents = Vector2( 28.3262, 27.6763 )
 script = ExtResource( 1 )
 _max_health = 3
 _speed = 1
+damaged_sprite = ExtResource( 6 )
 
 [node name="Detector" type="Area2D" parent="."]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Captain2.png-22267c4ec08ffad370abe22bdd46a46b.stex"
+path="res://.import/Guardian3_LowOP.png-2411abbc3f983abe7a24951903a92442.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Enemies/Captain2.png"
-dest_files=[ "res://.import/Captain2.png-22267c4ec08ffad370abe22bdd46a46b.stex" ]
+source_file="res://Art/Enemies/Guardian3_LowOP.png"
+dest_files=[ "res://.import/Guardian3_LowOP.png-2411abbc3f983abe7a24951903a92442.stex" ]
 
 [params]
 

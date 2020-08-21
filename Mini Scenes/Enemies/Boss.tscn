@@ -18,7 +18,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
-_max_health = 404
+_max_health = 512
 _speed = 1
 explosion = ExtResource( 11 )
 

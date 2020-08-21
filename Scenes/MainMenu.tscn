@@ -11,7 +11,7 @@
 [ext_resource path="res://Art/Icons/ThunderIcon.png" type="Texture" id=9]
 [ext_resource path="res://Art/Icons/EnergyBallIcon.png" type="Texture" id=10]
 [ext_resource path="res://Art/Canhao2V2.png" type="Texture" id=11]
-[ext_resource path="res://Art/Enemies/HackerEnemy.png" type="Texture" id=12]
+[ext_resource path="res://Art/HACKER4.png" type="Texture" id=12]
 [ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=13]
 [ext_resource path="res://Art/Icons/RedIcon.png" type="Texture" id=14]
 [ext_resource path="res://Art/Enemies/Slick2.png" type="Texture" id=15]
@@ -20,7 +20,7 @@
 [ext_resource path="res://Art/Icons/VioletIcon.png" type="Texture" id=18]
 [ext_resource path="res://Art/Canhao3.png" type="Texture" id=19]
 [ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=20]
-[ext_resource path="res://Art/Enemies/captain2.png" type="Texture" id=21]
+[ext_resource path="res://Art/Enemies/Captain2.png" type="Texture" id=21]
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=22]
 [ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=23]
 [ext_resource path="res://Art/Icons/QueeeIcon.png" type="Texture" id=24]
@@ -346,10 +346,10 @@ __meta__ = {
 }
 
 [node name="Stages" type="Label" parent="."]
-margin_left = -810.0
-margin_top = 192.0
-margin_right = -277.0
-margin_bottom = 471.0
+margin_left = -811.053
+margin_top = 193.053
+margin_right = -278.053
+margin_bottom = 472.053
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -525,11 +525,11 @@ __meta__ = {
 }
 
 [node name="Stage 4" type="TextureRect" parent="Stages/Page 1"]
-margin_left = 57.0
-margin_top = 144.0
-margin_right = 113.0
-margin_bottom = 210.0
-rect_scale = Vector2( 0.6, 0.6 )
+margin_left = 53.1982
+margin_top = 138.032
+margin_right = 108.198
+margin_bottom = 202.032
+rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -908,10 +908,10 @@ __meta__ = {
 }
 
 [node name="Stage 14" type="TextureRect" parent="Stages/Page 3"]
-margin_left = 59.3046
-margin_top = 140.879
-margin_right = 114.305
-margin_bottom = 195.879
+margin_left = 55.8309
+margin_top = 140.493
+margin_right = 111.831
+margin_bottom = 195.493
 rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 21 )
 __meta__ = {

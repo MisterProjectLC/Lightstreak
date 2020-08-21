@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Hacker.gd" type="Script" id=1]
-[ext_resource path="res://Art/Enemies/HackerEnemy.png" type="Texture" id=2]
+[ext_resource path="res://Art/HACKER4.png" type="Texture" id=2]
 [ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=5]
@@ -43,10 +43,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = -5.98841
-margin_top = -17.9764
-margin_right = 8.01159
-margin_bottom = 0.0236282
+margin_left = -13.6296
+margin_top = -9.18377
+margin_right = 0.370376
+margin_bottom = 8.81626
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.576471, 0, 0, 1 )
 text = "A"
@@ -55,10 +55,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = -5.95193
-margin_top = 1.35512
-margin_right = 8.04807
-margin_bottom = 19.3551
+margin_left = 1.68929
+margin_top = -9.1123
+margin_right = 15.6893
+margin_bottom = 8.8877
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.576471, 0, 0, 1 )
 text = "A"

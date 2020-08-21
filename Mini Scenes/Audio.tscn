@@ -13,7 +13,7 @@
 [ext_resource path="res://Sounds/esparks.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Sounds/Warp 1.ogg" type="AudioStream" id=12]
 [ext_resource path="res://Sounds/Warp 2.ogg" type="AudioStream" id=13]
-[ext_resource path="res://Music/numa numa.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Music/dreaming_of_earth.ogg" type="AudioStream" id=14]
 [ext_resource path="res://Sounds/Alert.ogg" type="AudioStream" id=15]
 [ext_resource path="res://Music/terrormountain2.ogg" type="AudioStream" id=16]
 [ext_resource path="res://Music/KrizForever.ogg" type="AudioStream" id=17]

@@ -1614,7 +1614,7 @@ margin_right = 336.0
 margin_bottom = 1.0
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
-text = "??? (Phase 2)"
+text = "Dreaming of Earth (Phase 2)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1677,7 +1677,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Phase 1" type="Label" parent="Music/dCi4"]
+[node name="Phase 7" type="Label" parent="Music/dCi4"]
 margin_left = 1.44153
 margin_top = -43.1887
 margin_right = 784.442

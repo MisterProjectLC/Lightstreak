@@ -238,6 +238,7 @@ func _on_MinionSpawner_phase_empty(time):
 
 
 func game_over():
+	print_debug("game_over")
 	leave_game()
 
 
@@ -246,7 +247,7 @@ func credits():
 
 
 func _on_AnimationPlayer_animation_finished(_anim_name):
-	get_tree().change_scene("res://Scenes/MainMenu.tscn")
+	get_tree().change_scene("res://Scenes/Credits.tscn")
 
 
 func leave_game():
@@ -255,7 +256,7 @@ func leave_game():
 
 # MINION SPAWNER -----------------------------
 
-func spawn_enemy(enemy_minion_name, enemy_lane, requester = null):
+func spawn_enemy(enemy_minion_name, enemy_lane, _requester = null):
 	$MinionSpawner.spawn_enemy(enemy_minion_name, enemy_lane)
 
 func send_alert(message, priority):

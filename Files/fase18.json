@@ -124,8 +124,6 @@
 
 	{"TIME":195, "MINION":"GUARDIAN", "LANE":5},
 	{"TIME":196, "MINION":"HACKER", "LANE":2},
-	{"TIME":197, "MINION":"HACKER", "LANE":3},
-	{"TIME":198, "MINION":"CAPTAIN", "LANE":0},
 
 	]
 }

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Hacker.gd" type="Script" id=1]
-[ext_resource path="res://Art/Enemies/HackerEnemy.png" type="Texture" id=2]
+[ext_resource path="res://Art/HACKER4.png" type="Texture" id=2]
 [ext_resource path="res://Art/paralyzed.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Mini Scenes/Enemies/Light.tscn" type="PackedScene" id=5]
@@ -44,10 +44,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = -5.98841
-margin_top = -17.9764
-margin_right = 8.01159
-margin_bottom = 0.0236282
+margin_left = -13.7827
+margin_top = -9.0119
+margin_right = 0.217267
+margin_bottom = 8.98813
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.576471, 0, 0, 1 )
 text = "A"
@@ -56,10 +56,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = -5.95193
-margin_top = 1.35512
-margin_right = 8.04807
-margin_bottom = 19.3551
+margin_left = 1.24283
+margin_top = -9.31607
+margin_right = 15.2428
+margin_bottom = 8.68393
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.576471, 0, 0, 1 )
 text = "A"
@@ -69,5 +69,3 @@ __meta__ = {
 
 [node name="Light" parent="." instance=ExtResource( 5 )]
 [connection signal="changed_stunned" from="." to="." method="_on_Hacker_changed_stunned"]
-[connection signal="hack" from="." to="." method="change_alphabet_letters"]
-[connection signal="hack" from="." to="." method="change_display_letters"]

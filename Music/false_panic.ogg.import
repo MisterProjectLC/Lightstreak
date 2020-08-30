@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/false_panic.ogg-49c55cb4d6eef4e8f930c31e12d4c84f.oggstr"
+
+[deps]
+
+source_file="res://Music/false_panic.ogg"
+dest_files=[ "res://.import/false_panic.ogg-49c55cb4d6eef4e8f930c31e12d4c84f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

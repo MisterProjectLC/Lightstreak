@@ -936,7 +936,7 @@ tracks/75/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/76/type = "value"
-tracks/76/path = NodePath("Music/DJBassFox28:rect_position")
+tracks/76/path = NodePath("Music/dCi5:rect_position")
 tracks/76/interp = 1
 tracks/76/loop_wrap = true
 tracks/76/imported = false
@@ -948,7 +948,7 @@ tracks/76/keys = {
 "values": [ Vector2( 800, 81.834 ), Vector2( 0, 81.834 ) ]
 }
 tracks/77/type = "value"
-tracks/77/path = NodePath("Music/DJBassFox28:modulate")
+tracks/77/path = NodePath("Music/dCi5:modulate")
 tracks/77/interp = 1
 tracks/77/loop_wrap = true
 tracks/77/imported = false
@@ -1579,7 +1579,7 @@ margin_right = 784.442
 margin_bottom = 2.81133
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
-text = "??? (Phase 1)"
+text = "False Panic (Phase 1)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2645,19 +2645,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DJBassFox28" type="Label" parent="Music"]
+[node name="dCi5" type="Label" parent="Music"]
 margin_left = 5094.67
 margin_top = 81.8343
 margin_right = 5593.67
 margin_bottom = 125.834
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
-text = "DJBASSFOX28"
+text = "DCI"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Outline" type="Label" parent="Music/DJBassFox28"]
+[node name="Outline" type="Label" parent="Music/dCi5"]
 margin_right = 364.0
 margin_bottom = 44.0
 custom_fonts/font = SubResource( 2 )
@@ -2668,19 +2668,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Phase 17" type="Label" parent="Music/DJBassFox28"]
+[node name="Phase 17" type="Label" parent="Music/dCi5"]
 margin_left = 1.21094
 margin_top = -42.1577
 margin_right = 894.211
 margin_bottom = 1.84227
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/font = SubResource( 3 )
-text = "Nyan Cat Remix (Phase 15)"
+text = "True Panic (Phase 17)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="source" type="Label" parent="Music/DJBassFox28"]
+[node name="source" type="Label" parent="Music/dCi5"]
+visible = false
 margin_left = 2.0
 margin_top = 45.0
 margin_right = 201.0
@@ -2693,6 +2694,7 @@ __meta__ = {
 }
 
 [node name="daniwell" type="Label" parent="Music"]
+visible = false
 margin_left = 5112.04
 margin_top = 204.745
 margin_right = 5744.04

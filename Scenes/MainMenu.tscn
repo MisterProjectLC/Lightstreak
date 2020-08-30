@@ -19,7 +19,7 @@
 [ext_resource path="res://Mini Scenes/Outline.gd" type="Script" id=17]
 [ext_resource path="res://Art/Icons/VioletIcon.png" type="Texture" id=18]
 [ext_resource path="res://Art/Canhao3.png" type="Texture" id=19]
-[ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=20]
+[ext_resource path="res://Art/Powers/Bomber2Friend.png" type="Texture" id=20]
 [ext_resource path="res://Art/Enemies/Captain2.png" type="Texture" id=21]
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=22]
 [ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=23]
@@ -728,11 +728,12 @@ __meta__ = {
 }
 
 [node name="Stage 10" type="TextureRect" parent="Stages/Page 2"]
-margin_left = 60.5047
-margin_top = 189.586
-margin_right = 147.505
-margin_bottom = 276.586
-rect_scale = Vector2( 0.4, 0.4 )
+margin_left = 77.0549
+margin_top = 181.763
+margin_right = 132.055
+margin_bottom = 236.763
+rect_rotation = 45.0
+rect_scale = Vector2( 0.65, 0.65 )
 texture = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false

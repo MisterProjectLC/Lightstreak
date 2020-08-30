@@ -10,6 +10,6 @@ func destroy():
 		Audio.play_sound(Audio.bomber)
 		var new = explosion.instance()
 		new.position = position
-		get_parent().add_child(new)
+		get_parent().call_deferred('add_child',new)
 	
 	.destroy()

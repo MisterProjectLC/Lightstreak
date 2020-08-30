@@ -6,7 +6,7 @@
 [ext_resource path="res://Sounds/Sphere2.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Music/123.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Music/omfgdogs.ogg" type="AudioStream" id=6]
-[ext_resource path="res://Music/tranceReduced.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Music/false_panic.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Music/WhereSheDances.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Music/ReDoin.ogg" type="AudioStream" id=9]
 [ext_resource path="res://Sounds/Electric Pulse.ogg" type="AudioStream" id=10]
@@ -31,7 +31,7 @@
 [ext_resource path="res://Sounds/147908__john129pats__laser-cannon.ogg" type="AudioStream" id=29]
 [ext_resource path="res://Music/Chocolate Rain - Eurobeat Remix.ogg" type="AudioStream" id=30]
 [ext_resource path="res://Music/sabife_basshunter-i-can-walk-on-water-i-can-fly-dj-sabife-remix.ogg" type="AudioStream" id=31]
-[ext_resource path="res://Music/Nyan Cat Nightcore.ogg" type="AudioStream" id=32]
+[ext_resource path="res://Music/TRUE_PANIC.ogg" type="AudioStream" id=32]
 [ext_resource path="res://Music/SeuMadruga.ogg" type="AudioStream" id=33]
 [ext_resource path="res://Music/FastTurtle.ogg" type="AudioStream" id=34]
 

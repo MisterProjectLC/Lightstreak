@@ -3,6 +3,7 @@
 [ext_resource path="res://Art/Battlefields/RedBattlefield.png" type="Texture" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
 [ext_resource path="res://Mini Scenes/Main/Battlefield.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Mini Scenes/Main/ConsoleEnemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Mini Scenes/Main/Cannon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Art/Canhao (1).png" type="Texture" id=6]
 [ext_resource path="res://Art/Highlight1.png" type="Texture" id=7]
@@ -10,7 +11,6 @@
 [ext_resource path="res://Art/Highlight2.png" type="Texture" id=9]
 [ext_resource path="res://Art/Canhao3.png" type="Texture" id=10]
 [ext_resource path="res://Art/Highlight3.png" type="Texture" id=11]
-[ext_resource path="res://Mini Scenes/Main/Console.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Mini Scenes/Main/WeaponTitle.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Mini Scenes/Weapon/Laser.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=15]
@@ -109,10 +109,10 @@ __meta__ = {
 }
 
 [node name="BlueBox2" type="ColorRect" parent="."]
-margin_left = 504.995
-margin_top = 189.757
-margin_right = 800.995
-margin_bottom = 200.757
+margin_left = 503.668
+margin_top = 240.177
+margin_right = 799.668
+margin_bottom = 251.177
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -211,11 +211,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Console" parent="." instance=ExtResource( 12 )]
-margin_left = 497.616
-margin_top = 677.868
-margin_right = 13.6157
-margin_bottom = -2.13251
+[node name="ConsoleEnemy" parent="." instance=ExtResource( 4 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 253.262, 750.563 )
@@ -241,7 +237,4 @@ anims/Fade = SubResource( 1 )
 [connection signal="damaged" from="Cannon1" to="." method="cannon_damaged"]
 [connection signal="damaged" from="Cannon2" to="." method="cannon_damaged"]
 [connection signal="damaged" from="Cannon3" to="." method="cannon_damaged"]
-[connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
-[connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]
-[connection signal="typer_updated" from="Console" to="." method="typer_updated"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

@@ -1,11 +1,12 @@
 {
-"0":["Easy", "Star", "Club", "Card", "New", "Far", "End", "Time", "City", "Word", "Car", "Run", "Font", "Book", "Four", "Mars", "War", "Art", "Eye", "Blue", "Red", "Dash",
-     "Past", "Half", "Life", "Air", "Game", "Song"],
+"0":["Easy", "Star", "Club", "Card", "New", "Far", "End", "Time", "City", "Word", "Car", "Run", "Font", "Book", "Four", "Mars", "War", "Art", "Eye", "Blue", "Red", "Dash", "Team", "Age",
+     "Past", "Half", "Life", "Air", "Game", "Song", "Silk", "Sum", "Odd"],
 
 "1":["Color", "System", "Scene", "Weight", "Coffee", "Trial", "Focus", "Debuff", "School", "Worker", "System", "Death", "Earth", "Realm", "Speed", "Method", "Humor", "Memory",
-     "Googol", "Logic", "Reason", "Space", "Alpha", "Galaxy", "Violet", "Parody", "Center", "Cable", "Turtle", "State", "Power", "Dream", "Valve", "Worth", "Sequel", "Melody", "Skate"],
+     "Googol", "Logic", "Reason", "Space", "Alpha", "Galaxy", "Violet", "Parody", "Center", "Cable", "Turtle", "State", "Power", "Dream", "Valve", "Worth", "Sequel", "Melody", "Skate", "Robot", "Cache",
+"Empire", "Realm", "Flight", "Count"],
 
-"2":["Reference", "Universe", "Kangaroo", "Certificate", "Hologram", "Velocity", "Professor", "Fireflies", "Hitchhiker", "Computer", "Cellphone", "Direction", "Tomorrow", "Deadline", 
-     "Yesterday", "Cardboard", "Roommate", "Objection", "Language"]
+"2":["Reference", "Universe", "Kangaroo", "Certificate", "Hologram", "Velocity", "Professor", "Fireflies", "Hitchhiker", "Computer", "Cellphone", "Direction", "Tomorrow", "Deadline", "Chemistry",
+     "Yesterday", "Cardboard", "Roommate", "Objection", "Language", "Subtraction", "Influence"]
 
 }

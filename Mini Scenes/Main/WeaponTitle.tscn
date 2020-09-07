@@ -20,6 +20,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+color = Color( 0, 0.290196, 0.498039, 1 )
 sprite = ExtResource( 6 )
 
 [node name="Sprite" type="TextureRect" parent="."]

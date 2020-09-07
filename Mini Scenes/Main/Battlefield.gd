@@ -1,5 +1,5 @@
-extends Node2D
+extends Sprite
 
 
 func set_background(background):
-	$Background.texture = background
+	self.texture = background

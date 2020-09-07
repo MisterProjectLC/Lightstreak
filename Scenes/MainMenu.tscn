@@ -143,9 +143,9 @@ __meta__ = {
 
 [node name="Play" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 190.0
-margin_right = 1164.0
-margin_bottom = 234.0
+margin_top = 182.0
+margin_right = 1208.0
+margin_bottom = 226.0
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -165,11 +165,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Play_Multi" type="Label" parent="."]
+margin_left = 798.53
+margin_top = 252.0
+margin_right = 1206.53
+margin_bottom = 296.0
+rect_scale = Vector2( 1.4, 1.4 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+text = "PLAY_MULTI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="Label" parent="Play_Multi"]
+modulate = Color( 1, 1, 0.784314, 1 )
+margin_right = 411.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="Options" type="Label" parent="."]
-margin_left = 800.814
-margin_top = 253.377
-margin_right = 1164.81
-margin_bottom = 297.377
+margin_left = 800.0
+margin_top = 322.0
+margin_right = 1164.0
+margin_bottom = 366.0
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -190,10 +215,10 @@ __meta__ = {
 }
 
 [node name="Credits" type="Label" parent="."]
-margin_left = 800.814
-margin_top = 323.377
-margin_right = 1164.81
-margin_bottom = 367.377
+margin_left = 800.0
+margin_top = 392.0
+margin_right = 1164.0
+margin_bottom = 436.0
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -214,10 +239,10 @@ __meta__ = {
 }
 
 [node name="Quit" type="Label" parent="."]
-margin_left = 800.814
-margin_top = 393.377
-margin_right = 1164.81
-margin_bottom = 484.377
+margin_left = 802.0
+margin_top = 462.0
+margin_right = 1166.0
+margin_bottom = 553.0
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )

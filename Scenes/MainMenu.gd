@@ -7,7 +7,10 @@ var fading_children = {
 	
 }
 
-var outlines = ["Play", "Options", "Credits", "Quit",
+const BASE_X = 190
+const INCREMENT = 70
+
+var outlines = ["Play", "Play_Multi", "Options", "Credits", "Quit",
 				"OptionsMenu/Music", "OptionsMenu/Sounds", "OptionsMenu/Back",
 				"OptionsMenu/Lang",
 				"Stages/Back", "Stages/Page 1/P1", "Stages/Page 1/P2",
@@ -138,14 +141,16 @@ func push_other_menus():
 
 
 func pull_menu():
-	moving_children['Play'] = Vector2(10, 190)
-	moving_children['Options'] = Vector2(10, 260)
-	moving_children['Credits'] = Vector2(10, 330)
-	moving_children['Quit'] = Vector2(10, 400)
+	moving_children['Play'] = Vector2(10, BASE_X)
+	moving_children['Play_Multi'] = Vector2(10, BASE_X+ INCREMENT*1)
+	moving_children['Options'] = Vector2(10, BASE_X+ INCREMENT*2)
+	moving_children['Credits'] = Vector2(10, BASE_X+ INCREMENT*3)
+	moving_children['Quit'] = Vector2(10, BASE_X+ INCREMENT*4)
 
 
 func pushback_menu():
-	moving_children['Play'] = Vector2(800, 190)
-	moving_children['Options'] = Vector2(800, 260)
-	moving_children['Credits'] = Vector2(800, 330)
-	moving_children['Quit'] = Vector2(800, 400)
+	moving_children['Play'] = Vector2(800, BASE_X)
+	moving_children['Play_Multi'] = Vector2(800, BASE_X+ INCREMENT*1)
+	moving_children['Options'] = Vector2(800, BASE_X+ INCREMENT*2)
+	moving_children['Credits'] = Vector2(800, BASE_X+ INCREMENT*3)
+	moving_children['Quit'] = Vector2(800, BASE_X+ INCREMENT*4)

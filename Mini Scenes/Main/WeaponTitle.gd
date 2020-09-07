@@ -1,5 +1,6 @@
 extends Control
 
+export(Color) var color
 export(Texture) var sprite
 export(PackedScene) var _weapon
 
@@ -8,6 +9,7 @@ export var _difficulty = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Icon.texture = sprite
+	$Sprite.set_modulate(color)
 
 func update_outline(text):
 	$Label/Outline.update_text(text)

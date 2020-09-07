@@ -1,6 +1,6 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=39 format=2]
 
-[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/MainMulti.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
 [ext_resource path="res://Mini Scenes/Main/Battlefield.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Mini Scenes/Main/Alerts.tscn" type="PackedScene" id=4]
@@ -23,17 +23,12 @@
 [ext_resource path="res://Mini Scenes/Enemies/HackerInit.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Mini Scenes/Enemies/RedBlast.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Art/Numbers.png" type="Texture" id=23]
-[ext_resource path="res://Mini Scenes/PhaseManager.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Art/Icons/ThunderIcon.png" type="Texture" id=25]
 [ext_resource path="res://Mini Scenes/Weapon/Magnet.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Art/Battlefields/VioletBattlefield.png" type="Texture" id=27]
-[ext_resource path="res://Art/Battlefields/RedBattlefield.png" type="Texture" id=28]
-[ext_resource path="res://Art/Battlefields/Battlefield3.png" type="Texture" id=29]
 [ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=30]
 [ext_resource path="res://Mini Scenes/Weapon/Missile.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Art/Icons/EnergyBallIcon.png" type="Texture" id=32]
 [ext_resource path="res://Mini Scenes/Enemies/Bomber.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Mini Scenes/Main/HeyLook.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Mini Scenes/Enemies/Slick.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Mini Scenes/Weapon/Bomb.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=37]
@@ -59,10 +54,8 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[node name="Main" type="Node"]
+[node name="MainMulti" type="Node"]
 script = ExtResource( 1 )
-_background_list = [ ExtResource( 29 ), ExtResource( 28 ), ExtResource( 27 ) ]
-heylook = ExtResource( 34 )
 
 [node name="BlackBackground" type="ColorRect" parent="."]
 margin_right = 804.0
@@ -74,7 +67,7 @@ __meta__ = {
 }
 
 [node name="Battlefield" parent="." instance=ExtResource( 3 )]
-position = Vector2( 553.122, 398.391 )
+position = Vector2( 554.451, 398.432 )
 
 [node name="MinionSpawner" parent="." instance=ExtResource( 18 )]
 hacker = ExtResource( 20 )
@@ -86,8 +79,6 @@ violet_blast = ExtResource( 39 )
 
 [node name="LangSystem" type="Node" parent="."]
 script = ExtResource( 2 )
-
-[node name="PhaseManager" parent="." instance=ExtResource( 24 )]
 
 [node name="Cannon1" parent="." instance=ExtResource( 5 )]
 position = Vector2( 409.878, 723.766 )

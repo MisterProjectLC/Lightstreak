@@ -35,6 +35,11 @@ func _ready():
 
 
 func _process(delta):
+	if phase_script != []:
+		read_phase_script(delta)
+
+
+func read_phase_script(delta):
 	# time
 	if _clock < 1:
 		_clock += delta
@@ -65,16 +70,18 @@ func spawn_enemy(enemy_type, lane):
 		add_blasts(_new)
 	else:
 		_new.connect('send_alert', self, 'send_alerts')
-		
+	
+	# seta lane e position
 	_new.set_lane(lane)
-
 	_new.set_position(Vector2(Global.get_lane_x(lane), _spawn_y))
 	
+	# prepara signal de pass_threshold
 	for i in _new.get_signal_list().size():
 		if _new.get_signal_list()[i]["name"] == "pass_threshold":
 			_new.connect('pass_threshold', self, 'passed_threshold')
 			break
 	
+	# inicia enemy
 	if _new.has_method("ready"):
 		_new.ready()
 	
@@ -91,11 +98,11 @@ func clear_blasts():
 	blasts.clear()
 
 
-func passed_threshold():
-	emit_signal("passed_threshold")
-
 func set_phase_script(_phase_script):
 	self.phase_script = _phase_script
+
+func passed_threshold():
+	emit_signal("passed_threshold")
 
 func send_alerts(message, priority):
 	emit_signal("send_alert", message, priority)

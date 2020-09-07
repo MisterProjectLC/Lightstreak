@@ -14,6 +14,9 @@ signal cannon_moved
 signal weapon_activated
 
 func _ready():
+	ready()
+
+func ready():
 	# setup phase
 	$PhaseManager.load_phase(Global.get_current_phase())
 	_current_phase = $PhaseManager.get_phase()
@@ -212,7 +215,6 @@ func shift_cannon(_cannon_n, _left):
 
 func cannon_damaged(cannon, damage):
 	# Yep, I'm lazy as FUCK
-	
 	if damage > 0:
 		$Console.set_damage_typer(_cannon_list.find(get_node(cannon.name)), true)
 	else:

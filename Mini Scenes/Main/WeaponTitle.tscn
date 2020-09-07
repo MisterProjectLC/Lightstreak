@@ -13,8 +13,8 @@ font_data = ExtResource( 4 )
 [node name="WeaponTitle" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -424.0
-margin_bottom = -731.0
+margin_right = -441.0
+margin_bottom = -740.0
 rect_scale = Vector2( 0.79, 0.79 )
 script = ExtResource( 1 )
 __meta__ = {

@@ -22,6 +22,7 @@ func _input(event):
 		if event.scancode == KEY_CONTROL:
 			_tab_active(false)
 
+
 func set_typer_count(count):
 	for i in range(1, count):
 		typer_list.append(get_node("Typer" + str(i+1)))
@@ -60,7 +61,7 @@ func _tab_active(forward):
 
 func _command_typed(typer_n, text):
 	emit_signal('command_typed', typer_n, text)
-	pass
+
 
 func _update_outlines(text):
 	emit_signal("typer_updated", text)

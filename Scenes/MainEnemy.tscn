@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Art/Battlefields/RedBattlefield.png" type="Texture" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Art/Highlight2.png" type="Texture" id=9]
 [ext_resource path="res://Art/Canhao3.png" type="Texture" id=10]
 [ext_resource path="res://Art/Highlight3.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Enemy_GUI.gd" type="Script" id=12]
 [ext_resource path="res://Mini Scenes/Main/WeaponTitle.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Mini Scenes/Weapon/Laser.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Art/Icons/BombIcon.png" type="Texture" id=15]
@@ -22,12 +23,17 @@
 [ext_resource path="res://Mini Scenes/Enemies/HackerInit.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Mini Scenes/Enemies/RedBlast.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Art/Numbers.png" type="Texture" id=23]
+[ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=24]
 [ext_resource path="res://Art/Icons/ThunderIcon.png" type="Texture" id=25]
 [ext_resource path="res://Mini Scenes/Weapon/Magnet.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Art/Powers/MagnetMid.png" type="Texture" id=27]
+[ext_resource path="res://Art/WeaponTitle.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/MainEnemy.gd" type="Script" id=29]
 [ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=30]
 [ext_resource path="res://Mini Scenes/Weapon/Missile.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Art/Icons/EnergyBallIcon.png" type="Texture" id=32]
 [ext_resource path="res://Mini Scenes/Enemies/Bomber.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Scenes/LaneOverlay.gd" type="Script" id=34]
 [ext_resource path="res://Mini Scenes/Enemies/Slick.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Mini Scenes/Weapon/Bomb.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=37]
@@ -36,8 +42,11 @@
 [ext_resource path="res://Mini Scenes/Weapon/MachinegunW.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Mini Scenes/Weapon/Push.tscn" type="PackedScene" id=41]
 
-[sub_resource type="Animation" id=1]
-resource_name = "Fade"
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 24 )
+
+[sub_resource type="Animation" id=2]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("BlackFade:color")
@@ -53,6 +62,7 @@ tracks/0/keys = {
 }
 
 [node name="MainEnemy" type="Node"]
+script = ExtResource( 29 )
 
 [node name="BlackBackground" type="ColorRect" parent="."]
 margin_right = 804.0
@@ -108,115 +118,172 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BlueBox2" type="ColorRect" parent="."]
-margin_left = 503.668
-margin_top = 240.177
-margin_right = 799.668
-margin_bottom = 251.177
+[node name="RedBox2" type="ColorRect" parent="."]
+margin_left = 507.259
+margin_top = 74.8622
+margin_right = 803.259
+margin_bottom = 85.8622
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LaserTitle" parent="." instance=ExtResource( 13 )]
-margin_left = 508.122
-margin_top = 612.777
-margin_right = 86.1227
-margin_bottom = -118.223
+margin_left = 512.237
+margin_top = 452.116
+margin_right = 73.2368
+margin_bottom = -285.884
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 _weapon = ExtResource( 14 )
 
 [node name="SphereTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 507.665
-margin_top = 561.51
-margin_right = 85.6653
-margin_bottom = -169.49
+margin_left = 512.002
+margin_top = 400.91
+margin_right = 90.002
+margin_bottom = -330.09
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 sprite = ExtResource( 32 )
 _weapon = ExtResource( 16 )
 
 [node name="ShockTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 507.002
-margin_top = 510.862
-margin_right = 85.0034
-margin_bottom = -220.138
+margin_left = 511.893
+margin_top = 349.065
+margin_right = 89.8949
+margin_bottom = -381.935
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 sprite = ExtResource( 25 )
 _weapon = ExtResource( 17 )
 _difficulty = 0
 
 [node name="MagnetTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 507.235
-margin_top = 459.448
-margin_right = 85.2353
-margin_bottom = -271.552
+margin_left = 511.572
+margin_top = 297.651
+margin_right = 89.572
+margin_bottom = -433.349
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 sprite = ExtResource( 30 )
 _weapon = ExtResource( 26 )
 _difficulty = 0
 
 [node name="MissileTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 507.358
-margin_top = 408.433
-margin_right = 85.3583
-margin_bottom = -322.567
+margin_left = 512.0
+margin_top = 247.0
+margin_right = 71.0
+margin_bottom = -484.0
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 sprite = ExtResource( 19 )
 _weapon = ExtResource( 31 )
 _difficulty = 2
 
 [node name="BombTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 507.55
-margin_top = 357.689
-margin_right = 85.5504
-margin_bottom = -373.311
+margin_left = 511.887
+margin_top = 195.892
+margin_right = 89.8871
+margin_bottom = -535.108
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 sprite = ExtResource( 15 )
 _weapon = ExtResource( 36 )
 
 [node name="MachineTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 505.921
-margin_top = 306.483
-margin_right = 83.9213
-margin_bottom = -424.517
+margin_left = 512.016
+margin_top = 144.686
+margin_right = 90.0165
+margin_bottom = -586.314
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 sprite = ExtResource( 38 )
 _weapon = ExtResource( 40 )
 _difficulty = 2
 
 [node name="PushTitle" parent="." instance=ExtResource( 13 )]
-visible = false
-margin_left = 506.735
-margin_top = 255.574
-margin_right = 84.7363
-margin_bottom = -475.426
+margin_left = 512.427
+margin_top = 94.0029
+margin_right = 90.4285
+margin_bottom = -636.997
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 sprite = ExtResource( 37 )
 _weapon = ExtResource( 41 )
 _difficulty = 0
 
-[node name="BlueBox" type="ColorRect" parent="."]
-margin_left = 503.668
-margin_top = 663.542
-margin_right = 799.668
-margin_bottom = 674.542
+[node name="RedBox" type="ColorRect" parent="."]
+margin_left = 506.445
+margin_top = 508.154
+margin_right = 802.445
+margin_bottom = 519.154
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Enemy_GUI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 510.175
+margin_top = 7.17871
+margin_right = 71.1748
+margin_bottom = -730.821
+rect_scale = Vector2( 0.79, 0.79 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="TextureRect" parent="Enemy_GUI"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Label" parent="Enemy_GUI"]
+margin_left = 10.0582
+margin_top = 5.55018
+margin_right = 375.058
+margin_bottom = 65.5502
+rect_scale = Vector2( 0.9, 0.95 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "0:10"
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="Enemy_GUI"]
+margin_left = 29.5987
+margin_top = 5.55018
+margin_right = 394.598
+margin_bottom = 65.5502
+rect_scale = Vector2( 0.9, 0.95 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "4/4"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="ConsoleEnemy" parent="." instance=ExtResource( 4 )]
+margin_top = 672.281
+margin_bottom = -7.7193
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 253.262, 750.563 )
 scale = Vector2( 0.806, 0.812 )
 texture = ExtResource( 23 )
+
+[node name="LaneOverlay" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 37.6654, 399.397 )
+scale = Vector2( 0.586293, 0.860246 )
+texture = ExtResource( 27 )
+script = ExtResource( 34 )
 
 [node name="BlackFade" type="ColorRect" parent="."]
 margin_left = 2.0
@@ -230,7 +297,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Fade = SubResource( 1 )
+anims/Fade = SubResource( 2 )
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
 [connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="send_alert" from="MinionSpawner" to="." method="send_alert"]

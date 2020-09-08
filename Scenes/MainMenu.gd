@@ -31,7 +31,7 @@ func _ready():
 	if Global.get_lightstreak_typed():
 		Audio.play_music(Audio.menu_theme)
 		$Typer.margin_left = -257
-		$Typer.margin_top = 581
+		$Typer.margin_top = 640
 		$Stages.margin_left = -367
 		$Stages.margin_top = -231
 		$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
@@ -71,7 +71,7 @@ func _command_typed(_id, text):
 		"LIGHTSTREAK":
 			if !Global.get_lightstreak_typed():
 				Audio.play_music(Audio.menu_theme)
-				moving_children['Typer'] = [-257, 601]
+				moving_children['Typer'] = [-257, 640]
 				pull_menu()
 				fading_children['GameBackground'] = 1
 				$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))

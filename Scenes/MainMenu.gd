@@ -18,6 +18,9 @@ var outlines = ["Play", "Options", "Credits", "Quit",
 				"Stages/Page 3/P15", "Stages/Page 4/P16", "Stages/Page 4/P17",
 				"Stages/Page 4/P18"]
 
+const BASE_Y = -245
+const INCREMENT = 70
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$"Stages/Page 4/Stage 18/AnimationPlayer".play("Stage18")
@@ -27,8 +30,10 @@ func _ready():
 	
 	if Global.get_lightstreak_typed():
 		Audio.play_music(Audio.menu_theme)
-		$Typer.rect_position = Vector2(117, 641)
-		$Stages.rect_position = Vector2(10, 192)
+		$Typer.margin_left = -257
+		$Typer.margin_top = 581
+		$Stages.margin_left = -367
+		$Stages.margin_top = -231
 		$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
 		$GameBackground.set_modulate(Color(1, 1, 1, 1))
 		pass
@@ -42,8 +47,9 @@ func find_outline(text):
 func _process(_delta):
 	for child in moving_children.keys():
 		var object = find_node(child)
-		if object.rect_position != moving_children[child]:
-			object.rect_position += 0.05*(moving_children[child] - object.rect_position)
+		if object.margin_left != moving_children[child][0] or object.margin_top != moving_children[child][1]:
+			object.margin_left += 0.05*(moving_children[child][0] - object.margin_left)
+			object.margin_top += 0.05*(moving_children[child][1] - object.margin_top)
 			
 	for child in fading_children.keys():
 		var object = find_node(child)
@@ -65,7 +71,7 @@ func _command_typed(_id, text):
 		"LIGHTSTREAK":
 			if !Global.get_lightstreak_typed():
 				Audio.play_music(Audio.menu_theme)
-				moving_children['Typer'] = Vector2(117, 641)
+				moving_children['Typer'] = [-257, 601]
 				pull_menu()
 				fading_children['GameBackground'] = 1
 				$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
@@ -78,7 +84,7 @@ func _command_typed(_id, text):
 			if len(args) == 1:
 				pushback_menu()
 				push_other_menus()
-				moving_children['Stages'] = Vector2(10, 192)
+				moving_children['Stages'] = [-367, BASE_Y]
 
 			elif len(args) == 2:
 				var chosen_phase = int(args[1])
@@ -93,7 +99,7 @@ func _command_typed(_id, text):
 			pushback_menu()
 			push_other_menus()
 
-			moving_children['OptionsMenu'] = Vector2(10, 192)
+			moving_children['OptionsMenu'] = [-367, BASE_Y]
 
 		"MUSIC":
 			if len(args) == 2:
@@ -133,19 +139,19 @@ func _update_outlines(text):
 
 
 func push_other_menus():
-	moving_children['Stages'] = Vector2(-810, 192)
-	moving_children['OptionsMenu'] = Vector2(-810, 192)
+	moving_children['Stages'] = [-1188, BASE_Y]
+	moving_children['OptionsMenu'] = [-1188, BASE_Y]
 
 
 func pull_menu():
-	moving_children['Play'] = Vector2(10, 190)
-	moving_children['Options'] = Vector2(10, 260)
-	moving_children['Credits'] = Vector2(10, 330)
-	moving_children['Quit'] = Vector2(10, 400)
+	moving_children['Play'] = [-380, BASE_Y]
+	moving_children['Options'] = [-380, BASE_Y+ INCREMENT]
+	moving_children['Credits'] = [-380, BASE_Y+INCREMENT*2]
+	moving_children['Quit'] = [-380, BASE_Y+INCREMENT*3]
 
 
 func pushback_menu():
-	moving_children['Play'] = Vector2(800, 190)
-	moving_children['Options'] = Vector2(800, 260)
-	moving_children['Credits'] = Vector2(800, 330)
-	moving_children['Quit'] = Vector2(800, 400)
+	moving_children['Play'] = [420, BASE_Y]
+	moving_children['Options'] = [420, BASE_Y+INCREMENT]
+	moving_children['Credits'] = [420, BASE_Y+INCREMENT*2]
+	moving_children['Quit'] = [420, BASE_Y+INCREMENT*3]

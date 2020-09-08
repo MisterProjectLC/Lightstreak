@@ -7,7 +7,7 @@ var outlines = [
 "Music/sabife", "Music/sabife2", "Music/sabife3", "Music/Basshunter", "Music/Swimmer One", "Music/kr1z", 
 "Music/Kairamen", "Music/Scoutellite", "Music/Syrsa", "Music/XenoGenic", "Music/TheLivingTombstone", 
 "Music/excalibur", "Music/Syrex", "Music/Loituma", "Music/Eino", "Music/AwesomiZer", "Music/Eiffel65",
-"Music/S4b3rw0lf", "Music/Jeffrey", "Music/Vikas", "Music/TayZonday", "Music/DJBassFox28", "Music/daniwell",
+"Music/S4b3rw0lf", "Music/Jeffrey", "Music/Vikas", "Music/TayZonday", "Music/dCi5", "Music/daniwell",
  "Music/mestre3224",  "Music/Anamanaguchi",  "Music/Anamanaguchi2", "SpecialThanks/Anderson", "SpecialThanks/Bariani",
 "SpecialThanks/Vitor", "SpecialThanks/Lorenz"]
 

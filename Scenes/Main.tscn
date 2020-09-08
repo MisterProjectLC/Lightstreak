@@ -65,8 +65,12 @@ _background_list = [ ExtResource( 29 ), ExtResource( 28 ), ExtResource( 27 ) ]
 heylook = ExtResource( 34 )
 
 [node name="BlackBackground" type="ColorRect" parent="."]
-margin_right = 804.0
-margin_bottom = 794.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -233.0
+margin_top = -135.0
+margin_right = 200.0
+margin_bottom = 182.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_lock_": true,
@@ -228,6 +232,7 @@ margin_right = -486.052
 margin_bottom = -3.98315
 
 [node name="Alerts" parent="." instance=ExtResource( 4 )]
+margin_right = -508.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 553.015, 755.228 )
@@ -235,13 +240,27 @@ scale = Vector2( 0.806, 0.812 )
 texture = ExtResource( 23 )
 
 [node name="BlackFade" type="ColorRect" parent="."]
-margin_left = 2.0
-margin_top = -9.0
-margin_right = 1730.0
-margin_bottom = 1198.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -321.0
+margin_top = -147.0
+margin_right = 332.0
+margin_bottom = 103.0
 color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Frontier" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -321.0
+margin_top = 794.39
+margin_right = 332.0
+margin_bottom = 99.39
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
 "_edit_use_anchors_": false
 }
 

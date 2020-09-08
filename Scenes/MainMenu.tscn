@@ -58,8 +58,8 @@ tracks/0/keys = {
 }
 
 [node name="MainMenu" type="Control"]
-anchor_right = 5.319
-anchor_bottom = 2.657
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 29.0
 margin_top = -1.0
 margin_right = -11.2002
@@ -71,12 +71,12 @@ __meta__ = {
 }
 
 [node name="Background" type="ColorRect" parent="."]
-anchor_right = 1.002
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -33.0
-margin_top = -1.0
-margin_right = -3439.43
-margin_bottom = -1362.0
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
 color = Color( 0.0117647, 0.0470588, 0.0941176, 1 )
 __meta__ = {
 "_edit_lock_": true,
@@ -85,6 +85,8 @@ __meta__ = {
 
 [node name="GameBackground" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 542.77
 margin_top = -127.596
 margin_right = 1170.77
@@ -92,14 +94,17 @@ margin_bottom = 867.405
 rect_scale = Vector2( 1.05, 1.4 )
 texture = ExtResource( 6 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="Label" parent="."]
-margin_left = 117.205
-margin_top = 63.4864
-margin_right = 481.206
-margin_bottom = 107.486
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -252.245
+margin_top = 57.1
+margin_right = 111.756
+margin_bottom = 101.1
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -109,10 +114,12 @@ __meta__ = {
 }
 
 [node name="Typer" type="Control" parent="."]
-margin_left = 112.1
-margin_top = 48.4502
-margin_right = 152.1
-margin_bottom = 88.4502
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -257.35
+margin_top = 42.0638
+margin_right = -217.35
+margin_bottom = 82.0639
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,6 +134,7 @@ custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 scroll_active = false
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -138,14 +146,19 @@ margin_bottom = 46.946
 rect_scale = Vector2( 1.46, 2 )
 texture = ExtResource( 5 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Play" type="Label" parent="."]
-margin_left = 800.0
-margin_top = 182.0
-margin_right = 1208.0
-margin_bottom = 226.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 419.6
+margin_top = -230.0
+margin_right = 783.6
+margin_bottom = -185.7
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -162,6 +175,7 @@ custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 script = ExtResource( 17 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -191,10 +205,14 @@ __meta__ = {
 }
 
 [node name="Options" type="Label" parent="."]
-margin_left = 800.0
-margin_top = 322.0
-margin_right = 1164.0
-margin_bottom = 366.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 420.649
+margin_top = -160.0
+margin_right = 784.645
+margin_bottom = -103.595
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -215,10 +233,14 @@ __meta__ = {
 }
 
 [node name="Credits" type="Label" parent="."]
-margin_left = 800.0
-margin_top = 392.0
-margin_right = 1164.0
-margin_bottom = 436.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 420.649
+margin_top = -90.0
+margin_right = 784.645
+margin_bottom = -33.5949
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -239,10 +261,14 @@ __meta__ = {
 }
 
 [node name="Quit" type="Label" parent="."]
-margin_left = 802.0
-margin_top = 462.0
-margin_right = 1166.0
-margin_bottom = 553.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 420.649
+margin_top = -20.0
+margin_right = 784.645
+margin_bottom = 83.4051
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.392157, 0.392157, 0.392157, 1 )
@@ -266,10 +292,14 @@ __meta__ = {
 }
 
 [node name="OptionsMenu" type="Label" parent="."]
-margin_left = -810.0
-margin_top = 192.0
-margin_right = -274.0
-margin_bottom = 424.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1194.66
+margin_top = -245.0
+margin_right = -658.659
+margin_bottom = 1.16833
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -371,10 +401,14 @@ __meta__ = {
 }
 
 [node name="Stages" type="Label" parent="."]
-margin_left = -811.053
-margin_top = 193.053
-margin_right = -278.053
-margin_bottom = 472.053
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1191.15
+margin_top = -245.0
+margin_right = -658.154
+margin_bottom = 47.1746
 rect_scale = Vector2( 1.4, 1.4 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -1115,6 +1149,34 @@ text = "Digite
 Lighstreak"
 align = 1
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Foreground" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 401.6
+margin_top = -524.7
+margin_right = 1148.6
+margin_bottom = 518.3
+color = Color( 0.0117647, 0.0470588, 0.0941176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Foreground2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1229.53
+margin_top = -522.095
+margin_right = -417.535
+margin_bottom = 106.205
+color = Color( 0.0117647, 0.0470588, 0.0941176, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

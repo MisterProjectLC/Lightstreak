@@ -19,8 +19,9 @@ __meta__ = {
 }
 
 [node name="BlackBackground" type="ColorRect" parent="."]
-margin_left = 19.0
-margin_right = 368.0
+visible = false
+margin_left = 10.0
+margin_right = 376.0
 margin_bottom = 225.0
 rect_scale = Vector2( 0.8, 0.8 )
 color = Color( 0.0392157, 0.00392157, 0.00392157, 1 )

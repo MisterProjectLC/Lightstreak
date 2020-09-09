@@ -18,7 +18,7 @@ var outlines = ["Play", "Options", "Credits", "Quit",
 				"Stages/Page 3/P15", "Stages/Page 4/P16", "Stages/Page 4/P17",
 				"Stages/Page 4/P18"]
 
-const BASE_Y = -245
+const BASE_Y = -260
 const INCREMENT = 70
 
 # Called when the node enters the scene tree for the first time.
@@ -31,9 +31,9 @@ func _ready():
 	if Global.get_lightstreak_typed():
 		Audio.play_music(Audio.menu_theme)
 		$Typer.margin_left = -257
-		$Typer.margin_top = 640
+		$Typer.margin_top = 680
 		$Stages.margin_left = -367
-		$Stages.margin_top = -231
+		$Stages.margin_top = BASE_Y
 		$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
 		$GameBackground.set_modulate(Color(1, 1, 1, 1))
 		pass
@@ -71,7 +71,7 @@ func _command_typed(_id, text):
 		"LIGHTSTREAK":
 			if !Global.get_lightstreak_typed():
 				Audio.play_music(Audio.menu_theme)
-				moving_children['Typer'] = [-257, 640]
+				moving_children['Typer'] = [-257, 680]
 				pull_menu()
 				fading_children['GameBackground'] = 1
 				$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))

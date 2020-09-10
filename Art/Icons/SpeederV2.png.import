@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HackerEnemy.png-8f2c5ab400ddce78bc79144a15f40e95.stex"
+path="res://.import/SpeederV2.png-2628d1c79d6f7441954fbd96fe2b0ad6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Enemies/HackerEnemy.png"
-dest_files=[ "res://.import/HackerEnemy.png-8f2c5ab400ddce78bc79144a15f40e95.stex" ]
+source_file="res://Art/Icons/SpeederV2.png"
+dest_files=[ "res://.import/SpeederV2.png-2628d1c79d6f7441954fbd96fe2b0ad6.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -7,6 +7,7 @@ export var _background_list = []
 export(PackedScene) var heylook
 
 var _current_phase
+var _power_count
 
 var player_health = 3
 
@@ -42,7 +43,8 @@ func ready():
 	_cannon_list[0].toggle_highlight(true)
 	
 	# setup weapon lists
-	for i in range(1, _current_phase["POWER_COUNT"]+1):
+	_power_count = _current_phase["POWER_COUNT"]
+	for i in range(1, _power_count+1):
 		_weapon_list[i-1].set_visible(true)
 	
 	if _current_phase["GENERATE"]:
@@ -52,7 +54,7 @@ func ready():
 			# if word is a repeat, try again
 			while (1):
 				var repeats = false
-				for i in range(_current_phase["POWER_COUNT"]):
+				for i in range(_power_count):
 					if _weapon_list[i] != _weapon_list[w] and _weapon_list[i].get_text() == new_word:
 						new_word = $LangSystem.get_word(_weapon_list[i].get_difficulty(), Global.get_language())
 						repeats = true
@@ -152,20 +154,15 @@ func _lightstreak_handler(_input):
 
 
 # weapon 
-func _weapon_handler(_cannon_n, _input, _lightstreak):
-	var _cannon = _cannon_list[_cannon_n]
+func _weapon_handler(_console_n, _input, _lightstreak):
+	var _cannon = _cannon_list[_console_n]
 	
 	for _weapon_title in _weapon_list:
 		if _weapon_title.get_text() == _input:
 			emit_signal("weapon_activated")
 			var _node = _weapon_title
 			# summon weapon
-			var _new_weapon = _node.get_weapon().instance()
-			add_child(_new_weapon)
-			_change_priority(_new_weapon, 3)
-			_new_weapon.position = _cannon.position + _new_weapon.get_weapon_offset()
-			_new_weapon.set_weapon_lane(_cannon.get_target_lane())
-			_new_weapon.set_lightstreak(_lightstreak)
+			activate_power(_node, _cannon, _lightstreak)
 			
 			# replace word
 			var new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
@@ -173,7 +170,7 @@ func _weapon_handler(_cannon_n, _input, _lightstreak):
 			# if word is a repeat, try again
 			while (1):
 				var repeats = false
-				for i in range(_current_phase["POWER_COUNT"]):
+				for i in range(_power_count):
 					if _weapon_list[i] != _weapon_title and _weapon_list[i].get_text() == new_word:
 						new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
 						repeats = true
@@ -186,6 +183,16 @@ func _weapon_handler(_cannon_n, _input, _lightstreak):
 			return new_word
 			
 	return _input
+
+
+func activate_power(_node, _cannon, _lightstreak):
+	# summon weapon
+	var _new_weapon = _node.get_weapon().instance()
+	add_child(_new_weapon)
+	_change_priority(_new_weapon, 3)
+	_new_weapon.position = _cannon.position + _new_weapon.get_weapon_offset()
+	_new_weapon.set_weapon_lane(_cannon.get_target_lane())
+	_new_weapon.set_lightstreak(_lightstreak)
 
 
 # cannon mover

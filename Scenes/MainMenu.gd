@@ -9,7 +9,7 @@ var fading_children = {
 
 var outlines = ["Play", "Play_Multi", "Options", "Credits", "Quit",
 				"OptionsMenu/Music", "OptionsMenu/Sounds", "OptionsMenu/Back",
-				"OptionsMenu/Lang",
+				"OptionsMenu/Lang", "PlayMulti/Back", "PlayMulti/Hero", "PlayMulti/Villain",
 				"Stages/Back", "Stages/Page 1/P1", "Stages/Page 1/P2",
 				"Stages/Page 1/P3", "Stages/Page 1/P4", "Stages/Page 1/P5",
 				"Stages/Page 2/P6", "Stages/Page 2/P7", "Stages/Page 2/P8",
@@ -80,25 +80,45 @@ func _command_typed(_id, text):
 		"PLAY":
 			if !Global.get_lightstreak_typed():
 				return
-
 			if len(args) == 1:
 				pushback_menu()
 				push_other_menus()
 				moving_children['Stages'] = [-367, BASE_Y]
-
 			elif len(args) == 2:
 				var chosen_phase = int(args[1])
 				if chosen_phase >= 1 and chosen_phase <= 20:
 					Global.set_current_phase(chosen_phase)
 					get_tree().change_scene("res://Scenes/Main.tscn")
-					
+		
+		"PLAY_MULTI":
+			if !Global.get_lightstreak_typed():
+				return
+			if len(args) == 1:
+				pushback_menu()
+				push_other_menus()
+				moving_children['PlayMulti'] = [-367, BASE_Y]
+		
+		"HERO":
+			if !Global.get_lightstreak_typed():
+				return
+			Network.create_server()
+			pushback_menu()
+			push_other_menus()
+			moving_children['Looking'] = [-367, BASE_Y]
+		
+		"VILLAIN":
+			if !Global.get_lightstreak_typed():
+				return
+			Network.connect_to_server()
+			pushback_menu()
+			push_other_menus()
+			moving_children['Looking'] = [-367, BASE_Y]
+		
 		"OPTIONS":
 			if !Global.get_lightstreak_typed():
 				return
-
 			pushback_menu()
 			push_other_menus()
-
 			moving_children['OptionsMenu'] = [-367, BASE_Y]
 
 		"MUSIC":
@@ -139,19 +159,22 @@ func _update_outlines(text):
 
 
 func push_other_menus():
+	moving_children['PlayMulti'] = [-1188, BASE_Y]
 	moving_children['Stages'] = [-1188, BASE_Y]
 	moving_children['OptionsMenu'] = [-1188, BASE_Y]
 
 
 func pull_menu():
 	moving_children['Play'] = [-380, BASE_Y]
-	moving_children['Options'] = [-380, BASE_Y+ INCREMENT]
-	moving_children['Credits'] = [-380, BASE_Y+INCREMENT*2]
-	moving_children['Quit'] = [-380, BASE_Y+INCREMENT*3]
+	moving_children['Play_Multi'] = [-380, BASE_Y+ INCREMENT]
+	moving_children['Options'] = [-380, BASE_Y+ INCREMENT*2]
+	moving_children['Credits'] = [-380, BASE_Y+INCREMENT*3]
+	moving_children['Quit'] = [-380, BASE_Y+INCREMENT*4]
 
 
 func pushback_menu():
 	moving_children['Play'] = [420, BASE_Y]
-	moving_children['Options'] = [420, BASE_Y+INCREMENT]
-	moving_children['Credits'] = [420, BASE_Y+INCREMENT*2]
-	moving_children['Quit'] = [420, BASE_Y+INCREMENT*3]
+	moving_children['Play_Multi'] = [420, BASE_Y+INCREMENT]
+	moving_children['Options'] = [420, BASE_Y+INCREMENT*2]
+	moving_children['Credits'] = [420, BASE_Y+INCREMENT*3]
+	moving_children['Quit'] = [420, BASE_Y+INCREMENT*4]

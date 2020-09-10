@@ -239,7 +239,6 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Fade = SubResource( 1 )
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
-[connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="send_alert" from="MinionSpawner" to="." method="send_alert"]
 [connection signal="damaged" from="Cannon1" to="." method="cannon_damaged"]
 [connection signal="damaged" from="Cannon2" to="." method="cannon_damaged"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpeederEnemy.png-f62fc50f27a61cc8a90cd372fde37066.stex"
+path="res://.import/Guardian2.png-841642adb8f0f5250d6f2f478ae0978e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Enemies/SpeederEnemy.png"
-dest_files=[ "res://.import/SpeederEnemy.png-f62fc50f27a61cc8a90cd372fde37066.stex" ]
+source_file="res://Art/Icons/Guardian2.png"
+dest_files=[ "res://.import/Guardian2.png-841642adb8f0f5250d6f2f478ae0978e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

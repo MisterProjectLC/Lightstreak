@@ -83,11 +83,6 @@ func ready():
 
 # CONSOLE METHODS ----------------------
 
-func _input(event):
-	if event is InputEventKey and event.pressed and event.scancode == KEY_ESCAPE:
-		leave_game()
-
-
 # tab handler
 func _on_Console_tab_console(typer):
 	for i in range(_cannon_list.size()):

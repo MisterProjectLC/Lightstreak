@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
@@ -42,9 +42,10 @@
 [ext_resource path="res://Mini Scenes/Weapon/MachinegunW.tscn" type="PackedScene" id=40]
 [ext_resource path="res://Mini Scenes/Weapon/Push.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=42]
+[ext_resource path="res://Mini Scenes/Main/Pause.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Mini Scenes/Main/Pause.gd" type="Script" id=44]
 
-[sub_resource type="Animation" id=1]
-resource_name = "Fade"
+[sub_resource type="Animation" id=3]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("BlackFade:color")
@@ -234,10 +235,18 @@ margin_bottom = -3.98315
 [node name="Alerts" parent="." instance=ExtResource( 4 )]
 margin_right = -508.0
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Numbers" type="Sprite" parent="."]
 position = Vector2( 553.015, 755.228 )
 scale = Vector2( 0.806, 0.812 )
 texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pause" parent="." instance=ExtResource( 43 )]
+pause_mode = 2
+visible = false
+script = ExtResource( 44 )
 
 [node name="BlackFade" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -265,7 +274,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Fade = SubResource( 1 )
+anims/Fade = SubResource( 3 )
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
 [connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="send_alert" from="MinionSpawner" to="." method="send_alert"]
@@ -275,4 +284,5 @@ anims/Fade = SubResource( 1 )
 [connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
 [connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]
 [connection signal="typer_updated" from="Console" to="." method="typer_updated"]
+[connection signal="leave_game" from="Pause" to="." method="leave_game"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

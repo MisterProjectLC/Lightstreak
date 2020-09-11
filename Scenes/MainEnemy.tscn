@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Art/Battlefields/RedBattlefield.png" type="Texture" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
@@ -14,31 +14,33 @@
 [ext_resource path="res://Scenes/Enemy_GUI.gd" type="Script" id=12]
 [ext_resource path="res://Mini Scenes/Main/WeaponTitle.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Mini Scenes/Enemies/Trooper.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Art/Enemies/Slick2.png" type="Texture" id=15]
+[ext_resource path="res://Art/Icons/GuardianIcon.png" type="Texture" id=15]
 [ext_resource path="res://Mini Scenes/Enemies/Captain.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Mini Scenes/Weapon/ShockW.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Mini Scenes/MinionSpawner.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Art/HACKER4.png" type="Texture" id=19]
+[ext_resource path="res://Art/Icons/SlickIcon.png" type="Texture" id=19]
 [ext_resource path="res://Mini Scenes/Enemies/Hacker.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Mini Scenes/Enemies/HackerInit.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Mini Scenes/Enemies/RedBlast.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Art/Numbers.png" type="Texture" id=23]
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=24]
-[ext_resource path="res://Art/Enemies/Captain2.png" type="Texture" id=25]
+[ext_resource path="res://Art/Icons/TrooperIcon.png" type="Texture" id=25]
 [ext_resource path="res://Mini Scenes/Enemies/Tank.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Art/Powers/MagnetMid.png" type="Texture" id=27]
 [ext_resource path="res://Art/WeaponTitle.png" type="Texture" id=28]
 [ext_resource path="res://Scenes/MainEnemy.gd" type="Script" id=29]
-[ext_resource path="res://Art/Enemies/EnemyTank.png" type="Texture" id=30]
+[ext_resource path="res://Art/Icons/BomberIcon.png" type="Texture" id=30]
 [ext_resource path="res://Mini Scenes/Enemies/Guardian.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Art/Enemies/Guardian3.png" type="Texture" id=32]
+[ext_resource path="res://Art/Icons/SpeederIcon.png" type="Texture" id=32]
 [ext_resource path="res://Mini Scenes/Enemies/Bomber.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Scenes/LaneOverlay.gd" type="Script" id=34]
 [ext_resource path="res://Mini Scenes/Enemies/Slick.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Art/Enemies/Tooper.png" type="Texture" id=37]
-[ext_resource path="res://Art/Enemies/Bomber2.png" type="Texture" id=38]
+[ext_resource path="res://Art/Battlefields/BlueBattlefield.png" type="Texture" id=36]
+[ext_resource path="res://Art/Icons/HackerIcon.png" type="Texture" id=37]
+[ext_resource path="res://Art/Icons/TankIcon.png" type="Texture" id=38]
 [ext_resource path="res://Mini Scenes/Enemies/VioletBlast.tscn" type="PackedScene" id=39]
-[ext_resource path="res://Art/Enemies/Speeder.png" type="Texture" id=42]
+[ext_resource path="res://Art/Battlefields/VioletBattlefield.png" type="Texture" id=40]
+[ext_resource path="res://Art/Icons/CaptainIcon.png" type="Texture" id=41]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -61,6 +63,7 @@ tracks/0/keys = {
 
 [node name="MainEnemy" type="Node"]
 script = ExtResource( 29 )
+_background_list = [ ExtResource( 36 ), ExtResource( 1 ), ExtResource( 40 ) ]
 
 [node name="BlackBackground" type="ColorRect" parent="."]
 margin_right = 804.0
@@ -92,15 +95,13 @@ sprite = ExtResource( 6 )
 highlight = ExtResource( 7 )
 
 [node name="Cannon2" parent="." instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 481.885, 724.086 )
+position = Vector2( 180.712, 719.168 )
 target_lane = 2
 sprite = ExtResource( 8 )
 highlight = ExtResource( 9 )
 
 [node name="Cannon3" parent="." instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 623.732, 721.539 )
+position = Vector2( 322.559, 716.621 )
 target_lane = 4
 sprite = ExtResource( 10 )
 highlight = ExtResource( 11 )
@@ -132,7 +133,7 @@ margin_top = 452.116
 margin_right = 73.2368
 margin_bottom = -285.884
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 37 )
+sprite = ExtResource( 25 )
 _weapon = ExtResource( 14 )
 _difficulty = 0
 
@@ -142,7 +143,7 @@ margin_top = 400.91
 margin_right = 90.002
 margin_bottom = -330.09
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 30 )
+sprite = ExtResource( 38 )
 _weapon = ExtResource( 26 )
 
 [node name="SpeederTitle" parent="." instance=ExtResource( 13 )]
@@ -151,7 +152,7 @@ margin_top = 349.065
 margin_right = 89.8949
 margin_bottom = -381.935
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 42 )
+sprite = ExtResource( 32 )
 _weapon = ExtResource( 17 )
 _difficulty = 2
 
@@ -161,7 +162,7 @@ margin_top = 297.651
 margin_right = 89.572
 margin_bottom = -433.349
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 38 )
+sprite = ExtResource( 30 )
 _weapon = ExtResource( 33 )
 _difficulty = 3
 
@@ -171,7 +172,7 @@ margin_top = 247.0
 margin_right = 71.0
 margin_bottom = -484.0
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 15 )
+sprite = ExtResource( 19 )
 _weapon = ExtResource( 35 )
 _difficulty = 4
 
@@ -181,7 +182,7 @@ margin_top = 195.892
 margin_right = 89.8871
 margin_bottom = -535.108
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 19 )
+sprite = ExtResource( 37 )
 _weapon = ExtResource( 20 )
 _difficulty = 5
 
@@ -191,7 +192,7 @@ margin_top = 144.686
 margin_right = 90.0165
 margin_bottom = -586.314
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 32 )
+sprite = ExtResource( 15 )
 _weapon = ExtResource( 31 )
 _difficulty = 6
 
@@ -201,7 +202,7 @@ margin_top = 94.0029
 margin_right = 90.4285
 margin_bottom = -636.997
 color = Color( 0.603922, 0.0156863, 0.0156863, 1 )
-sprite = ExtResource( 25 )
+sprite = ExtResource( 41 )
 _weapon = ExtResource( 16 )
 _difficulty = 7
 
@@ -270,7 +271,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ConsoleEnemy" parent="." instance=ExtResource( 4 )]
+[node name="Console" parent="." instance=ExtResource( 4 )]
 margin_top = 672.281
 margin_bottom = -7.7193
 
@@ -281,10 +282,13 @@ texture = ExtResource( 23 )
 
 [node name="LaneOverlay" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 37.6654, 399.397 )
+position = Vector2( 37.665, 400 )
 scale = Vector2( 0.586293, 0.860246 )
 texture = ExtResource( 27 )
 script = ExtResource( 34 )
+target_lane = 0
+move_speed = 12
+sprite = ExtResource( 27 )
 
 [node name="BlackFade" type="ColorRect" parent="."]
 margin_left = 2.0
@@ -305,4 +309,6 @@ anims/Fade = SubResource( 2 )
 [connection signal="damaged" from="Cannon1" to="." method="cannon_damaged"]
 [connection signal="damaged" from="Cannon2" to="." method="cannon_damaged"]
 [connection signal="damaged" from="Cannon3" to="." method="cannon_damaged"]
+[connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
+[connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

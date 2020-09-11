@@ -1,12 +1,14 @@
 extends Node
 
 var _cannon_list = []
+var _title_list = []
 var _weapon_list = []
 
 export var _background_list = []
 export(PackedScene) var heylook
 
 var _current_phase
+var _cannon_count
 var _power_count
 
 var player_health = 3
@@ -14,72 +16,92 @@ var player_health = 3
 signal cannon_moved
 signal weapon_activated
 
+
+# SETUP ------------------------------------------------------------
+
 func _ready():
 	ready()
 
 func ready():
 	# setup phase
-	$PhaseManager.load_phase(Global.get_current_phase())
-	_current_phase = $PhaseManager.get_phase()
-	
+	setup_phase()
 	Audio.play_music(Audio.phase_themes[Global.get_current_phase()-1])
-	_weapon_list = [get_node('LaserTitle'), get_node('SphereTitle'), 
-					get_node('ShockTitle'), get_node('MagnetTitle'),
-					get_node('MissileTitle'), get_node('BombTitle'), 
-					get_node('MachineTitle'), get_node('PushTitle'), 
-					get_node('LightTitle')]
 	
-	# setup arena
-	set_background(_current_phase["ARENA"])
+	# setup weapons
+	_weapon_list = [load("res://Mini Scenes/Weapon/Laser.tscn"),
+	load("res://Mini Scenes/Weapon/EnergyBall.tscn"),
+	load("res://Mini Scenes/Weapon/ShockW.tscn"),
+	load("res://Mini Scenes/Weapon/Magnet.tscn"),
+	load("res://Mini Scenes/Weapon/Missile.tscn"),
+	load("res://Mini Scenes/Weapon/Bomb.tscn"),
+	load("res://Mini Scenes/Weapon/MachinegunW.tscn"),
+	load("res://Mini Scenes/Weapon/Push.tscn"),
+	load("res://Mini Scenes/Weapon/Laser.tscn"),]
 	
-	# setup consoles
-	$Console.set_typer_count(_current_phase["CANNON_COUNT"])
-	$Console.set_input_specific(_current_phase["INITIAL_TEXT"], _current_phase["CANNON_COUNT"]-1)
+	# setup titles
+	set_title_list()
+	setup_title_list()
+	setup_title_replicate()
 	
-	# setup cannon
-	for i in range(0, _current_phase["CANNON_COUNT"]):
-		_cannon_list.append(get_node("Cannon" + str(i+1)))
-		_cannon_list[i].activate()
-	_cannon_list[0].toggle_highlight(true)
-	
-	# setup weapon lists
-	_power_count = _current_phase["POWER_COUNT"]
-	for i in range(1, _power_count+1):
-		_weapon_list[i-1].set_visible(true)
-	
-	if _current_phase["GENERATE"]:
-		for w in range(len(_weapon_list)):
-			var new_word = $LangSystem.get_word(_weapon_list[w].get_difficulty(), 
-										Global.get_language())
-			# if word is a repeat, try again
-			while (1):
-				var repeats = false
-				for i in range(_power_count):
-					if _weapon_list[i] != _weapon_list[w] and _weapon_list[i].get_text() == new_word:
-						new_word = $LangSystem.get_word(_weapon_list[i].get_difficulty(), Global.get_language())
-						repeats = true
-						break
-				
-				if repeats == false:
-					break
-			
-			_weapon_list[w].set_text(new_word)
-	
-	# replicate text
-	if _current_phase["REPLICATE_TEXT"] != 0:
-		if _current_phase["INITIAL_TEXT"].left(6) == 'Light ':
-			_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"].lstrip("Light "))
-		else:
-			_weapon_list[_current_phase["REPLICATE_TEXT"]-1].set_text(_current_phase["INITIAL_TEXT"])
-		
-		typer_updated(_current_phase["INITIAL_TEXT"])
-	
-	# setup minion spawner
-	$MinionSpawner.set_phase_script(_current_phase["SCRIPT"])
+	# other setup
+	setup_background()
+	setup_cannons()
+	setup_console()
 	
 	# setup tutorial
 	if Global.get_current_phase() == 1:
 		summon_heylook()
+
+
+func setup_phase():
+	$PhaseManager.load_phase(Global.get_current_phase())
+	_current_phase = $PhaseManager.get_phase()
+	_power_count = _current_phase["POWER_COUNT"]
+	_cannon_count = _current_phase["CANNON_COUNT"]
+	$MinionSpawner.set_phase_script(_current_phase["SCRIPT"])
+
+func set_title_list():
+	_title_list = [get_node('LaserTitle'), get_node('SphereTitle'), 
+					get_node('ShockTitle'), get_node('MagnetTitle'),
+					get_node('MissileTitle'), get_node('BombTitle'), 
+					get_node('MachineTitle'), get_node('PushTitle'), 
+					get_node('LightTitle')]
+
+func setup_title_list():
+	for i in range(1, _power_count+1):
+		_title_list[i-1].set_visible(true)
+	
+	for w in range(len(_title_list)):
+		var new_word = $LangSystem.get_word(_title_list[w].get_difficulty(), 
+										get_language())
+		# if word is a repeat, try again
+		while (1):
+			var repeats = false
+			for i in range(_power_count):
+				if _title_list[i] != _title_list[w] and _title_list[i].get_text() == new_word:
+					new_word = $LangSystem.get_word(_title_list[i].get_difficulty(), get_language())
+					repeats = true
+					break
+				
+			if repeats == false:
+				break
+			
+		_title_list[w].set_text(new_word)
+
+func setup_title_replicate():
+	pass
+
+func setup_background():
+	pass
+
+func setup_cannons():
+	for i in range(_cannon_count):
+		_cannon_list.append(get_node("Cannon" + str(i+1)))
+		_cannon_list[i].activate()
+	_cannon_list[0].toggle_highlight(true)
+
+func setup_console():
+	$Console.set_typer_count(_cannon_count)
 
 # CONSOLE METHODS ----------------------
 
@@ -115,13 +137,16 @@ func Console_command_typed(_typer_active, _input, _lightstreak):
 
 	# weapon
 	else:
-		return _weapon_handler(_typer_active, _input, _lightstreak)
+		return _power_handler(_typer_active, _input, _lightstreak)
 	
 	return _input
 
 
+func _on_Console_typer_updated(text):
+	typer_updated(text)
+
 func typer_updated(text):
-	for title in _weapon_list:
+	for title in _title_list:
 		title.update_outline(text)
 		if text.left(6) == 'Light ' and title.get_text() != "Light":
 			title.update_outline(text.lstrip("Light "))
@@ -131,16 +156,16 @@ func typer_updated(text):
 
 func _lightstreak_handler(_input):
 	var final_input
-	if _weapon_list[-1].get_text() == "Light": 
+	if _title_list[-1].get_text() == "Light": 
 		final_input = _input.right(6)
-	elif _weapon_list[-1].get_text() == "Streak":
+	elif _title_list[-1].get_text() == "Streak":
 		final_input = _input.right(7)
 	else:
 		return ""
 	
 	# replace word
 	var new_word = ["Light", "Streak"][randi() % 2]
-	_weapon_list[-1].set_text(new_word)
+	_title_list[-1].set_text(new_word)
 	
 	print("Lightstreak activated: " + final_input)
 	for i in range(len(_cannon_list)):
@@ -149,40 +174,45 @@ func _lightstreak_handler(_input):
 
 
 # weapon 
-func _weapon_handler(_console_n, _input, _lightstreak):
+func _power_handler(_console_n, _input, _lightstreak):
 	var _cannon = _cannon_list[_console_n]
 	
-	for _weapon_title in _weapon_list:
-		if _weapon_title.get_text() == _input:
+	for i in range(_power_count):
+		var title = _title_list[i]
+		
+		if title.get_text() == _input:
 			emit_signal("weapon_activated")
-			var _node = _weapon_title
-			# summon weapon
-			activate_power(_node, _cannon, _lightstreak)
+			# summon power
+			activate_power(i, _cannon, _lightstreak)
 			
 			# replace word
-			var new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
+			var new_word = $LangSystem.get_word(title.get_difficulty(), get_language())
 			
 			# if word is a repeat, try again
 			while (1):
 				var repeats = false
-				for i in range(_power_count):
-					if _weapon_list[i] != _weapon_title and _weapon_list[i].get_text() == new_word:
-						new_word = $LangSystem.get_word(_node.get_difficulty(), Global.get_language())
+				for j in range(_power_count):
+					if _title_list[j] != title and _title_list[j].get_text() == new_word:
+						new_word = $LangSystem.get_word(title.get_difficulty(), get_language())
 						repeats = true
 						break
 				
 				if repeats == false:
 					break
 			
-			_node.set_text(new_word)
+			title.set_text(new_word)
 			return new_word
 			
 	return _input
 
 
-func activate_power(_node, _cannon, _lightstreak):
+func activate_power(_index, _cannon, _lightstreak):
+	summon_weapon(_weapon_list[_index], _cannon, _lightstreak)
+
+
+func summon_weapon(_node, _cannon, _lightstreak):
 	# summon weapon
-	var _new_weapon = _node.get_weapon().instance()
+	var _new_weapon = _node.instance()
 	add_child(_new_weapon)
 	_change_priority(_new_weapon, 3)
 	_new_weapon.position = _cannon.position + _new_weapon.get_weapon_offset()
@@ -195,7 +225,7 @@ func _move_cannon(_cannon_n, _lane):
 	var _cannon = _cannon_list[_cannon_n]
 	
 	_cannon.set_target_lane(_lane)
-	_cannon.set_target_position(Vector2(Global.get_lane_x(_lane), Global.get_lane_y()))
+	_cannon.set_target_position(Vector2(get_lane_x(_lane), Global.get_lane_y()))
 
 
 func shift_cannon(_cannon_n, _left):
@@ -268,6 +298,12 @@ func send_alert(message, priority):
 
 # HELPER FUNCTIONS ---------------------------
 
+func get_language():
+	return Global.get_language()
+
+func get_lane_x(_lane):
+	Global.get_lane_x(_lane)
+
 func set_background(_new_arena):
 	$Battlefield.set_background(_background_list[_new_arena])
 	
@@ -275,13 +311,7 @@ func set_background(_new_arena):
 		$MinionSpawner.clear_blasts()
 
 func summon_heylook():
-	var new = heylook.instance()
-	add_child(new)
-	move_child(new, get_child_count()-1)
-	new.rect_position.x = 9
-	new.rect_position.y = 607
-	connect('cannon_moved', new, 'start')
-	connect('weapon_activated', new, 'destroy')
+	pass
 
 # bug fixers
 func _lane(_input):

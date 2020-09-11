@@ -1,13 +1,10 @@
-extends Sprite
+extends "res://Mini Scenes/Main/Cannon.gd"
 
+func activate():
+	visible = true
 
-var _target_position
+func damaged_methods(delta):
+	pass
 
-func _ready():
-	_target_position = position
-
-func _process(delta):
-	position = position.linear_interpolate(_target_position, delta)
-
-func set_target_position(_new_position):
-	_target_position = _new_position
+func cannon_damage():
+	pass

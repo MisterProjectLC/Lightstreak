@@ -7,7 +7,7 @@ extends Node
 #			SLICK, VIOLETBLAST, GUARDIAN, CAPTAIN, BOSS}
 #enum Alert{DAMAGE, HACK, RED}
 
-var language = 0
+var language = 2
 var music_volume = 0.7
 var sounds_volume = 1
 var current_phase = 1

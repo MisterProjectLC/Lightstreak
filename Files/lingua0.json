@@ -1,7 +1,10 @@
 {
-"0":["Mini", "Watt", "Ego", "Web", "Ok", "Wiki", "Beta"], 
-
-"1":["Wrona", "Hacker", "Turing", "Kraken", "Oxford", "Online", "Super","Newton", "Design", "Alien", "Linux", "Delta", "Asimov", "Forum", "Enigma", "Expert", "Nitro", "Sigma", "Mecha", "Mouse"], 
-
-"2":[]
+"0":["Neon"], 
+"1":["Tank"], 
+"2":["Speeder"], 
+"3":["Bomber"], 
+"4":["Gyrrun", "Spinner"], 
+"5":["Hackership", "Disruptor", "Megasaucer"], 
+"6":["Vanguard", "Supertank", "Sentinel"], 
+"7":["Commando", "Flagship", "Capital"]
 }

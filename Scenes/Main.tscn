@@ -1,6 +1,6 @@
 [gd_scene load_steps=46 format=2]
 
-[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/MainSingle.gd" type="Script" id=1]
 [ext_resource path="res://Mini Scenes/LangSystem.gd" type="Script" id=2]
 [ext_resource path="res://Mini Scenes/Main/Battlefield.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Mini Scenes/Main/Alerts.tscn" type="PackedScene" id=4]
@@ -28,7 +28,7 @@
 [ext_resource path="res://Mini Scenes/Weapon/Magnet.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Art/Battlefields/VioletBattlefield.png" type="Texture" id=27]
 [ext_resource path="res://Art/Battlefields/RedBattlefield.png" type="Texture" id=28]
-[ext_resource path="res://Art/Battlefields/Battlefield3.png" type="Texture" id=29]
+[ext_resource path="res://Art/Battlefields/BlueBattlefield.png" type="Texture" id=29]
 [ext_resource path="res://Art/Icons/MagnetIcon.png" type="Texture" id=30]
 [ext_resource path="res://Mini Scenes/Weapon/Missile.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Art/Icons/EnergyBallIcon.png" type="Texture" id=32]
@@ -45,7 +45,7 @@
 [ext_resource path="res://Mini Scenes/Main/Pause.tscn" type="PackedScene" id=43]
 [ext_resource path="res://Mini Scenes/Main/Pause.gd" type="Script" id=44]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("BlackFade:color")
@@ -274,7 +274,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Fade = SubResource( 3 )
+anims/Fade = SubResource( 1 )
 [connection signal="passed_threshold" from="MinionSpawner" to="." method="_on_MinionSpawner_passed_threshold"]
 [connection signal="phase_empty" from="MinionSpawner" to="." method="_on_MinionSpawner_phase_empty"]
 [connection signal="send_alert" from="MinionSpawner" to="." method="send_alert"]
@@ -283,6 +283,6 @@ anims/Fade = SubResource( 3 )
 [connection signal="damaged" from="Cannon3" to="." method="cannon_damaged"]
 [connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
 [connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]
-[connection signal="typer_updated" from="Console" to="." method="typer_updated"]
+[connection signal="typer_updated" from="Console" to="." method="_on_Console_typer_updated"]
 [connection signal="leave_game" from="Pause" to="." method="leave_game"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

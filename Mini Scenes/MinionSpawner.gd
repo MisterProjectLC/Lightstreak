@@ -60,7 +60,7 @@ func read_phase_script(delta):
 			emit_signal("phase_empty", _time)
 
 
-func spawn_enemy(enemy_type, lane):
+func spawn_enemy(enemy_type, lane, x_offset = 0):
 	# spawn and setup enemy
 	var _new = enemy_object[enemy_type].instance()
 	add_child(_new)
@@ -73,7 +73,7 @@ func spawn_enemy(enemy_type, lane):
 	
 	# seta lane e position
 	_new.set_lane(lane)
-	_new.set_position(Vector2(Global.get_lane_x(lane), _spawn_y))
+	_new.set_position(Vector2(Global.get_lane_x(lane) + x_offset, _spawn_y))
 	
 	# prepara signal de pass_threshold
 	for i in _new.get_signal_list().size():

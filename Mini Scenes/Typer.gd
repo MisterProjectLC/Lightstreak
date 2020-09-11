@@ -62,7 +62,6 @@ func input_function(event):
 			# append letter
 			set_display_text(self._display_text + kchar)
 
-
 		# backspace
 		elif event.scancode == KEY_BACKSPACE:
 			if _display_text.ends_with("]"):
@@ -71,7 +70,6 @@ func input_function(event):
 				set_display_text(_display_text.left(_display_text.length()-1))
 			
 			set_actual_text(_actual_text.left(_actual_text.length()-1))
-
 
 		# enter
 		elif event.scancode == KEY_ENTER:

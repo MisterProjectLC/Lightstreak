@@ -6,6 +6,9 @@ const MAX_PLAYERS = 2
 
 var other_player_id = 0
 
+onready var hero_scene = load("res://Scenes/MainMulti.tscn")
+onready var villain_scene = load("res://Scenes/MainEnemy.tscn")
+
 func _ready():
 	get_tree().connect('network_peer_disconnected', self, '_player_disconnected')
 
@@ -31,18 +34,27 @@ func connect_to_server():
 	get_tree().set_network_peer(peer)
 	print_debug("Server entrado")
 
-# HANDLING SIGNALS --------------------------------------
 
-func _connected_to_server():
-	get_tree().change_scene("res://Scenes/MainEnemy.tscn")
-	rpc('receive_spawner_info', get_tree().get_network_unique_id())
-
-
+# HANDLING RPCS ---------------------------------
 remote func receive_spawner_info(id):
 	if get_tree().is_network_server():
 		other_player_id = id
-		get_tree().change_scene("res://Scenes/MainMulti.tscn")
+		get_tree().change_scene(hero_scene)
+
+
+remote func receive_power():
+	pass
+
+
+# HANDLING SIGNALS --------------------------------------
+func _connected_to_server():
+	get_tree().change_scene(villain_scene)
+	rpc('receive_spawner_info', get_tree().get_network_unique_id())
 
 
 func _player_disconnected():
 	get_tree().change_scene("res://Scenes/Main.tscn")
+
+
+func _activated_power():
+	rpc('receive_power', get_tree().get_network_unique_id())

@@ -137,7 +137,7 @@ func _command_typed(_id, text):
 		
 		"LANG":
 			if len(args) == 2:
-				var dict = {"EN":0, "PT":1, "DE":2}
+				var dict = {"EN":2, "PT":3, "DE":4}
 				if args[1] in dict.keys():
 					Global.set_language(dict[args[1]])
 

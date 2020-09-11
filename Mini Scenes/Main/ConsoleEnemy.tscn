@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://Mini Scenes/EnemyTyper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mini Scenes/Main/Console.gd" type="Script" id=2]
-[ext_resource path="res://Mini Scenes/Typer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Art/Typer4.png" type="Texture" id=4]
 
 [node name="ConsoleEnemy" type="Control"]
@@ -24,66 +24,60 @@ margin_bottom = 145.0
 rect_scale = Vector2( 0.8, 0.8 )
 color = Color( 0.0392157, 0.00392157, 0.00392157, 1 )
 
-[node name="Typer1" parent="." instance=ExtResource( 3 )]
-margin_left = 19.1868
-margin_top = -137.112
-margin_right = 319.187
-margin_bottom = -67.1118
+[node name="Typer1" parent="." instance=ExtResource( 1 )]
+margin_left = 19.3241
+margin_top = -137.388
+margin_right = 377.324
+margin_bottom = -97.3882
 rect_scale = Vector2( 0.8, 1 )
 sprite = ExtResource( 4 )
 
-[node name="Typer2" parent="." instance=ExtResource( 3 )]
-margin_left = 19.1868
-margin_top = -99.9478
-margin_right = 319.187
-margin_bottom = -29.9476
+[node name="Typer2" parent="." instance=ExtResource( 1 )]
+margin_left = 18.7837
+margin_top = -99.563
+margin_right = 376.784
+margin_bottom = -59.563
 rect_scale = Vector2( 0.8, 1 )
-id = 1
 sprite = ExtResource( 4 )
 
-[node name="Typer3" parent="." instance=ExtResource( 3 )]
-margin_left = 19.2273
-margin_top = -62.8716
-margin_right = 368.227
-margin_bottom = -32.8716
+[node name="Typer3" parent="." instance=ExtResource( 1 )]
+margin_left = 18.8869
+margin_top = -61.7377
+margin_right = 376.887
+margin_bottom = -21.7377
 rect_scale = Vector2( 0.8, 1 )
-id = 2
 sprite = ExtResource( 4 )
 
-[node name="Typer4" parent="." instance=ExtResource( 3 )]
-margin_left = 18.7396
-margin_top = -25.9186
-margin_right = 367.74
-margin_bottom = 4.08142
+[node name="Typer4" parent="." instance=ExtResource( 1 )]
+margin_left = 18.8869
+margin_top = -24.2077
+margin_right = 376.887
+margin_bottom = 15.7923
 rect_scale = Vector2( 0.8, 1 )
-id = 2
 sprite = ExtResource( 4 )
 
-[node name="Typer5" parent="." instance=ExtResource( 3 )]
-margin_left = 19.2529
-margin_top = 11.0422
-margin_right = 368.253
-margin_bottom = 41.0422
+[node name="Typer5" parent="." instance=ExtResource( 1 )]
+margin_left = 18.8869
+margin_top = 13.8414
+margin_right = 376.887
+margin_bottom = 53.8414
 rect_scale = Vector2( 0.8, 1 )
-id = 2
 sprite = ExtResource( 4 )
 
-[node name="Typer6" parent="." instance=ExtResource( 3 )]
-margin_left = 18.7396
-margin_top = 48.7412
-margin_right = 367.74
-margin_bottom = 78.7412
+[node name="Typer6" parent="." instance=ExtResource( 1 )]
+margin_left = 19.7232
+margin_top = 51.8904
+margin_right = 377.723
+margin_bottom = 91.8904
 rect_scale = Vector2( 0.8, 1 )
-id = 2
 sprite = ExtResource( 4 )
 
-[node name="Typer7" parent="." instance=ExtResource( 3 )]
-margin_left = 18.8878
-margin_top = 85.7163
-margin_right = 367.888
-margin_bottom = 115.716
+[node name="Typer7" parent="." instance=ExtResource( 1 )]
+margin_left = 19.6814
+margin_top = 90.0021
+margin_right = 377.681
+margin_bottom = 130.002
 rect_scale = Vector2( 0.8, 1 )
-id = 2
 sprite = ExtResource( 4 )
 [connection signal="command_typed" from="Typer1" to="." method="_command_typed"]
 [connection signal="typer_updated" from="Typer1" to="." method="_update_outlines"]

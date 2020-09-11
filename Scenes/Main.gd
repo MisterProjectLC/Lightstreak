@@ -175,44 +175,41 @@ func _lightstreak_handler(_input):
 
 # weapon 
 func _power_handler(_console_n, _input, _lightstreak):
-	var _cannon = _cannon_list[_console_n]
-	
 	for i in range(_power_count):
 		var title = _title_list[i]
 		
 		if title.get_text() == _input:
 			emit_signal("weapon_activated")
-			# summon power
-			activate_power(i, _cannon, _lightstreak)
-			
+			summon_weapon(i, _console_n, _lightstreak)
 			# replace word
-			var new_word = $LangSystem.get_word(title.get_difficulty(), get_language())
-			
-			# if word is a repeat, try again
-			while (1):
-				var repeats = false
-				for j in range(_power_count):
-					if _title_list[j] != title and _title_list[j].get_text() == new_word:
-						new_word = $LangSystem.get_word(title.get_difficulty(), get_language())
-						repeats = true
-						break
-				
-				if repeats == false:
-					break
-			
-			title.set_text(new_word)
-			return new_word
-			
+			return replace_word(title)
 	return _input
 
 
-func activate_power(_index, _cannon, _lightstreak):
-	summon_weapon(_weapon_list[_index], _cannon, _lightstreak)
+func replace_word(title):
+	var new_word = $LangSystem.get_word(title.get_difficulty(), get_language())
+			
+	# if word is a repeat, try again
+	while (1):
+		var repeats = false
+		for j in range(_power_count):
+			if _title_list[j] != title and _title_list[j].get_text() == new_word:
+				new_word = $LangSystem.get_word(title.get_difficulty(), get_language())
+				repeats = true
+				break
+				
+		if repeats == false:
+			break
+			
+	title.set_text(new_word)
+	return new_word
 
 
-func summon_weapon(_node, _cannon, _lightstreak):
+func summon_weapon(_index, _console_n, _lightstreak):
+	var _cannon = _cannon_list[_console_n]
+	
 	# summon weapon
-	var _new_weapon = _node.instance()
+	var _new_weapon = _weapon_list[_index].instance()
 	add_child(_new_weapon)
 	_change_priority(_new_weapon, 3)
 	_new_weapon.position = _cannon.position + _new_weapon.get_weapon_offset()
@@ -225,7 +222,7 @@ func _move_cannon(_cannon_n, _lane):
 	var _cannon = _cannon_list[_cannon_n]
 	
 	_cannon.set_target_lane(_lane)
-	_cannon.set_target_position(Vector2(get_lane_x(_lane), Global.get_lane_y()))
+	_cannon.set_target_position( Vector2(get_lane_x(_lane), Global.get_lane_y()) )
 
 
 func shift_cannon(_cannon_n, _left):
@@ -302,7 +299,7 @@ func get_language():
 	return Global.get_language()
 
 func get_lane_x(_lane):
-	Global.get_lane_x(_lane)
+	return Global.get_lane_x(_lane)
 
 func set_background(_new_arena):
 	$Battlefield.set_background(_background_list[_new_arena])

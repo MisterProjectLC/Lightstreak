@@ -2,13 +2,19 @@ extends "res://Scenes/Main.gd"
 
 var _console_count = 7
 var _enemy_list
+var timer = 0
 
 const X_OFFSET = -300
+
+func _process(delta):
+	timer += delta
+	$Enemy_GUI.set_time(int(timer))
+
 
 # SETUP ------------------------------------------------------
 func setup_phase():
 	_power_count = 8
-	_cannon_count = 1
+	_cannon_count = 3
 	
 	_enemy_list = ["TROOPER", "TANK", "SPEEDER", "BOMBER",
 					"SLICK", "HACKER", "GUARDIAN", "CAPTAIN"]
@@ -20,8 +26,9 @@ func set_title_list():
 					get_node('GuardianTitle'), get_node('CaptainTitle')]
 
 func setup_cannons():
-	_cannon_list.append($LaneOverlay)
-	_cannon_list[0].activate()
+	for i in range(_cannon_count):
+		_cannon_list.append(get_node("Cannon" + str(i+1)))
+		_cannon_list[i].activate()
 
 func setup_console():
 	$Console.set_typer_count(_console_count)
@@ -31,17 +38,24 @@ func setup_background():
 
 # ---------------------------
 func Console_command_typed(_typer_active, _input, _lightstreak):
-	return _power_handler(0, _input, _lightstreak)
+	return _power_handler(_typer_active, _input, _lightstreak)
 
 
-func activate_power(_index, _cannon, _lightstreak):
-	spawn_enemy(_enemy_list[_index], _cannon.get_target_lane())
+func _power_handler(_console_n, _input, _lightstreak):
+	for i in range(_power_count):
+		var title = _title_list[i]
+		if title.get_text() == _input:
+			spawn_enemy(_enemy_list[i], _console_n, _lightstreak)
+			# replace word
+			return replace_word(title)
+	return _input
 
 
-func spawn_enemy(enemy_minion_name, enemy_lane, _requester = null):
-	$MinionSpawner.spawn_enemy(enemy_minion_name, enemy_lane, X_OFFSET)
+func spawn_enemy(enemy_name, enemy_lane, _requester = null):
+	Network._spawned_enemy(enemy_name, enemy_lane)
+	$MinionSpawner.spawn_enemy(enemy_name, enemy_lane, X_OFFSET)
 
-func send_alert(message, priority):
+func send_alert(_message, _priority):
 	pass
 
 # GETTERS / SETTERS ---------------------------
@@ -57,11 +71,7 @@ func _on_Console_tab_console(_lane):
 	$LaneOverlay.set_target_position( Vector2(get_lane_x(_lane), 400) )
 	$LaneOverlay.set_target_lane(_lane)
 
+
 func _on_MinionSpawner_passed_threshold():
-	if player_health > 0:
-		$Alerts.damage_alert()
-		Audio.play_sound(Audio.player_damage)
-		player_health -= 1
-	else:
-		game_over()
+	pass
 

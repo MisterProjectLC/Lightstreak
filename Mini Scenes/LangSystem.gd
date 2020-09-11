@@ -15,7 +15,7 @@ func _ready():
 				_linguas[lingua][diff].append(word)
 	
 func get_word(_diff, _lang):
-	if _diff == 3:
+	if _diff == 3 and _lang != 0:
 		return "Light"
 	else:
 		return _linguas[_lang][_diff][randi() % _linguas[_lang][_diff].size()]

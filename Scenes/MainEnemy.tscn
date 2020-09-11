@@ -101,7 +101,7 @@ sprite = ExtResource( 8 )
 highlight = ExtResource( 9 )
 
 [node name="Cannon3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 322.559, 716.621 )
+position = Vector2( 322.559, 717.751 )
 target_lane = 4
 sprite = ExtResource( 10 )
 highlight = ExtResource( 11 )
@@ -272,8 +272,10 @@ __meta__ = {
 }
 
 [node name="Console" parent="." instance=ExtResource( 4 )]
-margin_top = 672.281
-margin_bottom = -7.7193
+margin_left = 496.801
+margin_top = 666.579
+margin_right = 12.8012
+margin_bottom = -13.4208
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 253.262, 750.563 )

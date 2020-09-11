@@ -38,6 +38,7 @@ margin_top = -99.563
 margin_right = 376.784
 margin_bottom = -59.563
 rect_scale = Vector2( 0.8, 1 )
+id = 1
 sprite = ExtResource( 4 )
 
 [node name="Typer3" parent="." instance=ExtResource( 1 )]
@@ -46,6 +47,7 @@ margin_top = -61.7377
 margin_right = 376.887
 margin_bottom = -21.7377
 rect_scale = Vector2( 0.8, 1 )
+id = 2
 sprite = ExtResource( 4 )
 
 [node name="Typer4" parent="." instance=ExtResource( 1 )]
@@ -54,6 +56,7 @@ margin_top = -24.2077
 margin_right = 376.887
 margin_bottom = 15.7923
 rect_scale = Vector2( 0.8, 1 )
+id = 3
 sprite = ExtResource( 4 )
 
 [node name="Typer5" parent="." instance=ExtResource( 1 )]
@@ -62,6 +65,7 @@ margin_top = 13.8414
 margin_right = 376.887
 margin_bottom = 53.8414
 rect_scale = Vector2( 0.8, 1 )
+id = 4
 sprite = ExtResource( 4 )
 
 [node name="Typer6" parent="." instance=ExtResource( 1 )]
@@ -70,6 +74,7 @@ margin_top = 51.8904
 margin_right = 377.723
 margin_bottom = 91.8904
 rect_scale = Vector2( 0.8, 1 )
+id = 5
 sprite = ExtResource( 4 )
 
 [node name="Typer7" parent="." instance=ExtResource( 1 )]
@@ -78,6 +83,7 @@ margin_top = 90.0021
 margin_right = 377.681
 margin_bottom = 130.002
 rect_scale = Vector2( 0.8, 1 )
+id = 6
 sprite = ExtResource( 4 )
 [connection signal="command_typed" from="Typer1" to="." method="_command_typed"]
 [connection signal="typer_updated" from="Typer1" to="." method="_update_outlines"]

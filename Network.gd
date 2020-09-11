@@ -6,8 +6,8 @@ const MAX_PLAYERS = 2
 
 var other_player_id = 0
 
-onready var hero_scene = load("res://Scenes/MainMulti.tscn")
-onready var villain_scene = load("res://Scenes/MainEnemy.tscn")
+var hero_scene = "res://Scenes/MainMulti.tscn"
+var villain_scene = "res://Scenes/MainEnemy.tscn"
 
 func _ready():
 	get_tree().connect('network_peer_disconnected', self, '_player_disconnected')
@@ -26,7 +26,6 @@ func create_server():
 
 
 func connect_to_server():
-	#
 	get_tree().connect('connected_to_server', self, '_connected_to_server')
 	
 	var peer = NetworkedMultiplayerENet.new()
@@ -42,9 +41,11 @@ remote func receive_spawner_info(id):
 		get_tree().change_scene(hero_scene)
 
 
-remote func receive_power():
-	pass
+remote func receive_power(_index, _console_n, _lightstreak):
+	get_tree().get_root().get_node("MainEnemy").summon_weapon(_index, _console_n, _lightstreak)
 
+remote func receive_enemy(enemy_name, enemy_lane):
+	get_tree().get_root().get_node("MainMulti").spawn_enemy(enemy_name, enemy_lane)
 
 # HANDLING SIGNALS --------------------------------------
 func _connected_to_server():
@@ -56,5 +57,13 @@ func _player_disconnected():
 	get_tree().change_scene("res://Scenes/Main.tscn")
 
 
-func _activated_power():
-	rpc('receive_power', get_tree().get_network_unique_id())
+func _activated_power(_index, _cannon, _lightstreak):
+	rpc('receive_power', _index, _cannon, _lightstreak)
+
+
+func _spawned_enemy(enemy_name, enemy_lane):
+	rpc('receive_enemy', enemy_name, enemy_lane)
+
+
+
+

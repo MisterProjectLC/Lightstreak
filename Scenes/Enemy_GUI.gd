@@ -8,4 +8,8 @@ func set_health(new):
 func set_time(new):
 	var minutes = new / 60
 	var seconds = new % 60
-	$Timer.text = str(minutes) + ":" + str(seconds)
+	
+	if seconds < 10:
+		$Timer.text = str(minutes) + ":0" + str(seconds)
+	else:
+		$Timer.text = str(minutes) + ":" + str(seconds)

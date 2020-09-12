@@ -14,3 +14,7 @@ func _move_cannon(_cannon_n, _lane):
 
 func time_out():
 	victory()
+
+func leave_game():
+	Network.close_connection()
+	.leave_game()

@@ -9,7 +9,8 @@ var fading_children = {
 
 var outlines = ["Play", "Play_Multi", "Options", "Credits", "Quit",
 				"OptionsMenu/Music", "OptionsMenu/Sounds", "OptionsMenu/Back",
-				"OptionsMenu/Lang", "PlayMulti/Back", "PlayMulti/Hero", "PlayMulti/Villain",
+				"OptionsMenu/Lang", "PlayMulti/Back", "PlayMulti/Hero", 
+				"PlayMulti/Villain", "Looking/Back",
 				"Stages/Back", "Stages/Page 1/P1", "Stages/Page 1/P2",
 				"Stages/Page 1/P3", "Stages/Page 1/P4", "Stages/Page 1/P5",
 				"Stages/Page 2/P6", "Stages/Page 2/P7", "Stages/Page 2/P8",
@@ -72,6 +73,8 @@ func _command_typed(_id, text):
 			if !Global.get_lightstreak_typed():
 				Audio.play_music(Audio.menu_theme)
 				moving_children['Typer'] = [-257, 680]
+				$Typer.set_font_size(55)
+				$Typer/Text.rect_position += Vector2(0, 10)
 				pull_menu()
 				fading_children['GameBackground'] = 1
 				$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
@@ -101,6 +104,9 @@ func _command_typed(_id, text):
 		"HERO":
 			if !Global.get_lightstreak_typed():
 				return
+			
+			if len(args) == 2:
+				Network.set_server_name(args[1])
 			Network.create_server()
 			pushback_menu()
 			push_other_menus()
@@ -109,6 +115,9 @@ func _command_typed(_id, text):
 		"VILLAIN":
 			if !Global.get_lightstreak_typed():
 				return
+			
+			if len(args) == 2:
+				Network.set_server_name(args[1])
 			Network.connect_to_server()
 			pushback_menu()
 			push_other_menus()
@@ -145,6 +154,7 @@ func _command_typed(_id, text):
 			if Global.get_lightstreak_typed():
 				pull_menu()
 				push_other_menus()
+				Network.close_connection()
 		
 		"CREDITS":
 			get_tree().change_scene("res://Scenes/Credits.tscn")
@@ -160,6 +170,7 @@ func _update_outlines(text):
 
 func push_other_menus():
 	moving_children['PlayMulti'] = [-1188, BASE_Y]
+	moving_children['Looking'] = [-1188, BASE_Y]
 	moving_children['Stages'] = [-1188, BASE_Y]
 	moving_children['OptionsMenu'] = [-1188, BASE_Y]
 

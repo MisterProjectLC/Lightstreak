@@ -69,6 +69,11 @@ func receive_damage():
 func send_alert(_message, _priority):
 	pass
 
+
+func leave_game():
+	Network.close_connection()
+	.leave_game()
+
 # GETTERS / SETTERS ---------------------------
 func get_language():
 	return 0

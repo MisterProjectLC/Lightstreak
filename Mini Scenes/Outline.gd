@@ -3,6 +3,7 @@ extends Label
 var expected_text = ""
 var options_text = false
 var lang_text = false
+var server_text = false
 var already_activated = false
 
 func _ready():
@@ -10,6 +11,9 @@ func _ready():
 	
 	if expected_text.ends_with("<0-100>"):
 		options_text = true
+	
+	elif expected_text.ends_with("<NAME>"):
+		server_text = true
 	
 	elif expected_text.ends_with(">"):
 		lang_text = true
@@ -42,6 +46,11 @@ func update_text(received_text):
 		if (len(args) >= 2 and args[1].is_valid_integer() 
 		and int(args[1]) >= 0 and int(args[1]) <= 100):
 			received_text = args[0] + " <0-100>"
+	
+	elif server_text:
+		var args = received_text.rsplit(" ", false, 0)
+		if (len(args) >= 2):
+			received_text = args[0] + " <NAME>"
 	
 	elif lang_text:
 		var args = received_text.rsplit(" ", false, 0)

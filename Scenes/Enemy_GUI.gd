@@ -1,8 +1,14 @@
 extends Control
 
+var health = 4
+signal dead
 
-func set_health(new):
-	$Lives.text = str(new) + "/4"
+func reduce_health():
+	health -= 1
+	$Lives.text = str(health) + "/4"
+	
+	if health <= 0:
+		emit_signal("dead")
 
 
 func set_time(new):

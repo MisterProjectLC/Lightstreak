@@ -265,11 +265,12 @@ func _on_MinionSpawner_phase_empty(time):
 	if _current_phase["DURATION"] == 10:
 		credits()
 	elif _current_phase["DURATION"] <= time:
-		leave_game()
+		victory()
 
+func victory():
+	leave_game()
 
 func game_over():
-	print_debug("game_over")
 	leave_game()
 
 

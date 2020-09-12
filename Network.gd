@@ -44,8 +44,17 @@ remote func receive_spawner_info(id):
 remote func receive_power(_index, _console_n, _lightstreak):
 	get_tree().get_root().get_node("MainEnemy").summon_weapon(_index, _console_n, _lightstreak)
 
+remote func receive_movem(_cannon, _lane):
+	get_tree().get_root().get_node("MainEnemy")._move_cannon(_cannon, _lane)
+
+remote func receive_damage():
+	get_tree().get_root().get_node("MainEnemy")._receive_damage()
+
 remote func receive_enemy(enemy_name, enemy_lane):
 	get_tree().get_root().get_node("MainMulti").spawn_enemy(enemy_name, enemy_lane)
+
+remote func time_out():
+	get_tree().get_root().get_node("MainMulti").time_out()
 
 # HANDLING SIGNALS --------------------------------------
 func _connected_to_server():
@@ -56,14 +65,17 @@ func _connected_to_server():
 func _player_disconnected():
 	get_tree().change_scene("res://Scenes/Main.tscn")
 
-
 func _activated_power(_index, _cannon, _lightstreak):
 	rpc('receive_power', _index, _cannon, _lightstreak)
 
+func _moved_cannon(_cannon, _lane):
+	rpc('receive_movem', _cannon, _lane)
 
 func _spawned_enemy(enemy_name, enemy_lane):
 	rpc('receive_enemy', enemy_name, enemy_lane)
 
+func took_damage():
+	rpc('receive_damage')
 
-
-
+func timed_out():
+	rpc('time_out')

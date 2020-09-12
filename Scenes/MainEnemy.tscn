@@ -311,6 +311,7 @@ anims/Fade = SubResource( 2 )
 [connection signal="damaged" from="Cannon1" to="." method="cannon_damaged"]
 [connection signal="damaged" from="Cannon2" to="." method="cannon_damaged"]
 [connection signal="damaged" from="Cannon3" to="." method="cannon_damaged"]
+[connection signal="dead" from="Enemy_GUI" to="." method="victory"]
 [connection signal="command_typed" from="Console" to="." method="_on_Console_command_typed"]
 [connection signal="tab_console" from="Console" to="." method="_on_Console_tab_console"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

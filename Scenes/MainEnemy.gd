@@ -5,10 +5,16 @@ var _enemy_list
 var timer = 0
 
 const X_OFFSET = -300
+const MAX_TIMER = 120
 
 func _process(delta):
 	timer += delta
 	$Enemy_GUI.set_time(int(timer))
+	
+	if timer > MAX_TIMER:
+		Network.timed_out()
+		victory()
+		timer = 0
 
 
 # SETUP ------------------------------------------------------
@@ -54,6 +60,11 @@ func _power_handler(_console_n, _input, _lightstreak):
 func spawn_enemy(enemy_name, enemy_lane, _requester = null):
 	Network._spawned_enemy(enemy_name, enemy_lane)
 	$MinionSpawner.spawn_enemy(enemy_name, enemy_lane, X_OFFSET)
+
+
+func receive_damage():
+	$Enemy_GUI.reduce_health()
+
 
 func send_alert(_message, _priority):
 	pass

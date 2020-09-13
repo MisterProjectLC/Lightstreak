@@ -1,6 +1,8 @@
 extends Node
 
-var special = {KEY_COMMA:"<", KEY_SPACE:" ", KEY_PERIOD:">", KEY_MINUS:"_"}
+var special = {KEY_SPACE:" ", KEY_MINUS:"_"}
+var menu = {KEY_PERIOD:"."}
+var game = {KEY_COMMA:"<", KEY_PERIOD:">"}
 var alphabet
 
 func get_letter(input):
@@ -10,13 +12,23 @@ func get_letter(input):
 		return null
 
 func is_special(input):
-	return input in special.values()
+	return (input in special.values() or input in menu.values() or input in game.values())
 
 func _ready():
-	reset()
+	_reset()
 
-func reset():
+func _reset():
 	alphabet = special.duplicate()
+
+func game_reset():
+	_reset()
+	for m in game.keys():
+		alphabet[m] = game[m]
+
+func menu_reset():
+	_reset()
+	for m in menu.keys():
+		alphabet[m] = menu[m]
 
 func check_letter_pair(a, b):
 	if a in alphabet.keys() or b in alphabet.keys():

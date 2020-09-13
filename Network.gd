@@ -1,12 +1,11 @@
 extends Node
 
-const DEFAULT_IP = '127.0.0.1'
 const PORT = 31400
 const MAX_PLAYERS = 1
 
 var other_player_id = 0
 var peer = null
-var server_name = ''
+var server_ip = '127.0.0.1'
 
 var hero_scene = "res://Scenes/MainMulti.tscn"
 var villain_scene = "res://Scenes/MainEnemy.tscn"
@@ -20,21 +19,20 @@ func create_server():
 	# Peer = A PacketPeer implementation that should be passed to SceneTree.network_peer 
 	# after being initialized as either a client or server. Events can then be handled by 
 	# connecting to SceneTree signals.
-	
 	peer = NetworkedMultiplayerENet.new()
 	peer.create_server(PORT, MAX_PLAYERS) # this peer will be a server
 	get_tree().set_network_peer(peer)
 	print_debug("Server criado")
 
-func set_server_name(_name):
-	server_name = _name
+func set_server_ip(_ip):
+	server_ip = _ip
 
 
 func connect_to_server():
 	get_tree().connect('connected_to_server', self, '_connected_to_server')
 	
 	peer = NetworkedMultiplayerENet.new()
-	peer.create_client(DEFAULT_IP, PORT) # this peer will be a client
+	peer.create_client(server_ip, PORT) # this peer will be a client
 	get_tree().set_network_peer(peer)
 	print_debug("Cliente criado")
 
@@ -45,17 +43,6 @@ func close_connection():
 
 
 # HANDLING RPCS ---------------------------------
-remote func ping():
-	if get_tree().is_network_server():
-		rpc('pong', server_name)
-
-remote func pong(_name):
-	if server_name == _name:
-		get_tree().change_scene(villain_scene)
-		rpc('receive_spawner_info', get_tree().get_network_unique_id())
-	else:
-		close_connection()
-
 remote func receive_spawner_info(id):
 	if get_tree().is_network_server():
 		print_debug(str(id), " ", peer.get_peer_address(id), " ", str(peer.get_peer_port(id)))
@@ -80,7 +67,8 @@ remote func time_out():
 
 # HANDLING SIGNALS --------------------------------------
 func _connected_to_server():
-	rpc('ping')
+	get_tree().change_scene(villain_scene)
+	rpc('receive_spawner_info', get_tree().get_network_unique_id())
 
 func _player_disconnected(_a = ''):
 	if other_player_id != 0:

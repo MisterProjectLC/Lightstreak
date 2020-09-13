@@ -24,6 +24,7 @@ const INCREMENT = 70
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Alphabet.menu_reset()
 	$"Stages/Page 4/Stage 18/AnimationPlayer".play("Stage18")
 	
 	for i in range(outlines.size()):
@@ -35,6 +36,7 @@ func _ready():
 		$Typer.margin_top = 680
 		$Stages.margin_left = -367
 		$Stages.margin_top = BASE_Y
+		$Typer.set_font_size(50)
 		$Title.set("custom_colors/font_color", Color(1, 1, 1, 1))
 		$GameBackground.set_modulate(Color(1, 1, 1, 1))
 		pass
@@ -73,7 +75,7 @@ func _command_typed(_id, text):
 			if !Global.get_lightstreak_typed():
 				Audio.play_music(Audio.menu_theme)
 				moving_children['Typer'] = [-257, 680]
-				$Typer.set_font_size(55)
+				$Typer.set_font_size(50)
 				$Typer/Text.rect_position += Vector2(0, 10)
 				pull_menu()
 				fading_children['GameBackground'] = 1
@@ -106,7 +108,7 @@ func _command_typed(_id, text):
 				return
 			
 			if len(args) == 2:
-				Network.set_server_name(args[1])
+				Network.set_server_ip(args[1])
 			Network.create_server()
 			pushback_menu()
 			push_other_menus()
@@ -117,7 +119,7 @@ func _command_typed(_id, text):
 				return
 			
 			if len(args) == 2:
-				Network.set_server_name(args[1])
+				Network.set_server_ip(args[1])
 			Network.connect_to_server()
 			pushback_menu()
 			push_other_menus()

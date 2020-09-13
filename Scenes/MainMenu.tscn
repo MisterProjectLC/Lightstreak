@@ -20,7 +20,7 @@
 [ext_resource path="res://Art/Icons/VioletIcon.png" type="Texture" id=18]
 [ext_resource path="res://Art/Canhao3.png" type="Texture" id=19]
 [ext_resource path="res://Art/Powers/Bomber2Friend.png" type="Texture" id=20]
-[ext_resource path="res://Art/Enemies/Captain2.png" type="Texture" id=21]
+[ext_resource path="res://Art/Enemies/captain2.png" type="Texture" id=21]
 [ext_resource path="res://Art/Icons/PushIcon.png" type="Texture" id=22]
 [ext_resource path="res://Art/Icons/LighstreakIcon.png" type="Texture" id=23]
 [ext_resource path="res://Art/Icons/QueeeIcon.png" type="Texture" id=24]
@@ -32,7 +32,7 @@
 size = 56
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=2]
 size = 78
 font_data = ExtResource( 1 )
 
@@ -130,7 +130,7 @@ margin_left = 5.8895
 margin_top = 13.9712
 margin_right = 530.89
 margin_bottom = 78.9712
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 scroll_active = false
 __meta__ = {

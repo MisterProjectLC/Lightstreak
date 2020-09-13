@@ -26,6 +26,7 @@ func ready():
 	# setup phase
 	setup_phase()
 	Audio.play_music(Audio.phase_themes[Global.get_current_phase()-1])
+	Alphabet.game_reset()
 	
 	# setup weapons
 	_weapon_list = [load("res://Mini Scenes/Weapon/Laser.tscn"),
@@ -67,6 +68,7 @@ func set_title_list():
 					get_node('MachineTitle'), get_node('PushTitle'), 
 					get_node('LightTitle')]
 
+
 func setup_title_list():
 	for i in range(1, _power_count+1):
 		_title_list[i-1].set_visible(true)
@@ -74,6 +76,7 @@ func setup_title_list():
 	for w in range(len(_title_list)):
 		var new_word = $LangSystem.get_word(_title_list[w].get_difficulty(), 
 										get_language())
+			
 		# if word is a repeat, try again
 		while (1):
 			var repeats = false
@@ -283,7 +286,6 @@ func _on_AnimationPlayer_animation_finished(_anim_name):
 
 
 func leave_game():
-	Alphabet.reset()
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 # MINION SPAWNER -----------------------------

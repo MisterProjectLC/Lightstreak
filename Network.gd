@@ -20,6 +20,7 @@ func create_server():
 	# after being initialized as either a client or server. Events can then be handled by 
 	# connecting to SceneTree signals.
 	peer = NetworkedMultiplayerENet.new()
+	peer.set_bind_ip("169.254.121.139")
 	peer.create_server(PORT, MAX_PLAYERS) # this peer will be a server
 	get_tree().set_network_peer(peer)
 	print_debug("Server criado")
@@ -32,9 +33,9 @@ func connect_to_server():
 	get_tree().connect('connected_to_server', self, '_connected_to_server')
 	
 	peer = NetworkedMultiplayerENet.new()
-	peer.create_client(server_ip, PORT) # this peer will be a client
+	print_debug(peer.create_client(server_ip, PORT)) # this peer will be a client
 	get_tree().set_network_peer(peer)
-	print_debug("Cliente criado")
+	print_debug("Cliente criado, tentando entrar em ", server_ip)
 
 
 func close_connection():

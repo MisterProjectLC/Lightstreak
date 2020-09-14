@@ -5,14 +5,14 @@ const MAX_PLAYERS = 1
 
 var other_player_id = 0
 var peer = null
-var server_ip = '169.254.121.139'
+var server_ip = 'fe80::f181:48d1:10a8:798b%16'
 
 var hero_scene = "res://Scenes/MainMulti.tscn"
 var villain_scene = "res://Scenes/MainEnemy.tscn"
 
 func _ready():
 	get_tree().connect('network_peer_disconnected', self, '_player_disconnected')
-	server_ip = '169.254.121.139'
+	server_ip = 'fe80::f181:48d1:10a8:798b%16'
 
 # CREATE & JOIN -------------------------------------
 
@@ -26,7 +26,8 @@ func create_server():
 	print_debug("Server criado")
 
 func set_server_ip(_ip):
-	server_ip = _ip
+	#server_ip = _ip
+	server_ip = 'fe80::f181:48d1:10a8:798b%16'
 
 
 func connect_to_server():

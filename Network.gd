@@ -5,13 +5,14 @@ const MAX_PLAYERS = 1
 
 var other_player_id = 0
 var peer = null
-var server_ip = '127.0.0.1'
+var server_ip = '169.254.121.139'
 
 var hero_scene = "res://Scenes/MainMulti.tscn"
 var villain_scene = "res://Scenes/MainEnemy.tscn"
 
 func _ready():
 	get_tree().connect('network_peer_disconnected', self, '_player_disconnected')
+	server_ip = '169.254.121.139'
 
 # CREATE & JOIN -------------------------------------
 
@@ -20,7 +21,6 @@ func create_server():
 	# after being initialized as either a client or server. Events can then be handled by 
 	# connecting to SceneTree signals.
 	peer = NetworkedMultiplayerENet.new()
-	peer.set_bind_ip("169.254.121.139")
 	print_debug(peer.create_server(PORT, MAX_PLAYERS)) # this peer will be a server
 	get_tree().set_network_peer(peer)
 	print_debug("Server criado")

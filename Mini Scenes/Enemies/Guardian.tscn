@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Mini Scenes/Enemies/Tank.gd" type="Script" id=1]
 [ext_resource path="res://Art/Enemies/Guardian3.png" type="Texture" id=2]
@@ -13,6 +13,22 @@ extents = Vector2( 42.0906, 40.1176 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16.1415, 15.8326 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "blink"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
 
 [node name="Guardian" type="Area2D"]
 script = ExtResource( 1 )
@@ -61,6 +77,12 @@ texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Timer" type="Timer" parent="Shield"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shield"]
+anims/blink = SubResource( 3 )
 [connection signal="changed_stunned" from="." to="Shield" method="_on_Guardian_changed_stunned"]
 [connection signal="area_entered" from="Shield" to="Shield" method="_on_Shield_area_entered"]
 [connection signal="area_exited" from="Shield" to="Shield" method="_on_Shield_area_exited"]
+[connection signal="timeout" from="Shield/Timer" to="Shield" method="_on_Timer_timeout"]

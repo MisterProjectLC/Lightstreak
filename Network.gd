@@ -1,47 +1,98 @@
 extends Node
 
-const PORT = 31400
+const HOST_PORT = 31400
+const CLIENT_PORT = 31401
 const MAX_PLAYERS = 1
+const NAT_URL = "nat-punchthrough.herokuapp.com"
 
 var other_player_id = 0
 var peer = null
-var server_ip = 'fe80::f181:48d1:10a8:798b%16'
 
+var hosting = false
 var hero_scene = "res://Scenes/MainMulti.tscn"
 var villain_scene = "res://Scenes/MainEnemy.tscn"
 
+# Our WebSocketClient instance
+var ws_client = WebSocketClient.new()
+
 func _ready():
-	get_tree().connect('network_peer_disconnected', self, '_player_disconnected')
-	server_ip = 'fe80::f181:48d1:10a8:798b%16'
-
-# CREATE & JOIN -------------------------------------
-
-func create_server():
-	# Peer = A PacketPeer implementation that should be passed to SceneTree.network_peer 
-	# after being initialized as either a client or server. Events can then be handled by 
-	# connecting to SceneTree signals.
-	peer = NetworkedMultiplayerENet.new()
-	print_debug(peer.create_server(PORT, MAX_PLAYERS)) # this peer will be a server
-	get_tree().set_network_peer(peer)
-	print_debug("Server criado")
-
-func set_server_ip(_ip):
-	#server_ip = _ip
-	server_ip = 'fe80::f181:48d1:10a8:798b%16'
-
-
-func connect_to_server():
-	get_tree().connect('connected_to_server', self, '_connected_to_server')
+	# Connect base signals to get notified of connection open, close, and errors.
+	ws_client.connect("connection_closed", self, "_closed")
+	ws_client.connect("connection_error", self, "_closed")
+	ws_client.connect("connection_established", self, "_connected")
+	ws_client.connect("data_received", self, "_on_data")
+	ws_client.verify_ssl = true
 	
+	# Initiate connection to the given URL.
+	var err = ws_client.connect_to_url(NAT_URL)
+	if err != OK:
+		print("Unable to connect")
+		set_process(false)
+
+
+func _closed(was_clean = false):
+	print("Closed, clean: ", was_clean)
+	set_process(false)
+
+
+func _connected(proto = ""):
+	print("Connected with protocol: ", proto)
+
+
+func _on_data():
+	var data = ws_client.get_peer(1).get_packet().get_string_from_utf8()
+	print("Got data from server: ", data)
+	
+	if hosting:
+		host_receive_response(data)
+	else:
+		client_receive_response(data)
+
+
+func _process(delta):
+	ws_client.poll()
+
+
+# CREATE & HOST -------------------------------------
+
+func create_server(server_name):
+	hosting = true
+	$Handshake.setup_receiver(HOST_PORT)
 	peer = NetworkedMultiplayerENet.new()
-	print_debug(peer.create_client(server_ip, PORT)) # this peer will be a client
+	print_debug(peer.create_server(HOST_PORT, MAX_PLAYERS)) # this peer will be a server
 	get_tree().set_network_peer(peer)
-	print_debug("Cliente criado, tentando entrar em ", server_ip)
+	
+	var data = "host§" + server_name
+	ws_client.get_peer(1).put_packet(data.to_utf8())
+	print_debug("Server requisitado")
 
 
-func close_connection():
-	if peer != null:
-		peer.close_connection()
+func host_receive_response(data):
+	var args = data.split("§")
+	if args.size() < 2:
+		return
+	$Handshake.host_send_handshake(args)
+
+
+# JOIN  ------------------------------
+func connect_to_server(server_name):
+	hosting = false
+	$Handshake.setup_receiver(CLIENT_PORT)
+	get_tree().connect('connected_to_server', self, '_connected_to_server')
+	var data = "client§" + server_name
+	ws_client.get_peer(1).put_packet(data.to_utf8())
+
+
+func client_receive_response(data):
+	var args = data.split("§")
+	if args.size() < 2:
+		return
+	
+	$Handshake.client_send_handshake(args)
+	peer = NetworkedMultiplayerENet.new()
+	print_debug(peer.create_client(args[0], int(args[1]))) # this peer will be a client
+	get_tree().set_network_peer(peer)
+	print_debug("Cliente criado, tentando entrar em " + args[0] + ":" + args[1])
 
 
 # HANDLING RPCS ---------------------------------

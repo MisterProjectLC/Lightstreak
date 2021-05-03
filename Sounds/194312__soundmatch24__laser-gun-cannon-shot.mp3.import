@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/194312__soundmatch24__laser-gun-cannon-shot.mp3-88569a16e0edfa48717cca695b803903.mp3str"
+
+[deps]
+
+source_file="res://Sounds/194312__soundmatch24__laser-gun-cannon-shot.mp3"
+dest_files=[ "res://.import/194312__soundmatch24__laser-gun-cannon-shot.mp3-88569a16e0edfa48717cca695b803903.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

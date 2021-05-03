@@ -1329,5 +1329,6 @@ color = Color( 0.0117647, 0.0470588, 0.0941176, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="command_typed" from="Typer" to="." method="_command_typed"]
 [connection signal="typer_updated" from="Typer" to="." method="_update_outlines"]

@@ -47,7 +47,7 @@ func find_outline(text):
 	return get_node(text)
 
 
-func _process(_delta):
+func _physics_process(delta):
 	for child in moving_children.keys():
 		var object = find_node(child)
 		if object.margin_left != moving_children[child][0] or object.margin_top != moving_children[child][1]:
@@ -108,22 +108,20 @@ func _command_typed(_id, text):
 				return
 			
 			if len(args) == 2:
-				Network.set_server_ip(args[1])
-			Network.create_server()
-			pushback_menu()
-			push_other_menus()
-			moving_children['Looking'] = [-367, BASE_Y]
+				Network.create_server(args[1])
+				pushback_menu()
+				push_other_menus()
+				moving_children['Looking'] = [-367, BASE_Y]
 		
 		"VILLAIN":
 			if !Global.get_lightstreak_typed():
 				return
 			
 			if len(args) == 2:
-				Network.set_server_ip(args[1])
-			Network.connect_to_server()
-			pushback_menu()
-			push_other_menus()
-			moving_children['Looking'] = [-367, BASE_Y]
+				Network.connect_to_server(args[1])
+				pushback_menu()
+				push_other_menus()
+				moving_children['Looking'] = [-367, BASE_Y]
 		
 		"OPTIONS":
 			if !Global.get_lightstreak_typed():
@@ -156,7 +154,7 @@ func _command_typed(_id, text):
 			if Global.get_lightstreak_typed():
 				pull_menu()
 				push_other_menus()
-				Network.close_connection()
+				#Network.close_connection()
 		
 		"CREDITS":
 			get_tree().change_scene("res://Scenes/Credits.tscn")

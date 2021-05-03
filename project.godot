@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -25,12 +24,16 @@ Lane="*res://Mini Scenes/Lane.gd"
 Alphabet="*res://Mini Scenes/Alphabet.tscn"
 Global="*res://Global.gd"
 Audio="*res://Mini Scenes/Audio.tscn"
-Network="*res://Network.gd"
+Network="*res://Network.tscn"
 
 [display]
 
 window/size/width=805
 window/size/height=800
+
+[network]
+
+ssl/certificates="res://Files/cacert-2021-04-13.pem"
 
 [rendering]
 

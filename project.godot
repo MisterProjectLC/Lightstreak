@@ -24,7 +24,7 @@ Lane="*res://Mini Scenes/Lane.gd"
 Alphabet="*res://Mini Scenes/Alphabet.tscn"
 Global="*res://Global.gd"
 Audio="*res://Mini Scenes/Audio.tscn"
-Network="*res://Network.tscn"
+Network="*res://Scenes/Network.tscn"
 
 [display]
 

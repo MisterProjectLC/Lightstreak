@@ -154,7 +154,7 @@ func _command_typed(_id, text):
 			if Global.get_lightstreak_typed():
 				pull_menu()
 				push_other_menus()
-				#Network.close_connection()
+				Network.cancel_connection()
 		
 		"CREDITS":
 			get_tree().change_scene("res://Scenes/Credits.tscn")

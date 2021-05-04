@@ -77,6 +77,7 @@ func receive_response(data):
 	if args.size() < 2:
 		return
 	
+	ws_client.disconnect_from_host()
 	$Handshake.send_handshake(args, hosting)
 	emit_signal("received_destination", args)
 

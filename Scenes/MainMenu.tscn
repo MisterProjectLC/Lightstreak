@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Fonts/FORCED SQUARE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Mini Scenes/LabelFade.gd" type="Script" id=2]
@@ -38,6 +38,10 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 56
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
 font_data = ExtResource( 1 )
 
 [sub_resource type="Animation" id=4]
@@ -408,11 +412,26 @@ margin_left = -3.0
 margin_top = 180.024
 margin_right = 428.0
 margin_bottom = 224.024
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "LEAVE <NAME>
-BLANK WHEN
-MATCHMAKING"
+text = "BOTH YOU AND YOUR 
+FRIEND MUST CHOOSE
+THE SAME NAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warning" type="Label" parent="PlayMulti"]
+visible = false
+margin_left = 38.8489
+margin_top = 294.637
+margin_right = 469.849
+margin_bottom = 396.637
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.462745, 0, 0, 1 )
+text = "CONNECTION FAILED!"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1313,6 +1332,7 @@ margin_right = 1145.63
 margin_bottom = 520.566
 color = Color( 0.0117647, 0.0470588, 0.0941176, 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -1327,6 +1347,7 @@ margin_right = -417.535
 margin_bottom = 106.205
 color = Color( 0.0117647, 0.0470588, 0.0941176, 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

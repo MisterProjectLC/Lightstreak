@@ -1,117 +1,133 @@
 extends Node
 
-const HOST_PORT = 8910
-const CLIENT_PORT = 8911
-const MAX_PLAYERS = 1
+const MAX_PLAYERS = 2
+const HERO_SCENE = "res://Scenes/MainMulti.tscn"
+const VILLAIN_SCENE = "res://Scenes/MainEnemy.tscn"
 
-var my_ip = ""
-var dest_ip = ""
-var dest_port = ""
-
-var other_player_id = 0
-var peer = null
 var current_server_name = ""
-
 var hero = false
-var hero_scene = "res://Scenes/MainMulti.tscn"
-var villain_scene = "res://Scenes/MainEnemy.tscn"
+var hosting = false
+
+signal connection_failed
+
+# SETUP ----------------------------------
 
 func _ready():
-	$Punchthrough.setup(HOST_PORT, CLIENT_PORT, MAX_PLAYERS)
+	$WebSocket.setup(MAX_PLAYERS)
+
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		cancel_connection()
+		$WebSocket.close_networking()
+		get_tree().quit()
 
 
 func cancel_connection():
-	$Punchthrough.cancel_connection()
+	$WebSocket.send_packet(["destroy", current_server_name])
 
 
-func _on_Punchthrough_punchthrough_finished():
-	print_debug("Punched through")
+# MANAGE CONNECTION --------------------------------
+
+func enter_server(_hero, server_name):
+	var server_details = []
+	hero = _hero
 	if hero:
-		print_debug("Creating server")
-		peer = NetworkedMultiplayerENet.new()
-		peer.create_server(HOST_PORT, MAX_PLAYERS)
-		get_tree().set_network_peer(peer)
+		server_details.append('H')
 	else:
-		print_debug("Creating client")
-		$Timer.start(1)
+		server_details.append('V')
+	current_server_name = server_name
+	$WebSocket.enter_server(current_server_name, server_details)
 
 
-func _on_Punchthrough_received_destination(args):
-	if args.size() < 2:
+func _on_WebSocket_created(_args):
+	hosting = true
+
+
+func _on_WebSocket_connected(args):
+	if hero and (hosting == (args[0] == "H")):
+		get_tree().change_scene(HERO_SCENE)
+	elif !hero and (hosting == (args[0] == "V")):
+		get_tree().change_scene(VILLAIN_SCENE)
+
+
+func _on_WebSocket_not_connected(_args):
+	emit_signal("connection_failed")
+
+
+func _on_WebSocket_disconnected(_args):
+	get_tree().change_scene("res://Scenes/Main.tscn")
+
+
+# MANAGE MESSAGES ---------------------------------
+func send_game_message(args):
+	var sent_args = ["data", current_server_name]
+	for arg in args:
+		sent_args.append(arg)
+	$WebSocket.send_packet(sent_args)
+
+
+func _on_WebSocket_received_response(args):
+	if args.empty():
 		return
 	
-	dest_ip = args[0]
-	dest_port = args[1]
+	var message = args[0]
+	args.remove(0)
+	match(message):
+		"power":
+			receive_power(args)
+		"movem":
+			receive_movem(args)
+		"enemy":
+			receive_enemy(args)
+		"damage":
+			receive_damage()
+		"timeout":
+			timeout()
 
-
-# CREATE & HOST -------------------------------------
-
-func create_server(server_name):
-	hero = true
-	$Punchthrough.create_server(server_name)
-
-
-# JOIN  ------------------------------
-
-func connect_to_server(server_name):
-	hero = false
-	get_tree().connect('connected_to_server', self, '_connected_to_server')
-	$Punchthrough.connect_to_server(server_name)
-
-
-func _on_Timer_timeout():
-	peer = NetworkedMultiplayerENet.new()
-	var status = peer.create_client(dest_ip, int(dest_port))
-	get_tree().set_network_peer(peer)
-	
-	if status != OK:
-		$Timer.start(1)
 
 
 # HANDLING RPCS ---------------------------------
-remote func receive_spawner_info(id):
-	if get_tree().is_network_server():
-		print_debug(str(id), " ", peer.get_peer_address(id), " ", str(peer.get_peer_port(id)))
-		other_player_id = id
-		get_tree().change_scene(hero_scene)
-
-
-remote func receive_power(_index, _console_n, _lightstreak):
+func receive_power(args):
+	var _index = int(args[0])
+	var _console_n = int(args[1])
+	var _lightstreak = bool(args[2])
 	get_tree().get_root().get_node("MainEnemy").summon_weapon(_index, _console_n, _lightstreak)
 
-remote func receive_movem(_cannon, _lane):
+
+func receive_movem(args):
+	var _cannon = int(args[0])
+	var _lane = int(args[1])
 	get_tree().get_root().get_node("MainEnemy")._move_cannon(_cannon, _lane)
 
-remote func receive_damage():
-	get_tree().get_root().get_node("MainEnemy")._receive_damage()
 
-remote func receive_enemy(enemy_name, enemy_lane):
+func receive_enemy(args):
+	var enemy_name = args[0]
+	var enemy_lane = int(args[1])
 	get_tree().get_root().get_node("MainMulti").spawn_enemy(enemy_name, enemy_lane)
 
-remote func time_out():
+
+func receive_damage():
+	get_tree().get_root().get_node("MainEnemy")._receive_damage()
+
+
+func timeout():
 	get_tree().get_root().get_node("MainMulti").time_out()
 
+
+
 # HANDLING SIGNALS --------------------------------------
-func _connected_to_server():
-	get_tree().change_scene(villain_scene)
-	rpc('receive_spawner_info', get_tree().get_network_unique_id())
-
-func _player_disconnected(_a = ''):
-	if other_player_id != 0:
-		get_tree().change_scene("res://Scenes/Main.tscn")
-
-
 func _activated_power(_index, _cannon, _lightstreak):
-	rpc('receive_power', _index, _cannon, _lightstreak)
+	send_game_message(["power", str(_index), str(_cannon), str(_lightstreak)])
 
 func _moved_cannon(_cannon, _lane):
-	rpc('receive_movem', _cannon, _lane)
+	send_game_message(["movem", str(_cannon), str(_lane)])
 
 func _spawned_enemy(enemy_name, enemy_lane):
-	rpc('receive_enemy', enemy_name, enemy_lane)
+	send_game_message(["enemy", enemy_name, str(enemy_lane)])
 
 func took_damage():
-	rpc('receive_damage')
+	send_game_message(["damage"])
 
 func timed_out():
-	rpc('time_out')
+	send_game_message(["timeout"])

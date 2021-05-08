@@ -25,6 +25,7 @@ const INCREMENT = 70
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Alphabet.menu_reset()
+	Network.connect("connection_failed", self, "connection_failed")
 	$"Stages/Page 4/Stage 18/AnimationPlayer".play("Stage18")
 	
 	for i in range(outlines.size()):
@@ -108,7 +109,7 @@ func _command_typed(_id, text):
 				return
 			
 			if len(args) == 2:
-				Network.create_server(args[1])
+				Network.enter_server(true, args[1])
 				pushback_menu()
 				push_other_menus()
 				moving_children['Looking'] = [-367, BASE_Y]
@@ -118,7 +119,7 @@ func _command_typed(_id, text):
 				return
 			
 			if len(args) == 2:
-				Network.connect_to_server(args[1])
+				Network.enter_server(false, args[1])
 				pushback_menu()
 				push_other_menus()
 				moving_children['Looking'] = [-367, BASE_Y]
@@ -189,3 +190,10 @@ func pushback_menu():
 	moving_children['Options'] = [420, BASE_Y+INCREMENT*2]
 	moving_children['Credits'] = [420, BASE_Y+INCREMENT*3]
 	moving_children['Quit'] = [420, BASE_Y+INCREMENT*4]
+
+
+func connection_failed():
+	pull_menu()
+	push_other_menus()
+	moving_children['PlayMulti'] = [-367, BASE_Y]
+	$PlayMulti/Warning.visible = true

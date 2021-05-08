@@ -1,6 +1,6 @@
 extends Node
 
-const NAT_URL = "localhost"#"nat-punchthrough.herokuapp.com"
+const NAT_URL = "gamedev-multiplayer-server.herokuapp.com"
 
 var ws_client = WebSocketClient.new()
 var server_checked = null

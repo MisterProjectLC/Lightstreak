@@ -24,20 +24,24 @@ func _notification(what):
 
 
 func cancel_connection():
-	$WebSocket.send_packet(["destroy", current_server_name])
+	if hosting:
+		$WebSocket.send_packet(["destroy", current_server_name])
 
 
 # MANAGE CONNECTION --------------------------------
 
 func enter_server(_hero, server_name):
 	var server_details = []
+	var client_details = []
 	hero = _hero
 	if hero:
 		server_details.append('H')
+		client_details.append('V')
 	else:
 		server_details.append('V')
+		client_details.append('H')
 	current_server_name = server_name
-	$WebSocket.enter_server(current_server_name, server_details)
+	$WebSocket.enter_server(current_server_name, server_details, client_details)
 
 
 func _on_WebSocket_created(_args):
@@ -52,10 +56,12 @@ func _on_WebSocket_connected(args):
 
 
 func _on_WebSocket_not_connected(_args):
+	hosting = false
 	emit_signal("connection_failed")
 
 
 func _on_WebSocket_disconnected(_args):
+	hosting = false
 	get_tree().change_scene("res://Scenes/Main.tscn")
 
 

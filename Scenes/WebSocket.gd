@@ -46,9 +46,9 @@ func _closed(was_clean = false):
 	set_process(false)
 
 
-func enter_server(server_name, server_details = []):
+func enter_server(server_name, server_details = [], client_details = []):
 	server_checked = [server_name, server_details]
-	connect_to_server(server_name, server_details)
+	connect_to_server(server_name, client_details)
 
 
 func create_server(server_name, server_details = []):
@@ -58,9 +58,9 @@ func create_server(server_name, server_details = []):
 	send_packet(packet)
 
 
-func connect_to_server(server_name, server_details = []):
+func connect_to_server(server_name, client_details = []):
 	var packet = ["client", server_name]
-	packet.append_array(server_details)
+	packet.append_array(client_details)
 	send_packet(packet)
 
 

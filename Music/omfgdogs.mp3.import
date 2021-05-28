@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/omfgdogs.mp3-24f3cfaea519dbcdaad828b287cd5ddb.mp3str"
+
+[deps]
+
+source_file="res://Music/omfgdogs.mp3"
+dest_files=[ "res://.import/omfgdogs.mp3-24f3cfaea519dbcdaad828b287cd5ddb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

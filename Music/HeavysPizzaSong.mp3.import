@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HeavysPizzaSong.mp3-84bca98fcf4428c5e27422de850adf02.mp3str"
+
+[deps]
+
+source_file="res://Music/HeavysPizzaSong.mp3"
+dest_files=[ "res://.import/HeavysPizzaSong.mp3-84bca98fcf4428c5e27422de850adf02.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

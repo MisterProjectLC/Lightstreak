@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I am Blue [AwesomiZer] - Original Mix.mp3-2eb10f9518ec9cee0a823d60b63f4214.mp3str"
+
+[deps]
+
+source_file="res://Music/I am Blue [AwesomiZer] - Original Mix.mp3"
+dest_files=[ "res://.import/I am Blue [AwesomiZer] - Original Mix.mp3-2eb10f9518ec9cee0a823d60b63f4214.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

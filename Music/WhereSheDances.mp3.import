@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WhereSheDances.mp3-d4be76ae3d035c4afc749c4c5e921332.mp3str"
+
+[deps]
+
+source_file="res://Music/WhereSheDances.mp3"
+dest_files=[ "res://.import/WhereSheDances.mp3-d4be76ae3d035c4afc749c4c5e921332.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

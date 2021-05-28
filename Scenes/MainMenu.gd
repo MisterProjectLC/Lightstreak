@@ -105,24 +105,10 @@ func _command_typed(_id, text):
 				moving_children['PlayMulti'] = [-367, BASE_Y]
 		
 		"HERO":
-			if !Global.get_lightstreak_typed():
-				return
-			
-			if len(args) == 2:
-				Network.enter_server(true, args[1])
-				pushback_menu()
-				push_other_menus()
-				moving_children['Looking'] = [-367, BASE_Y]
+			enter_server(args, true)
 		
 		"VILLAIN":
-			if !Global.get_lightstreak_typed():
-				return
-			
-			if len(args) == 2:
-				Network.enter_server(false, args[1])
-				pushback_menu()
-				push_other_menus()
-				moving_children['Looking'] = [-367, BASE_Y]
+			enter_server(args, false)
 		
 		"OPTIONS":
 			if !Global.get_lightstreak_typed():
@@ -191,6 +177,19 @@ func pushback_menu():
 	moving_children['Credits'] = [420, BASE_Y+INCREMENT*3]
 	moving_children['Quit'] = [420, BASE_Y+INCREMENT*4]
 
+
+func enter_server(args, is_hero):
+	if !Global.get_lightstreak_typed():
+		return
+			
+	if len(args) > 0:
+		if len(args) == 2:
+			Network.enter_server(is_hero, args[1])
+		elif len(args) == 1:
+			Network.enter_server(is_hero)
+		pushback_menu()
+		push_other_menus()
+		moving_children['Looking'] = [-367, BASE_Y]
 
 func connection_failed():
 	pull_menu()

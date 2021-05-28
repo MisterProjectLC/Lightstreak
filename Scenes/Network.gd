@@ -30,7 +30,7 @@ func cancel_connection():
 
 # MANAGE CONNECTION --------------------------------
 
-func enter_server(_hero, server_name):
+func enter_server(_hero, server_name = null):
 	var server_details = []
 	var client_details = []
 	hero = _hero
@@ -40,18 +40,23 @@ func enter_server(_hero, server_name):
 	else:
 		server_details.append('V')
 		client_details.append('H')
-	current_server_name = server_name
-	$WebSocket.enter_server(current_server_name, server_details, client_details)
+	if server_name != null:
+		current_server_name = server_name
+		$WebSocket.enter_server(current_server_name, server_details, client_details)
+	else:
+		$WebSocket.enter_open_server(server_details, client_details)
 
 
-func _on_WebSocket_created(_args):
+func _on_WebSocket_created(args):
+	current_server_name = args[0]
 	hosting = true
 
 
 func _on_WebSocket_connected(args):
-	if hero and (hosting == (args[0] == "H")):
+	current_server_name = args[0]
+	if hero and (hosting == (args[1] == "H")):
 		get_tree().change_scene(HERO_SCENE)
-	elif !hero and (hosting == (args[0] == "V")):
+	elif !hero and (hosting == (args[1] == "V")):
 		get_tree().change_scene(VILLAIN_SCENE)
 
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/false_panic.mp3-534d70fa572dbfbcb3b2c80a6a6c7100.mp3str"
+
+[deps]
+
+source_file="res://Music/false_panic.mp3"
+dest_files=[ "res://.import/false_panic.mp3-534d70fa572dbfbcb3b2c80a6a6c7100.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

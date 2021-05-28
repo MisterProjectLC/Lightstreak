@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Leek spin remix.mp3-42eae11b10fcca5a26ac895b14aeca86.mp3str"
+
+[deps]
+
+source_file="res://Music/Leek spin remix.mp3"
+dest_files=[ "res://.import/Leek spin remix.mp3-42eae11b10fcca5a26ac895b14aeca86.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

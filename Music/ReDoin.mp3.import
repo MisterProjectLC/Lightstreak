@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ReDoin.mp3-c588466464facf1b43cca9ad8a7ae296.mp3str"
+
+[deps]
+
+source_file="res://Music/ReDoin.mp3"
+dest_files=[ "res://.import/ReDoin.mp3-c588466464facf1b43cca9ad8a7ae296.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

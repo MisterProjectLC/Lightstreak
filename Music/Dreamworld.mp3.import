@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dreamworld.mp3-2672bcf30bc6b5379ed7ba1c8489fc65.mp3str"
+
+[deps]
+
+source_file="res://Music/Dreamworld.mp3"
+dest_files=[ "res://.import/Dreamworld.mp3-2672bcf30bc6b5379ed7ba1c8489fc65.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

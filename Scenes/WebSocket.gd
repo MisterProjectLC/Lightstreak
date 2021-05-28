@@ -46,6 +46,7 @@ func _closed(was_clean = false):
 	set_process(false)
 
 
+# CLOSED SERVER ---
 func enter_server(server_name, server_details = [], client_details = []):
 	server_checked = [server_name, server_details]
 	connect_to_server(server_name, client_details)
@@ -64,8 +65,27 @@ func connect_to_server(server_name, client_details = []):
 	send_packet(packet)
 
 
-func destroy_server(server_name):
-	send_packet(["destroy", server_name])
+# OPEN SERVER ---
+func enter_open_server(server_details = [], client_details = []):
+	server_checked = [server_details]
+	connect_to_open_server(client_details)
+
+
+func create_open_server(server_details = []):
+	server_checked = null
+	var packet = ["host_open", str(max_players)]
+	packet.append_array(server_details)
+	send_packet(packet)
+
+
+func connect_to_open_server(client_details = []):
+	var packet = ["client_open"]
+	packet.append_array(client_details)
+	send_packet(packet)
+
+
+func destroy_server():
+	send_packet(["destroy"])
 
 
 func close_networking():
@@ -99,7 +119,10 @@ func _on_data():
 		
 		"not_connected":
 			if server_checked:
-				create_server(server_checked[0], server_checked[1])
+				if server_checked.size() > 1:
+					create_server(server_checked[0], server_checked[1])
+				else:
+					create_open_server(server_checked[0])
 			else:
 				ws_event(args)
 		

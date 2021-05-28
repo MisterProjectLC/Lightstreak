@@ -40,12 +40,11 @@ font_data = ExtResource( 1 )
 size = 56
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 size = 40
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=4]
-resource_name = "Stage18"
+[sub_resource type="Animation" id=5]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -412,7 +411,7 @@ margin_left = -3.0
 margin_top = 180.024
 margin_right = 428.0
 margin_bottom = 224.024
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "BOTH YOU AND YOUR 
 FRIEND MUST CHOOSE
@@ -427,7 +426,7 @@ margin_left = 38.8489
 margin_top = 294.637
 margin_right = 469.849
 margin_bottom = 396.637
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.462745, 0, 0, 1 )
 text = "CONNECTION FAILED!"
 align = 1
@@ -1278,7 +1277,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Stages/Page 4/Stage 18"]
-anims/Stage18 = SubResource( 4 )
+anims/Stage18 = SubResource( 5 )
 
 [node name="Back" type="Label" parent="Stages"]
 margin_left = 386.0

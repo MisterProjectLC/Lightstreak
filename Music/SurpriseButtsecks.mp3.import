@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SurpriseButtsecks.mp3-6e570c85296a8f0789daf3054fedeb69.mp3str"
+
+[deps]
+
+source_file="res://Music/SurpriseButtsecks.mp3"
+dest_files=[ "res://.import/SurpriseButtsecks.mp3-6e570c85296a8f0789daf3054fedeb69.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

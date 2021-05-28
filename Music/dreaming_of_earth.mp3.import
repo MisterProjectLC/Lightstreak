@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dreaming_of_earth.mp3-c97644a4d6220d502091aea19260909a.mp3str"
+
+[deps]
+
+source_file="res://Music/dreaming_of_earth.mp3"
+dest_files=[ "res://.import/dreaming_of_earth.mp3-c97644a4d6220d502091aea19260909a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

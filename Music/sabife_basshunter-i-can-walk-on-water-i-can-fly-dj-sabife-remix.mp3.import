@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sabife_basshunter-i-can-walk-on-water-i-can-fly-dj-sabife-remix.mp3-48ca9ead44f6e748ae6128ea8a70c9a5.mp3str"
+
+[deps]
+
+source_file="res://Music/sabife_basshunter-i-can-walk-on-water-i-can-fly-dj-sabife-remix.mp3"
+dest_files=[ "res://.import/sabife_basshunter-i-can-walk-on-water-i-can-fly-dj-sabife-remix.mp3-48ca9ead44f6e748ae6128ea8a70c9a5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

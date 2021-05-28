@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RedAlert.mp3-23e3edaa7fe6bea97703e5c62f0a7b11.mp3str"
+
+[deps]
+
+source_file="res://Music/RedAlert.mp3"
+dest_files=[ "res://.import/RedAlert.mp3-23e3edaa7fe6bea97703e5c62f0a7b11.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

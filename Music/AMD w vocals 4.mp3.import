@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/AMD w vocals 4.mp3-0a9235c9882e263ff69103b249b70fdf.mp3str"
+
+[deps]
+
+source_file="res://Music/AMD w vocals 4.mp3"
+dest_files=[ "res://.import/AMD w vocals 4.mp3-0a9235c9882e263ff69103b249b70fdf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

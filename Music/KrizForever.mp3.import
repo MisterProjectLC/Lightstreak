@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/KrizForever.mp3-79d48045d59c880c944266a9118f7573.mp3str"
+
+[deps]
+
+source_file="res://Music/KrizForever.mp3"
+dest_files=[ "res://.import/KrizForever.mp3-79d48045d59c880c944266a9118f7573.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

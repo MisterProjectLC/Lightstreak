@@ -119,7 +119,7 @@ func receive_enemy(args):
 
 
 func receive_damage():
-	get_tree().get_root().get_node("MainEnemy")._receive_damage()
+	get_tree().get_root().get_node("MainEnemy").receive_damage()
 
 
 func timeout():

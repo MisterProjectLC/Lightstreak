@@ -16,5 +16,10 @@ func time_out():
 	victory()
 
 func leave_game():
-	Network.close_connection()
+	Network.cancel_connection()
 	.leave_game()
+
+
+func _on_MinionSpawner_passed_threshold():
+	Network.took_damage()
+	._on_MinionSpawner_passed_threshold()

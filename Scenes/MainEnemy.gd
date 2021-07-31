@@ -74,6 +74,7 @@ func leave_game():
 	Network.close_connection()
 	.leave_game()
 
+
 # GETTERS / SETTERS ---------------------------
 func get_language():
 	return 0
